@@ -4,14 +4,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Insert title here</title>
-        <link href="${pageContext.request.contextPath}/resources/static/css/custom/expert-detail.css" rel="stylesheet" type="text/css"/>
+        
         <jsp:include page="../includes/bootstrap.jsp" />       
     </head>
     <body>         
         <jsp:include page="includes/menubar.jsp" />  
-        <jsp:include page="includes/header.jsp" /> 
-        <jsp:include page="includes/detail.jsp" /> 
-        <jsp:include page="includes/contact.jsp" /> 
-        <jsp:include page="../includes/script.jsp" />
+     
     </body>
 </html>
