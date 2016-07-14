@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section id="home" class="content-section text-center col-lg-8 col-lg-offset-2">
-    <div class="row">                  
+    <div class="row">             
         <div class="col-lg-4 text-left">                     
             <h3 class="text-muted">Find Employee</h3>
             <div class="input-group custom-search-form searchbox">
@@ -122,7 +122,6 @@
 
         </div>
 
-        <!--Grid -->  
         <div class="col-lg-8 text-left"> 
             <div class="col-lg-12">
                 <div class="col-lg-10">
