@@ -6,8 +6,12 @@
         <title>Insert title here</title>
         <jsp:include page="../includes/back-style.jsp" />       
     </head>
-    <body>         
-        <jsp:include page="includes/menubar.jsp" />  
+    <body  class="hold-transition skin-blue sidebar-mini">   
+        <div class="wrapper">
+            <jsp:include page="includes/menubar.jsp" />  
+            <jsp:include page="includes/sidbar-left.jsp" /> 
+            <jsp:include page="includes/body.jsp" /> 
+        </div>
         <jsp:include page="../includes/back-script.jsp" />
     </body>
 </html>
