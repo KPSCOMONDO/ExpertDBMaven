@@ -1,6 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/jquery/jquery.js"></script> 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/css/bootstraps/js/bootstrap.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/css/bootstraps/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/custom/jquery.easing.min.js"></script>
-
+<script src="../../../../resources/static/jquery/jquery.js" type="text/javascript"></script>
+<script src="../../../../resources/static/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

@@ -4,19 +4,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Insert title here</title>
-        <jsp:include page="../includes/linked.jsp" />
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
+        <jsp:include page="../includes/bootstrap.jsp" />       
     </head>
-    <body >
-        <h1>Hello bitch</h1>
+    <body>
+        <jsp:include page="includes/menubar.jsp" />              
         <jsp:include page="includes/header.jsp" />
-       
-       
-        <jsp:include page="includes/intro.jsp" />
+        <jsp:include page="includes/search-session.jsp" />
         <jsp:include page="includes/mission.jsp" />
         <jsp:include page="includes/footer.jsp" />
-        
-         <jsp:include page="../includes/script.jsp" />
+        <jsp:include page="../includes/script.jsp" />
     </body>
 </html>
