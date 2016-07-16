@@ -1,51 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container col-lg-8 col-lg-offset-2">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <i class="fa fa-database"></i>  <span class="light">Expert</span> Database
-            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">              
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a class="" href="#home">Home</a>
-                </li>                        
-                <li>
-                    <a class="page-scroll" href="#mission">Mission</a>
-                </li>
-
-                <li>
-                    <a class="page-scroll btn-block btn-info" href="login.html"><i class="fa fa-sign-in fa-1x"></i> Sign in</a>
-                </li>
-
-                <li>
-                    <a class="page-scroll" target="new" href="http://kshrd.com.kh/jsp/contactus.hrd">Contact</a>
-                </li>
-                <li>
-                    <a class="page-scroll" target="new" href="http://kshrd.com.kh/jsp/aboutus.hrd">About</a>
-                </li>      
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        Language <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" style="background-color: #000">
-                        <li>
-                            <a href="#"><img src="${pageContext.request.contextPath}/resources/static/img/flag/khmer.png" width="40"> Khmer</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="${pageContext.request.contextPath}/resources/static/img/flag/english.png" width="40"> English</a>
-                        </li>                                                                                        
-                    </ul>                           
-                </li>
-            </ul>
+<section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-41">
+    <div class="mbr-navbar__section mbr-section">
+        <div class="mbr-section__container container">
+            <div class="mbr-navbar__container">
+                <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
+                    <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">                                                    
+                        <span class="mbr-brand__name">
+                            <a class="mbr-brand__name text-white" href="">Expert Database</a>
+                        </span>
+                    </span>
+                </div>
+                <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
+                <div class="mbr-navbar__column mbr-navbar__menu">
+                    <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
+                        <div class="mbr-navbar__column">
+                            <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="one-page.html">Find candidate</a>
+                                </li> 
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="slider.html">Find company</a>
+                                </li>
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="video-background.html">Contact</a>
+                                </li> 
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="blog.html">About</a>
+                                </li></ul></div>
+                        <div class="mbr-navbar__column">
+                            <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__btn btn btn-default" href="">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+</section>

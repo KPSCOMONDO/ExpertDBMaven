@@ -10,7 +10,7 @@
         <div class="wrapper">
             <jsp:include page="includes/menubar.jsp" />  
             <jsp:include page="includes/sidbar-left.jsp" /> 
-            <jsp:include page="includes/body.jsp" /> 
+            <jsp:include page="includes/dashboard.jsp" /> 
         </div>
         <jsp:include page="../includes/back-script.jsp" />
     </body>

@@ -9,4 +9,8 @@ public class homeController {
     public String home() {
         return "/fronts/homes/home";
     }
+    @RequestMapping(value={"expert"})
+    public String expert() {
+        return "/fronts/homes/expert";
+    }
 }
