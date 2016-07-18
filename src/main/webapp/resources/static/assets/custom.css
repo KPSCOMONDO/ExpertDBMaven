@@ -1,0 +1,52 @@
+.search--box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: 28pt;
+}
+.expert--search-box, .expert--province--select{
+    font-size: 20pt;
+    padding: 10px 10px 10px 10px;
+    border-radius: 0%;
+}
+
+.uderline--small{
+    border-bottom: #075b2f solid 3px; 
+}
+.left-line--small{
+    border-left: #075b2f solid 3px; 
+}
+.right-line--small{
+    border-right: #075b2f solid 3px; 
+}
+
+.header {
+    font-weight: 300;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+}
+.header:before{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 10px;
+    bottom: 0;
+    left: 0%;
+    border-bottom: 5px solid #075b2f;
+}
+.box--result{
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid gray;
+}
+.btn--view--result{
+    width: 100%;
+    font-size: 10pt;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+.no-wrap{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}

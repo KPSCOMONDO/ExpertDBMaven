@@ -9,4 +9,8 @@ public class expertController {
     public String detail() {
         return "/fronts/experts/detail";
     }
+    @RequestMapping(value={"/expert"})
+    public String expert() {
+        return "/fronts/experts/expert";
+    }
 }

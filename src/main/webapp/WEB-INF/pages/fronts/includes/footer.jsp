@@ -1,40 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<footer class="text-left footer">
-    <div class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3 class="footer-col"> ABOUT US</h3>
-                    <p class="footer-text">Korea Software HRD Center is an IT academy for training SW professionals established by Korea International Cooperation Agency (KOICA) and Webcash Co., Ltd in April, 2013. Our mission is to train SW experts, provide job opportunities for them, and improve SW technologies in Cambodia.</p>
+<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="contacts2-57" style="background-color: rgb(60, 60, 60);">
+    <div class="mbr-section__container container">
+        <div class="mbr-contacts mbr-contacts--wysiwyg row">
+            <div class="col-sm-6">
+                <figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--no-bg">
+                    <div class="mbr-figure__map mbr-figure__map--short mbr-google-map">
+                        <p class="mbr-google-map__marker" data-coordinates="40.748384,-73.9854792"></p>
+                    </div>
+                </figure>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <p class="mbr-contacts__text"><strong>ADDRESS</strong><br>
+                            1234 Street Name<br>
+                            City, AA 99999<br><br>
+                            <strong>CONTACTS</strong><br>
+                            Email: support@mobirise.com<br>
+                            Phone: +1 (0) 000 0000 001<br>
+                            Fax: +1 (0) 000 0000 002</p>
+                    </div>
+                    <div class="col-sm-6"><p class="mbr-contacts__text"><strong>LINKS</strong></p><ul class="mbr-contacts__list"><li><a href="https://mobirise.com/bootstrap-template/" class="text-gray">Bootstrap one page template</a><a class="mbr-contacts__link text-gray" href="https://mobirise.com/bootstrap-template/"></a></li><li><a href="https://mobirise.com/bootstrap-template/" class="text-gray">Bootstrap basic template</a><a class="mbr-contacts__link text-gray" href="https://mobirise.com/bootstrap-template/"></a></li><li><a href="https://mobirise.com/bootstrap-template/" class="text-gray">Bootstrap gallery template</a></li><li><a href="https://mobirise.com/bootstrap-template/" class="text-gray">Bootstrap responsive template</a></li><li><br></li></ul></div>
                 </div>
-                <div class="col-md-4">
-                    <h3 class="footer-col">Location</h3>
-                    <p class="footer-text">Address: #12, St 323, Sangkat Boeung Kak II, KhanToul Kork, Phnom Penh, Cambodia.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3 class="footer-col">Contact</h3>
-                    <p>Tel:</p>
-                    <p class="footer-text">(855)23 99 13 14</p>
-                    <p class="footer-text">(855)77 77 12 36 (Khmer, English)</p>
-                    <p class="footer-text">(855)15 4 5555 2 (Khmer, English)</p>
-                    <p class="footer-text">(855)17 52 81 69(Korean, English)</p>
-                    <p>Email:</p>
-                    <a href="#" class="foot-contact">info.kshrd@gmail.com</a><br>
-                    <a href="#" class="foot-contact">phirum.gm@gmail.com</a>
-                </div>                        
             </div>
         </div>
     </div>
-    <div class="footer-line-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <p class="footer-text">Copyright © Your Website 2016</p>
-                </div>
-                <div class="col-lg-4">
-                    <p class="footer-text"><i class="fa fa-youtube fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class="fa fa-facebook fa-2x"></i></p>
-                </div>
+</section>
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-58" style="background-color: rgb(68, 68, 68);">
+    <div class="mbr-section__container container">
+        <div class="mbr-footer mbr-footer--wysiwyg row">
+            <div class="col-sm-12">
+                <p class="mbr-footer__copyright"></p><p>Copyright (c) 2015 Company Name. <a href="https://mobirise.com/bootstrap-template/license.txt" class="text-gray">License</a></p><p></p>
             </div>
         </div>
     </div>

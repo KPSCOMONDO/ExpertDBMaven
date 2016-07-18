@@ -1,65 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!-- About Section -->
-<section id="about" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>About Expert Database</h2>
-            <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-        </div>
-    </div>
-</section>
-<section id="counter-area">
-    <div class="container">
+<section class="mbr-section mbr-section--relative mbr-parallax-background" id="msg-box5-46" style="background-image: url(../../../../../resources/static/assets/images/iphone-6-458150-1920-1920x1285-73.jpg);">
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 168, 133);"></div>
+    <div class="mbr-section__container mbr-section__container--isolated container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="facts text-center">
-                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                        <div class="facts-wrap">
-                            <i class="icon icon-happy"></i>
-                            <div class="fact-content">
-                                <h6>Users</h6>
-                                <div class="line"></div>
-                                <div class="facts-wrap-num">
-                                    <span class="counter">61364</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                        <div class="facts-wrap">
-                            <i class="icon icon-flag"></i>
-                            <div class="fact-content">
-                                <h6>Awarded</h6>
-                                <div class="line"></div>
-                                <div class="facts-wrap-num"><span class="counter">19258</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                        <div class="facts-wrap">
-                            <i class="icon icon-download"></i>
-                            <div class="fact-content">
-                                <h6>Downloaded</h6>
-                                <div class="line"></div>
-                                <div class="facts-wrap-num"><span class="counter">46067</span></div>
-                            </div>
+            <div class="mbr-box mbr-box--fixed mbr-box--adapted">
+                <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-6">
+                    <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom mbr-figure--full-width"><img class="mbr-figure__img" src="assets/images/imac-605421-1920-1920x1275-41.jpg"></figure>
+                </div>
+                <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-6 mbr-section__right">
+                    <div class="mbr-section__container mbr-section__container--middle">
+                        <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg">
+                            <h3 class="mbr-header__text">Who we are?</h3>
 
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
-                        <div class="facts-wrap">
-                            <i class="icon icon-envelope"></i>
-                            <div class="fact-content">
-                                <h6>Mails</h6>
-                                <div class="line"></div>
-                                <div class="facts-wrap-num"><span class="counter">32834</span></div>
-                            </div>
-                        </div>
+                    <div class="mbr-section__container mbr-section__container--middle">
+                        <div class="mbr-article mbr-article--auto-align mbr-article--wysiwyg"><p>Integer condimentum risus id laoreet vestibulum. Nam placerat pretium lorem et mattis. Morbi eleifend, eros vitae semper rhoncus, eros risus fringilla quam, eget finibus lacus augue eu tellus. Nunc hendrerit lectus enim, eu vestibulum arcu maximus eget. Morbi gravida ut nisi vel consequat. Nunc eros odio, luctus porta convallis eget, dapibus non odio. Donec eu velit semper turpis vulputate molestie vitae ac massa. Proin pellentesque nibh nisl, nec dignissim eros fringilla in. Sed enim neque, porttitor eget luctus at, facilisis quis tellus.&nbsp;</p></div>
+                    </div>
+                    <div class="mbr-section__container">
+                        <div class="mbr-buttons mbr-buttons--auto-align btn-inverse"><a class="mbr-buttons__btn btn btn-lg btn-default" href="https://mobirise.com/bootstrap-template/">LEARN MORE</a></div>
                     </div>
                 </div>
-            </div>  
-        </div> <!-- Conatainer End -->
-    </div>  <!-- Fact div ENd -->
+
+            </div>
+        </div>
+    </div>
 </section>

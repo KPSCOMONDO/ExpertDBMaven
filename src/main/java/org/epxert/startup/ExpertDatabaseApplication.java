@@ -7,7 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"org.epxert.startup","org.expert.expert","org.expert.home","org.expert.authentation","org.expert.admin"})
+@ComponentScan(basePackages = {"org.epxert.startup","org.expert.expert",
+    "org.expert.home","org.expert.authentation",
+    "org.expert.admin","org.expert.company"})
 
 public class ExpertDatabaseApplication {
 

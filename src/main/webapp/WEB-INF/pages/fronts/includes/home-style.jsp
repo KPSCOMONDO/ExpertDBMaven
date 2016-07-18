@@ -14,3 +14,4 @@
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise-slider/style.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise-gallery/style.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+<link href="../../../../../resources/static/assets/custom.css" rel="stylesheet" type="text/css"/>

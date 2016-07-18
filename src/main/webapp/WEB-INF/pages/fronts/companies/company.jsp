@@ -4,15 +4,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Insert title here</title>
-
         <jsp:include page="../includes/home-style.jsp"/>
     </head>
     <body>
-        <jsp:include page="../includes/menubar.jsp"/>
-        <jsp:include page="includes/header.jsp"/>
-        <jsp:include page="includes/mission.jsp"/>
-        <jsp:include page="includes/about.jsp"/>
-        <jsp:include page="includes/guidline.jsp"/>
+        <jsp:include page="includes/menubar.jsp"/>     
         <jsp:include page="../includes/footer.jsp"/>
         <jsp:include page="../includes/home-script.jsp"/>
     </body>
