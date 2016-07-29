@@ -7,19 +7,31 @@
                     <h2 class="mbr-section__header">Our mission</h2>
                     <ul class="mbr-reviews mbr-reviews--wysiwyg row">
                         <li class="mbr-reviews__item col-sm-6 col-md-4">
-                            <div class="mbr-reviews__text"><p class="mbr-reviews__p">“Nullam cursus sed nibh nec commodo. Ut mattis mi at magna vestibulum, vel mattis dolor vulputate. Vestibulum egestas libero sit amet nisi feugiat, id molestie quam cursus. ”</p></div>
+                            <div class="mbr-reviews__text">
+                                <p class="mbr-reviews__p">
+                                   Filter your candidate.
+                                </p>
+                            </div>
                             <div class="mbr-reviews__author mbr-reviews__author--short">
                                 <div class="mbr-reviews__author-name">Search tool</div>
                                 <div class="mbr-reviews__author-bio">Find your stuff</div>
                             </div>
                         </li><li class="mbr-reviews__item col-sm-6 col-md-4">
-                            <div class="mbr-reviews__text"><p class="mbr-reviews__p">“Curabitur dignissim tempus libero at aliquam. Sed arcu nisi, maximus sit amet nulla quis, faucibus sollicitudin lacus. Quisque sed nulla at leo cursus finibus sed hendrerit risus. Maecenas euismod faucibus ornare. Sed tellus elit, fringilla in malesuada nec, volutpat vel ligula.”</p></div>
+                            <div class="mbr-reviews__text">
+                                <p class="mbr-reviews__p">
+                                    Accurate information.
+                                </p>
+                            </div>
                             <div class="mbr-reviews__author mbr-reviews__author--short">
                                 <div class="mbr-reviews__author-name">Information</div>
                                 <div class="mbr-reviews__author-bio">Truth</div>
                             </div>
                         </li><li class="mbr-reviews__item col-sm-6 col-md-4">
-                            <div class="mbr-reviews__text"><p class="mbr-reviews__p">“In tempus arcu a urna maximus, at porta felis laoreet. Vestibulum dui ipsum, varius ac ante sed, volutpat faucibus mauris. Morbi viverra ipsum ut lacinia pretium. Vivamus sit amet quam sed lorem rhoncus gravida. ”</p></div>
+                            <div class="mbr-reviews__text">
+                                <p class="mbr-reviews__p">
+                                    No charge.
+                                </p>
+                            </div>
                             <div class="mbr-reviews__author mbr-reviews__author--short">
                                 <div class="mbr-reviews__author-name">Free</div>
                                 <div class="mbr-reviews__author-bio">User</div>

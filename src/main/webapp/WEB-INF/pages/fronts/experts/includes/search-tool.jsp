@@ -1,14 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="col-sm-4 text-left">                  
     <h4 class="text-muted">Filter by:</h4>                               
-    <div class="panel panel-info">  
+    <div class="panel-default filter--box">  
         <div class="panel-heading">
             <a data-toggle="collapse" class="" href="#bl-category">
-                <h4 class="text-muted">Categories</h4>
+                <h3 class="">Categories</h3>
             </a>
         </div>
         <div role="navigation" class="collapse collapsing panel-body" id="bl-category">
             <div class="sidebar-nav navbar-collapse">
+                <input type="text" class="form-filter" placeholder="Write specific skill...">
                 <ul class="nav" id="side-menu" >                                                                          
                     <li>
                         <a href="#"><i class="fa fa-desktop fa-fw"></i> Web Developer<span class="fa arrow"></span></a>                                            <ul class="nav nav-second-level">
@@ -24,17 +25,21 @@
                             <li>
                                 <a href="#">JQuery</a>
                             </li>
+                            <li>
+                                <a href="#">......</a>
+                            </li>
                         </ul>
                     </li>                                                                                  
                 </ul>
+
             </div>
         </div>
     </div>                    
 
-    <div class="panel panel-default">   
+    <div class="panel-default filter--box">   
         <div class="panel-heading">
             <a data-toggle="collapse" href="#bl-gender">
-                <h4 class="text-muted pad-2px">Gender</h4>
+                <h3 class="">Gender</h3>
             </a>
         </div>
         <div class="mag-10px collapse panel-body" id="bl-gender">
@@ -42,9 +47,11 @@
             <input type="checkbox" class="mag-10px text-inline"> <p class="text-muted mag-10px text-inline">Female</p>
         </div>                  
     </div>   
-    <div class="panel panel-default">
+    <div class="panel-default filter--box">
         <div class="panel-heading">
-            <a data-toggle="collapse" href="#bl-age"><h4 class="text-muted pad-2px">Age</h4></a>
+            <a data-toggle="collapse" href="#bl-age">
+                <h3 class="">Age</h3>
+            </a>
         </div>
         <div class="collapse panel-body" id="bl-age">                              
             <div class="col-sm-6">
@@ -64,9 +71,11 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-default">
+    <div class="panel-default filter--box">
         <div class="panel-heading">
-            <a data-toggle="collapse" href="#bl-province"><h4 class="text-muted pad-2px">Province / City</h4></a>
+            <a data-toggle="collapse" href="#bl-province">
+                <h3 class="">Province / City</h3>
+            </a>
         </div>
         <div class="col-lg-8 collapse panel-body" id="bl-province">
             <select class="form-control">
@@ -79,9 +88,11 @@
         </div>                        
     </div>
 
-    <div class="panel panel-default">
+    <div class="panel-default filter--box">
         <div class="panel-heading">
-            <a data-toggle="collapse" href="#bl-language"><h4 class="text-muted pad-2px">Language</h4></a>                           
+            <a data-toggle="collapse" href="#bl-language">
+                <h3 class="">Language</h3>
+            </a>                           
         </div>
         <div class="col-sm-12 collapse panel-body" id="bl-language">
             <input type="checkbox"/><p class="text-inline text-muted mag-10px">English</p><br>
@@ -92,9 +103,11 @@
             <input type="checkbox"/><p class="text-inline text-muted mag-10px">Thai</p><br>
         </div>
     </div> 
-    <div class="panel panel-default">
+    <div class="panel-default filter--box">
         <div class="panel-heading">
-            <a data-toggle="collapse" href="#bl-experience"><h4 class="text-muted pad-2px">Experience</h4></a>
+            <a data-toggle="collapse" href="#bl-experience">
+                <h3 class="">Experience</h3>
+            </a>
         </div>
         <div class="mag-10px collapse panel-body" id="bl-experience">                                                 
             <div class="col-s-m6">
@@ -108,9 +121,11 @@
         </div>
     </div>                                                   
 
-    <div class="panel panel-default">
+    <div class="panel-default filter--box">
         <div class="panel-heading">
-            <a data-toggle="collapse" href="#bl-salary"><h4 class="text-muted">Salary</h4></a>
+            <a data-toggle="collapse" href="#bl-salary">
+                <h3 class="">Salary</h3>
+            </a>
         </div>
         <div class="mag-10px collapse panel-body" id="bl-salary">                              
             <div class="col-lg-6">                                    

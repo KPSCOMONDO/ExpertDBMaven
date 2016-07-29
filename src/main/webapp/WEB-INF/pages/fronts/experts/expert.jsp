@@ -24,8 +24,6 @@
                 <jsp:include page="includes/expert-list.jsp"/>                
             </div>
         </div>
-
-
     </section>
     <jsp:include page="../includes/footer.jsp"/>
     <jsp:include page="../includes/home-script.jsp"/>
