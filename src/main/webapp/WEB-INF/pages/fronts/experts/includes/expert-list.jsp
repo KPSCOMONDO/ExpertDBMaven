@@ -12,11 +12,11 @@
         </div>        
         <div class="col-sm-8">
             <div class="text-right">
-                <button class="btn"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn"><</button>
                 <label class="sub-menu">Page</label>
                 <input type="text" value="2" style="width: 10%; font-size: 16pt;">
-                <button  class="btn"><i class="glyphicon glyphicon-chevron-right"></i></button>           
-                <button  class="btn"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button  class="btn"><</button>           
+                <button  class="btn">></button>
                 <label class="sub-menu">of 5 pages</label>
             </div> 
         </div>

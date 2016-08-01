@@ -12,41 +12,36 @@
         <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 168, 133);"></div>
         <div class="mbr-section__container mbr-section__container--isolated container">
             <div class="row">
-                <div class="mbr-box mbr-box--fixed mbr-box--adapted" style="background-color: white; margin-top: 10%;margin-bottom: 0%;">
+                <div class="mbr-box mbr-box--fixed mbr-box--adapted" style="background-color: white; margin-top: 8%;margin-bottom: 0%;">
                     <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-2">
                         <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom">
-                            <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px" src="/resources/static/img/profile/channy.jpg">
+                            <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/static/img/profile/channy.jpg">
                         </figure>
                     </div>
                     <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">
-                        <div class="mbr-section__container mbr-section__container--middle">
-                            <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg">
-                                <h2 class="">Sok Channy</h2>
-                                <div class="mbr-reviews__text">
-                                    <p class="mbr-reviews__p">
-                                        Filter your candidate.
-                                    </p>
-                                </div>
+                        <div class="mbr-section__container mbr-section__container--middle"  style="margin-bottom: 0px; padding-bottom: 0px">
+                            <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">
+                                <h1 class="">Sok Channy</h1>                                
+                                <h3>
+                                    <h2>Phnom Penh</h2>
+                                </h3>                               
                             </div>
-                        </div>
-                        <div class="mbr-section__container mbr-section__container--middle">
-                            <div class="mbr-article mbr-article--auto-align mbr-article--wysiwyg">
-                                <p>     
-                                    We are freelance developer team. we build this platform for our country.
-                                </p>
-                            </div>                    
-                            <div class="mbr-section__container">
-                                <div class="mbr-buttons mbr-buttons--auto-align btn-inverse"><a class="mbr-buttons__btn btn btn-lg btn-default" href="https://mobirise.com/bootstrap-template/">LEARN MORE</a></div>
+                            <div class="col-sm-6 text-left">
+                                <p class="mbr-reviews__p mbr-reviews__text ">
+                                    Expect salary : 300$
+                                </p>                                
+                                <br>
+                                <i class="glyphicon glyphicon-phone" style="color: black"> (855)86 65 14 43</i><br><br>
+                                <i class="glyphicon glyphicon-envelope" style="color: black"> Sokchanny.sg@gmail.com</i><br><br>
+                                <i class="glyphicon glyphicon-globe" style="color: black"> www.c_fd.org.com.kh</i><br>                        
                             </div>
-                        </div>
-
+                        </div>                     
                     </div>
                 </div>
             </div>
     </section>  
     <jsp:include page="includes/detail.jsp"/>
-    <jsp:include page="includes/contact.jsp"/>   
-    <jsp:include page="../includes/footer.jsp"/>
+    <jsp:include page="includes/contact.jsp"/>  
     <jsp:include page="../includes/home-script.jsp"/>
 </body>
 </html>
