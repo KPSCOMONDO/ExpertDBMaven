@@ -24,7 +24,7 @@
     <!-- one record -->
     <div class="col-sm-12 box--result">
         <div class="col-sm-2 no-wrap">                                                                                         
-            <img class="img-responsive" src="../../../../../resources/static/img/profile/channy.jpg" alt=""/>
+            <img class="img-responsive" src="/resources/static/img/profile/channy.jpg" alt=""/>
         </div>                        
         <div class="col-sm-6">                                  
             <h3 class="">Sok Channy</h3>

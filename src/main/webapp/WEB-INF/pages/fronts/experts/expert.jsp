@@ -8,16 +8,15 @@
     </head>
     <body>
         <jsp:include page="includes/menubar.jsp"/>
-
     <section class="content-2" id="features1-42" style="background-color: rgb(255, 255, 255);">
         <div class="container">
             <div class="row"> 
-                <div class="content-2">
-                    <div class="col-sm-10">
+                <div class="content-2 text-center">
+                    <div class="col-sm-10 search--expert">
                         <input type="text" class="form-control expert--search-box animated fadeInUp delay" placeholder="Search for skill...">
                     </div>
-                    <div class="col-sm-2">
-                        <button class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay">Search</button>
+                    <div class="col-sm-2 search--expert">
+                        <button class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay btn--search--expert">Search</button>
                     </div>
                 </div>
                 <jsp:include page="includes/search-tool.jsp"/>
