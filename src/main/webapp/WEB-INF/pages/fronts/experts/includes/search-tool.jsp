@@ -1,16 +1,16 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="col-sm-4 text-left">                  
-    <h3 class="text-muted col-sm-12">Filter by:</h3><br><br>                              
+    <h3 class="ol-sm-12">Filter by:</h3>                              
     <div class="panel-default filter--box">  
         <div class="panel-heading">
             <a data-toggle="collapse" class="" href="#bl-category">
-                <h3 class="">Categories <span class="icon pull-right icon-angle-down"></span></h3>
+                <h3 class="">Skill<span class="icon pull-right icon-angle-down"></span></h3>
             </a>
         </div>
         <div role="navigation" class="collapse collapsing panel-body" id="bl-category">
             <div class="sidebar-nav navbar-collapse">
                 <input type="text" class="form-filter" placeholder="Write specific skill...">
-                <ul class="nav" id="side-menu" >                                                                          
+                <ul class="nav">                                                                          
                     <li>
                         <a href="#"><i class="fa fa-desktop fa-fw"></i> Web Developer<span class="fa arrow"></span></a>                                            <ul class="nav nav-second-level">
                             <li>
@@ -42,9 +42,10 @@
                 <h3 class="">Gender</h3>
             </a>
         </div>
-        <div class="mag-10px collapse panel-body" id="bl-gender">
-            <input type="checkbox" class="mag-10px text-inline"> <p class="text-muted mag-10px text-inline">Male</p>
-            <input type="checkbox" class="mag-10px text-inline"> <p class="text-muted mag-10px text-inline">Female</p>
+        <div class="collapse panel-body" id="bl-gender">
+            <input type="radio" name="rdoGender" checked="true" class="">&nbsp;&nbsp;<label class="sub-menu">Male</label><br>
+            <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Female</label><br>
+            <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Other</label>
         </div>                  
     </div>   
     <div class="panel-default filter--box">
@@ -53,22 +54,12 @@
                 <h3 class="">Age</h3>
             </a>
         </div>
-        <div class="collapse panel-body" id="bl-age">                              
-            <div class="col-sm-6">
-                <input type="radio" name="rdAge"><p class="text-muted mag-10px text-inline"> 18 to 25 years old</p>
-            </div>
-            <div class="col-sm-6">                                    
-                <input type="radio" name="rdAge"><p class="text-muted mag-10px text-inline"> 26 to 29 years old</p>                                    
-            </div>
-            <div class="col-sm-6">                                    
-                <input type="radio" name="rdAge"><p class="text-muted mag-10px text-inline"> 30 to 35 years old</p>
-            </div>
-            <div class="col-sm-6">                                    
-                <input type="radio" name="rdAge"><p class="text-muted mag-10px text-inline"> 36 than 40 years old</p>
-            </div>
-            <div class="col-sm-6">                                    
-                <input type="radio" name="rdAge"><p class="text-muted mag-10px text-inline"> More than 40 years old</p>
-            </div>
+        <div class="collapse panel-body" id="bl-age">                                        
+            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">18 to 25 years old</label><br>                                       
+            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">26 to 29 years old</label><br>                                                                       
+            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">30 to 35 years old</label><br>                                               
+            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">36 than 40 years old</label><br>                              
+            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">More than 40 years old</label><br>  
         </div>
     </div>
     <div class="panel-default filter--box">
@@ -77,7 +68,7 @@
                 <h3 class="">Province / City</h3>
             </a>
         </div>
-        <div class="col-lg-8 collapse panel-body" id="bl-province">
+        <div class="collapse panel-body" id="bl-province">
             <select class="form-control">
                 <option>Select one</option>
                 <option>Phnom Penh</option>
@@ -94,13 +85,13 @@
                 <h3 class="">Language</h3>
             </a>                           
         </div>
-        <div class="col-sm-12 collapse panel-body" id="bl-language">
-            <input type="checkbox"/><p class="text-inline text-muted mag-10px">English</p><br>
-            <input type="checkbox"/><p class="text-inline text-muted mag-10px">Chines</p><br>
-            <input type="checkbox"/><p class="text-inline text-muted mag-10px">Korean</p><br>
-            <input type="checkbox"/><p class="text-inline text-muted mag-10px">Japan</p><br>
-            <input type="checkbox"/><p class="text-inline text-muted mag-10px">Khmer</p><br>
-            <input type="checkbox"/><p class="text-inline text-muted mag-10px">Thai</p><br>
+        <div class="collapse panel-body" id="bl-language">
+            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">English</label><br>
+            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Chines</label><br>
+            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Korean</label><br>
+            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Japan</label><br>
+            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Khmer</label><br>
+            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Thai</label><br>
         </div>
     </div> 
     <div class="panel-default filter--box">
@@ -109,15 +100,11 @@
                 <h3 class="">Experience</h3>
             </a>
         </div>
-        <div class="mag-10px collapse panel-body" id="bl-experience">                                                 
+        <div class="collapse panel-body" id="bl-experience">                                                 
             <div class="col-s-m6">
                 <input id="ex2" class="text-inline" type="range"/>  
             </div>
-            <div class="col-sm-6">
-                <p class="text-muted text-inline​ pad-2px">
-                    At least 1 years
-                </p>
-            </div>
+            2 years
         </div>
     </div>                                                   
 
@@ -127,19 +114,11 @@
                 <h3 class="">Salary</h3>
             </a>
         </div>
-        <div class="mag-10px collapse panel-body" id="bl-salary">                              
-            <div class="col-lg-6">                                    
-                <input type="radio" name="rdSalary"><p class="text-muted"> 0$ - 199 USD</p>
-            </div>
-            <div class="col-lg-6">                                    
-                <input type="radio" name="rdSalary"><p class="text-muted"> 200 - 499 USD</p>
-            </div>
-            <div class="col-lg-6">                                    
-                <input type="radio" name="rdSalary"><p class="text-muted"> 1,000 - 1,999 USD</p>
-            </div>
-            <div class="col-lg-6">                                    
-                <input type="radio" name="rdSalary"><p class="text-muted"> 2,000 USD+</p>
-            </div>
+        <div class="collapse panel-body" id="bl-salary">                                                                 
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;0 USD - 199 USD</label><br>                                  
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;200 - 499 USD</label><br>                            
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;1,000 - 1,999 USD</label><br>                                   
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;2,000 USD+</label>
         </div>
     </div>                        
 </div>
