@@ -1,10 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="col-sm-4 text-left">                  
-    <h4 class="text-muted">Filter by:</h4>                               
+    <h3 class="text-muted col-sm-12">Filter by:</h3><br><br>                              
     <div class="panel-default filter--box">  
         <div class="panel-heading">
             <a data-toggle="collapse" class="" href="#bl-category">
-                <h3 class="">Categories</h3>
+                <h3 class="">Categories <span class="icon pull-right icon-angle-down"></span></h3>
             </a>
         </div>
         <div role="navigation" class="collapse collapsing panel-body" id="bl-category">

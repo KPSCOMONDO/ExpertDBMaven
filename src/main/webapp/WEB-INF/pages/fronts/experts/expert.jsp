@@ -14,7 +14,7 @@
             <div class="row"> 
                 <div class="content-2">
                     <div class="col-sm-10">
-                        <input type="text" class="form-control expert--search-box" placeholder="Search for skill...">
+                        <input type="text" class="form-control expert--search-box animated fadeInUp delay" placeholder="Search for skill...">
                     </div>
                     <div class="col-sm-2">
                         <button class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay">Search</button>
