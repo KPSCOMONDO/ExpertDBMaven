@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div class="col-sm-4 text-left">                  
+<div class="col-sm-4 text-left box--bottom--shardow searck--categroy">                  
     <h3 class="ol-sm-12">Filter by:</h3>                              
     <div class="panel-default filter--box">  
         <div class="panel-heading">
@@ -9,10 +9,10 @@
         </div>
         <div role="navigation" class="collapse collapsing panel-body" id="bl-category">
             <div class="sidebar-nav navbar-collapse">
-                <input type="text" class="form-filter" placeholder="Write specific skill...">
+                <input type="text" class="form-filter expert--province--select" placeholder="Write specific skill...">
                 <ul class="nav">                                                                          
-                    <li>
-                        <a href="#"><i class="fa fa-desktop fa-fw"></i> Web Developer<span class="fa arrow"></span></a>                                            <ul class="nav nav-second-level">
+                    <li>                        
+                        <ul class="nav nav-second-level search--skill">
                             <li>
                                 <a href="#">HTML</a>                                                   
                             </li>

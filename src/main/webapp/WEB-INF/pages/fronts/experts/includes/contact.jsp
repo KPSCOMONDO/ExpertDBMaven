@@ -2,7 +2,7 @@
 <section class="mbr-section mbr-section--relative mbr-parallax-background" id="msg-box5-46" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
     <div class="mbr-section__container mbr-section__container--isolated container content-2">  
         <div class="mbr-overlay" style="opacity: 0.1; background-color: black"></div>
-        <div class="col-sm-8 section">
+        <div class="col-sm-8 section" style="z-index: 9999">
             <h2 class="heading">Message  <i class="fa fa-envelope-o"></i></h2>
             <select class="form-control">
                 <option>Expert account</option>
@@ -13,7 +13,7 @@
             <br>
             <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="">SEND</a>
         </div>
-        <div class="col-sm-4 contact--expert">                  
+        <div class="col-sm-4 contact--expert"  style="z-index: 9999">                  
             <h2 class="heading">Contact</h2>
             <div class="content">
                 <h4><i class="glyphicon glyphicon-map-marker"></i><span>&nbsp;&nbsp;Phnom Penh, Cambodia</span></h4>

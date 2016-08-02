@@ -14,7 +14,7 @@
             <div class="text-right">
                 <button class="btn"><</button>
                 <label class="sub-menu">Page</label>
-                <input type="text" value="2" style="width: 10%; font-size: 16pt;">
+                <input type="text" value="2" style="width: 10%; font-size: 16pt;padding: 0px 6px 5px 5px;">
                 <button  class="btn"><</button>           
                 <button  class="btn">></button>
                 <label class="sub-menu">of 5 pages</label>
