@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted mbr-after-navbar" id="header1-40" data-bg-video="https://www.youtube.com/watch?v=cqNmVJk7Zyg">
     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left">
-        <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(76, 105, 114);"></div>
+        <div class="mbr-overlay" style="opacity: 0.0; background-color: rgb(255, 205, 254);"></div>
         <div class="mbr-box__container mbr-section__container container">
             <div class="mbr-box mbr-box--stretched">
                 <div class="mbr-box__magnet mbr-box__magnet--center-left">

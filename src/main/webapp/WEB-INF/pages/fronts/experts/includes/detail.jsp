@@ -50,7 +50,7 @@
             </section>
 
         </div>
-        <div class="secondary col-sm-4">                        
+        <div class="secondary col-sm-4 box--bottom--shardow">                        
             <h2 class="heading">Skill base</h2>
             <div class="section-inner">
                 <div class="content">                           

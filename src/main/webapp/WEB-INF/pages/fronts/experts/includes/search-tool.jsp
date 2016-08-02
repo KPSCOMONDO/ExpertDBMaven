@@ -43,7 +43,7 @@
             </a>
         </div>
         <div class="collapse panel-body" id="bl-gender">
-            <input type="radio" name="rdoGender" checked="true" class="">&nbsp;&nbsp;<label class="sub-menu">Male</label><br>
+            <input type="radio" name="rdoGender" checked class="">&nbsp;&nbsp;<label class="sub-menu">Male</label><br>
             <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Female</label><br>
             <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Other</label>
         </div>                  

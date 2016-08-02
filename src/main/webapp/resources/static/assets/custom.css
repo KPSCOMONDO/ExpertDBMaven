@@ -293,7 +293,9 @@ h2,h1,h3{
         min-height: 150px;
     }
     .timeline > li .timeline-panel {
-        padding: 0 20px 20px;
+        padding: 0 0px 00px;
+        margin-top: 5%;
+        padding: 0 0 0 0;
     }
     .timeline > li .timeline-image {
         width: 150px;
@@ -361,13 +363,22 @@ h2,h1,h3{
 }
 /*Contact*/ 
 .contact--expert{
-    
+
 }
 .contact--expert h4{
-    font-size: 12pt;
-    color: #ffffff;
+    font-size: 13pt;
+    color: #E0E0E0;
+    font-weight: 300;
 }
 .contact--expert h4 a{
     text-decoration: none;
     font-size: 12pt;    
+}
+.contact--expert span,a{
+    font-size: 12pt;
+    color: #EEEEEE;
+}
+
+.timeline-none-inverted{
+    margin-top: 5%;
 }

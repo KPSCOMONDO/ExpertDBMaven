@@ -9,10 +9,10 @@
     <body>
         <jsp:include page="includes/menubar.jsp"/>
     <section class="mbr-section mbr-section--relative" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
-        <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 168, 133);"></div>
-        <div class="mbr-section__container mbr-section__container--isolated container" style="padding-bottom: 10px;padding-top:140px">
+        <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(255, 355, 255);"></div>
+        <div class="mbr-section__container mbr-section__container--isolated container" style="padding-bottom: 10px;padding-top:200px">
             <div class="row">
-                <div class="mbr-box mbr-box--fixed mbr-box--adapted" style="background-color: white;">
+                <div class="mbr-box mbr-box--fixed mbr-box--adapted box--bottom--shardow" style="background-color: white;">
                     <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-2">
                         <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom">
                             <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/static/img/profile/channy.jpg">

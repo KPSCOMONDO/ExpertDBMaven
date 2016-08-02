@@ -15,11 +15,11 @@
         <div class="col-sm-4 contact--expert">                  
             <h2 class="heading">Contact</h2>
             <div class="content">
-                <h4>Location:Phnom Penh, Cambodia</h4>
-                <h4>Email:<a href="#">sokchanny.sg@gmail.com</a></h4>
-                <h4>Website:<a href="#">http://www.website.com</a></h4>
-                <h4>Mobile Phone:<a href="#">(+855)86-651-443</a></h4>
-                <h4>Home Phone:<a href="#">(+855)55-222-443-55</a></h4>
+                <h4><i class="glyphicon glyphicon-map-marker"></i><span>&nbsp;&nbsp;Phnom Penh, Cambodia</span></h4>
+                <h4><i class="glyphicon glyphicon-envelope"></i><a href="#">&nbsp;&nbsp;sokchanny.sg@gmail.com</a></h4>
+                <h4><i class="glyphicon glyphicon-globe"></i><a href="#">&nbsp;&nbsp;http://www.website.com</a></h4>
+                <h4><i class="glyphicon glyphicon-phone"></i><a href="#">&nbsp;&nbsp;(+855)86-651-443</a></h4>
+                <h4><i class="glyphicon glyphicon-phone-alt"></i><a href="#">&nbsp;&nbsp;(+855)55-222-443-55</a></h4>
             </div> 
         </div>
     </div>                                                     
