@@ -8,7 +8,7 @@
     </head>
     <body>
         <jsp:include page="includes/menubar.jsp"/>
-    <section class="mbr-section mbr-section--relative mbr-parallax-background" id="msg-box5-46" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
+    <section class="mbr-section mbr-section--relative" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
         <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 168, 133);"></div>
         <div class="mbr-section__container mbr-section__container--isolated container" style="padding-bottom: 10px;padding-top:140px">
             <div class="row">
@@ -23,7 +23,7 @@
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">
                                 <h1 class="">Sok Channy</h1>                                
                                 <h3>
-                                    <h2>Phnom Penh</h2>
+                                    Phnom Penh
                                 </h3>                               
                             </div>
                             <div class="col-sm-6 text-left">
@@ -38,13 +38,11 @@
                         </div>                     
                     </div>
                 </div>
-            </div>
-
-            
-
+            </div>        
     </section>  
     <jsp:include page="includes/detail.jsp"/>
-    <jsp:include page="includes/contact.jsp"/>  
+    <jsp:include page="includes/contact.jsp"/> 
+    <jsp:include page="../includes/footer.jsp"/> 
     <jsp:include page="../includes/home-script.jsp"/>
 </body>
 </html>
