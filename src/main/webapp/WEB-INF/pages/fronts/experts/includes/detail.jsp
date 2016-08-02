@@ -1,150 +1,140 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<section>
-    <div class="col-lg-8 col-lg-offset-2">
-        <div class="row">                  
-            <div class="col-lg-8">
-                <section class="section horizontal-underline-line">
-                    <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p>Write a brief intro about yourself. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>    
-                            <p>It's a good idea to include your personal interests and hobbies as well. Commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<div class="mbr-section__container mbr-section__container--isolated container">                
+    <div class="col-sm-8">
+        <section class="section horizontal-underline-line">
+
+        </section>
+        <h2 class="heading">Work Experience</h2>
+        <section class="mbr-section mbr-section--relative mbr-parallax-background" id="msg-box5-46" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
+
+
+
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image">
+                        <h4>2010<br>To<br>2014</h4>
+                    </div>
+                    <div class="timeline-panel mbr-reviews__up__text">                                             
+                        <div class="timeline-heading">
+                            <p class="text-muted">Our Humble Beginnings</p>
                         </div>
                     </div>
-                </section>                             
-                <section class="experience section horizontal-underline-line">
-                    <div class="section-inner">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup Hub</a></span> <span class="year">(2014 - Present)</span></h3>
-                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                            </div>
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span> <span class="year">(2013 - 2014)</span></h3>
-                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
-                            </div>
-
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span> <span class="year">(2012 - 2013)</span></h3>
-                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
-                            </div>
-
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>2010
+                            <br>To
+                            <br>2014</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>March 2011</h4>
+                            <h4 class="subheading">An Agency is Born</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
                         </div>
                     </div>
-                </section>
-                <section class="projects section">
-                    <div class="section-inner container">
-                        <h2 class="heading">Other Projects</h2>
-                        <div class="content">
-                            <div class="item col-lg-4">
-                                <h3 class="title"><a href="#">Employee Records</a></h3>                                    
-                                <p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
-                            </div><!--//item-->
-                            <div class="item col-lg-4">
-                                <h3 class="title"><a href="#">IT-Green Project</a> <span class="label label-theme">Open Source</span></h3>                                  
-                                <p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
-                            </div><!--//item-->      
-                            <div class="item col-lg-4">
-                                <h3 class="title"><a href="#">Pay Go</a> <span class="label label-theme">E-Zcome</span></h3>                                  
-                                <p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
-                            </div><!--//item--> 
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-
-            </div><!--//primary-->
-            <div class="secondary col-lg-4 col-md-4 col-sm-12 col-xs-12 vertical-line-left">                        
-                <aside class="skills aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">                                
-                            <div class="skillset">
-                                <div class="item">
-                                    <h3 class="level-title">Python
-                                        <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="70%">
-                                        </div>                                      
-                                    </div><!--//level-bar--> 
-                                </div><!--//item-->
-                                <div class="item">
-                                    <h3 class="level-title">Javascript &amp; jQuery<span class="level-label">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="96%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">HTML5, CSS3, SASS &amp; SS<span class="level-label">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="96%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Ruby on Rails<span class="level-label">Pro</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="85%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-
-
-
-                <aside class="education aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Computer Science</h3>
-                                <h4 class="university">Royal University of Phnom Penh <span class="year">(2012-2016)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> IT Expert(skill)</h3>
-                                <h4 class="university">KSHRD Center <span class="year">(20016-2017)</span></h4>
-                            </div><!--//item-->                                
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-
-                <aside class="languages aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level">Fair good</span>
-                                </li><!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Korean:</strong></span>
-                                    <span class="level">Fair</span>
-                                </li><!--//item-->
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->               
-
-                <aside class="credits aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Achievement</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><a href="#" target="_blank"><i class="fa fa-external-link"></i> Public Speaking (29 April 2012)</a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-external-link"></i> Best Hacker Barcam (19 May 2012)</a></li>                                                                                                  
-                            </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->                    
-            </div><!--//secondary-->  
-        </div><!--//row-->
+                </li>                                   
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>Be Part
+                            <br>Of Our
+                            <br>Story!</h4>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="projects section">
+            <div class="section-inner container">
+                <h2 class="heading">Other Projects</h2>
+                <div class="content">
+                    <div class="item col-lg-4">
+                        <h3 class="title"><a href="#">Employee Records</a></h3>                                    
+                        <p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                    </div>
+                    <div class="item col-lg-4">
+                        <h3 class="title"><a href="#">IT-Green Project</a> <span class="label label-theme">Open Source</span></h3>                                  
+                        <p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                    </div>    
+                    <div class="item col-lg-4">
+                        <h3 class="title"><a href="#">Pay Go</a> <span class="label label-theme">E-Zcome</span></h3>                                  
+                        <p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                    </div>
+                </div>
+            </div>             
+        </section>
     </div>
+    <div class="secondary col-sm-4">                        
+        <h2 class="heading row">Skill base</h2>
+        <div class="section-inner">
+            <div class="content">                           
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                         aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                        HTML
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                         aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                        IOS
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                         aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                        JAVA
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                         aria-valuemin="0" aria-valuemax="100" style="width:99%">
+                        Spring
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aside class="education aside section">
+            <h2 class="heading row">Education</h2>
+            <div class="content">
+                <div class="item">                      
+                    <h3><i class="fa fa-graduation-cap"></i> Computer Science</h3>
+                    <p class="mbr-reviews__up__text mbr-reviews__up__p">Royal University of Phnom Penh <span class="year">(2012-2016)</span></p>
+                </div>
+                <div class="item">
+                    <h3><i class="fa fa-graduation-cap"></i> IT Expert(skill)</h3>
+                    <p class="mbr-reviews__up__text mbr-reviews__up__p">KSHRD Center <span class="year">(20016-2017)</span></p>
+                </div>                               
+            </div>
 
-</section><!--//masonry-->
+        </aside>
+
+        <aside class="languages aside section">
+
+            <h2 class="heading row">Languages</h2>
+            <div class="content">
+                <ul class="list-unstyled">
+                    <li class="item">
+                        <span class="title"><strong>English:</strong></span>
+                        <span class="level">Fair good</span>
+                    </li>
+                    <li class="item">
+                        <span class="title"><strong>Korean:</strong></span>
+                        <span class="level">Fair</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>          
+
+        <aside class="credits aside section">            
+            <h2 class="heading row">Achievement</h2>
+            <div class="content">
+                <ul class="list-unstyled">
+                    <li><a href="#" target="_blank"><i class="fa fa-external-link"></i> Public Speaking (29 April 2012)</a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-external-link"></i> Best Hacker Barcam (19 May 2012)</a></li>                                                                                                  
+                </ul>
+            </div>         
+        </aside>                  
+    </div>
+</div>

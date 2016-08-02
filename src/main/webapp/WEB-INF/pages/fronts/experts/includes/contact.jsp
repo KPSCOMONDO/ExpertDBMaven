@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<section>                                     
-    <div class="col-lg-8 col-lg-offset-2 secondary contact ">   
+<section class="mbr-section mbr-section--relative mbr-parallax-background" id="msg-box5-46" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
+    <div class="">   
         <div class="col-lg-8 section">
             <h2 class="heading">Message  <i class="fa fa-envelope-o"></i></h2>
             <select class="form-control">
