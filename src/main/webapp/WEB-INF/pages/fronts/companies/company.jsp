@@ -7,7 +7,7 @@
         <jsp:include page="../includes/home-style.jsp"/>
     </head>
     <body>
-        <jsp:include page="includes/menubar.jsp"/>     
+        <jsp:include page="/includes/menubar.jsp">     
         <jsp:include page="../includes/footer.jsp"/>
         <jsp:include page="../includes/home-script.jsp"/>
     </body>

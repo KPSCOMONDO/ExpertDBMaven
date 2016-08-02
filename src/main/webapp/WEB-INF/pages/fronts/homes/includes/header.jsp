@@ -11,9 +11,15 @@
                                 <h1 class="mbr-hero__text">Expert Database</h1>
                                 <p class="mbr-hero__subtext">We provided a platform for recruitment. <br></p>
                             </div>
-                            <div class="mbr-buttons btn-inverse mbr-buttons--lef">
-                                <input type="text" class="form-control search--box animated fadeInUp delay" placeholder="Search for job position, skill, subject ....">
-                                <a class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-warning" href="">Find Candidate</a> 
+                            <div class="mbr-buttons btn-inverse mbr-buttons--lef">                                
+                                <select class="form-control animated fadeInUp delay search--box">
+                                    <option>Search by skill</option>
+                                    <option>Web Development</option>
+                                    <option>SPRING FRAMEWORK</option>
+                                    <option>CMS</option>
+                                    <option>C#</option>
+                                </select>
+                                <a class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-warning" href="${pageContext.request.contextPath}/expert">Find Candidate</a> 
                                 <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="">LEARN MORE</a>
                             </div>                            
                         </div>

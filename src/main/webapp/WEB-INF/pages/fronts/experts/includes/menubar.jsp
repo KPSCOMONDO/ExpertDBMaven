@@ -16,7 +16,7 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="one-page.html">Home</a>
+                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/   ">Home</a>
                                 </li> 
                                 <li class="mbr-navbar__item">
                                     <a class="mbr-buttons__link btn text-white" href="slider.html">Find company</a>
