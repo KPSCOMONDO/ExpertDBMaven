@@ -6,7 +6,7 @@
         <title>Insert title here</title>
         <jsp:include page="../includes/home-style.jsp"/>
     </head>
-    <body>
+    <body ng-app="home__app" ng-controller="home__controller">       
         <jsp:include page="../includes/menubar.jsp"/>
         <jsp:include page="includes/header.jsp"/>
         <jsp:include page="includes/mission.jsp"/>
@@ -14,5 +14,6 @@
         <jsp:include page="includes/guidline.jsp"/>
         <jsp:include page="../includes/footer.jsp"/>
         <jsp:include page="../includes/home-script.jsp"/>
+        <script src="../../../../resources/scripts/frontend/home.js" type="text/javascript"></script>
     </body>
 </html>

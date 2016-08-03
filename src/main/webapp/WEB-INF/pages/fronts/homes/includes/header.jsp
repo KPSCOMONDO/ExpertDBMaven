@@ -12,12 +12,9 @@
                                 <p class="mbr-hero__subtext">We provided a platform for recruitment. <br></p>
                             </div>
                             <div class="mbr-buttons btn-inverse mbr-buttons--lef">                                
-                                <select class="form-control animated fadeInUp delay search--box">
-                                    <option>Search by skill</option>
-                                    <option>Web Development</option>
-                                    <option>SPRING FRAMEWORK</option>
-                                    <option>CMS</option>
-                                    <option>C#</option>
+                                <select class="form-control animated fadeInUp delay search--box"> 
+                                    <option selected>Find by skill</option>
+                                    <option ng-repeat="skill in skills">{{skill.skill_name}}</option>                                  
                                 </select>
                                 <a class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-warning" href="${pageContext.request.contextPath}/expert">Find Candidate</a> 
                                 <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="">LEARN MORE</a>
