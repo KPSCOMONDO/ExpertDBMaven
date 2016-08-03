@@ -1,10 +1,10 @@
-package org.expert.authentation;
+package org.expert.database.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class authentationController {
+public class AuthentationController {
     @RequestMapping(value={"/login"})
     public String login(){
         return "/fronts/authentations/login";

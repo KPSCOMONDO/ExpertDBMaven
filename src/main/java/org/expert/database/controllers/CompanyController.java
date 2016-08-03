@@ -1,10 +1,10 @@
-package org.expert.company;
+package org.expert.database.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class companyController {
+public class CompanyController {
     @RequestMapping(value={"/company"})
     public String company(){
         return "/fronts/companies/company";

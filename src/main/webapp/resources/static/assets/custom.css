@@ -23,6 +23,9 @@ h2,h1,h3{
     background: none;
     color: black;
 }
+.expert--search-box{
+    border-color: black;
+}
 
 .search--expert{
     padding: 0px 0px 0px 0px;
@@ -299,7 +302,7 @@ h2,h1,h3{
         text-align: left;
         padding: 0 30px 20px 20px;
     }
-   
+
 }
 @media (min-width: 992px) {
     .timeline > li {
@@ -325,7 +328,7 @@ h2,h1,h3{
         margin-top: 5%;
         padding-left: 100px;
     }
-        
+
 }
 @media (min-width: 1200px) {
     .timeline > li {
@@ -378,7 +381,7 @@ h2,h1,h3{
 /*Contact*/ 
 
 .contact--company{
-    
+
 }
 .contact--company h4{
     font-size: 13pt;
@@ -391,7 +394,7 @@ h2,h1,h3{
 }
 .contact--company span, .contact--company a{
     font-size: 12pt;
-   color: grey;
+    color: grey;
 }
 
 .timeline-none-inverted{
@@ -420,4 +423,76 @@ h2,h1,h3{
 
 .searck--categroy{
     padding-bottom: 20px;
+}
+
+.login--control{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    margin: 5px 0px 5px 0px;
+    font-size: 12pt;
+    background: none;
+    border-color: #1A237E;
+    color: black;
+    padding: 5px 10px 5px 10px;
+    width: 100%;
+}
+.login--form{
+
+}
+.login--form h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-size: 28pt;
+    color: #ffffff;
+}
+.login--form p,.login--form p a{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-size: 12pt;
+    color: #ffffff;  
+    text-decoration: none;
+}
+
+
+
+/*  Modal  */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

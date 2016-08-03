@@ -1,10 +1,10 @@
-package org.expert.home;
+package org.expert.database.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class homeController {
+public class HomeController {
     @RequestMapping(value={"/", "/home"})
     public String home() {
         return "/fronts/homes/home";

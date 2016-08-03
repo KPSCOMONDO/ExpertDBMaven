@@ -8,6 +8,7 @@
     </head>
     <body>
         <jsp:include page="includes/menubar.jsp"/>
+
     <section class="" style="background-color: rgba(198, 199, 199, 1);padding: 115px 0 23px 0;">
         <div class="container">
             <div class="text-center">
@@ -20,7 +21,8 @@
             </div>
         </div>
     </section>
-    <section class="text-left content-2" style="padding-top: 0px">
+ 
+    <section class="text-left content-2" style="padding-top: 0px;z-index: -9">
         <div class="container">
             <div class="col-sm-6">
                 <h2 class="heading">RESULT</h2>
@@ -31,6 +33,22 @@
             </div>
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+        <div>
+            <div class="col-sm-4 col-sm-offset-4" style="opacity: 0.9;background-color: white;padding: 20px 20px 20px 20px;">
+                <span class="close">×</span>
+                <form>                        
+                    <input type="email" class="form-control login--control animated fadeInUp delay" placeholder="Email or Username"/>
+                    <input type="password" class="form-control login--control animated fadeInUp delay" placeholder="Password"/>
+                    <a class="mbr-buttons__btn btn btn-lg btn-default login--control animated fadeInUp delay" href="${pageContext.request.contextPath}/expert">Sign In</a>
+                    <span><input type="checkbox"> Remember me <br>Not a member ? <a href="">Sign Up</a></span>                        
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <section>
         <div class="container" style="padding-bottom: 100px">
             <jsp:include page="includes/search-tool.jsp"/>
@@ -39,5 +57,29 @@
     </section>
     <jsp:include page="../includes/footer.jsp"/>
     <jsp:include page="../includes/home-script.jsp"/>
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementsByClassName("btn--view--result")[2];
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        $(document).ready(function (){
+            $(".btn--view--result").click(function (){
+                $("#myModal").style(display = "block";
+            })
+            $(".close").click(function (){
+                modal.style.display = "none";
+            })
+        })
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

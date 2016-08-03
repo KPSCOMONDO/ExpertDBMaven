@@ -27,7 +27,7 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__btn btn btn-default" href="">Login</a>
+                                    <a class="mbr-buttons__btn btn btn-default" href="${pageContext.request.contextPath}/login">Login</a>
                                 </li>
                             </ul>
                         </div>

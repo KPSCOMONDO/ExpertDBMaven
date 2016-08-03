@@ -3,46 +3,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Insert title here</title>
-        <jsp:include page="../includes/bootstrap.jsp" />       
-        <link href="../../../../resources/static/css/custom/home.css" rel="stylesheet" type="text/css"/>
+        <title>Insert title here</title> 
+        <jsp:include page="../includes/home-style.jsp"/>
     </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <div class="login-panel panel panel-info">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><span><i class="fa fa-user"></i></span> <b>Sign In</b></h4>
-                        </div>
-                        <div class="panel-body">                                                                                       
-                            <form>
-                                
-                                    <div class="form-group">                                 
-                                        <input class="form-control" id="txEmail" placeholder="E-mail" name="email" type="text"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="txPassword" placeholder="Password" name="password" type="password" value="">
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                        </label>
-                                    </div>                              
-                             
-                            </form>
-                            <input type="submit" id="btn-login1" class="btn btn-lg btn-success btn-block" value="Login" >
-                            <div class="text-right">
-                                <label class="text-muted">Is not a member? <a href="signup.html">Sign up</a></label><br>
-                                <label class="text-muted">Forget password? <a href="resetpassword.html">Reset password</a></label>  
-                            </div>                            
-                        </div>
-                        <div class="panel-footer text-center">
-                            <a href="index.html" class="text-center">Cancel</a>
-                        </div>                            
-                    </div>
+    <body class="mbr-section mbr-section--relative" style="background-image: url(/resources/static/assets/images/background.jpg);-webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;">
+    <section>      
+        <div class="mbr-section__container mbr-section__container--isolated container content-2 login--form">     
+            <h1><strong>Expert Database</strong> Login Form</h1>
+            <p>This will bring you to new page and you can view all information of expert.</p>
+            <p><a href="${pageContext.request.contextPath}/"><i class="glyphicon glyphicon-arrow-left"></i> Go back</a></p>
+            <div class="col-sm-5">
+                <div  style="z-index: 99999;margin: 20px 20px 2px 20px;opacity: 0.8; background-color: white;z-index: -99;padding: 20px 20px 20px 20px">
+                    <form>                        
+                        <input type="email" class="form-control login--control animated fadeInUp delay" placeholder="Email or Username">
+                        <input type="password" class="form-control login--control animated fadeInUp delay" placeholder="Password">
+                        <a class="mbr-buttons__btn btn btn-lg btn-default login--control animated fadeInUp delay" href="${pageContext.request.contextPath}/expert">Sign In</a>
+                        <span><input type="checkbox"> Remember me <br>Not a member ? <a href="">Sign Up</a></span>                        
+                    </form>    
                 </div>
-            </div>
-        </div> 
-    </body>
+            </div>           
+        </div>                                                     
+    </section>
+</body>
 </html>

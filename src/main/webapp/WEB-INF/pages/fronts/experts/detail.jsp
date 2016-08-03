@@ -21,7 +21,7 @@
                     <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">
                         <div class="mbr-section__container mbr-section__container--middle">
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">
-
+                                <a href="#"><i class="glyphicon glyphicon-bookmark"> Mark</i></a>
                                 <h1 class="" style="margin-top: 10%;">Sok Channy<span class="glyphicons glyphicons-bookmark"></span></h1>                                
                                 <h3>
                                     <i class="glyphicon glyphicon-map-marker"></i>
