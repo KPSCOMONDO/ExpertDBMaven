@@ -13,21 +13,7 @@
                 <ul class="nav">                                                                          
                     <li>                        
                         <ul class="nav nav-second-level search--skill">
-                            <li>
-                                <a href="#">HTML</a>                                                   
-                            </li>
-                            <li>
-                                <a href="#">JavaScript</a>
-                            </li>
-                            <li>
-                                <a href="#">BootStrap</a>
-                            </li>
-                            <li>
-                                <a href="#">JQuery</a>
-                            </li>
-                            <li>
-                                <a href="#">......</a>
-                            </li>
+                            <li ng-repeat="skill in skills_by_cat_id">{{skill.skill_name}}</li>                           
                         </ul>
                     </li>                                                                                  
                 </ul>
@@ -70,11 +56,7 @@
         </div>
         <div class="collapse panel-body" id="bl-province">
             <select class="form-control">
-                <option>Select one</option>
-                <option>Phnom Penh</option>
-                <option>Batdambang</option>
-                <option>Siem Rieb</option>
-                <option>Pailin</option>                                    
+                <option ng-repeat="province in provinces">{{province.province_status}}</option>                                    
             </select>                            
         </div>                        
     </div>

@@ -6,9 +6,8 @@
         <title>Insert title here</title>
         <jsp:include page="../includes/home-style.jsp"/>
     </head>
-    <body>
+    <body ng-app="expert__app" ng-controller="expert__controller">
         <jsp:include page="includes/menubar.jsp"/>
-
     <section class="" style="background-color: rgba(198, 199, 199, 1);padding: 115px 0 23px 0;">
         <div class="container">
             <div class="text-center">
@@ -21,7 +20,7 @@
             </div>
         </div>
     </section>
- 
+
     <section class="text-left content-2" style="padding-top: 0px;z-index: -9">
         <div class="container">
             <div class="col-sm-6">
@@ -33,7 +32,7 @@
             </div>
         </div>
     </section>
-
+<%--
     <div id="myModal" class="modal">
         <div>
             <div class="col-sm-4 col-sm-offset-4" style="opacity: 0.9;background-color: white;padding: 20px 20px 20px 20px;">
@@ -47,7 +46,7 @@
             </div>
         </div>
     </div>
-
+--%>
 
     <section>
         <div class="container" style="padding-bottom: 100px">
@@ -64,11 +63,11 @@
         btn.onclick = function () {
             modal.style.display = "block";
         }
-        $(document).ready(function (){
-            $(".btn--view--result").click(function (){
+        $(document).ready(function () {
+            $(".btn--view--result").click(function () {
                 $("#myModal").style(display = "block";
             })
-            $(".close").click(function (){
+            $(".close").click(function () {
                 modal.style.display = "none";
             })
         })
@@ -81,5 +80,6 @@
             }
         }
     </script>
+    <script src="../../../../resources/scripts/frontend/expert.js" type="text/javascript"></script>
 </body>
 </html>

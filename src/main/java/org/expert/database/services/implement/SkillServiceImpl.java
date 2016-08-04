@@ -36,5 +36,10 @@ public class SkillServiceImpl implements SkillService{
         skillRepository.Delete(skill_id);
     }
 
+    @Override
+    public ArrayList<Skill> findAllByCatId(byte skill_category_id) {
+        return  skillRepository.findAllByCatId(skill_category_id);
+    }
+
     
 }
