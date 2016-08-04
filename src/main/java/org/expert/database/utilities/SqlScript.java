@@ -27,4 +27,11 @@ public class SqlScript {
     public static final String RS_LANGUAGE = "SELECT language_id,language_status FROM exp_languages";
     public static final String D_LANGUAGE = "";
     public static final String U_LANGUAGE = "";
+    
+     // skill category
+    public static final String C_SKILL_CATEGORY = "";
+    public static final String R_SKILL_CATEGORY = "SELECT skill_category_id,skill_category_status FROM exp_skill_category WHERE skill_category_id = #{skill_category_id}";
+    public static final String RS_SKILL_CATEGORY = "SELECT skill_category_id,skill_category_status FROM exp_skill_category";
+    public static final String D_SKILL_CATEGORY = "";
+    public static final String U_SKILL_CATEGORY = "";
 }

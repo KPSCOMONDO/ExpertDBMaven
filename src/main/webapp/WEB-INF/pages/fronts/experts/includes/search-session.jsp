@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>               
 <div class="col-sm-4 text-left box--bottom--shardow searck--categroy">                  
     <h3 class="ol-sm-12">Filter by:</h3>                              
     <div class="panel-default filter--box">  
@@ -7,21 +7,22 @@
                 <h3 class="">Skill<span class="icon pull-right icon-angle-down"></span></h3>
             </a>
         </div>
-        <div role="navigation" class="collapse collapsing panel-body" id="bl-category">
-            <div class="sidebar-nav navbar-collapse">
-                <input type="text" class="form-filter expert--province--select" placeholder="Write specific skill...">
-                <ul class="nav">                                                                          
-                    <li>                        
-                        <ul class="nav nav-second-level search--skill">
-                            <li ng-repeat="skill in skills_by_cat_id">{{skill.skill_name}}</li>                           
-                        </ul>
-                    </li>                                                                                  
-                </ul>
-
+        <div class="collapse panel-body"  id="bl-category">
+            <select class="form-filter expert--province--select" ng-model="cbo_skill_category">                    
+                <option ng-repeat="skill_category in skills_category" value="{{skill_category.skill_category_id}}">
+                    {{skill_category.skill_category_status}}
+                </option>                        
+            </select><br></br>                                                                                                          
+            <div ng-repeat="skill in skills_by_cat_id">
+                <label class="sub-menu" >
+                    <input type="checkbox">&nbsp;&nbsp;{{skill.skill_name}}
+                </label>
             </div>
+            <label class="sub-menu" >
+                &nbsp;&nbsp;More...
+            </label>
         </div>
     </div>                    
-
     <div class="panel-default filter--box">   
         <div class="panel-heading">
             <a data-toggle="collapse" href="#bl-gender">
@@ -31,7 +32,7 @@
         <div class="collapse panel-body" id="bl-gender">
             <input type="radio" name="rdoGender" checked class="">&nbsp;&nbsp;<label class="sub-menu">Male</label><br>
             <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Female</label><br>
-            <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Other</label>
+            <input type="radio" name="rdoGender">&nbsp;&nbsp;<label class="sub-menu">Both</label>
         </div>                  
     </div>   
     <div class="panel-default filter--box">
@@ -55,8 +56,10 @@
             </a>
         </div>
         <div class="collapse panel-body" id="bl-province">
-            <select class="form-control">
-                <option ng-repeat="province in provinces">{{province.province_status}}</option>                                    
+            <select class="form-filter expert--province--select">
+                <option ng-repeat="province in provinces">
+                    {{province.province_status}}
+                </option>                                    
             </select>                            
         </div>                        
     </div>
@@ -68,12 +71,14 @@
             </a>                           
         </div>
         <div class="collapse panel-body" id="bl-language">
-            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">English</label><br>
-            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Chines</label><br>
-            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Korean</label><br>
-            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Japan</label><br>
-            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Khmer</label><br>
-            <input type="checkbox"/>&nbsp;&nbsp;<label class="sub-menu">Thai</label><br>
+            <div ng-repeat="language in languages">
+                <label class="sub-menu" >
+                    <input type="checkbox">&nbsp;&nbsp;{{language.language_status}}
+                </label>
+            </div>
+            <label class="sub-menu" >
+                &nbsp;&nbsp;More...
+            </label>            
         </div>
     </div> 
     <div class="panel-default filter--box">
@@ -83,13 +88,12 @@
             </a>
         </div>
         <div class="collapse panel-body" id="bl-experience">                                                 
-            <div class="col-s-m6">
-                <input id="ex2" class="text-inline" type="range"/>  
-            </div>
-            2 years
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;0 year to 1 year</label><br>                                  
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;1 year to 2 years</label><br>                            
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;2 year to 4 year</label><br>                                   
+            <input type="radio" name="rdSalary"><label class="sub-menu">&nbsp;&nbsp;4 years + </label>
         </div>
     </div>                                                   
-
     <div class="panel-default filter--box">
         <div class="panel-heading">
             <a data-toggle="collapse" href="#bl-salary">

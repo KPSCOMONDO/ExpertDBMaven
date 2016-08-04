@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ExpertController {
     @RequestMapping(value={"/expert/detail"})
     public String detail() {
-        return "/fronts/experts/detail";
+        return "/fronts/experts/detail/detail";
     }
     @RequestMapping(value={"/expert"})
     public String expert() {

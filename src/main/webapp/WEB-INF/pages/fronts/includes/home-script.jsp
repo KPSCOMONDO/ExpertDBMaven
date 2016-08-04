@@ -17,6 +17,6 @@
 <script src="../../../../../resources/static/assets/masonry/masonry.pkgd.min.js"></script>
 <script src="../../../../../resources/static/assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="../../../../../resources/static/assets/social-likes/social-likes.js"></script>
-<script src="../../../../../resources/static/assets/mobirise/js/script.js"></script>
+<%--<script src="../../../../../resources/static/assets/mobirise/js/script.js"></script>--%>
 <script src="../../../../../resources/static/assets/mobirise-gallery/script.js"></script>
 <script src="../../../../../resources/static/assets/custom.js" type="text/javascript"></script>

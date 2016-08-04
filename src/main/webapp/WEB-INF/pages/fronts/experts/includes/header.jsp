@@ -1,19 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div class="col-lg-8 col-lg-offset-2">
-    <div class="col-lg-8">     
-        <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-6">
-            <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom mbr-figure--full-width"><img class="mbr-figure__img" src="/resources/static/assets/images/help-me-find-a-job.png"></figure>
+<section class="" style="background-color: #EEEEEE;padding: 112px 0 15px 0;">
+    <div class="container">
+        <div class="text-center">
+            <div class="col-sm-10 search--expert">
+                <input type="text" class="form-control expert--search-box animated fadeInUp delay" ng-model="searh_for_skill" placeholder="Search for skill...">
+            </div>
+            <div class="search--expert">
+                <button class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  btn--search--expert">Search</button>
+            </div>
         </div>
     </div>
-    <div class="col-lg-4 text-right">
-        <h2 class="desc"><b>Web Developer </b></h2>
-        <h2 class="money"><i class="fa fa-money"></i> 360$</h2> 
-    </div> 
-    <div class="col-lg-12">
-        <h2 class="resume">RESUME</h2>                        
-        <a class="btn btn-cta-secondary" href="#"><i class="fa fa-eye"></i> Preview</a>
-        <a class="btn btn-cta-secondary" href="#"><i class="fa fa-download"></i> Download</a>                    
-        <a class="btn btn-cta-secondary" href="#"><i class="glyphicon glyphicon-ok"></i> Add to wish list</a>   
+</section>
+<section class="text-left content-2" style="padding-top: 0px;z-index: -9">
+    <div class="container">
+        <div class="col-sm-6">
+            <h3 class="heading">RESULT</3>               
+        </div>
+        <div class="col-lg-6">
+
+        </div>
     </div>
-</div>
+</section>
 
