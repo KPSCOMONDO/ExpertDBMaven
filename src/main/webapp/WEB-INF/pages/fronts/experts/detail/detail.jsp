@@ -13,5 +13,6 @@
         <jsp:include page="includes/contact.jsp"/> 
         <jsp:include page="../../includes/footer.jsp"/> 
         <jsp:include page="../../includes/home-script.jsp"/>
+        <script src="../../../../../resources/scripts/frontend/configuration.js"></script>
     </body>
 </html>

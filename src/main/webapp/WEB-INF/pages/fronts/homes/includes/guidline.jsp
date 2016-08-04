@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<section class="content-2 col-4" id="features1-47" style="background-color: rgb(239, 239, 239);">
+<section class="content-2 col-4" style="background-color: rgb(239, 239, 239);">
     <div class="container">
         <div class="row">
             <div>
                 <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="resources/static/assets/images/step-icon-1.png"></div>
+                    <div class="image">
+                        <img class="undefined" src="resources/static/assets/images/step-icon-1.png"></div>
                     <div class="caption">
                         <div>
                             <h3>REGISTER WITH US</h3>                            
