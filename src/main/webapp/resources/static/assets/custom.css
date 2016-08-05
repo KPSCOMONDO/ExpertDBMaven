@@ -512,3 +512,14 @@ h2,h1,h3{
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Categroy*/
+.demo-category{
+    margin: 2px 2px 2px 2px;
+}
+@media (max-width: 640px) {
+    .demo-category{    
+        margin: 2px 2px 2px 2px;
+        width: 100%;
+    }
+}

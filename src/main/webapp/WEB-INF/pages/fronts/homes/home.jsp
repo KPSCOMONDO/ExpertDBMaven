@@ -12,86 +12,81 @@
 
     <section  style="background-color: rgb(255, 255, 255);padding-top: 100px;">
         <div class="container">
-            <nav class="navbar navbar-default" >
-                <div style="border: 2px #000000 solid" >
-                    <div class="navbar-header" >
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button> 
-                    </div>
-                    <div class="collapse navbar-collapse row">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">TOP EXPERIENCE DEVELOPER</a></li>
-                            <li><a href="#">TOP RATE DEVELOPER</a></li>                      
-                            <li><a href="#">TOP SALARY DEVELOPER</a></li>
-                            <li><a href="#">TOP NEW DEVELOPER</a></li>
-                        </ul>                        
-                    </div>
-                </div>
-            </nav>
+            <h2 class="heading">SOME DEVELOPER IN OUR SITE</h2>
+            <div class="text-center">
+                <a href="" class="btn btn-default demo-category">TOP EXPERIENCE DEVELOPER</a>
+                <a href="" class="btn btn-default demo-category">TOP RATE DEVELOPER</a>                     
+                <a href="" class="btn btn-default demo-category">TOP SALARY DEVELOPER</a>
+                <a href="" class="btn btn-default demo-category">TOP NEW DEVELOPER</a>                     
+            </div>
         </div>
-        <div class="content-2 col-4">
-            <div class="container">
+        <div class="content-2 col-5">           
+            <div class="container">          
+                <h3 ng-bind="btn1"></h3>
                 <div class="row">
                     <div>
                         <div class="thumbnail">
                             <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
                             <div class="caption">
                                 <div>
-                                    <h3>Sok Channy</h3>
+                                    <h2>Sok Channy</h2>
                                     <h4>Spring security, Kosign</h4>
                                 </div>
-                                <p class="group"><a href="https://mobirise.com/bootstrap-template/" class="btn btn-default">VIEW DETAIL</a></p>
+                                <p class="group">
+                                    <a href="${pageContext.request.contextPath}/expert/detail"" class="btn btn-default">VIEW DETAIL</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="thumbnail">
-                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
+                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/ren.jpg"></div>
                             <div class="caption">
                                 <div>
-                                    <h3>Sok Channy</h3>
+                                    <h2>Ren Sothearin</h2>
                                     <h4>Spring security, Kosign</h4>
                                 </div>
-                                <p class="group"><a href="https://mobirise.com/bootstrap-template/" class="btn btn-default">VIEW DETAIL</a></p>
+                                <p class="group">
+                                    <a href="${pageContext.request.contextPath}/expert/detail"" class="btn btn-default">VIEW DETAIL</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="thumbnail">
-                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
+                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/polen.jpg"></div>
                             <div class="caption">
                                 <div>
-                                    <h3>Sok Channy</h3>
+                                    <h2>Polen So Cute</h2>
                                     <h4>Spring security, Kosign</h4>
                                 </div>
-                                <p class="group"><a href="https://mobirise.com/bootstrap-template/" class="btn btn-default">VIEW DETAIL</a></p>
+                                <p class="group">
+                                    <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="thumbnail">
-                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
+                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/dang.jpg"></div>
                             <div class="caption">
                                 <div>
-                                    <h3>Sok Channy</h3>
-                                    <h4>Spring security, Kosign</h4>
+                                    <h2>Dim Dang</h2>
+                                    <h4>Scrapt everyt, Kosign</h4>
                                 </div>
-                                <p class="group"><a href="https://mobirise.com/bootstrap-template/" class="btn btn-default">VIEW DETAIL</a></p>
+                                <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="thumbnail">
-                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
+                            <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/mama.jpg"></div>
                             <div class="caption">
                                 <div>
                                     <h3>Sok Channy</h3>
                                     <h4>Spring security, Kosign</h4>
                                 </div>
-                                <p class="group"><a href="https://mobirise.com/bootstrap-template/" class="btn btn-default">VIEW DETAIL</a></p>
+                                <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
                             </div>
                         </div>
                     </div>
@@ -99,7 +94,6 @@
             </div>
         </div>
     </section> 
-
     <jsp:include page="includes/about.jsp"/>
     <jsp:include page="includes/guidline.jsp"/>
     <jsp:include page="../includes/footer.jsp"/>

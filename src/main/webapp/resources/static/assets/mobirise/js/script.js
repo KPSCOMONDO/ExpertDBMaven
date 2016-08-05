@@ -382,39 +382,38 @@
         $(window).resize().scroll();
 
         // smooth scroll
-        if (!$('html').hasClass('is-builder')){
-            $(document).click(function(e){
-                try {
-                    var target = e.target;
-                    do {
-                        if (target.hash){
-                            var useBody = /#bottom|#top/g.test(target.hash);
-                            $(useBody ? 'body' : target.hash).each(function(){
-                                e.preventDefault();
-                                // in css sticky navbar has height 64px 
-                                var stickyMenuHeight = $('.mbr-navbar--sticky').length ? 64 : 0;
-                                var goTo = target.hash == '#bottom' 
-                                        ? ($(this).height() - $(window).height())
-                                        : ($(this).offset().top - stickyMenuHeight);
-                                $('html, body').stop().animate({
-                                    scrollTop: goTo
-                                }, 800, 'easeInOutCubic');
-                            });
-                            break;
-                        }
-                    } while (target = target.parentNode);
-                } catch (e) {
-                   // throw e;
-                }
-            });
-        }
+//        if (!$('html').hasClass('is-builder')){
+//            $(document).click(function(e){
+//                try {
+//                    var target = e.target;
+//                    do {
+//                        if (target.hash){
+//                            var useBody = /#bottom|#top/g.test(target.hash);
+//                            $(useBody ? 'body' : target.hash).each(function(){
+//                                e.preventDefault();
+//                                // in css sticky navbar has height 64px 
+//                                var stickyMenuHeight = $('.mbr-navbar--sticky').length ? 64 : 0;
+//                                var goTo = target.hash == '#bottom' 
+//                                        ? ($(this).height() - $(window).height())
+//                                        : ($(this).offset().top - stickyMenuHeight);
+//                                $('html, body').stop().animate({
+//                                    scrollTop: goTo
+//                                }, 800, 'easeInOutCubic');
+//                            });
+//                            break;
+//                        }
+//                    } while (target = target.parentNode);
+//                } catch (e) {
+//                   // throw e;
+//                }
+//            });
+//        }
 
     });
 
 })(jQuery);
 !function() {
 	document.getElementsByClassName('engine')[0].getElementsByTagName('a')[0].removeAttribute('rel');
-
     if(!document.getElementById('top-1')) {
         var e = document.createElement("section");
         e.id = "top-1";
