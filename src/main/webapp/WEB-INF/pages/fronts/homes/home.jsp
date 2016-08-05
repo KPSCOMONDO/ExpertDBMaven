@@ -7,7 +7,7 @@
         <jsp:include page="../includes/home-style.jsp"/>
     </head>
     <body ng-app="home__app" ng-controller="home__controller">       
-        <jsp:include page="../includes/menubar.jsp"/>
+        <jsp:include page="../includes/menubar.jsp"/>   
         <jsp:include page="includes/header.jsp"/>
 
     <section  style="background-color: rgb(255, 255, 255);padding-top: 100px;">
@@ -33,7 +33,7 @@
                                     <h4>Spring security, Kosign</h4>
                                 </div>
                                 <p class="group">
-                                    <a href="${pageContext.request.contextPath}/expert/detail"" class="btn btn-default">VIEW DETAIL</a>
+                                    <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
                                 </p>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                     <h4>Spring security, Kosign</h4>
                                 </div>
                                 <p class="group">
-                                    <a href="${pageContext.request.contextPath}/expert/detail"" class="btn btn-default">VIEW DETAIL</a>
+                                    <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
                                 </p>
                             </div>
                         </div>
