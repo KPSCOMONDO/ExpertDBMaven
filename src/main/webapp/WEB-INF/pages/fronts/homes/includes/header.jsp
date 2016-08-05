@@ -55,13 +55,12 @@
                     </div>
                 </div>
             </div>
-
             <a data-app-prevent-settings="" class="left carousel-control" role="button" data-slide="prev" href="#slider-38">
-                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true" style="padding-top: 30%;"></span>
                 <span class="sr-only">Previous</span>
             </a>
             <a data-app-prevent-settings="" class="right carousel-control" role="button" data-slide="next" href="#slider-38">
-                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="padding-top: 30%;"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
