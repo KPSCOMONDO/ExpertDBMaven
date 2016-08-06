@@ -796,3 +796,8 @@ h2,h1,h3{
 .subject li a{
     text-decoration: none;   
 }
+
+/* Slide */
+.slide{
+    height: 60pt;
+}

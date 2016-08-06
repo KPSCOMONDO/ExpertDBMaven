@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<section  style="background-color: rgb(255, 255, 255);">       
+<section class="filter--session"  style="background-color: rgb(255, 255, 255);">       
     <div class="content-2 col-5">
         <div class="panel with-nav-tabs panel-primary">
             <div class="panel-heading clearfix">
