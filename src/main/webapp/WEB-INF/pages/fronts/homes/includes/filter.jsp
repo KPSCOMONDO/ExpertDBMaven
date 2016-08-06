@@ -2,18 +2,35 @@
 <section  style="background-color: rgb(255, 255, 255);">       
     <div class="content-2 col-5">
         <div class="panel with-nav-tabs panel-primary">
-            <div class="panel-heading">
-                <ul class="nav nav-tabs subject">
-                    <li class="active">
-                        <a href="#all" data-toggle="tab">ALL</a>
-                    </li>
-                    <li>
-                        <a href="#tab2primary" data-toggle="tab">WEB DESIGN</a>
-                    </li>
-                    <li>
-                        <a href="#tab3primary" data-toggle="tab">MOBILE FRAMEWORK</a>
-                    </li>                        
-                </ul>
+            <div class="panel-heading clearfix">
+                <div class="pull-right">
+                    <i class="glyphicon glyphicon-filter"></i>
+                </div>
+                <div class="pull-left">
+                    <ul class="nav nav-tabs subject">
+                        <li class="active">
+                            <a href="#all" data-toggle="tab">ALL</a>
+                        </li>
+                        <li>
+                            <a href="#tab2primary" data-toggle="tab">WEB DESIGN</a>
+                        </li>
+                        <li>
+                            <a href="#tab3primary" data-toggle="tab">MOBILE FRAMEWORK</a>
+                        </li> 
+                        <li>
+                            <a href="#tab3primary" data-toggle="tab">CMS</a>
+                        </li> 
+                        <li>
+                            <a href="#tab3primary" data-toggle="tab">MIS</a>
+                        </li> 
+                        <li>
+                            <a href="#tab3primary" data-toggle="tab">NETWORK</a>
+                        </li> 
+                        <li>
+                            <a href="#tab3primary" data-toggle="tab">OTHER</a>
+                        </li>
+                    </ul>                        
+                </div>                        
             </div>
             <div class="panel-body">
                 <div class="tab-content">
@@ -36,7 +53,7 @@
                         <a class="col-sm-2" href="">CSS</a>
                         <a class="col-sm-2" href="">JAVASCRIPT</a>
                     </div>
-                    <div class="tab-pane fade" id="tab3primary">
+                    <div class="tab-pane fade subject" id="tab3primary">
                         <a class="col-sm-2" href="">HTML</a>
                         <a class="col-sm-2" href="">CSS</a>
                         <a class="col-sm-2" href="">JAVASCRIPT</a>
@@ -44,8 +61,13 @@
                         <a class="col-sm-2" href="">HTML</a>
                         <a class="col-sm-2" href="">CSS</a>
                         <a class="col-sm-2" href="">JAVASCRIPT</a>
-                    </div>                            
+                    </div>
                 </div>
+            </div>
+            <div class="panel-footer">
+                <a href="${pageContext.request.contextPath}/expert" class="panel-title btn btn-danger">
+                    <i class="glyphicon glyphicon-filter"></i> Search more
+                </a>
             </div>
         </div>
         <h1 class="heading">All developers</h1>
@@ -253,6 +275,12 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+        <div class="col-sm-12 text-center">
+            <a href="${pageContext.request.contextPath}/expert" class="panel-title btn btn-default">
+                <i class="glyphicon glyphicon-filter"></i> Search more ...
+            </a>
         </div>
     </div>
 </section> 

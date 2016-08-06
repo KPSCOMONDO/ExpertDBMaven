@@ -10,9 +10,8 @@
         <jsp:include page="../includes/menubar.jsp"/>   
         <jsp:include page="includes/header.jsp"/>
         <jsp:include page="includes/filter.jsp"/>
-        <jsp:include page="includes/statistic.jsp"/>        
+        <jsp:include page="includes/about.jsp"/>    
         <jsp:include page="includes/guidline.jsp"/>
-        <jsp:include page="includes/about.jsp"/>
         <jsp:include page="../includes/footer.jsp"/>
         <jsp:include page="../includes/home-script.jsp"/>
         <script src="../../../../resources/scripts/frontend/home.js" type="text/javascript"></script>

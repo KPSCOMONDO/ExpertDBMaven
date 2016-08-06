@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section class="mbr-section mbr-section--relative mbr-parallax-background" id="msg-box5-46" style="background-image: url(/resources/static/assets/images/profile-background.jpg);">
     <div class="mbr-section__container mbr-section__container--isolated container content-2">  
-        <div class="mbr-overlay" style="opacity: 0.1; background-color: black"></div>
+        <div class="mbr-overlay" style="opacity: 0.3; background-color: black"></div>
         <div class="col-sm-8 section" style="z-index: 9999">
             <h2 class="heading">Message  <i class="fa fa-envelope-o"></i></h2>
             <select class="form-control">
