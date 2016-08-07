@@ -5,10 +5,10 @@
             <div class="panel with-nav-tabs panel-primary box--bottom--shardow">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs subject">
-                        <li>
+                        <li class="active">
                             <a href="#about" data-toggle="tab">ABOUT</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="#work__experience" data-toggle="tab">WORK EXPERIENCE</a>
                         </li>
                         <li>
@@ -21,17 +21,35 @@
                 </div>
                 <div class="panel-body">                  
                     <div class="tab-content">
-                        <div class="tab-pane fade" id="about">
+                        <div class="tab-pane fade in active" id="about">
                             <div class="content-2" style="padding-top: 20px">
-                                <h4 class="heading">Birthday</h4>
+                                <h3 class="heading">Basic Information</h3>
+                                <table>
+                                    <tr>
+                                        <td style="width: 30%;"><h4>Birthday</h4></td>
+                                        <td><h4>June 07, 2016</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Gender</h4></td>
+                                        <td><h4>Male</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h4>Address</h4></td>
+                                        <td><h4>Phnom Penh, Chamka Mon, Cambodia</4></td>
+                                    </tr>
+                                </table>
+                                <h3 class="heading">Occupation</h3>
+                                <h4>Web developer</h4>
+                                <h3 class="heading">Organization/Company</h3>
+                                <h4>Kosign</h4>
                             </div>                          
                         </div>
-                        <div id="work__experience" class="tab-pane fade in active">
+                        <div id="work__experience" class="tab-pane fade">
                             <div class="content-2" style="padding-top: 10px;padding-bottom: 20px">
                                 <ul class="timeline">
                                     <li>
                                         <div class="timeline-image">
-                                            <h4>2010<br>To<br>2014</h4>
+                                            <h4>2010<br>-<br>2014</h4>
                                         </div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
@@ -44,9 +62,7 @@
                                     </li>
                                     <li class="timeline-inverted">
                                         <div class="timeline-image">
-                                            <h4>2010
-                                                <br>To
-                                                <br>2014</h4>
+                                            <h4>2010<br>-<br>2014</h4>
                                         </div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
@@ -59,7 +75,7 @@
                                     </li>                                   
                                     <li>
                                         <div class="timeline-image">
-                                            <h4>2010<br>To<br>2014</h4>
+                                            <h4>2010<br>-<br>2014</h4>
                                         </div>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">

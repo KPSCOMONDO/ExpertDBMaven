@@ -25,7 +25,8 @@
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
+        
+        <ul id="page-wrap" class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview">
                 <a href="#">
@@ -48,8 +49,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Expert list</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
+                    <li><a id="" href="#test.jsp"><i class="fa fa-circle-o"></i> Expert list</a></li>
+                    <li><a id="exp"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
                 </ul>
             </li>
             <li class="treeview">
@@ -141,5 +142,4 @@
             </li>
         </ul>
     </section>
-    <!-- /.sidebar -->
 </aside>
