@@ -8,10 +8,10 @@
     </head>
     <body  class="hold-transition skin-blue sidebar-mini">   
         <div class="wrapper">
-            <jsp:include page="../includes/menubar.jsp" />             
+            <jsp:include page="../ncludes/menubar.jsp" /> 
             <jsp:include page="../includes/sidbar-left.jsp" />             
-            <jsp:include page="includes/dashboard.jsp" /> 
+            <jsp:include page="includes/expert-list.jsp" /> 
         </div>
-        <jsp:include page="../includes/back-script.jsp" />           
+        <jsp:include page="../includes/back-script.jsp" />      
     </body>
 </html>

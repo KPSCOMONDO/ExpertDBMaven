@@ -8,8 +8,8 @@
     </head>
     <body  class="hold-transition skin-blue sidebar-mini">   
         <div class="wrapper">
-            <jsp:include page="includes/menubar.jsp" />  
-            <jsp:include page="includes/sidbar-left.jsp" /> 
+            <jsp:include page="../includes/menubar.jsp" />  
+            <jsp:include page="../includes/sidbar-left.jsp" /> 
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Data Table With Full Features</h3>
