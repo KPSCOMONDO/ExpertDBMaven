@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: ExpertDatabase
-Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: sokchanny
-Implementation-Vendor-Id: org.expert.database
-Build-Jdk: 1.8.0_112-ea
-Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
-

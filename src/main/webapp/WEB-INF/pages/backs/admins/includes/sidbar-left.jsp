@@ -22,23 +22,14 @@
                     </button>
                 </span>
             </div>
-        </form>
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        
-        <ul id="page-wrap" class="sidebar-menu">
+        </form>      
+        <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview">
-                <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/admin">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>                
             </li>
             <li class="treeview">
                 <a href="#">
@@ -49,35 +40,18 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a id="" href="#test.jsp"><i class="fa fa-circle-o"></i> Expert list</a></li>
-                    <li><a id="exp"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
+                    <li><a href="${pageContext.request.contextPath}/admin/expert/list"><i class="fa fa-circle-o"></i> Expert list</a></li>
+                    <li><a href="${pageContext.request.contextPath}/admin/expert/list"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
                 </ul>
-            </li>
+            </li>            
             <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>Companies</span>
-                    <span class="pull-right-container">
-                        <span class="label label-primary pull-right">39</span>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Company list</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Add new company</a></li>                    
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
+                <a href="${pageContext.request.contextPath}/admin/position">
                     <i class="fa fa-files-o"></i>
                     <span>Job position</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">34</span>
                     </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Job position list</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Add new job position</a></li>                    
-                </ul>
             </li>
             <li class="treeview">
                 <a href="#">
@@ -93,30 +67,40 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#">
+                <a href="${pageContext.request.contextPath}/admin/skill/category">
                     <i class="fa fa-files-o"></i>
-                    <span>Skill)</span>
+                    <span>Skill Category</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Skills list</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Add new skill</a></li>                    
-                </ul>
+                </a>                
             </li>
             <li class="treeview">
-                <a href="#">
+                <a href="${pageContext.request.contextPath}/admin/skill">
+                    <i class="fa fa-files-o"></i>
+                    <span>Skill</span>
+                    <span class="pull-right-container">
+                        <span class="label label-primary pull-right">14</span>
+                    </span>
+                </a>                
+            </li>
+            <li class="treeview">
+                <a href="${pageContext.request.contextPath}/admin/language">
                     <i class="fa fa-files-o"></i>
                     <span>Language</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Languages list</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Add new language</a></li>                    
-                </ul>
+                </a>                
+            </li>
+            <li class="treeview">
+                <a href="${pageContext.request.contextPath}/admin/province">
+                    <i class="fa fa-files-o"></i>
+                    <span>Province</span>
+                    <span class="pull-right-container">
+                        <span class="label label-primary pull-right">14</span>
+                    </span>
+                </a>                
             </li>
             <li class="treeview">
                 <a href="#">
