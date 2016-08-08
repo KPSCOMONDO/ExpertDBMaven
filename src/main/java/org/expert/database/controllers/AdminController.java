@@ -22,12 +22,12 @@ public class AdminController {
         return "/backs/admins/skills/skill";
     }
     
-    @RequestMapping(value = {"/expert/skill/category"})
+    @RequestMapping(value = {"/skill/category"})
     public String SkillCategory(){
         return "/backs/admins/skillcategories/skill-category";
     }
     
-    @RequestMapping(value = {"/expert/province"})
+    @RequestMapping(value = {"/province"})
     public String Province(){
         return "/backs/admins/provinces/province";
     }
