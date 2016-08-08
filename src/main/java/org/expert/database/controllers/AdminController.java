@@ -14,7 +14,7 @@ public class AdminController {
     
     @RequestMapping(value = {"/expert/list"})
     public String expertList(){
-        return "/backs/admins/expert-list";
+        return "/backs/experts/expert";
     }
     
     @RequestMapping(value = {"/skill"})
@@ -31,4 +31,5 @@ public class AdminController {
     public String province(){
         return "/backs/admins/province-list";
     }
+    
 }

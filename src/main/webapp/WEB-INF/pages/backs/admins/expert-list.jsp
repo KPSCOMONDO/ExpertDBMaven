@@ -168,7 +168,6 @@
                     </div>            
                 </div>
         </div>
-    </div>
-    <jsp:include page="../includes/back-script.jsp" />
-</body>
+        <jsp:include page="../includes/back-script.jsp" />
+    </body>
 </html>

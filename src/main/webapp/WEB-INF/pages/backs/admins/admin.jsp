@@ -8,25 +8,10 @@
     </head>
     <body  class="hold-transition skin-blue sidebar-mini">   
         <div class="wrapper">
-            <jsp:include page="includes/menubar.jsp" /> 
-            
-            <jsp:include page="includes/sidbar-left.jsp" /> 
-            
+            <jsp:include page="../includes/menubar.jsp" />             
+            <jsp:include page="../includes/sidbar-left.jsp" />             
             <jsp:include page="includes/dashboard.jsp" /> 
         </div>
-        <jsp:include page="../includes/back-script.jsp" />
-        <script>
-            
-            $("#exp").click(function () {
-                alert();
-                $.ajax({
-                    url: "${pageContext.request.contextPath}/WEB-INF/pages/backs/admins/data.html",
-                    //url:"http://stackoverflow.com/questions/13778300/change-div-tag-content-dynamically-with-jsp-code",
-                    cache: false
-                }).done(function (html) {
-                    console.log(html)
-                });
-            });
-        </script>      
+        <jsp:include page="../includes/back-script.jsp" />           
     </body>
 </html>
