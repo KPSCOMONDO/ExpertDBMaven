@@ -11,6 +11,7 @@
             <jsp:include page="../includes/menubar.jsp" />             
             <jsp:include page="../includes/sidbar-left.jsp" />             
             <jsp:include page="includes/dashboard.jsp" /> 
+            <jsp:include page="../includes/footer.jsp"/>
         </div>
         <jsp:include page="../includes/back-script.jsp" />           
     </body>

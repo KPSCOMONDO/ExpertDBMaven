@@ -13,7 +13,7 @@
         <jsp:include page="includes/about.jsp"/>    
         <jsp:include page="includes/guidline.jsp"/>
         <jsp:include page="../includes/footer.jsp"/>
-        <jsp:include page="../includes/home-script.jsp"/>
+        <jsp:include page="../includes/home-script.jsp"/>       
         <script src="../../../../resources/scripts/frontend/home.js" type="text/javascript"></script>
         <script src="../../../../resources/scripts/frontend/configuration.js" type="text/javascript"></script>
     </body>

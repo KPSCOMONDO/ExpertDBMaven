@@ -11,14 +11,14 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Skill category</th>                            
+                            <th>Province</th>                            
                             <th style="width: 15%;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Web Developer</td>                            
+                            <td>Pailin</td>                            
                             <td>
                                 <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
                                 <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
@@ -28,7 +28,7 @@
                     <tfoot>
                         <tr>
                             <th>#</th>
-                            <th>Skill category</th>                            
+                            <th>Province</th>                            
                             <th>Action</th>
                         </tr>
                     </tfoot>

@@ -14,11 +14,13 @@
             <div class="content-wrapper">                                
                 <section class="content">
                     <jsp:include page="includes/new.jsp"/>
-                    <jsp:include page="includes/position-list.jsp"/>
+                    <jsp:include page="../../includes/page-doesnot-exist.jsp"/>
                 </section>
             </div>             
             <jsp:include page="../../includes/footer.jsp"/>
         </div>        
-        <jsp:include page="../includes/sub-script.jsp"/>
-    </body>
+    </div>
+    <jsp:include page="../includes/sub-script.jsp"/>
+    <script src="../../../../../resources/scripts/backend/user.js" type="text/javascript"></script>
+</body>
 </html>

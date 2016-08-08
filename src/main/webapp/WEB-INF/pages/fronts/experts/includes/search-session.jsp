@@ -45,7 +45,7 @@
             <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">18 to 25 years old</label><br>                                       
             <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">26 to 29 years old</label><br>                                                                       
             <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">30 to 35 years old</label><br>                                               
-            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">36 than 40 years old</label><br>                              
+            <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">36 to 40 years old</label><br>                              
             <input type="radio" name="rdo_age">&nbsp;&nbsp;<label class="sub-menu">More than 40 years old</label><br>  
         </div>
     </div>

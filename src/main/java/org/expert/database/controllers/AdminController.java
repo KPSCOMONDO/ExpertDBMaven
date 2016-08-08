@@ -17,6 +17,11 @@ public class AdminController {
         return "/backs/admins/experts/expert";
     }
     
+    @RequestMapping(value = {"/expert/detail"})
+    public String ExpertDetail(){
+        return "/backs/admins/experts/details/detail";
+    }
+    
     @RequestMapping(value = {"/skill"})
     public String Skill(){
         return "/backs/admins/skills/skill";
@@ -37,7 +42,7 @@ public class AdminController {
     	return "/backs/admins/languages/language";
     }
     
-    @RequestMapping(value={"/Level"})
+    @RequestMapping(value={"/level"})
     public String Level(){
     	return "/backs/admins/levels/level";
     }
@@ -45,5 +50,15 @@ public class AdminController {
     @RequestMapping(value={"/position"})
     public String Position(){
     	return "/backs/admins/positions/position";
+    }
+    
+    @RequestMapping(value={"/user"})
+    public String User(){
+        return "/backs/admins/users/user";
+    }
+    
+    @RequestMapping(value={"/report"})
+    public String Report(){
+        return "/backs/admins/reports/report";
     }
 }

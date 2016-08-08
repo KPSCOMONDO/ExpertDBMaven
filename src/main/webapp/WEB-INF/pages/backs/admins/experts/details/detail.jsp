@@ -5,20 +5,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>AdminLTE 2 | Data Tables</title>
-        <jsp:include page="../includes/sub-style.jsp"/>
+        <jsp:include page="../../includes/sub-style.jsp"/>
     </head>
     <body  class="hold-transition skin-blue sidebar-mini">   
         <div class="wrapper"> 
-            <jsp:include page="../../includes/menubar.jsp"/>
-            <jsp:include page="../../includes/sidbar-left.jsp"/>
+            <jsp:include page="../../../includes/menubar.jsp"/>
+            <jsp:include page="../../../includes/sidbar-left.jsp"/>
             <div class="content-wrapper">                                
                 <section class="content">
-                    <jsp:include page="includes/new.jsp"/>
-                    <jsp:include page="includes/position-list.jsp"/>
+                    <jsp:include page="includes/expert-list.jsp"/>
                 </section>
             </div>             
-            <jsp:include page="../../includes/footer.jsp"/>
+            <jsp:include page="../../../includes/footer.jsp"/>
         </div>        
-        <jsp:include page="../includes/sub-script.jsp"/>
-    </body>
+    </div>
+    <jsp:include page="../../includes/sub-script.jsp"/>    
+</body>
 </html>
