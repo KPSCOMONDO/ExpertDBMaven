@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>AdminLTE 2 | Data Tables</title>
         <jsp:include page="../../includes/sub-style.jsp"/>
+        <link href="../../../../../../resources/static/admin/custom.css" rel="stylesheet" type="text/css"/>
     </head>
     <body  class="hold-transition skin-blue sidebar-mini">   
         <div class="wrapper"> 
@@ -13,7 +14,8 @@
             <jsp:include page="../../../includes/sidbar-left.jsp"/>
             <div class="content-wrapper">                                
                 <section class="content">
-                    <jsp:include page="includes/expert-list.jsp"/>
+                    <jsp:include page="includes/basic-detail.jsp"/>
+                    <jsp:include page="includes/advance-detail.jsp"/>
                 </section>
             </div>             
             <jsp:include page="../../../includes/footer.jsp"/>
