@@ -8,28 +8,42 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminController {
     
     @RequestMapping(value={"/",""})
-    public String admin(){
+    public String Admin(){
         return "/backs/admins/admin";
     }
     
     @RequestMapping(value = {"/expert/list"})
-    public String expertList(){
-        return "/backs/experts/expert";
+    public String ExpertList(){
+        return "/backs/admins/experts/expert";
     }
     
     @RequestMapping(value = {"/skill"})
-    public String skill(){
-        return "/backs/admins/expert-list";
+    public String Skill(){
+        return "/backs/admins/skills/skill";
     }
     
     @RequestMapping(value = {"/expert/skill/category"})
-    public String skillCategory(){
-        return "/backs/admins/skill-category-list";
+    public String SkillCategory(){
+        return "/backs/admins/skillcategories/skill-category";
     }
     
     @RequestMapping(value = {"/expert/province"})
-    public String province(){
-        return "/backs/admins/province-list";
+    public String Province(){
+        return "/backs/admins/provinces/province";
     }
     
+    @RequestMapping(value={"/language"})
+    public String Language(){
+    	return "/backs/admins/languages/language";
+    }
+    
+    @RequestMapping(value={"/Level"})
+    public String Level(){
+    	return "/backs/admins/levels/level";
+    }
+    
+    @RequestMapping(value={"/position"})
+    public String Position(){
+    	return "/backs/admins/positions/position";
+    }
 }
