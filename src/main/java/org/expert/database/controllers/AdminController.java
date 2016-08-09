@@ -22,6 +22,11 @@ public class AdminController {
         return "/backs/admins/experts/details/detail";
     }
     
+    @RequestMapping(value = {"/expert/add"})
+    public String ExpertAdd(){
+        return "/backs/admins/experts/adds/add";
+    }
+    
     @RequestMapping(value = {"/skill"})
     public String Skill(){
         return "/backs/admins/skills/skill";

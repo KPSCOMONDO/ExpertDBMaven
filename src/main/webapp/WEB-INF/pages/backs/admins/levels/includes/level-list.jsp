@@ -19,10 +19,10 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Poor</td>
-                            <td>50</td>
+                            <td><input type="text" value="poor" class="edit--text" disabled/></td>
+                            <td><input type="text" value="50" class="edit--text" disabled/></td>
                             <td>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
+                                <a href="#" onclick="edit(this)" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
                                 <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
                             </td>
                         </tr>                                

@@ -10,7 +10,9 @@
                             <div class="panel with-nav-tabs panel-primary">
                                 <div class="panel-heading clearfix">
                                     <div class="pull-left">
-
+                                        <button type="button" class="btn btn-info btn-sm">
+                                            <i class="fa fa-plus"></i>
+                                        </button> 
                                     </div>
                                     <div class="pull-right">                                       
                                         <ul class="nav nav-tabs">                                        
@@ -41,34 +43,20 @@
                                 <div class="panel-body">                  
                                     <div class="tab-content">
                                         <div class="tab-pane fade in active" id="education">
-                                            <div class="content-2" style="padding-top: 20px">                                                
-                                                <table class="table table-condensed">     
+                                            <div class="content-2" style="padding-top: 20px">
+                                                <table class="table table-condensed">
                                                     <thead>
-                                                    <th>
-                                                        <button onclick="add(this)" type="button" class="btn btn-info btn-sm">
-                                                            <i class="fa fa-plus"></i>
-                                                        </button>  
-                                                    </th>                                        
+                                                    <th>#</th>
                                                     <th>Academic year</th>
                                                     <th>Course/Major</th>
                                                     <th>Description</th>
                                                     <th>Action</th>
                                                     </thead>
-                                                    <tbody>
-                                                        <tr style="display: none;">
-                                                            <td>#</td>
-                                                            <td><input type="text" placeholder="Academic year" class="edit--text"/></td>
-                                                            <td><input type="text" placeholder="Major" class="edit--text"/></td>
-                                                            <td><input type="text" placeholder="School" class="edit--text"/></td>
-                                                            <td>
-                                                                <a href="#" onclick="edit(this)" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-save"></i></a>                                        
-                                                                <a href="#" data-skin="skin-blue-light" class="btn btn-danger btn-xs"><i class="fa fa-remove"></i></a>
-                                                            </td>
-                                                        </tr>
+                                                    <tbody>                                                        
                                                         <tr>
                                                             <td>1</td>
                                                             <td><input type="text" value="2010-2011" class="edit--text" disabled/></td>
-                                                            <td><input type="text" value="IT" class="edit--text" disabled/></td>
+                                                            <td><input type="text" value="ID" class="edit--text" disabled/></td>
                                                             <td><input type="text" value="Royal University of Phnom Penh" class="edit--text" disabled/></td>
                                                             <td>
                                                                 <a href="#" onclick="edit(this)" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>                                        

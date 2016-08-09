@@ -13,6 +13,6 @@
             <jsp:include page="includes/dashboard.jsp" /> 
             <jsp:include page="../includes/footer.jsp"/>
         </div>
-        <jsp:include page="../includes/back-script.jsp" />           
-    </body>
+    <jsp:include page="../includes/back-script.jsp" />           
+</body>
 </html>

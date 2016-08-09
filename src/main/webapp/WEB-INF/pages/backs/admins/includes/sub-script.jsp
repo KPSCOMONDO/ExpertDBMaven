@@ -20,5 +20,20 @@
             "info": true,
             "autoWidth": false
         });
+
+        edit = function (element) {
+            $(element).html('<i class="fa fa-save">');
+            $tr = $(element).parent().parent();
+            $tr.children('td').children('input').each(function () {
+                $(this).addClass('edit--text--enable');
+                $(this).removeAttr('disabled');                
+            });
+            $tr.children('td').children('input')[0].focus();
+        }
+        add = function (element) {
+            $(element).html('<i class="fa fa-minus">');
+            $tb = $(element).parent().parent();
+            $tb.children('tdody').first().removeAttr('style');
+        }
     });
 </script>

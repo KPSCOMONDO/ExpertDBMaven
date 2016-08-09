@@ -6,7 +6,6 @@
             <div class="box-header">
                 <h3 class="box-title">Data Table With Full Features</h3>
             </div>
-            <!-- /.box-header -->
             <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
@@ -30,8 +29,8 @@
                     <td>Sokchanny.sg@gmail.com</td>                    
                     <td>086 651 443</td>
                     <td>
-                        <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-info"></i> Detail</a>
-                        <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
+                        <a href="${pageContext.request.contextPath}/admin/expert/detail"  class="btn btn-primary btn-xs"><i class="fa fa-info"></i></a>
+                        <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                     </td>                     
                     </tbody>
                     <tfoot>

@@ -12,12 +12,12 @@
             <jsp:include page="../../includes/sidbar-left.jsp"/>
             <div class="content-wrapper">                                
                 <section class="content">
-                    <jsp:include page="includes/expert-list.jsp"/>
+                    <jsp:include page="../../includes/page-doesnot-exist.jsp"/>
                 </section>
             </div>             
             <jsp:include page="../../includes/footer.jsp"/>
         </div>        
     </div>
-    <jsp:include page="../includes/sub-script.jsp"/>    
+    <jsp:include page="../includes/sub-script.jsp"/>
 </body>
 </html>

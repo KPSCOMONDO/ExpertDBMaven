@@ -5,8 +5,15 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">                                                    
-                        <span class="mbr-brand__name">
-                            <a class="mbr-brand__name text-white" href="">Expert Database</a>
+                        <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
+                            <span class="mbr-brand__logo">
+                                <a href="${pageContext.request.contextPath}/">
+                                    <img class="mbr-navbar__brand-img mbr-brand__img" src="../../../../resources/static/img/exlogo1.png" alt="Mobirise">
+                                </a>
+                            </span>
+                            <span class="mbr-brand__name">
+                                <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/">Recruitment</a>
+                            </span>
                         </span>
                     </span>
                 </div>
@@ -19,10 +26,10 @@
                                     <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/expert">Find candidate</a>
                                 </li>                                 
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="video-background.html">Contact</a>
+                                    <a class="mbr-buttons__link btn text-white" href="">Contact</a>
                                 </li> 
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="blog.html">About</a>
+                                    <a class="mbr-buttons__link btn text-white" href="">About</a>
                                 </li></ul></div>
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">

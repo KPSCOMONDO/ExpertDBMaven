@@ -38,11 +38,11 @@
 
                     </div>                                                    
                     <div class="tab-pane fade subject" id="tab2primary">
-                        <a class="col-sm-2" href="">HTML</a>
-                        <a class="col-sm-2" href="">CSS</a>
-                        <a class="col-sm-2" href="">JAVASCRIPT</a>
-                        <a class="col-sm-2" href="">NOSCRIPT</a>
-                        <a class="col-sm-2" href="">HTML</a>
+                        <a class="col-sm-2" href="">HTML <small>(19)</small></a>
+                        <a class="col-sm-2" href="">CSS <small>(19)</small></a>
+                        <a class="col-sm-2" href="">JAVASCRIPT <small>(19)</small></a>
+                        <a class="col-sm-2" href="">NOSCRIPT <small>(19)</small></a>
+                        <a class="col-sm-2" href="">HTML <small>(19)</small></a>
                         <a class="col-sm-2" href="">CSS</a>
                         <a class="col-sm-2" href="">JAVASCRIPT</a>
                         <a class="col-sm-2" href="">HTML</a>

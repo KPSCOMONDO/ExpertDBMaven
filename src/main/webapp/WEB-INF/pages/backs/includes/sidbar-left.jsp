@@ -28,7 +28,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${pageContext.request.contextPath}/admin/expert/list"><i class="fa fa-circle-o"></i> Expert list</a></li>
-                    <li><a href="${pageContext.request.contextPath}/admin/expert/detail"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
+                    <li><a href="${pageContext.request.contextPath}/admin/expert/add"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
                 </ul>
             </li>  
             <li class="treeview">
@@ -90,7 +90,7 @@
                 </a>                
             </li>
             <li>
-                <a href="pages/widgets.html">
+                <a href="${pageContext.request.contextPath}/admin/report">
                     <i class="fa fa-th"></i> <span>Report</span>
                     <span class="pull-right-container">
                         <small class="label pull-right bg-green">new</small>

@@ -4,6 +4,9 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Sok Channy</h3>
+                </div>
                 <div class="box-body">
                     <div class="row">
                         <div class="col-xs-2">
@@ -16,15 +19,8 @@
                             <table class="col-xs-12 text-left table-condensed">
                                 <tbody>
                                     <tr>
-                                        <th style="width: 20%">Name</th>
-                                        <td style="width: 70%"><input type="text" value="Sok Channy" class="edit--text" disabled/></td>
-                                        <td>
-                                            <a href="#" onclick="edit(this)" data-skin="skin-blue-light" class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>                                        
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Birthday</th>
-                                        <td><input type="text" value="June 07, 2016" class="edit--text" disabled/></td>
+                                        <th style="width: 20%">Birthday</th>
+                                        <td style="width: 70%"><input type="text" value="June 07, 2016" class="edit--text" disabled/></td>
                                         <td>
                                             <a href="#" onclick="edit(this)" data-skin="skin-blue-light" class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>                                        
                                         </td>

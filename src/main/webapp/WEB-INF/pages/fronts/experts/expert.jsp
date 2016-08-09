@@ -13,8 +13,8 @@
         <div class="container" style="padding-bottom: 100px">
             <jsp:include page="includes/search-session.jsp"/>
             <jsp:include page="includes/expert-list.jsp"/>  
-        </div>
-    </section>
+        </div>       
+    </section>    
     <jsp:include page="../includes/footer.jsp"/>
     <jsp:include page="../includes/home-script.jsp"/>    
     <script src="../../../../resources/scripts/frontend/expert.js" type="text/javascript"></script>

@@ -7,7 +7,8 @@
         </h3>
         <div class="pull-right box-tools">
             <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                <i class="fa fa-plus"></i></button>                   
+                <i class="fa fa-plus"></i>
+            </button>                   
         </div>
     </div>
     <div class="box-body pad">

@@ -5,8 +5,13 @@
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">                                                    
+                        <span class="mbr-brand__logo">
+                            <a href="${pageContext.request.contextPath}/">
+                                <img class="mbr-navbar__brand-img mbr-brand__img" src="../../../../resources/static/img/exlogo1.png" alt="Mobirise">
+                            </a>
+                        </span>
                         <span class="mbr-brand__name">
-                            <a class="mbr-brand__name text-white" href="">Find candidate</a>
+                            <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/">Recruitment</a>
                         </span>
                     </span>
                 </div>

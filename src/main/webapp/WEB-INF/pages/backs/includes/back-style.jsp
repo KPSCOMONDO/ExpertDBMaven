@@ -20,4 +20,5 @@
 <!-- Daterange picker -->
 <link rel="stylesheet" href="../../../../resources/static/admin/plugins/daterangepicker/daterangepicker.css">
 <!-- bootstrap wysihtml5 - text editor -->
-<link rel="stylesheet" href="../../../../resources/static/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">ic/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="../../../../resources/static/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<link href="../../../../resources/static/admin/custom.css" rel="stylesheet" type="text/css"/>
