@@ -61,6 +61,10 @@ public class AdminController {
     public String User(){
         return "/backs/admins/users/user";
     }
+    @RequestMapping(value={"/user/detail"})
+    public String UserDetail(){
+        return "/backs/admins/users/detail";
+    }
     
     @RequestMapping(value={"/report"})
     public String Report(){

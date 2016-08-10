@@ -35,8 +35,8 @@
                                 </label>                                       
                             </td>
                             <td>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
+                                <a href="${pageContext.request.contextPath}/admin/user/detail" class="btn btn-primary btn-xs"><i class="fa fa-info"></i></a>
+                                <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                             </td>                            
                         </tr>                                
                     </tbody>

@@ -57,6 +57,10 @@
                                             <a href="#" onclick="edit(this)" data-skin="skin-blue-light" class="btn btn-default btn-xs"><i class="fa fa-edit"></i></a>                                        
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th>Profile picture</th>
+                                        <td><input type="file"/></td>                                        
+                                    </tr>
                                 </tbody>
                             </table>          
                         </div>                        
