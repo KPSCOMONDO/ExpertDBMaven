@@ -2,66 +2,28 @@
 <section class="filter--session"  style="background-color: rgb(255, 255, 255);">       
     <div class="content-2 col-5">
         <div class="panel with-nav-tabs panel-primary">
-            <div class="panel-heading clearfix">
+            <div class="panel-heading clearfix" ng-if="skill_category.length != 0">
                 <div class="pull-right">
                     <i class="glyphicon glyphicon-filter"></i>
                 </div>
                 <div class="pull-left">
                     <ul class="nav nav-tabs subject">
                         <li class="active">
-                            <a href="#all" data-toggle="tab">ALL</a>
+                            <a href="#all" data-toggle="tab"><i class="glyphicon glyphicon-th"></i></a>
                         </li>
-                        <li>
-                            <a href="#tab2primary" data-toggle="tab">WEB DESIGN</a>
-                        </li>
-                        <li>
-                            <a href="#tab3primary" data-toggle="tab">MOBILE FRAMEWORK</a>
-                        </li> 
-                        <li>
-                            <a href="#tab3primary" data-toggle="tab">CMS</a>
-                        </li> 
-                        <li>
-                            <a href="#tab3primary" data-toggle="tab">MIS</a>
-                        </li> 
-                        <li>
-                            <a href="#tab3primary" data-toggle="tab">NETWORK</a>
-                        </li> 
-                        <li>
-                            <a href="#tab3primary" data-toggle="tab">OTHER</a>
-                        </li>
+                        <li ng-repeat="skill_category in skills_categories">
+                            <a href="{{ID_CAT}}{{skill_category.ID}}" data-toggle="tab">{{skill_category.CATEGORYSTATUS}}</a>
+                        </li>                        
                     </ul>                        
                 </div>                        
             </div>
             <div class="panel-body">
                 <div class="tab-content">
                     <div id="all" class="tab-pane fade">
-
                     </div>                                                    
-                    <div class="tab-pane fade subject" id="tab2primary">
-                        <a class="col-sm-2" href="">HTML <small>(19)</small></a>
-                        <a class="col-sm-2" href="">CSS <small>(19)</small></a>
-                        <a class="col-sm-2" href="">JAVASCRIPT <small>(19)</small></a>
-                        <a class="col-sm-2" href="">NOSCRIPT <small>(19)</small></a>
-                        <a class="col-sm-2" href="">HTML <small>(19)</small></a>
-                        <a class="col-sm-2" href="">CSS</a>
-                        <a class="col-sm-2" href="">JAVASCRIPT</a>
-                        <a class="col-sm-2" href="">HTML</a>
-                        <a class="col-sm-2" href="">CSS</a>
-                        <a class="col-sm-2" href="">JAVASCRIPT</a>
-                        <a class="col-sm-2" href="">NOSCRIPT</a>
-                        <a class="col-sm-2" href="">HTML</a>
-                        <a class="col-sm-2" href="">CSS</a>
-                        <a class="col-sm-2" href="">JAVASCRIPT</a>
-                    </div>
-                    <div class="tab-pane fade subject" id="tab3primary">
-                        <a class="col-sm-2" href="">HTML</a>
-                        <a class="col-sm-2" href="">CSS</a>
-                        <a class="col-sm-2" href="">JAVASCRIPT</a>
-                        <a class="col-sm-2" href="">NOSCRIPT</a>
-                        <a class="col-sm-2" href="">HTML</a>
-                        <a class="col-sm-2" href="">CSS</a>
-                        <a class="col-sm-2" href="">JAVASCRIPT</a>
-                    </div>
+                    <div ng-repeat="items in skills_categories" class="tab-pane fade subject" id="{{ID_CAT_}}{{items.ID}}">
+                        <a ng-repeat="item in items.SKILLS" ng-click="doFilter(this)" class="col-sm-2" href="">{{item.SKILL}} <span>({{item.COUNT}})</span></a>                        
+                    </div>                 
                 </div>
             </div>
             <div class="panel-footer">
@@ -72,210 +34,24 @@
         </div>
         <h1 class="heading">All developers</h1>
         <h3 ng-bind="btn1"></h3>
-        <div class="row">
-            <div>
+        <div ng-if="experts.length != 0" class="row">
+            <div ng-repeat="item in experts">
                 <div class="thumbnail">
                     <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
                     <div class="caption">
-                        <div>
-                            <h2>Sok Channy</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
+                            <h2>{{item.FULLNAME}}</h2>
+                            <span ng-repeat="pos in item.POSITIONS| limitTo:1">
+                                <i class="glyphicon glyphicon-briefcase"></i> {{pos.POSITION}}
+                            </span><br>                            
+                            <span>
+                                <i class="glyphicon glyphicon-home"></i> {{item.CURRENTWORK}}
+                            </span>                                              
                         <p class="group">
                             <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
+                        </p>                        
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/ren.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Ren Sothearin</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/polen.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Polen So Cute</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/dang.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Dim Dang</h2>
-                            <h4>Scrapt everyt, Kosign</h4>
-                        </div>
-                        <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/mama.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Moung Theara</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Sok Channy</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/ren.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Ren Sothearin</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/polen.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Polen So Cute</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/dang.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Dim Dang</h2>
-                            <h4>Scrapt everyt, Kosign</h4>
-                        </div>
-                        <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/mama.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Moung Theara</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Sok Channy</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/ren.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Ren Sothearin</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/polen.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Polen So Cute</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/dang.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Dim Dang</h2>
-                            <h4>Scrapt everyt, Kosign</h4>
-                        </div>
-                        <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/mama.jpg"></div>
-                    <div class="caption">
-                        <div>
-                            <h2>Moung Theara</h2>
-                            <h4>Spring security, Kosign</h4>
-                        </div>
-                        <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a></p>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="col-sm-12 text-center">
             <a href="${pageContext.request.contextPath}/expert" class="panel-title btn btn-default">

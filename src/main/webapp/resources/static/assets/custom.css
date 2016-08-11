@@ -795,6 +795,20 @@ h2,h1,h3{
 }
 .subject li a{
     text-decoration: none;   
+    border-bottom: none;
+}
+
+.subject li a:visited{
+    text-decoration: none;   
+    border-bottom: none;
+}
+.subject li a:after{
+    text-decoration: none;   
+    border-bottom: none;
+}
+.subject li a:active{
+    text-decoration: none; 
+    border-bottom: none;
 }
 
 /* Slide */

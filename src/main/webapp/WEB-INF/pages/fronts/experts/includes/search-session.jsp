@@ -9,8 +9,8 @@
         </div>
         <div class="collapse panel-body"  id="bl-category">
             <select class="form-filter expert--province--select" ng-model="cbo_skill_category">                    
-                <option ng-repeat="skill_category in skills_category" value="{{skill_category.skill_category_id}}">
-                    {{skill_category.skill_category_status}}
+                <option ng-repeat="skill_category in skills_categories" value="{{skill_category.skill_category_id}}">
+                    {{skill_category.CATEGORYSTATUS}}
                 </option>                        
             </select><br></br>                                                                                                          
             <div ng-repeat="skill in skills_by_cat_id">
@@ -22,7 +22,29 @@
                 &nbsp;&nbsp;More...
             </label>
         </div>
-    </div>                    
+    </div>
+    <div class="panel-default filter--box">  
+        <div class="panel-heading">
+            <a data-toggle="collapse" class="" href="#bl-position">
+                <h3 class="">Position<span class="icon pull-right icon-angle-down"></span></h3>
+            </a>
+        </div>
+        <div class="collapse panel-body"  id="bl-position">
+            <select class="form-filter expert--province--select" ng-model="cbo_skill_category">                    
+                <input type="radio" name="rdoPosition" ng-repeat="position in positions">
+                    {{position.POSITION}}
+                                       
+            </select><br></br>                                                                                                          
+            <div ng-repeat="skill in skills_by_cat_id">
+                <label class="sub-menu" >
+                    <input type="checkbox">&nbsp;&nbsp;{{skill.skill_name}}
+                </label>
+            </div>
+            <label class="sub-menu" >
+                &nbsp;&nbsp;More...
+            </label>
+        </div>
+    </div> 
     <div class="panel-default filter--box">   
         <div class="panel-heading">
             <a data-toggle="collapse" href="#bl-gender">
@@ -73,7 +95,7 @@
         <div class="collapse panel-body" id="bl-language">
             <div ng-repeat="language in languages">
                 <label class="sub-menu" >
-                    <input type="checkbox">&nbsp;&nbsp;{{language.language_status}}
+                    <input type="checkbox">&nbsp;&nbsp;{{language.LANGUAGE}}
                 </label>
             </div>
             <label class="sub-menu" >

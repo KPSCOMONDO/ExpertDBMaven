@@ -4,7 +4,7 @@ public class SqlScript {
 
     // Skill 
     public static final String C_SKILL = "INSER INTO exp_skills (skill_id,skill_name) VALUES(#{skill_id},#{skill_name})";
-    public static final String R_SKILL = "SELECT skill_id,skill_name FROM exp_skills WHERE skill_id=#{skill_id}";
+    public static final String R_SKILL = "SELECT skill_id,skill_status FROM exp_skills WHERE skill_id=#{skill_id}";
     public static final String RS_SKILL = "SELECT skill_id,skill_name,exp_skills.skill_category_id,skill_category_status \n"
             + "FROM exp_skills INNER JOIN exp_skill_category \n"
             + "ON exp_skills.skill_category_id=exp_skill_category.skill_category_id";
