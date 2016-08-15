@@ -133,7 +133,8 @@ h2,h1,h3{
 }
 
 .sub-menu{
-    font-size: 10pt;
+    font-size: 12pt;
+    margin: 15px 0 5px 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
 }
@@ -437,9 +438,6 @@ h2,h1,h3{
     margin-top: 5%;
 }
 
-.searck--categroy{
-    padding-bottom: 20px;
-}
 
 .login--control{
     font-family: Arial, Helvetica, sans-serif;
@@ -814,4 +812,46 @@ h2,h1,h3{
 /* Slide */
 .slide{
     height: 60pt;
+}
+
+.search--more{
+}
+
+.filter--by{
+    margin-top: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 640px) {
+    h2,h3, .mbr-hero__subtext{
+        font-size: 12pt;
+    }
+    h1{
+        font-size: 14pt;
+    }
+    .mbr-hero__text{
+        font-size: 16pt;
+    }
+    .mbr-section--60-height{
+        height: 70vh;
+    }
+    .subject a{
+       padding: 0;
+       margin: 0;
+    }
+}
+.image--profile{
+    width: 15%;
+}
+
+.sort--icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+th {
+	cursor:pointer;
 }

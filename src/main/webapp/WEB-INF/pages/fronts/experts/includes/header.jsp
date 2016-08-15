@@ -2,23 +2,27 @@
 <section class="" style="background-color: #EEEEEE;padding: 112px 0 15px 0;">
     <div class="container">
         <div class="text-center">
-            <div class="col-sm-10 search--expert">
+            <div class="col-sm-11 search--expert">
                 <input type="text" class="form-control expert--search-box animated fadeInUp delay" ng-model="searh_for_skill" placeholder="Search for skill...">
             </div>
-            <div class="search--expert">
-                <button class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  btn--search--expert">Search</button>
+            <div class="search--expert col-sm-1">
+                <button class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  expert--search-box">
+                    <span class="fa fa-search" style="padding: 10px;"></span>
+                </button>
             </div>
         </div>
     </div>
 </section>
-<section class="text-left content-2" style="padding-top: 0px;z-index: -9">
-    <div class="container">
-        <div class="col-sm-6">
-            <h3 class="heading">RESULT</3>               
-        </div>
-        <div class="col-lg-6">
-
-        </div>
+<section class="text-left content-2 container" style="padding-top: 20px;">
+    <span class="pull-left"><a href="${pageContext.request.contextPath}/home"><span class="fa fa-home"></span>Home</a>/Filter</span>
+    <div class="pull-right">        
+        <span ng-repeat="item in counters">            
+            {{item.CATEGORYSTATUS}}
+            <span class="fa fa-chevron-right"  style="color: #004D40"></span>
+            {{item.SKILLSTATUS}}
+            <small class="fa fa-chevron-right"  style="color: #004D40"></small>
+            <strong>{{item.COUNT}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
     </div>
 </section>
 

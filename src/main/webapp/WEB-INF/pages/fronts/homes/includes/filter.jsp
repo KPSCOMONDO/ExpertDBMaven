@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section class="filter--session"  style="background-color: rgb(255, 255, 255);">       
     <div class="content-2 col-5">
+        <%-- ----- ------- -----Skill category tab ---------------- ----- --- --%>       
         <div class="panel with-nav-tabs panel-primary">
             <div class="panel-heading clearfix" ng-if="skill_category.length != 0">
                 <div class="pull-right">
@@ -11,8 +12,8 @@
                         <li class="active">
                             <a href="#all" data-toggle="tab"><i class="glyphicon glyphicon-th"></i></a>
                         </li>
-                        <li ng-repeat="skill_category in skills_categories">
-                            <a href="{{ID_CAT}}{{skill_category.ID}}" data-toggle="tab">{{skill_category.CATEGORYSTATUS}}</a>
+                        <li ng-repeat="items in skills_categories">
+                            <a href="{{hash}}{{items.ID}}category" data-toggle="tab">{{items.CATEGORYSTATUS}}</a>
                         </li>                        
                     </ul>                        
                 </div>                        
@@ -21,40 +22,53 @@
                 <div class="tab-content">
                     <div id="all" class="tab-pane fade">
                     </div>                                                    
-                    <div ng-repeat="items in skills_categories" class="tab-pane fade subject" id="{{ID_CAT_}}{{items.ID}}">
-                        <a ng-repeat="item in items.SKILLS" ng-click="doFilter(this)" class="col-sm-2" href="">{{item.SKILL}} <span>({{item.COUNT}})</span></a>                        
+                    <div ng-repeat="items in skills_categories" class="tab-pane fade subject" id="{{items.ID}}category">
+                        <a ng-repeat="item in items.SKILLS" ng-click="doFilter(this)" class="col-sm-2" href="">
+                            {{item.SKILL}} <span>({{item.COUNT}})</span>
+                        </a>                        
                     </div>                 
                 </div>
             </div>
             <div class="panel-footer">
-                <a href="${pageContext.request.contextPath}/expert" class="panel-title btn btn-danger">
+                <a href="${pageContext.request.contextPath}/expert/filter" class="panel-title btn btn-danger">
                     <i class="glyphicon glyphicon-filter"></i> Search more
                 </a>
             </div>
         </div>
-        <h1 class="heading">All developers</h1>
-        <h3 ng-bind="btn1"></h3>
+        <%-- ----- ------- -----Result tile ---------------- ----- --- --%> 
+        <h3 ng-repeat="item in counters| limitTo:1">
+            <span class="heading">Result :</span><small> {{item.CATEGORYSTATUS}} > {{item.SKILLSTATUS}}</small>
+        </h3>
+        <%-- ----- ------- -----Expert list ---------------- ----- --- --%> 
         <div ng-if="experts.length != 0" class="row">
             <div ng-repeat="item in experts">
                 <div class="thumbnail">
-                    <div class="image"><img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg"></div>
-                    <div class="caption">
-                            <h2>{{item.FULLNAME}}</h2>
-                            <span ng-repeat="pos in item.POSITIONS| limitTo:1">
-                                <i class="glyphicon glyphicon-briefcase"></i> {{pos.POSITION}}
-                            </span><br>                            
-                            <span>
-                                <i class="glyphicon glyphicon-home"></i> {{item.CURRENTWORK}}
-                            </span>                                              
-                        <p class="group">
-                            <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
-                        </p>                        
+                    <div class="content">
+                        <div class="image">
+                            <img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg">
+                        </div>
+                        <div class="caption">
+                            <table class="table-condensed text-left">
+                                <tr>
+                                    <td><i class="glyphicon glyphicon-text-background"></i></td><th>{{item.FULLNAME}}</th>
+                                </tr>
+                                <tr ng-repeat="pos in item.POSITIONS| limitTo:1">
+                                    <td><i class="glyphicon glyphicon-briefcase"></i></td><td>{{pos.POSITION}}</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="glyphicon glyphicon-home"></i></td><td>{{item.CURRENTWORK}}</td>
+                                </tr>
+                            </table>                                              
+                            <p class="group">
+                                <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
+                            </p>                        
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 text-center">
-            <a href="${pageContext.request.contextPath}/expert" class="panel-title btn btn-default">
+            <a href="${pageContext.request.contextPath}/expert/filter" class="panel-title btn btn-default">
                 <i class="glyphicon glyphicon-filter"></i> Search more ...
             </a>
         </div>

@@ -11,7 +11,7 @@
                             </a>
                         </span>
                         <span class="mbr-brand__name">
-                            <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/">Recruitment</a>
+                            <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/home">Recruitment</a>
                         </span>
                     </span>
                 </div>
@@ -21,18 +21,14 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/   ">Home</a>
-                                </li>                              
-                                <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="video-background.html">Contact</a>
-                                </li> 
-                                <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="blog.html">About</a>
-                                </li></ul></div>
+                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/home">Home</a>
+                                </li>                                                             
+                            </ul>
+                        </div>
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__btn btn btn-default" href="">Login</a>
+                                    <a class="mbr-buttons__btn btn btn-default" href="${pageContext.request.contextPath}/login">Login</a>
                                 </li>
                             </ul>
                         </div>

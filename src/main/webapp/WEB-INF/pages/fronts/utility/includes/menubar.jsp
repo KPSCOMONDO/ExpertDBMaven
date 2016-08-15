@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute mbr-navbar--transparent mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-41">
+<section class="mbr-navbar mbr-navbar--freeze mbr-navbar--absolute  mbr-navbar--sticky mbr-navbar--auto-collapse" id="menu-41">
     <div class="mbr-navbar__section mbr-section">
         <div class="mbr-section__container container">
             <div class="mbr-navbar__container">
@@ -23,18 +23,7 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/expert/filter">Find candidate</a>
-                                </li>                                 
-                                <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/contact">Contact</a>
-                                </li> 
-                                <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/about">About</a>
-                                </li></ul></div>
-                        <div class="mbr-navbar__column">
-                            <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-                                <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__btn btn btn-default" href="${pageContext.request.contextPath}/login">Login</a>
+                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/home">Home</a>
                                 </li>
                             </ul>
                         </div>

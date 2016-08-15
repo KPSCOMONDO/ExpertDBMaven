@@ -15,7 +15,7 @@
                                         <p class="mbr-hero__subtext">We provide a platform for find IT stuff</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">
-                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert">Find Candidate</a> 
+                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a> 
                                     </div>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                                         <p class="mbr-hero__subtext">Easy to use and with powerfull function</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">
-                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert">Find Candidate</a>
+                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                         <p class="mbr-hero__subtext">We provide full contact of IT expert.</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">
-                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert">Find Candidate</a> 
+                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a> 
                                     </div>
                                 </div>                                    
                             </div>
@@ -55,14 +55,6 @@
                     </div>
                 </div>
             </div>
-            <a data-app-prevent-settings="" class="left carousel-control" role="button" data-slide="prev" href="#slider-38">
-                <span class="glyphicon glyphicon-menu-left" aria-hidden="true" style="padding-top: 30%;"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a data-app-prevent-settings="" class="right carousel-control" role="button" data-slide="next" href="#slider-38">
-                <span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="padding-top: 30%;"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
 </section>
