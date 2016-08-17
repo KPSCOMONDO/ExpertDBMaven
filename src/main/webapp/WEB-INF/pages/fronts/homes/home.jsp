@@ -17,7 +17,8 @@
         <jsp:include page="../includes/footer.jsp"/><%-- --- Footer --- --%>
         <jsp:include page="../includes/home-script.jsp"/> <%-- --- include script template --- --%>        
         <jsp:include page="../utility/loading.jsp"/><%-- --- Loading path --- --%>  
-        <script src="../../../../resources/scripts/frontend/home.js" type="text/javascript"></script>
-        <script src="../../../../resources/scripts/frontend/configuration.js" type="text/javascript"></script>
+        <script src="../../../../resources/scripts/utility/configuration.js" type="text/javascript"></script>
+        <script src="../../../../resources/static/angular/angular.js" type="text/javascript"></script>
+        <script src="../../../../resources/scripts/frontend/angular/home.js" type="text/javascript"></script>
     </body>
 </html>

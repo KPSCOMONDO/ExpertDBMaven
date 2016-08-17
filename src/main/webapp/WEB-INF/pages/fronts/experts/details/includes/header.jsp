@@ -16,9 +16,9 @@
                     <div>
                         <div class="mbr-section__container mbr-section__container--middle">
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">                            
-                                <h1 class="" style="margin-top: 10%;">Sok Channy<span class="glyphicons glyphicons-bookmark"></span></h1>                                
+                                <h1 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}<span class="glyphicons glyphicons-bookmark"></span></h1>                                
                                 <h4>
-                                    <i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;Phnom Penh
+                                    <i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;{{experts.ADDRESS.PROVINCE}}
                                 </h4> 
                                 <h4 class="subject"><i class="glyphicon glyphicon-envelope"></i><a href="#">&nbsp;&nbsp;sokchanny.sg@gmail.com</a></h4>                                
                                 <h4 class="subject"><i class="glyphicon glyphicon-phone"></i><a href="#">&nbsp;&nbsp;(+855)86-651-443</a></h4>

@@ -5,44 +5,47 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Language list</h3>
+                <h3 class="box-title">Language list</h3>                
             </div>
+            <form class="form-inline box-header">
+                <div class="form-group">
+                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                </div>
+            </form>
             <!-- /.box-header -->
-            <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
+            <div class="box-body">                
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Language</th>                                                                      
-                            <th style="width: 15%;">Action</th>
+                            <th ng-click="sort('LANGUAGE')">Language
+                                <span class="fa" ng-show="sortKey == 'LANGUAGE'" 
+                                      ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
+                                </span>
+                            </th>                            
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Khmer</td>
+                        <tr dir-paginate="item in LANGUAGES|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
                             <td>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
+                                {{$index + 1}}
+                            </td>
+                            <td>                                
+                              <input type="text" ng-model="item.LANGUAGE" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/>
+                            </td>
+                            <td>
+                                <a ng-click="editClick(item)" class="btn btn-primary btn-xs" >
+                                    <span class="fa " ng-class="{'fa-edit':(item.STATUS == false),'fa-save':(item.STATUS == true)}"></span>
+                                </a>
+                                <a ng-click="deleteLanguage(item)" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>English</td>
-                            <td>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>#</th>
-                            <th>Language</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+                    </tbody>                    
                 </table>
+                <div class="pull-right">
+                    <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
+                </div>
             </div>
         </div>
     </div>

@@ -11,15 +11,15 @@
         </div>
     </div>
     <div class="box-body pad">
-        <form role="form">
+        <form ng-submit="createLanguage()">
             <div class="box-body">
                 <div class="form-group">
                     <label for="txlanguage">Language status</label>
-                    <input id="txlanguage" type="text" class="form-control" placeholder="New languege">
+                    <input id="txlanguage" ng-model="txtLanguage" type="text" class="form-control" placeholder="Create new language">
                 </div>                        
             </div>
             <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button  type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
     </div>

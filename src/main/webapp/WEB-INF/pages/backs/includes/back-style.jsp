@@ -22,3 +22,4 @@
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="../../../../resources/static/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <link href="../../../../resources/static/admin/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../resources/static/sweetalert2/sweetalert2.css" rel="stylesheet" type="text/css"/>

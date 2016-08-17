@@ -7,32 +7,34 @@
                 <h3 class="box-title">Province list</h3>
             </div>
             <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Province</th>                            
-                            <th style="width: 15%;">Action</th>
+                            <th ng-click="sort('LOCATIONSTATUS')">Location
+                                <span class="fa" ng-show="sortKey == 'LOCATIONSTATUS'" 
+                                      ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
+                                </span>
+                            </th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Pailin</td>                            
+                        <tr dir-paginate="item in LOCATIONS|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                            <td>{{$index + 1}}</td>                            
+                            <td><input type="text" ng-model="item.LOCATIONSTATUS" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
                             <td>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
+                                <a ng-click="editClick(item)" class="btn btn-primary btn-xs" >
+                                    <span class="fa " ng-class="{'fa-edit':(item.STATUS == false),'fa-save':(item.STATUS == true)}"></span>
+                                </a>
+                                <a ng-click="deleteLocation(item)" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                             </td>
                         </tr>                                
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>#</th>
-                            <th>Province</th>                            
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+                    </tbody>                    
                 </table>
+                <div class="pull-right">
+                        <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
+                    </div>
             </div>
         </div>
     </div>

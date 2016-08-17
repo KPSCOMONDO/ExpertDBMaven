@@ -17,8 +17,13 @@
                     <jsp:include page="includes/skill-list.jsp"/>
                 </section>
             </div>             
+            <jsp:include page="../../utility/loading.jsp"/>
             <jsp:include page="../../includes/footer.jsp"/>
         </div>        
         <jsp:include page="../includes/sub-script.jsp"/>
+        <script src="../../../../../resources/scripts/utility/configuration.js" type="text/javascript"></script>
+        <script src="../../../../../resources/static/angular/angular.js" type="text/javascript"></script>
+        <script src="../../../../../resources/static/libs/dirPagination.js" type="text/javascript"></script>
+        <script src="../../../../../resources/scripts/angular/skill.js" type="text/javascript"></script>
     </body>
 </html>

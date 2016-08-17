@@ -1,4 +1,5 @@
 package org.expert.database.configuration;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,7 +37,9 @@ public class WebConfiguration {
 
     @Bean
     public String WS_URL() {
-        return "http://localhost:8081/api";//environment.getProperty("EXPERT.API.URL");
+        //return  "http://localhost:8081/api";//"
+        return  "http://192.168.178.137:8081/api";//"
+        //return "https://infinite-lowlands-88344.herokuapp.com/api/";//environment.getProperty("EXPERT.API.URL");
     }
 
     @Bean
@@ -46,6 +49,6 @@ public class WebConfiguration {
 
     @Bean
     public String KEY() {
-        return  "ZGV2OiFAIyQlYXBp"; //environment.getProperty("EXPERT.API.HEADER");
+        return "ZGV2OiFAIyQlYXBp"; //environment.getProperty("EXPERT.API.HEADER");
     }
 }

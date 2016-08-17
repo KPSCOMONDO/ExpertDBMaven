@@ -781,6 +781,15 @@ h2,h1,h3{
 }
 
 /* LINK */
+.info-text{
+    font-size: 12pt;
+    margin: 5px;
+}
+.info-name{
+    font-size: 14pt;
+    margin: 10px;
+}
+
 .subject a{
     text-decoration: none;
     padding: 10px 0px 10px 0px;    
@@ -839,8 +848,8 @@ h2,h1,h3{
         height: 70vh;
     }
     .subject a{
-       padding: 0;
-       margin: 0;
+        padding: 0;
+        margin: 0;
     }
 }
 .image--profile{
@@ -853,5 +862,46 @@ h2,h1,h3{
 }
 
 th {
-	cursor:pointer;
+    cursor:pointer;
+}
+
+// USER PROFILE
+//Navbar User Menu
+/*.user > a {
+    > .fa,
+    > .glyphicon,
+    > .ion {
+        margin-right: 5px;
+    }
+}*/
+
+/*.user-menu{
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+    padding:1px 0 0 0;
+    border-top-width:0;
+    width:280px;
+}*/
+
+//.user-menu 
+.user-image{
+    height:25px;
+    width: 25px;
+    border-radius:50%;
+    margin-right:10px;
+    margin-top:-2px
+}
+
+.user-header {
+  background-color: #222;
+}
+
+.user-body{
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:4px
+}
+
+.user-footer{
+    background-color:#f9f9f9;
+    adding:10px
 }

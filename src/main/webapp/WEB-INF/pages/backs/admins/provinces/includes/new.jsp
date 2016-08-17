@@ -11,11 +11,11 @@
         </div>
     </div>
     <div class="box-body pad">
-        <form role="form">
+        <form ng-submit="createLocation()">
             <div class="box-body">
                 <div class="form-group">
                     <label for="txprovince">Province status</label>
-                    <input id="txprovince" type="text" class="form-control" placeholder="New provice">
+                    <input ng-model="txtLocation" id="txprovince" type="text" class="form-control" placeholder="New provice">
                 </div>                
             </div>
             <div class="box-footer">

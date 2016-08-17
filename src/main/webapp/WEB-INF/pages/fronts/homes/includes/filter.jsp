@@ -12,7 +12,7 @@
                         <li class="active">
                             <a href="#all" data-toggle="tab"><i class="glyphicon glyphicon-th"></i></a>
                         </li>
-                        <li ng-repeat="items in skills_categories">
+                        <li ng-repeat="items in SKILL_CATEGORIES">
                             <a href="{{hash}}{{items.ID}}category" data-toggle="tab">{{items.CATEGORYSTATUS}}</a>
                         </li>                        
                     </ul>                        
@@ -22,8 +22,8 @@
                 <div class="tab-content">
                     <div id="all" class="tab-pane fade">
                     </div>                                                    
-                    <div ng-repeat="items in skills_categories" class="tab-pane fade subject" id="{{items.ID}}category">
-                        <a ng-repeat="item in items.SKILLS" ng-click="doFilter(this)" class="col-sm-2" href="">
+                    <div ng-repeat="items in SKILL_CATEGORIES" class="tab-pane fade subject" id="{{items.ID}}category">
+                        <a ng-repeat="item in items.SKILLS" ng-click="doFilter(item)" class="col-sm-2" href="">
                             {{item.SKILL}} <span>({{item.COUNT}})</span>
                         </a>                        
                     </div>                 
@@ -36,32 +36,52 @@
             </div>
         </div>
         <%-- ----- ------- -----Result tile ---------------- ----- --- --%> 
-        <h3 ng-repeat="item in counters| limitTo:1">
+        <h3 ng-repeat="item in COUNTERS| limitTo:1">
             <span class="heading">Result :</span><small> {{item.CATEGORYSTATUS}} > {{item.SKILLSTATUS}}</small>
         </h3>
         <%-- ----- ------- -----Expert list ---------------- ----- --- --%> 
         <div ng-if="experts.length != 0" class="row">
-            <div ng-repeat="item in experts">
+            <div ng-repeat="item in EXPERTS|limitTo:8">
                 <div class="thumbnail">
                     <div class="content">
                         <div class="image">
                             <img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg">
                         </div>
                         <div class="caption">
-                            <table class="table-condensed text-left">
-                                <tr>
-                                    <td><i class="glyphicon glyphicon-text-background"></i></td><th>{{item.FULLNAME}}</th>
-                                </tr>
-                                <tr ng-repeat="pos in item.POSITIONS| limitTo:1">
-                                    <td><i class="glyphicon glyphicon-briefcase"></i></td><td>{{pos.POSITION}}</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="glyphicon glyphicon-home"></i></td><td>{{item.CURRENTWORK}}</td>
-                                </tr>
+                            <span class="info-name"><strong>{{item.FULLNAME| limitTo:20}}<span ng-if="item.length > 20">....</span></strong></span><br>
+                            <span ng-repeat="pos in item.POSITIONS| limitTo:1">
+                                <span class="info-text">&nbsp;{{pos.POSITION}}</span>
+                                <span class="info-text">,&nbsp;{{item.CURRENTWORK}}</span>
+                            </span>
+                            </tr>
                             </table>                                              
                             <p class="group">
-                                <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
+                                <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
                             </p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a ng-show="experts.length > 8" href="#more--expert" data-toggle="collapse">MORE...</a>
+            <div ng-s class="collapse" id="more--expert">
+                <div ng-if="experts.length > 8" ng-repeat="item in EXPERTS|limitTo:(EXPERTS.length - 8):8">
+                    <div class="thumbnail">
+                        <div class="content">
+                            <div class="image">
+                                <img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg">
+                            </div>
+                            <div class="caption">
+                                <span class="info-name"><strong>{{item.FULLNAME| limitTo:20}}<span ng-if="item.length > 20">....</span></strong></span><br>
+                                <span ng-repeat="pos in item.POSITIONS| limitTo:1">
+                                    <span class="info-text">&nbsp;{{pos.POSITION}}</span>
+                                    <span class="info-text">,&nbsp;{{item.CURRENTWORK}}</span>
+                                </span>
+                                </tr>
+                                </table>                                              
+                                <p class="group">
+                                    <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
+                                </p>                        
+                            </div>
                         </div>
                     </div>
                 </div>

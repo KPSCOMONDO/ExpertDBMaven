@@ -257,10 +257,11 @@
 
 /*Editable text box*/
 .edit--text{
+    margin: 0;
     width: 100%;
     border: none;
     background: none;
 }
 .edit--text--enable{
-    background: #ddd;
+    border:solid 1px #4a9fe9;
 }

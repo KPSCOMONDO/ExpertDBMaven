@@ -32,6 +32,7 @@
         </div>                                                     
     </section>
     <script src="../../../../resources/static/jquery/jquery.js" type="text/javascript"></script>
+    <script src="../../../../resources/scripts/utility/configuration.js" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
             $("#frmLogin").submit(function (e) {
@@ -43,12 +44,15 @@
                     success: function (data) {
                         if (data == "User account is locked") {
                             alert(data);
+                            APP_CACHE.set("LOGIN",false);
                         } else if (data == "User is disabled") {
                             alert(data);
+                            APP_CACHE.set("LOGIN",false);
                         } else if (data == "Bad credentials") {
                             alert(data);
-                        } else {
-                            console.log(data);
+                            APP_CACHE.set("LOGIN",false);
+                        } else{
+                            APP_CACHE.set("LOGIN",true);                           
                             location.href = "${pageContext.request.contextPath}" + data;
                         }
                     },

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="text-center">
             <div class="col-sm-11 search--expert">
-                <input type="text" class="form-control expert--search-box animated fadeInUp delay" ng-model="searh_for_skill" placeholder="Search for skill...">
+                <input type="text" class="form-control expert--search-box animated fadeInUp delay" style="padding: 10px;" ng-model="searh_for_skill" placeholder="Search for skill...">
             </div>
             <div class="search--expert col-sm-1">
                 <button class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  expert--search-box">

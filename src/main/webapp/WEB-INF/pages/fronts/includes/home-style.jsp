@@ -15,5 +15,5 @@
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise-gallery/style.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise/css/mbr-additional.css" type="text/css">
 <link href="../../../../../resources/static/assets/custom.css" rel="stylesheet" type="text/css"/>
-<script src="../../../../resources/static/angular/angular.min.js" type="text/javascript"></script>
 <link href="../../../../resources/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../resources/static/sweetalert2/sweetalert2.css" rel="stylesheet" type="text/css"/>

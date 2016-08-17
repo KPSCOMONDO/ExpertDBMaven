@@ -6,33 +6,53 @@
             <div class="box-header">
                 <h3 class="box-title">Province list</h3>
             </div>
+            <form class="form-inline box-header">
+                <div class="form-group">
+                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                </div>
+            </form>
             <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Skill category</th>                            
-                            <th style="width: 15%;">Action</th>
+                            <th ng-click="sort('CATEGORYSTATUS')" style="width: 30%">Status
+                                <span class="fa" ng-show="sortKey == 'CATEGORYSTATUS'" 
+                                      ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
+                                </span>
+                            </th> 
+                            <th>Skills</th>
+                            <th ng-click="sort('DESCRIPTION')" style="width: 50%">Description
+                                <span class="fa" ng-show="sortKey == 'DESCRIPTION'" 
+                                      ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
+                                </span>
+                            </th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr dir-paginate="item in SKILLCATEGORIES|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
                             <td>1</td>
-                            <td>Web Developer</td>                            
+                            <td><input type="text" ng-model="item.CATEGORYSTATUS" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
+                            <td>{{item.COUNTS}}</td>
+                            <td><input type="text" ng-model="item.DESCRIPTION" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
                             <td>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
-                                <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i> Delete</a>
+                                <a ng-click="editClick(item)" class="btn btn-primary btn-xs" >
+                                    <span class="fa " ng-class="{'fa-edit':(item.STATUS == false),'fa-save':(item.STATUS == true)}"></span>
+                                </a>
+                                <a ng-click="deleteLanguage(item)" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                             </td>
                         </tr>                                
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th>#</th>
-                            <th>Skill category</th>                            
-                            <th>Action</th>
+
                         </tr>
                     </tfoot>
                 </table>
+                <div class="pull-right">
+                    <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
+                </div>
             </div>
         </div>
     </div>

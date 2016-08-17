@@ -9,26 +9,31 @@
                     <span class="fa pull-right" ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}"></span>
                 </button>
                 <ul class="dropdown-menu subject">
-                    <li><a href="" class="subject" ng-click="sort('FULLNAME','Name')">Name</a></li>
-                    <li><a href="" class="subject" ng-click="sort('YEAREXPERIENCE','Year experience')">Year experience</a></li>
-                    <li><a href="" class="subject" ng-click="sort('SALARY','Salary')">Salary</a></li>
-                    <li><a href="" class="subject" ng-click="sort('PROVINCESTATUS','City/Province')">City/Province</a></li>
-                    <li><a href="" class="subject" ng-click="sort('AGE','Age')">Age</a></li>
+                    <li><a href="" class="subject" ng-click="sort('FULLNAME', 'Name')">Name</a></li>
+                    <li><a href="" class="subject" ng-click="sort('YEAREXPERIENCE', 'Year experience')">Year experience</a></li>
+                    <li><a href="" class="subject" ng-click="sort('SALARY', 'Salary')">Salary</a></li>
+                    <li><a href="" class="subject" ng-click="sort('PROVINCESTATUS', 'City/Province')">City/Province</a></li>
+                    <li><a href="" class="subject" ng-click="sort('AGE', 'Age')">Age</a></li>
                 </ul>
-            </div>                            
+            </div> 
+            <div ng-if="experts">
+                <h2 class="heading">Result</h2>
+            </div>
         </div>
-        <div class="pull-right">
-            <form class="form-inline">
-                <div class="form-group">
-                    <label>Search:</label>
-                    <input type="text" ng-model="search" class="form-control search--expert" placeholder="Search by keyword">
-                </div>
-            </form>
-            <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
+        <div>            
+            <div class="pull-right">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label>Search:</label>
+                        <input type="text" ng-model="search" class="form-control search--expert" placeholder="Search by keyword">
+                    </div>
+                </form>            
+                <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
+            </div>
         </div>
         <table style="width: 100%;" >    
             <tbody>
-                <tr dir-paginate="item in experts|orderBy:sortKey:reverse|filter:search|itemsPerPage:3">
+                <tr dir-paginate="item in EXPERTS|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
                     <td>
                         <div class="col-sm-12 box--result">
                             <div class="pull-left image--profile">                                                                                         
@@ -43,10 +48,6 @@
                                     <h4 class="text-right row"><span class="fa fa-money"> {{item.SALARY| currency:"USD ":0}}</span></h4>                                                                                                                             
                                 </div>
                                 <div class="col-sm-12 row">
-                                    <!--                                    <div class="col-sm-10 pull-left">
-                                                                            <span ng-repeat="pos in item.POSITIONS| limitTo:1"><i class="glyphicon glyphicon-adjust"></i> {{pos.POSITION}}</span><br> 
-                                                                            <span ><i class="glyphicon glyphicon-map-marker"></i>{{item.CURRENTWORK}}</span>                                                                        
-                                                                        </div>-->
                                     <div class="col-sm-10 pull-left" style="padding-left: 0;margin-left: 0;">
                                         <span ng-repeat="pos in item.POSITIONS| limitTo:1" class="fa fa-briefcase">
                                             &nbsp;&nbsp;<strong>{{pos.POSITION}}</strong>
@@ -57,7 +58,7 @@
                                         <span class="fa fa-location-arrow">&nbsp;&nbsp;{{item.Province.PROVINCESTATUS}}</span>
                                     </div>
                                     <div class="col-sm-2">
-                                        <a class="btn btn-primary row" href="${pageContext.request.contextPath}/expert/detail">
+                                        <a class="btn btn-primary row" ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail">
                                             <i class="glyphicon glyphicon-eye-open"></i> DETAIL
                                         </a> 
                                     </div>

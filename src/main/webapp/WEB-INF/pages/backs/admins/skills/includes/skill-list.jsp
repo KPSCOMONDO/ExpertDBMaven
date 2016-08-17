@@ -16,10 +16,10 @@
                             <th style="width: 15%;">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody >
+                        <tr dir-paginate="item in SKILLS|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
                             <td>1</td>
-                            <td>Web developer</td>
+                            <td>{{item.SKILLSTATUS}}</td>
                             <td>HTML</td>
                             <td>
                                 <a href="#" data-skin="skin-blue-light" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>

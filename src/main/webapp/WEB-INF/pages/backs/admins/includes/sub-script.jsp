@@ -9,6 +9,7 @@
 <script src="../../../../../resources/static/admin/dist/js/demo.js"></script>
 
 <script src="../../../../../resources/static/switch/switch.js" type="text/javascript"></script>
+<script src="../../../../../resources/static/sweetalert2/sweetalert2.js" type="text/javascript"></script>
 <script>
     $(function () {
         $("#example1").DataTable();

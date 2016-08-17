@@ -20,3 +20,4 @@
 <script src="../../../../../resources/static/assets/mobirise/js/script.js"></script>
 <script src="../../../../../resources/static/assets/mobirise-gallery/script.js"></script>
 <script src="../../../../../resources/static/assets/custom.js" type="text/javascript"></script>
+<script src="../../../../resources/static/sweetalert2/sweetalert2.js" type="text/javascript"></script>

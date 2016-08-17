@@ -35,3 +35,4 @@
 <script src="../../../../resources/static/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../../../resources/static/admin/dist/js/demo.js"></script>
+<script src="../../../../resources/static/sweetalert2/sweetalert2.js" type="text/javascript"></script>

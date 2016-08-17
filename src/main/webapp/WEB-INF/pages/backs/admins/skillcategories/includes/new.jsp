@@ -11,12 +11,16 @@
         </div>
     </div>
     <div class="box-body pad">
-        <form role="form">
+        <form ng-submit="createSkillCategory()">
             <div class="box-body">
                 <div class="form-group">
                     <label for="txpskillcategory">Skill Category</label>
-                    <input id="txskillcategory" type="text" class="form-control" placeholder="New skill category">
+                    <input ng-model="txtCategoryName" id="txskillcategory" type="text" class="form-control" placeholder="New skill category">
                 </div>                
+                <div class="form-group">
+                    <label for="tadescription">Skill Category</label>
+                    <textarea  ng-model="txaDescription" id="tadescription" type="texta" rows="10" class="form-control" placeholder="New skill category"></textarea>
+                </div> 
             </div>
             <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
