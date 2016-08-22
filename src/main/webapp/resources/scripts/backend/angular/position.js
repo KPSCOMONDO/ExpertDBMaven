@@ -3,15 +3,21 @@ var app = angular.module('position--app', ['angularUtils.directives.dirPaginatio
 app.controller('position__controller', function ($scope, $http) {
     $scope.loading = true;
     $scope.FinallPosition = function () {
-        $http.get(CONFIGURATION.getBase_url() + "/component/position/findall")
-                .then(function (response) {
-                    $scope.loading = false;
-                    $scope.POSITIONS = (response.data.DATA).reverse();
-                    $scope.setItemStatus();
-                }, function (err) {
-                    $scope.loading = false;
-                });
+        REQUEST.GET("/component/position/findall", $http, function (response) {
+            $scope.loading = false;
+            $scope.POSITIONS = (response.data.DATA);
+            if ($scope.POSITIONS) {
+                $scope.POSITIONS = $scope.POSITIONS.reverse();
+            }
+            $scope.setItemStatus();
+            $scope.loading = false
+            $scope.setItemStatus();
+        }, function (error) {
+            DIALOG.error("Error", error.message);
+            $scope.loading = false;
+        })
     }
+
     $scope.sort = function (keyname, name) {
         $scope.sortKey = keyname;   //set the sortKey to the param passed
         $scope.sortName = name;
@@ -37,63 +43,42 @@ app.controller('position__controller', function ($scope, $http) {
      * Create new 
      */
     $scope.createPosition = function () {
-        $scope.loading = true;
-        var formData = {
+        REQUEST.POST("/component/position/create", {
             "POSITION STATUS": $scope.txtPosition
-        }
-        $http({
-            method: 'POST',
-            url: CONFIGURATION.getBase_url() + "/component/position/create",
-            data: JSON.stringify(formData)
-        }).then(function (response) {
-            if (response.data.STATUS) {
-                $scope.loading = false;
-                $scope.FinallPosition();
-            }
+        }, $http, function (response) {
+            REQUEST.SUCCESS(response);
+            $scope.FinallPosition()
+            $scope.txtPosition = ""
+        }, function (error) {
+            REQUEST.ERROR(error)
         })
     }
-    /**
-     * Update position
-     * 
-     */
     $scope.updatePosition = function (element) {
-        $scope.loading = true;
-        var formData = {
-            "POSITION ID": element.ID,
-            "POSITION": element.POSITION
-        }
-        $http({
-            method: 'PUT',
-            url: CONFIGURATION.getBase_url() + "/component/position/update",
-            data: JSON.stringify(formData)
-        }).then(function (response) {
-            if (response.data.STATUS) {
-                $scope.loading = false;
-                $scope.FinallPosition();
-            }
+        REQUEST.PUT("/component/position/update", {
+            "POSITION ID": element.POSITIONID,
+            "POSITION STATUS": element.POSITION
+        }, $http, function (response) {
+            REQUEST.SUCCESS(response)
+            $scope.FinallPosition()
         }, function (error) {
-            $scope.loading = false;
+            REQUEST.ERROR(error)
         })
     }
     $scope.deletePosition = function (element) {
-        DIALOG.confirm("Deleting!", element.POSITION + " is being deleted.",
-                function () {
-                    $http({
-                        method: 'DELETE',
-                        url: CONFIGURATION.getBase_url() + "/component/position/delete/" + element.ID
-                    }).then(function (response) {
-                        if (response.data.STATUS) {
-                            $scope.loading = false;
-                            $scope.FinallPosition();
-                            DIALOG.success("Deleted", "")
-                        } else {
-                            DIALOG.error("Error", "Cannot delete " + element.POSITION + ",\nbecause it is used by other record")
-                        }
-                    }, function (error) {
-                        DIALOG.error("Error!", error.message)
-                        $scope.loading = false;
-                    })
-                })
+        DIALOG.confirm("Deleting!", element.POSITION + " is being deleted.", function () {
+            REQUEST.DELETE("/component/position/delete/" + element.POSITIONID, $http, function (data) {
+                REQUEST.SUCCESS(data)
+                $scope.FinallPosition()
+            }, function (error) {
+                REQUEST.ERROR(error)
+            })
+        })
     }
+    $scope.setItemStatus = function () {
+        $.map($scope.POSITIONS, function (item) {
+            item.STATUS = false;
+        })
+    }
+
     $scope.FinallPosition();
 });

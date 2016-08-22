@@ -14,6 +14,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +27,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 @RequestMapping(value = {"/rest/component"},method = RequestMethod.POST)
+@CrossOrigin
 public class PostComponentRController {    
     @Autowired
     private String WS_URL;
@@ -74,7 +76,7 @@ public class PostComponentRController {
     }
     
     @RequestMapping(value = {"/skill/create"})
-    public ResponseEntity<Map<String, Object>> CreateSkillCategory(@RequestBody AddSkill addSkill) {
+    public ResponseEntity<Map<String, Object>> CreateSkill(@RequestBody AddSkill addSkill) {
         HttpEntity<Object> request = new HttpEntity<Object>(addSkill, header);
         header.set("Accept", MediaType.APPLICATION_JSON_VALUE);
         String URL = WS_URL + "/component/add-skill";

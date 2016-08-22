@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section>
-    <div class="mbr-section__container mbr-section__container--isolated container">                
+    <div class="container" style="margin-top: 20px;">
+        <span class="pull-left subject">
+            <a href="${pageContext.request.contextPath}/home"><span class="fa fa-home"></span>&nbsp;Home</a>
+            <a href="${pageContext.request.contextPath}/expert/filter">/Filter</a>
+            <span>/Detail</span>
+        </span> 
+    </div>
+    <div class="mbr-section__container mbr-section__container--isolated container">                        
         <div class="col-sm-8">
             <div class="panel with-nav-tabs panel-primary">
                 <div class="panel-heading">
@@ -27,164 +34,145 @@
                         <%--      ------------ BSIC INFO ----------------------- --%>
                         <div class="tab-pane fade in active" id="about">
                             <div class="content-2" style="padding-top: 20px">
-                                <h3 class="heading">Basic Information</h3>
-                                <table>
+                                <h3>
+                                    <i class="fa fa-align-right text-green"></i>
+                                    <strong class="text-blue">Personal Data</strong>
+                                </h3>
+                                <table style="width: 100%;">
                                     <tr>
-                                        <td style="width: 30%;"><h4>Date of birth</h4></td>
+                                        <td style="width: 30%;"><h4 class="text--title">Date of birth</h4></td>
                                         <td><h4>{{EXPERTS.DATEOFBIRTH| date}}</h4></td>
                                     </tr>
                                     <tr>
-                                        <td><h4>Gender</h4></td>
+                                        <td><h4 class="text--title">Gender</h4></td>
                                         <td><h4>{{EXPERTS.GENDER}}</h4></td>
                                     </tr>
                                     <tr>
-                                        <td><h4>Address</h4></td>
+                                        <td><h4 class="text--title">Address</h4></td>
                                         <td><h4>{{EXPERTS.ADDRESS.COMMUNE}},&nbsp;{{EXPERTS.ADDRESS.DISTRICT}},&nbsp;{{EXPERTS.ADDRESS.CITY}},&nbsp;{{experts.ADDRESS.COUNTRY}}</4></td>
-                                    </tr>                                   
+                                    </tr>                                    
                                 </table>
-                                <h3 class="heading">Work position</h3>
-                                <h4 ng-repeat="item in EXPERTS.POSITIONS">{{item.POSITION}}</h4>                    
+                                <h3>
+                                    <i class="fa fa-bar-chart text-red"></i>
+                                    <strong class="text-blue">Experience</strong>
+                                </h3>
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td style="width: 30%;"><h4 class="text--title">Current work place</h4></td>
+                                        <td><h4>{{EXPERTS.CURRENTWORK}}</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%;"><h4 class="text--title">Position</h4></td>
+                                        <td><h4 ng-repeat="item in EXPERTS.POSITIONS">{{item.POSITION}}</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%;"><h4 class="text--title">Year experience</h4></td>
+                                        <td><h4>{{EXPERTS.YEAREXPERIENCE}} years</4></td>
+                                    </tr>                                                                    
+                                    <tr>
+                                        <td style="width: 30%;"><h4 class="text--title">Current work place</h4></td>
+                                        <td><h4>{{EXPERTS.CURRENTWORK}}</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%;"><h4 class="text--title">Position</h4></td>
+                                        <td><h4 ng-repeat="item in EXPERTS.POSITIONS">{{item.POSITION}}</h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%;"><h4 class="text--title">Year experience</h4></td>
+                                        <td><h4>{{EXPERTS.YEAREXPERIENCE}} years</4></td>
+                                    </tr>                                     
+                                </table>
                             </div>                          
                         </div>
                         <%--      ------------ WORK EXPERIENCE ----------------------- --%>
                         <div id="work__experience" class="tab-pane fade">
                             <div class="content-2" style="padding-top: 10px;padding-bottom: 20px">
-                                <ul class="timeline">
-                                    <li ng-repeat="item in EXPERTS.EXPERIENCES" ng-class="{'timeline-inverted':($index % 2) != 0}">
-                                        <div class="timeline-image">
-                                            <h4>{{item.YEAR}}</h4>
-                                        </div>
-                                        <div class="timeline-panel">
-                                            <div class="timeline-heading">
-                                                <h4 class="subheading">{{item.EXPERIENCE}}</h4>
-                                            </div>
-                                            <div class="timeline-body">
-                                                <p class="text-muted">{{item.DESCRIPTION}}</p>
-                                            </div>
-                                        </div>
-                                    </li>                                   
-                                </ul>
+                                <div ng-repeat="item in EXPERTS.EXPERIENCES" style="padding-top: 40px;">                                    
+                                    <h3>
+                                        <i class="fa fa-chain" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">                                            
+                                        </i>&nbsp;&nbsp;<strong>{{item.EXPERIENCE}}</strong>
+                                        <span class="year sub-menu">&nbsp;&nbsp;({{item.YEAR}})</span>
+                                    </h3>                                    
+                                    <p class="mbr-reviews__up__text mbr-reviews__up__p text-black">
+                                        {{item.DESCRIPTION}}
+                                    </p>                                    
+                                </div>
                             </div>
                         </div> 
                         <%-- --------------------- OTHER PROJECT ------------------ -----%>
                         <div class="tab-pane fade" id="other__project">
-                            <div class="content-2 col-3" style="padding-top: 10px;">
-                                <div>
-                                    <div class="row">
-                                        <div>
-                                            <div class="thumbnail">                                
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>Khmer Academy</h2>
-                                                        <h4>Create forum, KSHRD</h4>
-                                                    </div>
-                                                    <p class="group">
-                                                        <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumbnail">                                
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>EMP RECORD</h2>
-                                                        <h4>Spring security, Kosign</h4>
-                                                    </div>
-                                                    <p class="group">
-                                                        <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumbnail">                               
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>Green</h2>
-                                                        <h4>Spring security, Kosign</h4>
-                                                    </div>
-                                                    <p class="group">
-                                                        <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumbnail">                               
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>Resturant</h2>
-                                                        <h4>Scrapt everyt, Kosign</h4>
-                                                    </div>
-                                                    <p class="group"><a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                            <div class="content-2" style="padding-top: 10px;">                                
+                                <div ng-repeat="item in EXPERTS.DOCUMENTS" ng-if="item.DOCUMENTSTATE == 'Project'">
+                                    <div style="padding-top: 40px;">         
+                                        <h3> 
+                                            <i class="fa fa-github" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                            <strong>{{item.DOCUMENTSTATUS}}</strong>&nbsp;<small>{{item.DOCUMENTSTATE}}</small>                                            
+                                        </h3>
+                                        <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
+                                        <p class="group">
+                                            <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
+                                                <i class="fa fa-link" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                                <small ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;More</small>
+                                            </a>
+                                        </p>
                                     </div>
-                                </div>
+                                </div>                                                                         
                             </div>
                         </div>  
                         <%-- --------------------- AWARD ------------------ -----%>                       
                         <div class="tab-pane fade" id="other__award">
                             <div class="content-2 col-3" style="padding-top: 10px;">
-                                <div>
-                                    <div class="row">
-                                        <div>
-                                            <div class="thumbnail">                                
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>Public Speaking</h2>
-                                                        <h4>Create forum, KSHRD</h4>
-                                                    </div>
-                                                    <p class="group">
-                                                        <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumbnail">                                
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>Best Hacker</h2>
-                                                        <h4>Spring security, Kosign</h4>
-                                                    </div>
-                                                    <p class="group">
-                                                        <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumbnail">                               
-                                                <div class="caption">
-                                                    <div>
-                                                        <h2>Youth and mobile 2017</h2>
-                                                        <h4>Spring security, Kosign</h4>
-                                                    </div>
-                                                    <p class="group">
-                                                        <a href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">MORE...</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                                <div ng-repeat="item in EXPERTS.DOCUMENTS" ng-if="item.DOCUMENTSTATE == 'Achievement'">
+                                    <div style="padding-top: 40px;">         
+                                        <h3> 
+                                            <i class="fa fa-certificate" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                            <strong>{{item.DOCUMENTSTATUS}}</strong>&nbsp;<small>{{item.DOCUMENTSTATE}}</small>                                            
+                                        </h3>
+                                        <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
+                                        <p class="group">
+                                            <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
+                                                <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                                <small ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;Download</small>
+                                            </a>
+                                        </p>
                                     </div>
-                                </div>
+                                </div>  
                             </div>
                         </div>  
                         <%--      ------------ DOCUMENTATION ----------------------- --%>
                         <div class="tab-pane fade" id="documentation">
-                            <div class="content-2" style="padding-top: 20px">
-                                <div ng-repeat="item in EXPERTS.DOCUMENTS" style="padding-bottom: 25px;">
-                                    <spand  class="sub-menu">
-                                        <strong>{{item.DOCUMENTSTATUS}}</strong>&nbsp;
-                                        {{item.DOCUMENTDESCRIPTION}}&nbsp;<a href="">DOWNLOAD</a>
-                                        </span>
+                            <div class="content-2 col-3" style="padding-top: 10px;">
+                                <div ng-repeat="item in EXPERTS.DOCUMENTS" ng-if="item.DOCUMENTSTATE == 'Transcript'">
+                                    <div style="padding-top: 40px;">         
+                                        <h3> 
+                                            <i class="fa fa-certificate" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                            <strong>{{item.DOCUMENTSTATUS}}</strong>&nbsp;<small>{{item.DOCUMENTSTATE}}</small>                                            
+                                        </h3>
+                                        <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
+                                        <p class="group">
+                                            <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
+                                                <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                                <small ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;Download</small>
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>                          
+                                <div ng-repeat="item in EXPERTS.DOCUMENTS" ng-if="item.DOCUMENTSTATE == 'Certificate'">
+                                    <div style="padding-top: 40px;">         
+                                        <h3> 
+                                            <i class="fa fa-paper-plane" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                            <strong>{{item.DOCUMENTSTATUS}}</strong>&nbsp;<small>{{item.DOCUMENTSTATE}}</small>                                            
+                                        </h3>
+                                        <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
+                                        <p class="group">
+                                            <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
+                                                <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                                <small ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;Download</small>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                                  
                         </div>
                         <%-- end of tab ====================================== --%>
                     </div>
@@ -204,96 +192,58 @@
                     <div class="tab-content">                        
                         <div class="tab-pane fade in active" id="skill__base">                            
                             <div class="section-inner">
-                                <div class="content">
-                                    <h3 class="heading">Web development</h3>
-                                    <table class="table table-condensed">
+                                <div class="conten" style="padding-bottom: 100px;">                                    
+                                    <table style="width: 100%;">
                                         <thead>
                                             <tr style="font-size: 14pt">
-                                                <th>Skill</th><th>Level</th>                            
-                                            </tr>
+                                                <th>
+                                        <h3 class="text-blue">
+                                            <i class="fa fa-bar-chart" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                            Skill</h3>
+                                        </th>
+                                        <th>
+                                        <h3 class="text-blu">
+                                            <i class="fa fa-level-up" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                            Level</h3>
+                                        </th>                            
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr style="font-size: 12pt">
-                                                <td>HTML</td><td>Pro</td>
-                                            </tr>
-                                            <tr style="font-size: 12pt">
-                                                <td>CSS</td><td>World Class</td>
-                                            </tr>
-                                            <tr style="font-size: 12pt">
-                                                <td>JAVASCRIP</td><td>Pro</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <h3 class="heading">Mobile development</h3>
-                                    <table class="table table-condensed">
-                                        <thead>
-                                            <tr style="font-size: 14pt">
-                                                <th>Skill</th><th>Level</th>                            
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr style="font-size: 12pt">
-                                                <td>Swiff</td><td>Pro</td>
-                                            </tr>
-                                            <tr style="font-size: 12pt">
-                                                <td>J#</td><td>World Class</td>
-                                            </tr>
-                                            <tr style="font-size: 12pt">
-                                                <td>Java</td><td>Pro</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <h3 class="heading">Framework</h3>
-                                    <table class="table table-responsive">
-                                        <thead>
-                                            <tr style="font-size: 14pt">
-                                                <th>Spring</th><th>Level</th>                            
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr style="font-size: 12pt">
-                                                <td>IONIC</td><td>Pro</td>
-                                            </tr>
-
-                                            <tr style="font-size: 12pt">
-                                                <td>Mybitis</td><td>World Class</td>
-                                            </tr>
+                                            <tr ng-repeat="item in EXPERTS.SKILLS">
+                                                <td><h4>{{item.SKILL}}</h4></td>
+                                                <td><h4>{{item.RNAGE}}%</h4></td>
+                                            </tr>                                            
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="language">
-                            <div style="padding-top: 20px;">
-                                <table class="table table-condensed">
+                            <div class="content" style="padding-bottom: 100px;">
+                                <table style="width: 100%;">
                                     <thead>
-                                        <tr style="font-size: 14pt">
-                                            <th>Language</th><th>Level</th>                            
-                                        </tr>
+                                        <tr>
+                                            <th><h3 class="heading">Language</h3></th><th><h3 class="heading">Level</h3></th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr style="font-size: 12pt">
-                                            <td>Japan</td><td>Pro</td>
-                                        </tr>
-                                        <tr style="font-size: 12pt">
-                                            <td>Lao</td><td>World Class</td>
-                                        </tr>
-                                        <tr style="font-size: 12pt">
-                                            <td>Vietnam</td><td>Pro</td>
-                                        </tr>
+                                        <tr ng-repeat="item in EXPERTS.LANGUAGES" style="font-size: 12pt">
+                                            <td><h4>{{item.LANGUAGE}}</h4></td>
+                                            <td><h4>{{item.LEVEL}}</h4></td>
+                                        </tr>                                        
                                     </tbody>
                                 </table>
                             </div> 
                         </div>
                         <div class="tab-pane fade" id="education">
-                            <div class="content">
-                                <div class="item">                      
-                                    <h3><i class="fa fa-graduation-cap"></i> Computer Science</h3>
-                                    <p class="mbr-reviews__up__text mbr-reviews__up__p">Royal University of Phnom Penh <span class="year">(2012-2016)</span></p>
-                                </div>
-                                <div class="item">
-                                    <h3><i class="fa fa-graduation-cap"></i> IT Expert(skill)</h3>
-                                    <p class="mbr-reviews__up__text mbr-reviews__up__p">KSHRD Center <span class="year">(20016-2017)</span></p>
+                            <div class="content" style="padding-top: 10px;padding-bottom: 100px;">
+                                <div class="item" ng-repeat="item in EXPERTS.EDUCATIONS" style="padding-top: 30px;">                      
+                                    <h4><i class="fa fa-university" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}"></i>
+                                        &nbsp;&nbsp;<strong>{{item.EDUCATION}}</strong></h4>
+                                    <p class="mbr-reviews__up__text mbr-reviews__up__p">
+                                        {{item.DESCRIPTION}}
+                                        <span class="year">&nbsp;&nbsp;({{item.EDUCATEDDATE}})</span>
+                                    </p>
                                 </div>                               
                             </div>
                         </div>    

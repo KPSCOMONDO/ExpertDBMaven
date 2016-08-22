@@ -15,7 +15,7 @@
             <div class="box-body">
                 <div class="form-group">
                     <label for="txlanguage">Language status</label>
-                    <input id="txlanguage" ng-model="txtLanguage" type="text" class="form-control" placeholder="Create new language">
+                    <input id="txlanguage" ng-model="txtLanguage" type="text" class="form-control" placeholder="Create new language" required>
                 </div>                        
             </div>
             <div class="box-footer">

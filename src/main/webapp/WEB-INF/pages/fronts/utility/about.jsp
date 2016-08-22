@@ -10,7 +10,6 @@
         <jsp:include page="includes/menubar.jsp"/>
         <jsp:include page="includes/about.jsp"/>
         <jsp:include page="../includes/footer.jsp"/>
-        <jsp:include page="loading.jsp"/>
         <jsp:include page="../includes/home-script.jsp"/>       
     </body>
 </html>

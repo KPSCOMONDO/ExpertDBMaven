@@ -208,10 +208,10 @@ public class AddExpert {
 
 	public static class AddExpertLanguage{
 		
-		@JsonProperty("LANGUAGEID")
+		@JsonProperty("LANGUAGE ID")
 		private int languageId;
 		
-		@JsonProperty("LEVELID")
+		@JsonProperty("LEVEL ID")
 		private int levelId;
 
 		public int getLanguageId() {
@@ -234,10 +234,10 @@ public class AddExpert {
 	
 	public static class AddExpertSkill{
 		
-		@JsonProperty("SKILLID")
+		@JsonProperty("SKILL ID")
 		private int skillId;
 		
-		@JsonProperty("LEVELID")
+		@JsonProperty("LEVEL ID")
 		private int levelId;
 
 		public int getSkillId() {

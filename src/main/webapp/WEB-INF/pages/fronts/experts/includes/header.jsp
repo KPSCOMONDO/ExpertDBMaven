@@ -14,7 +14,7 @@
     </div>
 </section>
 <section class="text-left content-2 container" style="padding-top: 20px;">
-    <span class="pull-left"><a href="${pageContext.request.contextPath}/home"><span class="fa fa-home"></span>Home</a>/Filter</span>
+    <span class="pull-left subject"><a href="${pageContext.request.contextPath}/home"><span class="fa fa-home"></span>Home</a>/Filter</span>
     <div class="pull-right">        
         <span ng-repeat="item in counters">            
             {{item.CATEGORYSTATUS}}

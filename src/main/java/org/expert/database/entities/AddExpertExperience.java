@@ -1,4 +1,5 @@
 package org.expert.database.entities;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddExpertExperience {

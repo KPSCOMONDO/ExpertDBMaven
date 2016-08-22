@@ -12,6 +12,7 @@ public class ViewConfiguration extends WebMvcAutoConfiguration.WebMvcAutoConfigu
         
         registry.addViewController("/home").setViewName("/fronts/homes/home");
         registry.addViewController("/").setViewName("/fronts/homes/home");
+        registry.addViewController("/logout").setViewName("/fronts/homes/home");
         
         registry.addViewController("/expert/filter").setViewName("/fronts/experts/filter");          
         registry.addViewController("/expert/detail").setViewName("/fronts/experts/details/detail");        

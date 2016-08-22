@@ -19,11 +19,21 @@ var CONFIGURATION = {
         this.CATEGORY_ID = CategoryId;
     },
     getBase_url: function () {
-        return "http://localhost:9999/rest";
+        //return "http://192.168.178.211:9999/rest";
+        return "http://localhost:8082/rest";
     }
 }
 
 var DECLARATION = {
+    fetchDocument: function () {
+        return [
+            {"VALUE": "Project"},
+            {"VALUE": "Transcript"},
+            {"VALUE": "Certificate"},
+            {"VALUE": "Achievement"},
+            {"VALUE": "Resume"}
+        ]
+    },
     fetchGender: function () {
         return [
             {
@@ -159,7 +169,8 @@ var REQUEST = {
     POST: function (REST_URL, DATA, $HTTP, successCallback, errorCallback) {
         $HTTP({
             method: 'POST',
-            url: CONFIGURATION.getBase_url() + REST_URL
+            url: CONFIGURATION.getBase_url() + REST_URL,
+            data: JSON.stringify(DATA)
         }).then(function (data) {
             successCallback(data)
         }, function (data) {
@@ -189,12 +200,37 @@ var REQUEST = {
         });
     },
     ERROR: function (data) {
-        if(data.status==400){
-            DIALOG.error("Error","Page error.")
-        }else if(data.status==500){
-            DIALOG.error("Error","Server error.")
-        }else if(data.status==401){
-            DIALOG.error("Error","Page not found.")
+        if (data.status == 400) {
+            DIALOG.error("Error", "Page error.")
+        } else if (data.status == 500) {
+            DIALOG.error("Error", "Server error.")
+        } else if (data.status == 401) {
+            DIALOG.error("Error", "Page not found.")
         }
+    },
+    SUCCESS: function (data) {
+        if (data.data.STATUS) {
+            DIALOG.success("SUCCESS", "")
+        } else {
+            DIALOG.error("ERROR", "")
+        }
+    },
+    SUCCESS_DELETE: function (data) {
+        if (data.STATUS) {
+            DIALOG.success("SUCCESS", "")
+        } else {
+            DIALOG.error("ERROR")
+        }
+    }
+}
+var JYSON = {
+    DELETE: function (jsonArray, index,callBack) {        
+        var temp = []
+        $.map(jsonArray, function (item,i) {
+            if (index !== i) {
+                temp.push(item)
+            }            
+        })
+        callBack(temp)        
     }
 }

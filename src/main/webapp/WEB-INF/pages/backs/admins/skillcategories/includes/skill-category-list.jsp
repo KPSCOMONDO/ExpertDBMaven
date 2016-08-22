@@ -34,21 +34,16 @@
                         <tr dir-paginate="item in SKILLCATEGORIES|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
                             <td>1</td>
                             <td><input type="text" ng-model="item.CATEGORYSTATUS" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
-                            <td>{{item.COUNTS}}</td>
+                            <td>{{item.COUNT}}</td>
                             <td><input type="text" ng-model="item.DESCRIPTION" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
                             <td>
                                 <a ng-click="editClick(item)" class="btn btn-primary btn-xs" >
                                     <span class="fa " ng-class="{'fa-edit':(item.STATUS == false),'fa-save':(item.STATUS == true)}"></span>
                                 </a>
-                                <a ng-click="deleteLanguage(item)" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
+                                <a ng-click="deleteSkillCategory(item)" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                             </td>
                         </tr>                                
                     </tbody>
-                    <tfoot>
-                        <tr>
-
-                        </tr>
-                    </tfoot>
                 </table>
                 <div class="pull-right">
                     <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 

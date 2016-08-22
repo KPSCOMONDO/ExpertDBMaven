@@ -19,17 +19,13 @@
                 </a>                
             </li>
             <li class="treeview">
-                <a href="#">
+                <a href="${pageContext.request.contextPath}/admin/expert/list">
                     <i class="fa fa-files-o"></i>
-                    <span>Expert</span>
+                    <span>Expert Llist</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">144</span>
                     </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="${pageContext.request.contextPath}/admin/expert/list"><i class="fa fa-circle-o"></i> Expert list</a></li>
-                    <li><a href="${pageContext.request.contextPath}/admin/expert/add"><i class="fa fa-circle-o"></i> Add new expert</a></li>                    
-                </ul>
+                </a>                
             </li>  
             <li class="treeview">
                 <a href="#">

@@ -1,4 +1,5 @@
 package org.expert.database.entities;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddLocation {
@@ -24,14 +25,18 @@ public class AddLocation {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+			
 	public static class UpdateLocation{
 		
 		@JsonProperty("LOCATION ID")
 		private int id;
 		
-		@JsonProperty("LOCATION")
+		@JsonProperty("LOCATION STATUS")
 		private String status;
 
+		@JsonProperty("DESCRIPTION")
+		private String description;
+		
 		public int getId() {
 			return id;
 		}
@@ -47,5 +52,14 @@ public class AddLocation {
 		public void setStatus(String status) {
 			this.status = status;
 		}
-	}		
+
+		public String getDescription() {
+			return description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+		
+	}
 }

@@ -14,8 +14,8 @@
         <form ng-submit="createPosition()">
             <div class="box-body">
                 <div class="form-group">
-                    <label for="txposition">Position status</label>
-                    <input ng-model="txtPosition" id="txposition" type="text" class="form-control" placeholder="New job position">
+                    <label for="txtPosition">Position status</label>
+                    <input ng-model="txtPosition" id="txtPosition" type="text" class="form-control" placeholder="New job position">
                 </div>                
             </div>
             <div class="box-footer">

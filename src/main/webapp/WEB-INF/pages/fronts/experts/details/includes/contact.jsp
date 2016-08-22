@@ -3,7 +3,7 @@
     <div class="mbr-section__container mbr-section__container--isolated container content-2">  
         <div class="mbr-overlay" style="opacity: 0.3; background-color: black"></div>
         <div class="col-sm-8 section" style="z-index: 9999">
-            <h2 class="heading">Message  <i class="fa fa-envelope-o"></i></h2>
+            <h2 class="heading text-white">Message  <i class="fa fa-envelope-o"></i></h2>
             <select class="form-control">
                 <option>Expert account</option>
                 <option>Sokchanny.sg@gmail.com</option>                            
@@ -11,10 +11,10 @@
             <br>
             <textarea class="form-control" rows="5" placeholder="Write your text hear."></textarea>
             <br>
-            <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="">SEND</a>
+            <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay text-white" href="">SEND</a>
         </div>
         <div class="col-sm-4 contact--expert"  style="z-index: 9999">                  
-            <h2 class="heading">Contact</h2>
+            <h2 class="heading text-white">Contact</h2>
             <div class="content">
                 <h4><i class="glyphicon glyphicon-map-marker"></i><span>&nbsp;&nbsp;Phnom Penh, Cambodia</span></h4>
                 <h4><i class="glyphicon glyphicon-envelope"></i><a href="#">&nbsp;&nbsp;sokchanny.sg@gmail.com</a></h4>

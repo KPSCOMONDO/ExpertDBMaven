@@ -614,17 +614,17 @@ a.active {
     padding-bottom: 50px;
     background-color: #EEEEEE;
 }
-.heading{
+.heading{    
     font-weight: 300;
     display: inline-block;
     padding-bottom: 10px;
-    position: relative;
+    position: relative;    
 }
 .heading:before{
     content: "";
     position: absolute;
     width: 25%;
-    height: 2px;
+    height: 1px;
     bottom: 0;
     left: 0%;
     border-bottom: 5px solid #82B1FF;

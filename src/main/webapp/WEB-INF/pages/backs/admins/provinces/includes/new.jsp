@@ -14,9 +14,9 @@
         <form ng-submit="createLocation()">
             <div class="box-body">
                 <div class="form-group">
-                    <label for="txprovince">Province status</label>
+                    <label for="txprovince">Location status</label>
                     <input ng-model="txtLocation" id="txprovince" type="text" class="form-control" placeholder="New provice">
-                </div>                
+                </div>                                
             </div>
             <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -18,15 +18,16 @@
             </div>
             <div class="collapse panel-body"  id="bl-category">
                 <select class="form-filter expert--province--select" ng-model="skill_category_id" 
-                        ng-options="item.CATEGORYSTATUS for item in skills_categories">
+                        ng-options="item.CATEGORYSTATUS for item in SKILL_CATEGORIES">
                     <option value="">-- Choose main skill --</option>
                 </select>            
                 <div ng-repeat="item in SKILLS| limitTo:5">
-                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="onSkillChange(this)">
+                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="onSkillChange(item)">
                     <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
                 </div>
                 <div class="collapse" id="bl-sub-skill" ng-repeat="item in skills| limitTo:skills.length" ng-if="$index>4">
-                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-init='checkStatus = false' ng-model='checkStatus' ng-click="onSkillChange(this, checkStatus)">
+                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-init='checkStatus = false' ng-model='checkStatus' 
+                           ng-click="onSkillChange(item)">
                     <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
                 </div><br><br>
                 <h3 class="sub-menu" ng-if="skills.length == 0">Not avaliable</h3>

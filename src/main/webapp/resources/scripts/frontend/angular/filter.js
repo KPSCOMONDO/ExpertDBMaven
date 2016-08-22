@@ -2,6 +2,7 @@ var app = angular.module('filter--app', ['angularUtils.directives.dirPagination'
 
 app.controller('filter__controller', function ($scope, $http) {
     // DECLARATION 
+    $scope.LOGIN = APP_CACHE.get("LOGIN")
     $scope.loading = true;
     $scope.AGES = DECLARATION.fetchAge();
     $scope.EXPERIENCES = DECLARATION.fetchExperience();
@@ -25,54 +26,38 @@ app.controller('filter__controller', function ($scope, $http) {
         $scope.loading = false;
     })
 
-    /**
-     * Retieving data by using rest template 
-     */
-    REQUEST.GET("/component/skill/category/findall", $http, function (response) {
-        $scope.loading = false;
+    REQUEST.GET("/component/skill/category/skill/findall", $http, function (response) {
         $scope.SKILL_CATEGORIES = response.data.DATA;
     }, function (error) {
         REQUEST.ERROR(error)
-        $scope.loading = false;
     })
 
     REQUEST.GET("/component/location/findall", $http, function (response) {
-        $scope.loading = false;
         $scope.LOCATIONS = response.data.DATA;
     }, function (error) {
         REQUEST.ERROR(error)
-        $scope.loading = false;
     })
 
     REQUEST.GET("/component/language/findall", $http, function (response) {
-        $scope.loading = false;
         $scope.LANGUAGES = response.data.DATA;
     }, function (error) {
         REQUEST.ERROR(error)
-        $scope.loading = false;
     })
 
     REQUEST.GET("/component/position/findall", $http, function (response) {
-        $scope.loading = false;
         $scope.POSITIONS = response.data.DATA;
     }, function (error) {
         REQUEST.ERROR(error)
-        $scope.loading = false;
     })
 
     // fucntion > > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   >>>> >>>
 
-    $scope.onSkillChange = function (element, state) {
+    $scope.onSkillChange = function (element) {
         $scope.loading = false;
-        console.log(element, state)
-        if ($(element).is(':checked')) {
-            alert();
-        }
-        ;
-        REQUEST.GET("/component/expert/find-by-skill-id/" + element.ID, $http, function (response) {
-            $scope.loading = false;
+        REQUEST.GET("/filter/expert/by-skill-id/" + element.ID, $http, function (response) {
             $scope.EXPERTS = response.data.DATA;
-            $scope.COUNTERS = response.data.COUNTER;
+            $scope.COUNTERS = response.data.DATA.COUNTER;
+            $scope.loading = false;
         }, function (error) {
             REQUEST.ERROR(error)
             $scope.loading = false;
@@ -83,13 +68,15 @@ app.controller('filter__controller', function ($scope, $http) {
         APP_CACHE.set("EXPERT_ID", element.item.ID);
         alert(APP_CACHE.get("EXPERT_ID"));
     }
+
     /**
      * Watch block
      */
 
     $scope.$watch('skill_category_id', function (element) {
-        // change skill by it caategory        
-        $scope.SKILLS = element.SKILLS;
+        if (element != undefined) {
+            $scope.SKILLS = element.SKILLS;
+        }
     });
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>=======================================
 });

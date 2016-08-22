@@ -1,4 +1,5 @@
 package org.expert.database.entities;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddSkill {
@@ -9,8 +10,11 @@ public class AddSkill {
 	@JsonProperty("CATEGORY ID")
 	private int categoryId;
 
-	public AddSkill(String status, int categoryId) {
+	public AddSkill(){
 		super();
+	}
+	public AddSkill(String status, int categoryId) {
+		this();
 		this.status = status;
 		this.categoryId = categoryId;
 	}
@@ -30,5 +34,29 @@ public class AddSkill {
 	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
-	
+
+	public static class UpdateSkill{
+		
+		@JsonProperty("SKILL ID")
+		private int id;
+		
+		@JsonProperty("SKILL STATUS")
+		private String status;
+
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
+		}
+
+		public String getStatus() {
+			return status;
+		}
+
+		public void setStatus(String status) {
+			this.status = status;
+		}
+	}
 }

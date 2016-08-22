@@ -10,10 +10,12 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
 @PropertySource(value = {"classpath:configuration.properties"})
-public class WebConfiguration {
+public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     @Autowired
     private Environment environment;
@@ -22,7 +24,7 @@ public class WebConfiguration {
     public HttpHeaders header() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.set("Authorization", "Basic ZGV2OiFAIyQlYXBp");// + environment.getProperty("EXPERT.API.HEADER"));
+        headers.set("Authorization", "Basic " + environment.getProperty("EXPERT.API.HEADER"));
         return headers;
     }
 
@@ -37,9 +39,7 @@ public class WebConfiguration {
 
     @Bean
     public String WS_URL() {
-        //return  "http://localhost:8081/api";//"
-        return  "http://192.168.178.137:8081/api";//"
-        //return "https://infinite-lowlands-88344.herokuapp.com/api/";//environment.getProperty("EXPERT.API.URL");
+        return environment.getProperty("EXPERT.API.URL");
     }
 
     @Bean
@@ -49,6 +49,13 @@ public class WebConfiguration {
 
     @Bean
     public String KEY() {
-        return "ZGV2OiFAIyQlYXBp"; //environment.getProperty("EXPERT.API.HEADER");
+        return environment.getProperty("EXPERT.API.HEADER");
     }
+
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedOrigins("*")
+//                .allowedMethods("PUT", "DELETE", "GET", "POST");
+//    }
 }

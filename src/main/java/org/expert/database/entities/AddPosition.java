@@ -1,4 +1,5 @@
 package org.expert.database.entities;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddPosition {
@@ -19,7 +20,7 @@ public class AddPosition {
 		@JsonProperty("POSITION ID")
 		private int id;
 		
-		@JsonProperty("POSITION")
+		@JsonProperty("POSITION STATUS")
 		private String status;
 
 		public int getId() {

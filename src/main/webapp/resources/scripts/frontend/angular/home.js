@@ -1,4 +1,4 @@
-var app = angular.module("home__app", []);
+var app = angular.module("home--app", []);
 app.controller("home__controller", function ($scope, $http) {
     $scope.LOGIN = APP_CACHE.get("LOGIN")
     //-----------------declarationion----------------- 
@@ -6,7 +6,10 @@ app.controller("home__controller", function ($scope, $http) {
     $scope.hash = "#";
 
     REQUEST.GET("/component/skill/category/skill/findall", $http, function (response) {
-        $scope.SKILL_CATEGORIES = (response.data.DATA).reverse();
+        if ($scope.SKILL_CATEGORIES = (response.data.DATA)) {
+            $scope.SKILL_CATEGORIES.reverse()
+        }
+        console.log($scope.SKILL_CATEGORIES)
         $scope.loading = false;
     }, function (error) {
         REQUEST.ERROR(error)
@@ -15,10 +18,12 @@ app.controller("home__controller", function ($scope, $http) {
 
     $scope.doFilter = function (element) {
         APP_CACHE.set("SKILL_ID", element.ID);
+        console.log("SKill ID",APP_CACHE.get("SKILL_ID"))
         $scope.loading = true;
         REQUEST.GET("/filter/expert/by-skill-id/" + APP_CACHE.get("SKILL_ID"), $http, function (response) {
-            $scope.EXPERTS = response.data.DATA;
-            $scope.COUNTERS = response.data.DATA.COUNTER;
+            if ($scope.EXPERTS = response.data.DATA) {
+                $scope.COUNTERS = response.data.DATA.COUNTER;
+            }
             $scope.loading = false;
         }, function (error) {
             REQUEST.ERROR(error)

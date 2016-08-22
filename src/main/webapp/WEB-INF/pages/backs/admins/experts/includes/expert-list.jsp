@@ -7,45 +7,51 @@
                 <h3 class="box-title">Data Table With Full Features</h3>
             </div>
             <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table class="table table-striped table-responsive">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Position</th>
+                            <th ng-click="sort('FULLNAME')">Name
+                                <span class="fa" ng-show="sortKey == 'FULLNAME'" 
+                                      ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
+                                </span>
+                            </th>        
                             <th>Gender</th>
-                            <th>Email</th> 
-                            <th>Phone</th>
+                            <th>Position</th>
+                            <th >Email</th>
+                            <th>Phone</th>                                                        
+                            <th>Active</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <td>1</td>
-                    <td>Sok</td>
-                    <td>Channy</td>
-                    <td>Web developer</td>
-                    <td>Male</td>                    
-                    <td>Sokchanny.sg@gmail.com</td>                    
-                    <td>086 651 443</td>
-                    <td>
-                        <a href="${pageContext.request.contextPath}/admin/expert/detail"  class="btn btn-primary btn-xs"><i class="fa fa-info"></i></a>
-                        <a href="#" data-skin="skin-blue-light" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
-                    </td>                     
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>#</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Position</th>
-                            <th>Gender</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Action</th>
+                        <tr dir-paginate="item in EXPERTS|orderBy:sortKey:reverse|filter:search|itemsPerPage:10">
+                            <td>{{$index + 1}}</td>
+                            <td>{{item.FULLNAME}}</td> 
+                            <td>{{item.GENDER}}</td>
+                            <td ng-repeat="p in item.POSITIONS|limitTo:1">{{p.POSITION}}</td>
+                            <td ng-repeat="con in item.CONTACTS|limitTo:1">{{con.EMAIL}}</td>
+                            <td ng-repeat="con in item.CONTACTS|limitTo:1">{{con.PHONE}}</td>              
+                            <td>
+                                <label class="switch">
+                                    <input ng-checked="item.STATE" type="checkbox">
+                                    <div class="slider round"></div>
+                                </label>
+                            </td>
+                            <td>
+                                <label  for="edit" ng-click="detailClick(item)" class="btn btn-primary btn-xs">
+                                    <i class="fa fa-info"></i>
+                                </label>
+                                <a ng-click="deleteExpert(item)" data-skin="skin-blue-light" class="btn btn-danger btn-xs">
+                                    <i class="fa fa-remove"></i>
+                                </a>
+                            </td> 
                         </tr>
-                    </tfoot>
+                    </tbody>
                 </table>
+                <div class="pull-right">
+                    <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
+                </div>
             </div>
         </div>                
     </div>   

@@ -370,7 +370,7 @@ h2,h1,h3{
 
 /* heading */
 .heading{
-    font-weight: 300;
+    font-weight: 200;
     display: inline-block;
     padding-bottom: 10px;
     position: relative;
@@ -379,7 +379,7 @@ h2,h1,h3{
     content: "";
     position: absolute;
     width: 75%;
-    height: 2px;
+    height: 1px;
     bottom: 0;
     left: 0%;
     border-bottom: 5px solid #3DA0DB;
@@ -893,7 +893,7 @@ th {
 }
 
 .user-header {
-  background-color: #222;
+    background-color: #222;
 }
 
 .user-body{
@@ -905,3 +905,45 @@ th {
     background-color:#f9f9f9;
     adding:10px
 }
+
+.text-red{
+    color: red;
+}
+.text-blue{
+    color: #0091EA;
+}
+.text-yellow{
+    color: yellow;
+}
+.text-orange{
+    color: orange;    
+}
+.text-green{
+    color:#18FFFF;
+}
+.text-black{
+    color: #212121;
+}
+.text--title{
+    margin-left: 25px;
+    font-weight: bold;
+}
+/*// Panel 
+.panel-info {
+  border-color: #2196F3;
+}
+.panel-info > .panel-heading {
+  color: #2196F3;
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+.panel-info > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #2196F3;
+}
+.panel-info > .panel-heading .badge {
+  color: #2196F3;
+  background-color: #2196F3;
+}
+.panel-info > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #2196F3;
+}*/

@@ -11,12 +11,12 @@
                             </a>
                         </span>
                         <span class="mbr-brand__name">
-                            <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/home">Recruitment</a>
+                            <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/home">GEEK DIR</a>
                         </span>
                     </span>
                 </div>
                 <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
-                <div class="mbr-navbar__column mbr-navbar__menu">
+                <div class="mbr-navbar__column mbr-navbar__menu text-right">
                     <nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right">
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
@@ -25,7 +25,14 @@
                                 </li>                                                             
                             </ul>
                         </div>
-                        <div class="mbr-navbar__column">
+                        <div ng-if="LOGIN" class="mbr-navbar__column">
+                            <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+                                <li class="mbr-navbar__item">
+                                    <a class="mbr-buttons__link btn text-white" href="">Marked Resume</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div ng-if="!LOGIN" class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
                                 <li class="mbr-navbar__item">
                                     <a class="mbr-buttons__btn btn btn-default" href="${pageContext.request.contextPath}/login">Login</a>
@@ -33,6 +40,28 @@
                             </ul>
                         </div>
                     </nav>
+                </div>
+                <div ng-if="LOGIN" class="mbr-navbar__column pull-right">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="/resources/static/img/profile/channy.jpg" 
+                             style="width: 40px;height: 40px;border-radius: 50%;padding-top:0;padding-bottom: 0p;margin-top: 10px;margin-bottom: 10px;"  alt="User Image">
+                    </a>
+                    <div class="dropdown-menu panel row" style="width: 250px;padding: 0;background-color: #2196F3">                                        
+                        <div class="text-center panel-heading" style="">
+                            <img src="/resources/static/img/profile/channy.jpg" style="width: 60px;height: 60px;border-radius: 50%;" alt="User Image">
+                            <p>
+                                Sok Channy
+                            </p>
+                        </div>
+                        <div class="col-2 panel-body">
+                            <div class="text-left col-sm-6 subject">
+                                <a href="#" ><small class="text-white">Marked</small>&nbsp;&nbsp;<span class="fa fa-bookmark text-white"></span></a>
+                            </div>
+                            <div class="text-right col-sm-6 subject">
+                                <a href="${pageContext.request.contextPath}/logout" class="text-white"><small class="text-white">Logout</small>&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out text-white"></span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

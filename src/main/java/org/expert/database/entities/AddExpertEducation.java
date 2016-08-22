@@ -1,4 +1,5 @@
 package org.expert.database.entities;
+
 import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,7 +9,7 @@ public class AddExpertEducation {
 	@JsonProperty("STATUS")
 	private String status;
 	
-	@JsonProperty("GRADUATED DATE")
+	@JsonProperty("GRADUATED_DATE")
 	private Date graduatedDate;
 	
 	@JsonProperty("DESCRIPTION")

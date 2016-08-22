@@ -1,4 +1,5 @@
 package org.expert.database.entities;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddExpertDocument {
@@ -29,14 +30,6 @@ public class AddExpertDocument {
 
 	public void setUrl(String url) {
 		this.url = url;
-	}
-
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
 	}
 
 	public String getDescription() {

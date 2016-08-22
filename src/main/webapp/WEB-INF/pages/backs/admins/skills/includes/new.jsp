@@ -11,17 +11,18 @@
         </div>
     </div>
     <div class="box-body pad">
-        <form role="form">
+        <form ng-submit="createSkill()">
             <div class="box-body">
                 <div class="form-group">
                     <label for="cbskillcategory">Skill category</label>
-                    <select id="cbskillcategory" type="text" class="form-control">
-                        <option>Web developer</option>
+                    <select id="cbskillcategory" class="form-filter expert--province--select form-control" ng-model="skill_category_id" 
+                            ng-options="item.CATEGORYSTATUS for item in SKILLCATEGORIES">
+                        <option value="">-- Choose main skill --</option>
                     </select>
                 </div>                
                 <div class="form-group">
                     <label for="txskill">Skill status</label>
-                    <input id="txskill" class="form-control" placeholder="New skill"/>
+                    <input id="txskill" ng-model="txtSkill" class="form-control" placeholder="New skill"/>
                 </div>
             </div>
             <div class="box-footer">

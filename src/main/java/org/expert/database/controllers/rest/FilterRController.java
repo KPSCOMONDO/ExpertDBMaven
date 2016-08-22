@@ -41,7 +41,7 @@ public class FilterRController {
     }
 
     // FILTER 
-    @RequestMapping(value = {"/expert/by-skill-id/{skillId}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/expert/by-skill-id/{skillId}"})
     public ResponseEntity<Map<String, Object>> findExpertBySkillId(@PathVariable("skillId") int skillId) {
 
         HttpEntity<Object> request = new HttpEntity<Object>(header);

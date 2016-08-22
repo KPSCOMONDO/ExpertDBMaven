@@ -13,7 +13,7 @@
                             <a href="#all" data-toggle="tab"><i class="glyphicon glyphicon-th"></i></a>
                         </li>
                         <li ng-repeat="items in SKILL_CATEGORIES">
-                            <a href="{{hash}}{{items.ID}}category" data-toggle="tab">{{items.CATEGORYSTATUS}}</a>
+                            <a href="{{hash}}{{items.CATEGORYID}}category" data-toggle="tab">{{items.CATEGORYSTATUS}}</a>
                         </li>                        
                     </ul>                        
                 </div>                        
@@ -22,7 +22,7 @@
                 <div class="tab-content">
                     <div id="all" class="tab-pane fade">
                     </div>                                                    
-                    <div ng-repeat="items in SKILL_CATEGORIES" class="tab-pane fade subject" id="{{items.ID}}category">
+                    <div ng-repeat="items in SKILL_CATEGORIES" class="tab-pane fade subject" id="{{items.CATEGORYID}}category">
                         <a ng-repeat="item in items.SKILLS" ng-click="doFilter(item)" class="col-sm-2" href="">
                             {{item.SKILL}} <span>({{item.COUNT}})</span>
                         </a>                        

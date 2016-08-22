@@ -16,19 +16,22 @@
                     <div>
                         <div class="mbr-section__container mbr-section__container--middle">
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">                            
-                                <h1 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}<span class="glyphicons glyphicons-bookmark"></span></h1>                                
+                                <h2 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}</h2>                                
                                 <h4>
-                                    <i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;{{experts.ADDRESS.PROVINCE}}
-                                </h4> 
-                                <h4 class="subject"><i class="glyphicon glyphicon-envelope"></i><a href="#">&nbsp;&nbsp;sokchanny.sg@gmail.com</a></h4>                                
-                                <h4 class="subject"><i class="glyphicon glyphicon-phone"></i><a href="#">&nbsp;&nbsp;(+855)86-651-443</a></h4>
+                                    <i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;{{EXPERTS.ADDRESS.CITY}}
+                                </h4>
+                                <div ng-repeat="item in EXPERTS.CONTACTS|limitTo:1">
+                                    <h4 class="subject"><i class="glyphicon glyphicon-envelope"></i><a href="#">&nbsp;&nbsp;{{item.EMAIL}}</a></h4>                                
+                                    <h4 class="subject"><i class="glyphicon glyphicon-phone"></i><a href="#">&nbsp;&nbsp;{{item.PHONE}}</a></h4>
+                                </div>                                
                             </div>
 
                             <div class="col-sm-6 text-left">
                                 <div>
                                     <p class="mbr-reviews__p mbr-reviews__text">
-                                        <strong>Web Developer</strong><br>
-                                        expect salary : 300 USD
+                                        <span style="color: #0097A7;"><strong ng-repeat="item in EXPERTS.POSITIONS|limitTo:1">{{item.POSITION}}</strong></span><br>
+                                        <span>{{EXPERTS.YEAREXPERIENCE}}&nbsp;years experiences</span><br>
+                                        <span>{{EXPERTS.SALARY|currency:"USD ":0}}</span>
                                     </p> 
                                 </div>                                                           
                                 <br>

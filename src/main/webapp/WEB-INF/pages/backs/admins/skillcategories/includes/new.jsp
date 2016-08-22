@@ -19,7 +19,7 @@
                 </div>                
                 <div class="form-group">
                     <label for="tadescription">Skill Category</label>
-                    <textarea  ng-model="txaDescription" id="tadescription" type="texta" rows="10" class="form-control" placeholder="New skill category"></textarea>
+                    <textarea  ng-model="txaDescription" id="tadescription" type="texta" rows="3" class="form-control" placeholder="New skill category"></textarea>
                 </div> 
             </div>
             <div class="box-footer">
