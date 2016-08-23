@@ -4,11 +4,11 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Position list</h3>
+                <h3 class="box-title">បញ្ជី</h3>
             </div>
             <form class="form-inline box-header">
                 <div class="form-group">
-                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                    <input type="text" ng-model="search" class="form-control" placeholder="ច្រោះ">
                 </div>
             </form>
             <div class="box-body">
@@ -16,12 +16,12 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th ng-click="sort('POSITION')">Position
+                            <th ng-click="sort('POSITION')">តួនាទី
                                 <span class="fa" ng-show="sortKey == 'POSITION'" 
                                       ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
                                 </span>
                             </th>                            
-                            <th>Action</th>
+                            <th>សកម្មភាព</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,14 +39,7 @@
                                 <a ng-click="deletePosition(item)" class="btn btn-warning btn-xs"><i class="fa fa-remove"></i></a>
                             </td>
                         </tr>                               
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>#</th>
-                            <th>Position</th>                            
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+                    </tbody>                    
                 </table>
                 <div class="pull-right">
                     <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 

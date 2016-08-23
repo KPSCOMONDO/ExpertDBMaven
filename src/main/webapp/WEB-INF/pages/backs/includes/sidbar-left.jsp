@@ -6,44 +6,39 @@
                 <img src="/resources/static/img/profile/channy.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Sok Channy</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <p>Sok Channy</p>                
             </div>
         </div>           
         <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
+            <li class="header">ស្វែងរកព័ត៌មានលំអិត</li>
+            <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin">
                     <i class="fa fa-dashboard"></i>
-                    <span>Dashboard</span>
+                    <span>ផ្ទាំងគ្រប់គ្រង</span>
                 </a>                
             </li>
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/expert/list">
-                    <i class="fa fa-files-o"></i>
-                    <span>Expert Llist</span>
-                    <span class="pull-right-container">
-                        <span class="label label-primary pull-right">144</span>
-                    </span>
+                    <i class="fa fa-circle-o"></i> ក្រុមអ្នកជំនាញ</a>                                        
                 </a>                
             </li>  
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-pie-chart"></i>
-                    <span>Skill</span>
+                    <span>ជំនាញ</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
                     <ul class="treeview-menu">
-                        <li><a href="${pageContext.request.contextPath}/admin/skill"><i class="fa fa-circle-o"></i> Skill</a></li>
-                        <li><a href="${pageContext.request.contextPath}/admin/skill/category"><i class="fa fa-circle-o"></i> Skill category</a></li>                    
+                        <li><a href="${pageContext.request.contextPath}/admin/skill"><i class="fa fa-circle-o"></i> មុខជំនាញ</a></li>
+                        <li><a href="${pageContext.request.contextPath}/admin/skill/category"><i class="fa fa-circle-o"></i> ប្រភេទមុខជំនាញ</a></li>                    
                     </ul>
                 </a>                
             </li>  
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/position">
                     <i class="fa fa-bars"></i>
-                    <span>Job position</span>
+                    <span>មុខតំណែង</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">34</span>
                     </span>
@@ -52,7 +47,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/province">
                     <i class="fa fa-map-marker"></i>
-                    <span>Province</span>
+                    <span>ខេត្ត</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
@@ -61,7 +56,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/language">
                     <i class="fa fa-language"></i>
-                    <span>Language</span>
+                    <span>ភាសា</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
@@ -70,7 +65,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/level">
                     <i class="fa fa-level-up"></i>
-                    <span>Level</span>
+                    <span>លំដាប់ថ្នាក់</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">144</span>
                     </span>
@@ -79,7 +74,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/user">
                     <i class="fa fa-users"></i>
-                    <span>User</span>
+                    <span>អ្នកប្រើប្រាស់</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">144</span>
                     </span>
@@ -87,9 +82,9 @@
             </li>
             <li>
                 <a href="${pageContext.request.contextPath}/admin/report">
-                    <i class="fa fa-th"></i> <span>Report</span>
+                    <i class="fa fa-th"></i> <span>របាយការណ៍</span>
                     <span class="pull-right-container">
-                        <small class="label pull-right bg-green">new</small>
+                        <small class="label pull-right bg-green">ថ្មី</small>
                     </span>
                 </a>
             </li>

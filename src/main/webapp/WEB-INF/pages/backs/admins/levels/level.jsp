@@ -13,7 +13,6 @@
             <jsp:include page="../../includes/sidbar-left.jsp"/>
             <div class="content-wrapper">                                
                 <section class="content">
-                    <jsp:include page="includes/new.jsp"/>
                     <jsp:include page="includes/level-list.jsp"/>
                 </section>
             </div>             

@@ -1711,7 +1711,7 @@ html {
   display: block;
   font-size: 25px;
   font-weight: bold;
-  letter-spacing: 6px;
+  //letter-spacing: 6px;
   line-height: 1.5em;
   margin: 0;
 }
@@ -1810,7 +1810,7 @@ html {
 .mbr-footer {
   color: #9c9c9c;
   font-size: 13px;
-  letter-spacing: 1px;
+  //letter-spacing: 1px;
   line-height: 1.5em;
   padding: 37px 0 39px;
   word-spacing: 1px;

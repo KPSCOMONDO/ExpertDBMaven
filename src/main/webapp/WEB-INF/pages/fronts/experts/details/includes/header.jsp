@@ -11,7 +11,7 @@
                 </div>                                    
                 <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">
                     <div class="col-sm-12" style="padding: 10px;">
-                        <a href="#" class="pull-right">Mark <i class="glyphicon glyphicon-bookmark"></i></a>
+                        <a href="#" class="pull-right">សំគាល់ <i class="glyphicon glyphicon-bookmark"></i></a>
                     </div>
                     <div>
                         <div class="mbr-section__container mbr-section__container--middle">
@@ -30,13 +30,13 @@
                                 <div>
                                     <p class="mbr-reviews__p mbr-reviews__text">
                                         <span style="color: #0097A7;"><strong ng-repeat="item in EXPERTS.POSITIONS|limitTo:1">{{item.POSITION}}</strong></span><br>
-                                        <span>{{EXPERTS.YEAREXPERIENCE}}&nbsp;years experiences</span><br>
+                                        <span>{{EXPERTS.YEAREXPERIENCE}}&nbsp;ឆ្នាំបទពិសោធន៍ការងារ</span><br>
                                         <span>{{EXPERTS.SALARY|currency:"USD ":0}}</span>
                                     </p> 
                                 </div>                                                           
                                 <br>
-                                <a class="col-sm-5 mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href=""><i class="glyphicon glyphicon-eye-open"></i> Resume</a>
-                                <a class="col-sm-5 mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href=""><i class="glyphicon glyphicon-download"></i> Resume</a>                                                            
+                                <a class="col-sm-5 mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href=""><i class="glyphicon glyphicon-eye-open"></i></a>
+                                <a class="col-sm-5 mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href=""><i class="glyphicon glyphicon-download"></i></a>                                                            
                             </div>
                         </div>                     
                     </div>

@@ -19,7 +19,7 @@
                     <div class="form-group">
                         <img src="" style="width: 80px;height: 100px;" alt="UNAVALIABEL">
                         <label for="txtProfile">Upload profile</label>
-                        <input id="txtFullName" type="file"  placeholder="Name">
+                        <input id="txtFullName" type="file" placeholder="Name" ng-click="upLoadProfile()">
                     </div>
                     <div class="form-group">
                         <label for="txtFullName">First name</label>
@@ -28,9 +28,8 @@
                     <div class="form-group">
                         <label for="cboGender">Gender</label>
                         <select class="form-filter expert--province--select form-control" id="cboGender" 
-                                ng-model="cboGender" 
-                                ng-options="item.VALUE for item in GENDERS" required>
-                            <option>--{{gender}}--</option>
+                                ng-model="cboGender" ng-options="item.VALUE for item in GENDERS" required>
+                            <option value="" selected>-- {{gender}} --</option>
                         </select>            
                     </div>
                     <div class="form-group">
@@ -47,25 +46,21 @@
                     <h3 class="box-title text-red">Address</h3>
                     <div class="form-group">
                         <label for="txtCommune">Commune</label>
-                        <input ng-model="txtCommune" id="txtCommune" type="text" class="form-control" 
-                               placeholder="Commune name" required>
+                        <input ng-model="txtCommune" id="txtCommune" type="text" class="form-control" placeholder="Commune name" required>
                     </div>
                     <div class="form-group">
                         <label for="txtDistrict">District</label>
-                        <input ng-model="txtDistrict" id="txtDistrict" type="text" class="form-control" 
-                               placeholder="District name" required>
+                        <input ng-model="txtDistrict" id="txtDistrict" type="text" class="form-control" placeholder="District name" required>
                     </div>
                     <div class="form-group">
                         <label for="cboCity">Province/City</label>
-                        <select class="form-filter expert--province--select form-control" ng-model="cboCity" 
-                                ng-options="item.LOCATIONSTATUS for item in LOCATIONS" id="cboCity" required>
-                            <option value="">-- Choose province/city --</option>
+                        <select class="form-filter expert--province--select form-control" ng-model="cboCity" ng-options="item.LOCATIONSTATUS for item in LOCATIONS" id="cboCity">
+                            <option value="">-- {{city}} --</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="txtCountry">Country</label>
-                        <input ng-model="txtCountry" id="txtCountry" type="text" class="form-control" 
-                               placeholder="Country name" required>
+                        <input ng-model="txtCountry" id="txtCountry" type="text" class="form-control" placeholder="Country name" required>
                     </div>
                 </div>
                 <div class="col-sm-12">
@@ -74,13 +69,11 @@
                     <div class="col-sm-6 row">
                         <div class="form-group">
                             <label for="txtPhoneA">Phone 1</label>
-                            <input ng-model="txtPhoneA" id="txtPhoneA" type="text" class="form-control"
-                                   placeholder="Phone first line" required>
+                            <input ng-model="txtPhoneA" id="txtPhoneA" type="text" class="form-control" placeholder="Phone first line" required>
                         </div>
                         <div class="form-group">
                             <label for="txtEmailA">Email 1</label>
-                            <input ng-model="txtEmailA" id="txtEmailA" type="email" class="form-control" 
-                                   placeholder="Email first line" required>
+                            <input ng-model="txtEmailA" id="txtEmailA" type="email" class="form-control" placeholder="Email first line" required>
                         </div>                        
                     </div>
                     <div class="col-sm-6">                        
@@ -95,11 +88,11 @@
                     </div>
                     <div class="form-group">
                         <label for="txtWebsiteA">Website/block URL 1</label>
-                        <input ng-model="txtWebsiteA" id="txtWebsiteA" type="text" class="form-control" placeholder="Website/block URL 1">
+                        <input ng-model="txtWebsiteA" id="txtWebsiteA" type="text" class="form-control" placeholder="Website/block URL 1" required>
                     </div>
                     <div class="form-group">
                         <label for="txtWebsiteB">Website/block URL 2</label>
-                        <input ng-model="txtWebsiteB" id="txtWebsiteB" type="text" class="form-control" placeholder="Website/block URL 2">
+                        <input ng-model="txtWebsiteB" id="txtWebsiteB" type="text" class="form-control" placeholder="Website/block URL 2" required>
                     </div>
 
                     <div class="form-group">
@@ -117,8 +110,7 @@
                     <h3 class="box-title text-red">Work information</h3>                                    
                     <div class="form-group">
                         <label for="txtCurrentWorkPlace">Current workplace</label>
-                        <input ng-model="txtCurrentWorkPlace" id="txtCurrentWorkPlace" type="text" class="form-control" 
-                               placeholder="Current workplace" required>
+                        <input ng-model="txtCurrentWorkPlace" id="txtCurrentWorkPlace" type="text" class="form-control" placeholder="Current workplace" required>
                     </div>
                     <div class="form-group">
                         <label for="cboPositionA">In position</label>
@@ -129,28 +121,24 @@
                     </div>
                     <div class="form-group">
                         <label for="txtYearexperience">Year experience</label>
-                        <input ng-model="txtYearexperience" id="txtYearexperience" type="number" class="form-control" 
-                               placeholder="Salary" required>
+                        <input ng-model="txtYearexperience" id="txtYearexperience" type="number" class="form-control" placeholder="Salary" required>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <h3 class="box-title text-red">Interest work information</h3>                                       
                     <div class="form-group">
                         <label for="cboPositionB">Work position</label>
-                        <select class="form-filter expert--province--select form-control" ng-model="cboPositionB" 
-                                ng-options="item.POSITION for item in POSITIONS" id="cboPositionB">
+                        <select class="form-filter expert--province--select form-control" ng-model="cboPositionB" ng-options="item.POSITION for item in POSITIONS" id="cboPositionB" required>
                             <option value="">-- Choose position --</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="txtSalary">Salary</label>
-                        <input ng-model="txtSalary" id="txtSalary" type="number" class="form-control" 
-                               placeholder="Salary" required>
+                        <input ng-model="txtSalary" id="txtSalary" type="number" class="form-control" placeholder="Salary" required>
                     </div> 
                     <div class="form-group">
                         <label for="cboLocation">Interest work location</label>
-                        <select class="form-filter expert--province--select form-control" ng-model="cboLocation" 
-                                ng-options="item.LOCATIONSTATUS for item in LOCATIONS" id="cboLocation" required>
+                        <select class="form-filter expert--province--select form-control" ng-model="cboLocation" ng-options="item.LOCATIONSTATUS for item in LOCATIONS" id="cboLocation" required>
                             <option value="">-- {{location}} --</option>
                         </select>
                     </div>
@@ -170,8 +158,8 @@
                                         </td>
                                         <td ng-repeat="level in LEVELS">
                                             <input ng-checked="!item.CHECKED" ng-click="onLaguageLevelCheck(item, level)" type="radio" 
-                                                   name="{{item.LANGUAGE}}" id="{{level.LEVELSTATUS}}" required
-                                                   ng-show="item.CHECKED">&nbsp;&nbsp;{{level.LEVELSTATUS}}                                
+                                                   name="{{item.LANGUAGE}}" id="{{level.LEVELSTATUS}}" required ng-show="item.CHECKED">
+                                            &nbsp;&nbsp;{{level.LEVELSTATUS}}                                
                                         </td>                                   
                                     </tr>
                                 </table>               
@@ -386,7 +374,7 @@
             <div class="col-sm-12">
                 <%-- ---------------------------------------  Document  -------------------------------%>
                 <div class="col-sm-10">
-                    <form ng-submit="addDocument()">
+                    <form ng-submit="addDocument()" id="docForm">
                         <h3 class="box-title text-red">Related document</h3>
                         <div class="box-body">      
                             <div class="form-group">
@@ -403,7 +391,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="Upload">Upload file</label>                                                      
-                                <input ng-model="Upload" id="Upload" type="file" required></textarea>                                                                                                    
+                                <input ng-model="Upload" id="Upload" name="file" type="file" required></textarea>                                                                                                    
                             </div>                           
                             <div class="form-group">
                                 <label for="txtDocumentDescription">Description</label>                                                      

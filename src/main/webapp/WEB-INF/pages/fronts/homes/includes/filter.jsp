@@ -31,7 +31,7 @@
             </div>
             <div class="panel-footer">
                 <a href="${pageContext.request.contextPath}/expert/filter" class="panel-title btn btn-danger">
-                    <i class="glyphicon glyphicon-filter"></i> Search more
+                    <i class="glyphicon glyphicon-filter"></i> បន្ថែមលក្ខណ្ឌស្វែងរក
                 </a>
             </div>
         </div>
@@ -45,7 +45,8 @@
                 <div class="thumbnail">
                     <div class="content">
                         <div class="image">
-                            <img class="undefined" src="../../../../../resources/static/img/profile/channy.jpg">
+                            <img class="undefined" src="{{item.IMAGEURL}}" 
+                                 onerror="this.onerror=null;this.src='../../../../../resources/images/profile/na-profile.jpg';">                           
                         </div>
                         <div class="caption">
                             <span class="info-name"><strong>{{item.FULLNAME| limitTo:20}}<span ng-if="item.length > 20">....</span></strong></span><br>
@@ -56,7 +57,7 @@
                             </tr>
                             </table>                                              
                             <p class="group">
-                                <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
+                                <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">ព័តិមានលំអិត</a>
                             </p>                        
                         </div>
                     </div>
@@ -79,7 +80,7 @@
                                 </tr>
                                 </table>                                              
                                 <p class="group">
-                                    <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">VIEW DETAIL</a>
+                                    <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">ព័តិមានលំអិត</a>
                                 </p>                        
                             </div>
                         </div>
@@ -89,7 +90,7 @@
         </div>
         <div class="col-sm-12 text-center">
             <a href="${pageContext.request.contextPath}/expert/filter" class="panel-title btn btn-default">
-                <i class="glyphicon glyphicon-filter"></i> Search more ...
+                <i class="glyphicon glyphicon-filter"></i> បន្ថែមលក្ខខ័ណ្ឌស្វែងរក
             </a>
         </div>
     </div>

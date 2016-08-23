@@ -21,21 +21,21 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/">Home</a>
+                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/">ទំព័រដើម</a>
                                 </li>                                                              
                             </ul>
                         </div>
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a>
+                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/expert/filter">ស្វេងរកបេក្ខភាព</a>
                                 </li>                                                              
                             </ul>
                         </div>
                         <div ng-show="!LOGIN" class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__btn btn btn-default" href="">Login</a>
+                                    <a class="mbr-buttons__btn btn btn-default" href="">ចូលប្រើប្រាសល់</a>
                                 </li>
                             </ul>
                         </div>
@@ -53,12 +53,9 @@
                                 Sok Channy
                             </p>
                         </div>
-                        <div class="col-2 panel-body">
-                            <div class="text-left col-sm-6 subject">
-                                <a href="#" ><small class="text-white">Marked</small>&nbsp;&nbsp;<span class="fa fa-bookmark text-white"></span></a>
-                            </div>
-                            <div class="text-right col-sm-6 subject">
-                                <a href="${pageContext.request.contextPath}/logout" class="text-white"><small class="text-white">Logout</small>&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out text-white"></span></a>
+                        <div class="col-2 panel-body">                            
+                            <div class="text-right subject">
+                                <a href="${pageContext.request.contextPath}/logout" class="text-white"><small class="text-white">ចាកចេញ</small>&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out text-white"></span></a>
                             </div>
                         </div>
                     </div>

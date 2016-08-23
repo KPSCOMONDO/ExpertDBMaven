@@ -928,6 +928,36 @@ th {
     margin-left: 25px;
     font-weight: bold;
 }
+.btn a{
+    font-size: 14pt;
+    font-family: 'Hanuman'
+}
+
+/**
+FONT 
+**/
+
+.mbr-navbar__item .mbr-buttons__link{
+    font-family: ç;
+    font-size:18pt;
+}
+
+h1,h2,h3{
+    font-family: "Hanuman";
+}
+span,label,h4,h5,h6,button{
+    font-family: "Hanuman";
+    font-size: 16pt;
+}
+.mbr-hero__text{
+    font-family: "Hanuman";
+    margin: 15px 0 15px 0;
+}
+mbr-header__text{
+    font-family: "Hanuman";	
+}
+
+
 /*// Panel 
 .panel-info {
   border-color: #2196F3;

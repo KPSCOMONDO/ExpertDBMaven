@@ -3,7 +3,8 @@
     <div class="container">
         <div class="text-center">
             <div class="col-sm-11 search--expert">
-                <input type="text" class="form-control expert--search-box animated fadeInUp delay" style="padding: 10px;" ng-model="searh_for_skill" placeholder="Search for skill...">
+                <input type="text" class="form-control expert--search-box animated fadeInUp delay" style="padding: 10px;" 
+                ng-model="searh_for_skill" placeholder="ស្វែងរកតាមរយះជំនាញ...">
             </div>
             <div class="search--expert col-sm-1">
                 <button class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  expert--search-box">
@@ -14,7 +15,7 @@
     </div>
 </section>
 <section class="text-left content-2 container" style="padding-top: 20px;">
-    <span class="pull-left subject"><a href="${pageContext.request.contextPath}/home"><span class="fa fa-home"></span>Home</a>/Filter</span>
+    <span class="pull-left subject"><a href="${pageContext.request.contextPath}/home"><span class="fa fa-home"></span>ទំព័រដើម</a>/ទំព័រស្វែងរក</span>
     <div class="pull-right">        
         <span ng-repeat="item in counters">            
             {{item.CATEGORYSTATUS}}

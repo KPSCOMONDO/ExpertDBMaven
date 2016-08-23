@@ -4,11 +4,11 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Province list</h3>
+                <h3 class="box-title">បញ្ជី</h3>
             </div>
             <form class="form-inline box-header">
                 <div class="form-group">
-                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                    <input type="text" ng-model="search" class="form-control" placeholder="ច្រោះ">
                 </div>
             </form>
             <div class="box-body">
@@ -16,23 +16,22 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th ng-click="sort('CATEGORYSTATUS')" style="width: 30%">Status
-                                <span class="fa" ng-show="sortKey == 'CATEGORYSTATUS'" 
-                                      ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
+                            <th ng-click="sort('CATEGORYSTATUS')" style="width: 30%">ប្រភេទនៃជំនាញ
+                                <span class="fa" ng-show="sortKey == 'CATEGORYSTATUS'" ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
                                 </span>
                             </th> 
                             <th>Skills</th>
-                            <th ng-click="sort('DESCRIPTION')" style="width: 50%">Description
+                            <th ng-click="sort('DESCRIPTION')" style="width: 50%">លំអិត
                                 <span class="fa" ng-show="sortKey == 'DESCRIPTION'" 
                                       ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
                                 </span>
                             </th>
-                            <th>Action</th>
+                            <th>សកម្មភាព</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr dir-paginate="item in SKILLCATEGORIES|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
-                            <td>1</td>
+                            <td>{{$index +1}}</td>
                             <td><input type="text" ng-model="item.CATEGORYSTATUS" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
                             <td>{{item.COUNT}}</td>
                             <td><input type="text" ng-model="item.DESCRIPTION" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>

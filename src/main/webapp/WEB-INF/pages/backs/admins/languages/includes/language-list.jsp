@@ -5,7 +5,7 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Language list</h3>                
+                <h3 class="box-title">បញ្ជី</h3>                
             </div>
             <form class="form-inline box-header">
                 <div class="form-group">
@@ -18,12 +18,12 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th ng-click="sort('LANGUAGE')">Language
+                            <th ng-click="sort('LANGUAGE')">ភាសារ
                                 <span class="fa" ng-show="sortKey == 'LANGUAGE'" 
                                       ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
                                 </span>
                             </th>                            
-                            <th>Action</th>
+                            <th>សកម្មភាព</th>
                         </tr>
                     </thead>
                     <tbody>

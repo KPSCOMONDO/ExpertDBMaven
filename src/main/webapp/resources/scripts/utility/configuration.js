@@ -201,36 +201,55 @@ var REQUEST = {
     },
     ERROR: function (data) {
         if (data.status == 400) {
-            DIALOG.error("Error", "Page error.")
+            DIALOG.error("បរាជ័យ", "ទំព័រជួបការរំខាន​")
         } else if (data.status == 500) {
-            DIALOG.error("Error", "Server error.")
+        	DIALOG.error("បរាជ័យ", "ការតភ្ជាប់ទៅកាន់ម៉ាសុីនមេត្រូវបានកាត់ផ្តាច់")
         } else if (data.status == 401) {
-            DIALOG.error("Error", "Page not found.")
+        	DIALOG.error("បរាជ័យ", "ទំព័រមិនទំនេរ")
         }
     },
     SUCCESS: function (data) {
         if (data.data.STATUS) {
-            DIALOG.success("SUCCESS", "")
+        	DIALOG.success("ជោកជ័យ", "ប្រតិបត្តការណ៍ជោគជ័យ")
         } else {
-            DIALOG.error("ERROR", "")
+        	DIALOG.error("បរាជ័យ", "មានកំហុសឆ្គង ប្រតិបត្តការណ៍មិនអាចធ្វើបាន")
         }
     },
     SUCCESS_DELETE: function (data) {
         if (data.STATUS) {
-            DIALOG.success("SUCCESS", "")
+            DIALOG.success("ជោកជ័យ", "ប្រតិបត្តការណ៍ជោគជ័យ")
         } else {
-            DIALOG.error("ERROR")
+            DIALOG.error("បរាជ័យ", "មានកំហុសឆ្គង ប្រតិបត្តការណ៍មិនអាចធ្វើបាន")
         }
+    },
+    UPLOAD: function (NAME, formdata, successCallBack, errorCallBack) {
+        var formData = new FormData(formdata)
+        var profilePicture = $('input[name=file]')[0].files[0]
+        formData.append('file', profilePicture)
+        $.ajax({
+            method: 'POST',
+            url: CONFIGURATION.getBase_url() + "/document/upload-file?expertName=" + NAME,
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).then(function (data) {
+            successCallBack(data)
+        }, function (data) {
+            errorCallBack(data)
+        })
     }
+
 }
 var JYSON = {
-    DELETE: function (jsonArray, index,callBack) {        
+    DELETE: function (jsonArray, index, callBack) {
         var temp = []
-        $.map(jsonArray, function (item,i) {
+        $.map(jsonArray, function (item, i) {
             if (index !== i) {
                 temp.push(item)
-            }            
+            }
         })
-        callBack(temp)        
+        callBack(temp)
     }
 }

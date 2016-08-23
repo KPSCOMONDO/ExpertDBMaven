@@ -13,7 +13,7 @@ app.controller('language__controller', function ($scope, $http) {
             console.log("Language:", $scope.LANGUAGES)
             $scope.setItemStatus();
         }, function (error) {
-            DIALOG.error("Error", error.message);
+            
             $scope.loading = false;
         })
     }

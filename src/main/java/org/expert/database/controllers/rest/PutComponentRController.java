@@ -94,5 +94,5 @@ public class PutComponentRController {
         String URL = WS_URL + "/component/update-language";
         ResponseEntity<Map> response = rest.exchange(URL, HttpMethod.PUT, request, Map.class);
         return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
-    }
+    }        
 }

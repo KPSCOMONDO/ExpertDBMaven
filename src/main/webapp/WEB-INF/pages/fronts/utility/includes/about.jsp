@@ -7,24 +7,44 @@
                 <div class="thumbnail">                    
                     <div class="caption">
                         <div class="text-left">
-                            <h3 class="heading">About</h3>
-                            <p style="color: #000;text-justify: inter-word; text-align: justify;">Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in. Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.&nbsp;</p>
+                            <h3 class="heading">អំពីយើង</h3>
+                            <p style="color: #000;text-justify: inter-word; text-align: justify;">
+                            
+                            	GEEG DIR គឺជាគ្រុមមួយដែលមានទំនួលខុសត្រូវខ្ពស់ចំពោះកាងារ។ ដែលក្រុមនេះត្រូវបានចាប់ផ្តើមឡើងនៅពេលដែលពួកយើងបានចូលមកសិក្សានៅ HRD Center។ ហើយក្រុមពួកយើងបានធ្វើកម្មវិធីមួយដែលគ្រប់គ្រង់ទៅលើ 
+                            	ពត៏មានរបស់អតីត សិស្សដែលបានសិក្សានៅ មជ្ឈមណ្ឌលនេះទាំងអស់។ ពួកយើងទទួលបានជោកជ័យលើកិច្ចការនេះដោយមានសមាជិកចូលរួមប្រតិបត្តិការទាំងអស់គ្នាមានចំនួនប្រាំនាក់ ដោយម្នាក់ៗមានមុខងាផ្សេងគ្នា ប៉ុន្តែយើងមានការសហការគ្នាបានល្អក្នុងកិច្ចការមួយនេះ។
+                            	
+                            	&nbsp;</p>
                         </div>                        
                     </div>
                 </div>
                 <div class="thumbnail">                    
                     <div class="caption">
                         <div class="text-left">
-                            <h3 class="heading">Mission</h3>
-                            <p style="color: #000;text-justify: inter-word; text-align: justify;">Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in. Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.&nbsp;</p>
+                            <h3 class="heading"> បេសកកម្ម </h3>
+                            <p style="color: #000;text-justify: inter-word; text-align: justify;">
+                            
+                           		 យើងបានផ្តល់ភាពងាយស្រួលទៅអោយអ្នកប្រើប្រាស់ដោយយើងប្រើជាភាសារជាតិ។​
+                           		អ្នកប្រើប្រាស់អាចធ្វើការស្វែងរកដោយងាយស្រួលនៅក្នុងប្រពន្ធ​
+                           		អ្នកប្រើប្រាស់មាអារម្មថាសមញ្ញ តែពោពេញទៅដោយគុនភាពរបស់ប្រពន្ធ
+                           		អ្នកប្រើប្រាស់អាចចុះឈ្មោះធ្វើជាសមាជិករបស់ប្រពន្ធ័
+                            
+                            &nbsp;</p>
                         </div>                        
                     </div>
                 </div>
                 <div class="thumbnail">                    
                     <div class="caption">
                         <div class="text-left">
-                            <h3 class="heading">Vision</h3>
-                            <p style="color: #000;text-justify: inter-word; text-align: justify;">Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in. Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.&nbsp;</p>
+                            <h3 class="heading">​ ចក្ខុវិស័យ </h3>
+                            <p style="color: #000;text-justify: inter-word; text-align: justify;">
+                            
+                            	សម្រាប់ការបង្កើតកម្មវិធីនេះឡើង ក្នុងគោលបណង ដើម្បីអោយមានការរីកចម្រើនលើផ្នែកពត៏មានវិទ្យានៅក្នុងប្រទេលកម្ពុជាយើងដែលយើងឈរលើចក្ខុវិស័យដូចខាងក្រោមៈ 
+                            		- ផ្សព្វផ្សាយរាល់អ្នកបានសិក្សានៅមជ្ឈមណ្ឌល HRD Center លើផ្នែក IT
+                            		- ជួយអោយនយោជក ងាយស្រួលជ្រើសរើបុគ្គលិក
+                            		- ផ្តល់ឪកាសកាងាច្រើនដល់និស្សិតជំនាញពត៏មានវិទ្យានៅមជ្ឈមណ្ឌល HRD Center                         
+                         			- 
+                            
+                            </p>
                         </div>                        
                     </div>
                 </div>
@@ -54,14 +74,15 @@
         <div class="row">
             <div class="mbr-section__container mbr-section__container--middle">
                 <div class="mbr-article mbr-article--auto-align mbr-article--wysiwyg">
-                    <h1>OUR PARTNER</h1>
+                    <h1> ដែគូររបស់ពួកយើង </h1>
                     <p>
-                        KOREAN SOFTWARE KSHRD Center.
+                    	មជ្ឈមណ្ឌល កូរ៉េ សហ្វវែ KSHRD
+                        
                     </p>
                 </div>
                 <div class="mbr-section__container">
                     <div class="mbr-buttons mbr-buttons--auto-align btn-inverse">
-                        <a class="mbr-buttons__btn btn btn-lg btn-default" href="http://www.kshrd.com.kh/jsp/index.hrd" target="new">ABOUT KOREAN SOFTWARE KSHRD Center.</a>
+                        <a class="mbr-buttons__btn btn btn-lg btn-default" href="http://www.kshrd.com.kh/jsp/index.hrd" target="new">អំពីមជ្ឈមណ្ឌល កូរ៉េ សហ្វវែ KSHRD.</a>
                     </div>
                 </div>
             </div>

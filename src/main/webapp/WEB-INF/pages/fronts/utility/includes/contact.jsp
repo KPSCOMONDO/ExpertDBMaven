@@ -8,14 +8,17 @@
                     <div class="caption">
                         <div class="pi-col-sm-6 text-left">
                             <h2 class="heading">
-                                Contact Us
+                                	ទំនាក់ទំនងពួកយើងតាមអាស័យដ្ឋានខាងក្រោម
                             </h2>
                             <p class="text-black">
-                                If you have any questions, please feel free to contact us.
+                                	បើសិនជាអ្នកមានសំនួរ , សូមធ្វើការទនាក់ទំនងមកតាមរយៈ.
                             </p>
                             <p class="h6 pi-uppercase pi-weight-700 pi-padding-top-20">
                                 <i class="icon-location pi-text-base" style="margin-right: 5px;color: #2196F3;"></i> 
-                                #12, st. 323, Sangkat Beoung Kok 2 Khan Toul Kork, Phnom Penh, Cambodia
+                               
+                                
+                                	អាគាលេខ 12 ផ្លូវលេខ 323 	   សង្កាត់បឹងកក់ II  	ខណ្ឌ័ទួលគក​ រាជធានីភ្នំពេញ                        	កម្ពុជា                                
+                                
                             </p>
                             <p class="">
                                 <i class="glyphicon glyphicon-envelope" style="margin-right: 5px;color: #2196F3;"></i>

@@ -4,19 +4,24 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Province list</h3>
+                <h3 class="box-title">បញ្ជី</h3>
             </div>
+            <form class="form-inline box-header">
+                <div class="form-group">
+                    <input type="text" ng-model="search" class="form-control" placeholder="ច្រោះ">
+                </div>
+            </form>
             <div class="box-body">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th ng-click="sort('LOCATIONSTATUS')">Location
+                            <th ng-click="sort('LOCATIONSTATUS')">ខេត្ត/ក្រុង
                                 <span class="fa" ng-show="sortKey == 'LOCATIONSTATUS'" 
                                       ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
                                 </span>
                             </th>
-                            <th>Action</th>
+                            <th>សកម្មភាព</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,7 +39,7 @@
                 </table>
                 <div class="pull-right">
                         <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 
-                    </div>
+                </div>
             </div>
         </div>
     </div>

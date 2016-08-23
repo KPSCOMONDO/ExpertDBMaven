@@ -10,21 +10,19 @@
                 <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-6 mbr-section__right">
                     <div class="mbr-section__container mbr-section__container--middle">
                         <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg">
-                            <h3 class="mbr-header__text">Who we are?</h3>
-
+                            <h3 class="mbr-header__text">តើយើងជាអ្នកណា?</h3>
                         </div>
                     </div>
                     <div class="mbr-section__container mbr-section__container--middle">
                         <div class="mbr-article mbr-article--auto-align mbr-article--wysiwyg">
                             <p>     
-                                We are freelance developer team. we build this platform for our country.
+                               	យើងជាក្រុមដែលមានការសហការល្អ ហើយយើងបង្កើតវិបសាយនេះសម្រាប់ប្រទេសរបស់យើង។                          
                             </p>
                         </div>                    
                         <div class="mbr-section__container">
-                            <div class="mbr-buttons mbr-buttons--auto-align btn-inverse"><a class="mbr-buttons__btn btn btn-lg btn-default" href="https://mobirise.com/bootstrap-template/">LEARN MORE</a></div>
+                            <div class="mbr-buttons mbr-buttons--auto-align btn-inverse"><a class="mbr-buttons__btn btn btn-lg btn-default" href="${pageContext.request.contextPath}/about">អំពីពួកយើង</a></div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -2,10 +2,10 @@
 <div class="col-sm-4 text-left box--bottom--shardow" style="padding-top: 10px;padding-bottom: 10px; margin: 10px 0 10px 0;">
     <div>
         <a class="" data-toggle="collapse" href="#search-session">
-            Filter by: <span class="fa fa-unsorted"></span>
+            លក្ខខ័ណ្ធស្វែងរក : <span class="fa fa-unsorted"></span>
         </a>  
         <a class="pull-right" href="">
-            Reset all
+            សម្អាត
         </a>
     </div>   
     <div class="collapse in content" id="search-session">
@@ -13,13 +13,13 @@
         <div class="panel-default filter--box">  
             <div class="panel-heading">
                 <a data-toggle="collapse" class="" href="#bl-category" onclick="onCatClick(this)">
-                    <h3 class="" >Skill<span class="icon pull-right fa fa-chevron-right"></span></h3>
+                    <h3 class="" >ជំនាញ<span class="icon pull-right fa fa-chevron-right"></span></h3>
                 </a>
             </div>
             <div class="collapse panel-body"  id="bl-category">
                 <select class="form-filter expert--province--select" ng-model="skill_category_id" 
                         ng-options="item.CATEGORYSTATUS for item in SKILL_CATEGORIES">
-                    <option value="">-- Choose main skill --</option>
+                    <option value="">-- ជ្រើសរើស --</option>
                 </select>            
                 <div ng-repeat="item in SKILLS| limitTo:5">
                     <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="onSkillChange(item)">
@@ -30,9 +30,9 @@
                            ng-click="onSkillChange(item)">
                     <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
                 </div><br><br>
-                <h3 class="sub-menu" ng-if="skills.length == 0">Not avaliable</h3>
+                <h3 class="sub-menu" ng-if="skills.length == 0">មិនទំនេរ</h3>
                 <a data-toggle="collapse" class="search--more" onclick="onChange(this)" href="#bl-sub-skill">
-                    <span>More</span> <span class="fa fa-sort-desc"></span>
+                    <span>ច្រើនទៀត</span> <span class="fa fa-sort-desc"></span>
                 </a>                
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="panel-default filter--box">  
             <div class="panel-heading">
                 <a data-toggle="collapse" class="" href="#bl-position" onclick="onCatClick(this)">
-                    <h3 class="" >Position<span class="icon pull-right fa fa-chevron-right"></span></h3>
+                    <h3 class="" >តួនាទី<span class="icon pull-right fa fa-chevron-right"></span></h3>
                 </a>
             </div>
             <div class="collapse panel-body"  id="bl-position">               
@@ -59,9 +59,9 @@
                         </label><br>    
                     </div>                
                 </div><br><br>       
-                <h3 class="sub-menu" ng-if="POSITIONS.length == 0">Not avaliable</h3>
+                <h3 class="sub-menu" ng-if="POSITIONS.length == 0">មិនទំនេរ</h3>
                 <a data-toggle="collapse" class="search--more" onclick="onChange(this)" href="#bl-sub-position">
-                    <span>More</span> <span class="fa fa-sort-desc"></span>
+                    <span>ច្រើនទៀត</span> <span class="fa fa-sort-desc"></span>
                 </a>                
             </div>
         </div> 
@@ -69,7 +69,7 @@
         <div class="panel-default filter--box">   
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-gender" onclick="onCatClick(this)">
-                    <h3 class="" >Gender<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >ភេទ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-gender">
@@ -85,32 +85,32 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-age" onclick="onCatClick(this)">
-                    <h3 class="" >Age<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >អាយុ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-age">            
                 <div ng-repeat="item in AGES">                
                     <input id="{{item.MIN}}" type="radio" ng-click="ongAgeChange(item)" name="age" value="{{item}}">
                     <label for="{{item.MIN}}" class="sub-menu">
-                        {{item.MIN}} years old 
-                        <span ng-if="item.MAX"> to {{item.MAX}} years old</span>
+                        {{item.MIN}} ឆ្នាំ 
+                        <span ng-if="item.MAX"> រហូតដល់ {{item.MAX}} ឆ្នាំ</span>
                         <span ng-if="!item.MAX">+</span>
                     </label> 
                 </div>
-                <h3 class="sub-menu" ng-if="AGES.length == 0">Not avaliable</h3>
+                <h3 class="sub-menu" ng-if="AGES.length == 0">មិនទំនេរ</h3>
             </div>
         </div>
         <%-- -------------------------------------------  Province / City  --------------------------------------------%>
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-province" onclick="onCatClick(this)">
-                    <h3 class="" >Location<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >ទីតាំងការងារ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-province">
                 <select class="form-filter expert--province--select" ng-model="cbo_location" 
                         ng-options="item.LOCATIONSTATUS for item in LOCATIONS">
-                    <option value="">-- Choose city --</option>
+                    <option value="">-- ខេត្ត/ក្រុង --</option>
                 </select>            
             </div>                        
         </div>
@@ -118,7 +118,7 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-language" onclick="onCatClick(this)">
-                    <h3 class="" >Language<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >ភាសារ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>                           
             </div>
             <div class="collapse panel-body" id="bl-language">
@@ -138,7 +138,7 @@
                 </div><br><br>
                 <h3 class="sub-menu" ng-if="LANGUAGES.length == 0">Not avaliable</h3>
                 <a data-toggle="collapse" class="search--more" onclick="onChange(this)" href="#bl-sub-language">
-                    <span>More</span> <span class="fa fa-sort-desc"></span>
+                    <span>ច្រើនទៀត</span> <span class="fa fa-sort-desc"></span>
                 </a>                
             </div>
         </div>
@@ -146,14 +146,14 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-experience" onclick="onCatClick(this)">
-                    <h3 class="" >Experience<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >បទពិសោទការងារ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-experience"> 
                 <div ng-repeat="item in EXPERIENCES">
                     <input id="{{item.MIN}}age" type="radio" name="rdSalary">
-                    <label for="{{item.MIN}}age" class="sub-menu">{{item.MIN}} years
-                        <span ng-if="item.MAX"> to {{item.MAX}} years</span> 
+                    <label for="{{item.MIN}}age" class="sub-menu">{{item.MIN}} ឆ្នាំ
+                        <span ng-if="item.MAX"> រហូតដល់ {{item.MAX}} ឆ្នាំ</span> 
                         <span ng-if="!item.MAX"> +</span>
                     </label><br>                                  
                 </div>
@@ -163,15 +163,15 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-salary" onclick="onCatClick(this)">
-                    <h3 class="" >Salary<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >ប្រាក់ខែរ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-salary">
                 <div ng-repeat="item in SALARIES">
                     <input id="{{item.MIN}}salary" type="radio" name="rdSalary">
                     <label for="{{item.MIN}}salary" class="sub-menu">
-                        {{item.MIN| currency:"USD ":0}} 
-                        <span ng-if="item.MAX"> to {{item.MAX| currency:"USD ":0}}</span>
+                        <span>{{item.MIN| currency:"USD ":0}}</span>
+                        <span ng-if="item.MAX"> រហូតដល់ {{item.MAX| currency:"USD ":0}}</span>
                         <span ng-if="!item.MAX"> +</span>
                     </label><br>                                  
                 </div>         

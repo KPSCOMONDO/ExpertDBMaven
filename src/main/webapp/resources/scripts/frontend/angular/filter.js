@@ -84,18 +84,18 @@ app.controller('filter__controller', function ($scope, $http) {
 
 $(document).ready(function () {
     onChange = function (element) {
-        $span1 = $(element).children().first();
-        $span2 = $(element).children().eq(1);
-        if ($span1.text() === "More") {
+        $span1 = $(element).children().first()
+        $span2 = $(element).children().eq(1)
+        if ($span2.hasClass("fa-sort-desc")) {
             $span2
                     .removeClass("fa-sort-desc")
                     .addClass("fa-sort-asc")
-            $span1.text("Less");
+            $span1.text("បន្ថយ");
         } else {
             $span2
                     .removeClass("fa-sort-asc")
                     .addClass("fa-sort-desc");
-            $span1.text("More");
+            $span1.text("ច្រើនទៀត");
         }
     }
     onCatClick = function (element) {

@@ -5,21 +5,22 @@
             <div class="col-sm-8">
                 <div class="row">
                     <div class="col-sm-5 col-sm-offset-1">
-                        <p class="mbr-contacts__text"><strong>ADDRESS</strong><br>
-                            #12, St 323,<br>
-                            Sangkat Boeung Kak II,<br>
-                            KhanToul Kork, Phnom Penh,</br>
-                            Cambodia.<br><br>
-                            <strong>CONTACTS</strong><br>
-                            Email: info.kshrd@gmail.com phirum.gm@gmail.com<br>
-                            Phone: +(855)23 99 13 14<br>
-                            Phone: +(855)77 77 12 36 (Khmer, English)                   
+                        <p class="mbr-contacts__text"><strong> អាស័យដ្ខាន </strong><br>
+                            	អាគាលេខ 12 ផ្លូវលេខ 323<br>
+                         	   សង្កាត់បឹងកក់ II,<br>
+                           	ខណ្ឌ័ទួលគក​ រាជធានីភ្នំពេញ </br>
+                            	កម្ពុជា<br><br>
+                            <strong>ទំនាក់ទំនង</strong><br>
+                            	មែល: info.kshrd@gmail.com phirum.gm@gmail.com<br>
+                            	ទូរសព្ទ័: +(855)23 99 13 14<br>
+                           	 ទូរសព្ទ័: +(855)77 77 12 36 (Khmer, English)                   
                            </p>
                     </div>
                     <div class="col-sm-6"><p class="mbr-contacts__text">
-                            <strong>ABOUT US</strong></p>
+                            <strong> អំពីយើង </strong></p>
                         <p>
-Korea Software HRD Center is an IT academy for training SW professionals established by Korea International Cooperation Agency (KOICA) and Webcash Co., Ltd in April, 2013. Our mission is to train SW experts, provide job opportunities for them, and improve SW technologies in Cambodia.</p>
+                        មជ្ឈមណ្ឌលកូរ៉េសហ្វវែ HRD គឺជាមជ្ឈមណ្ឌលមួយសម្រាប់ធ្វើការបណ្តុះបណ្តាល ជំនាញកម្មវិធី  ដែលមានការគាំទ្រពីប្រទេសកូរ៉េ ដែលក្រុមហ៉ុននោះមានឈ្មោះថា (KOICA) and Webcash Co., Ltd។ ហើមជ្ឈមណ្ឌលនេះត្រូវបានបង្កើតឡើនៅឆ្នាំ ២០១៣ ខែមេសា ។ ហើយជាគោលបំណងនោះគឺចង់បណ្តុះបណ្តាល ជំនាញកម្មវិធី ដែលផ្តល់ឪកាសការងារសម្រាប់ពួកគេ និងការអភិវឌ្ឈន៏ប្រព្ធ័បច្ចេកវិទ្យាកម្មវិធីនៅប្រទេសកម្ពុជា។ 
+</p>
                     </div>
                 </div>
             </div>
@@ -30,7 +31,7 @@ Korea Software HRD Center is an IT academy for training SW professionals establi
     <div class="mbr-section__container container">
         <div class="mbr-footer mbr-footer--wysiwyg row">
             <div class="col-sm-12">
-                <p class="mbr-footer__copyright"></p><p>Copyright (c) 2015 Company Name. <a href="https://mobirise.com/bootstrap-template/license.txt" class="text-gray">License</a></p><p></p>
+                <p class="mbr-footer__copyright"></p><p>Copyright (c) 2016</p>
             </div>
         </div>
     </div>

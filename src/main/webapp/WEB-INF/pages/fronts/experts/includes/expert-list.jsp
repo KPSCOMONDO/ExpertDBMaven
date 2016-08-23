@@ -5,27 +5,27 @@
         <div class="col-sm-5">
             <div class="dropdown">
                 <button class="" data-toggle="dropdown" style="width: 100%;">
-                    <span class="pull-left">Sort by : {{sortName}}</span>
+                    <span class="pull-left">តម្រៀបតាម : {{sortName}}</span>
                     <span class="fa pull-right" ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}"></span>
                 </button>
                 <ul class="dropdown-menu subject">
-                    <li><a href="" class="subject" ng-click="sort('FULLNAME', 'Name')">Name</a></li>
-                    <li><a href="" class="subject" ng-click="sort('YEAREXPERIENCE', 'Year experience')">Year experience</a></li>
-                    <li><a href="" class="subject" ng-click="sort('SALARY', 'Salary')">Salary</a></li>
-                    <li><a href="" class="subject" ng-click="sort('PROVINCESTATUS', 'City/Province')">City/Province</a></li>
-                    <li><a href="" class="subject" ng-click="sort('AGE', 'Age')">Age</a></li>
+                    <li><a href="" class="subject" ng-click="sort('FULLNAME','ឈ្មោះ')">ឈ្មេាះ</a></li>
+                    <li><a href="" class="subject" ng-click="sort('YEAREXPERIENCE', 'ឆ្នាំនៃបទពិសោធន')">ឆ្នាំនៃបទពិសោធន៍</a></li>
+                    <li><a href="" class="subject" ng-click="sort('SALARY', 'ប្រាក់ខែ')">ប្រាក់ខែ</a></li>
+                    <li><a href="" class="subject" ng-click="sort('PROVINCESTATUS', 'ទីតាំងការងារ')">ទីតាំងការងារ</a></li>
+                    <li><a href="" class="subject" ng-click="sort('AGE', 'អាយុ')">អាយុ</a></li>
                 </ul>
             </div> 
-            <div ng-if="experts">
-                <h2 class="heading">Result</h2>
+            <div ng-if="EXPERTS">
+                <h3 class="heading">លទ្ធផល</h3>
             </div>
         </div>
         <div>            
             <div class="pull-right">
                 <form class="form-inline">
                     <div class="form-group">
-                        <label>Search:</label>
-                        <input type="text" ng-model="search" class="form-control search--expert" placeholder="Search by keyword">
+                        <label>ច្រោះយក</label>
+                        <input type="text" ng-model="search" class="form-control search--expert" placeholder="ច្រោះតាមពាក្យ">
                     </div>
                 </form>            
                 <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls> 

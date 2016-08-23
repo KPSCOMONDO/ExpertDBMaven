@@ -11,11 +11,11 @@
                         <div class=" container">
                             <div class="row"><div class="col-sm-8 col-sm-offset-2">
                                     <div class="mbr-hero">
-                                        <h1 class="mbr-hero__text">Expert Database</h1>
-                                        <p class="mbr-hero__subtext">We provide a platform for find IT stuff</p>
+                                        <h1 class="mbr-hero__text">GEEK DIR</h1>
+                                        <p class="mbr-hero__subtext">យើបផ្តល់នូវទម្រង់សម្រាប់ស្វែងរកបុគ្គលិក</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">
-                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a> 
+                                        <a  class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">ស្វែងរកបេក្ខភាព</a> 
                                     </div>
                                 </div>
                             </div>
@@ -27,11 +27,11 @@
                             <div class="row">
                                 <div class="col-sm-8 col-sm-offset-2">
                                     <div class="mbr-hero">
-                                        <h1 class="mbr-hero__text">Easire to find candidate</h1>
-                                        <p class="mbr-hero__subtext">Easy to use and with powerfull function</p>
+                                        <h1 class="mbr-hero__text">ងាយស្រួលស្វែងរកបេក្ខភាព</h1>
+                                        <p class="mbr-hero__subtext">ងាយស្រួលប្រើ និងមានតួនាទីដ៏អស្ចារ្យ</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">
-                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a>
+                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">ស្វែងរកបេក្ខភាព</a>
                                     </div>
                                 </div>
                             </div>
@@ -43,11 +43,11 @@
                             <div class="row">
                                 <div class="col-sm-8 col-sm-offset-2">
                                     <div class="mbr-hero">
-                                        <h1 class="mbr-hero__text">Fastest assecc to IT Expert.</h1>
-                                        <p class="mbr-hero__subtext">We provide full contact of IT expert.</p>
+                                        <h1 class="mbr-hero__text">ដំណើការមានល្បឿនលឿនក្នុងការស្វែងរកបេក្ខភាព</h1>
+                                        <p class="mbr-hero__subtext">យើងផ្តល់នូវទំនាក់ទំនងលម្អិតរបស់ អ្នកជំនាញពត៏រមានវិទ្យា</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">
-                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">Find Candidate</a> 
+                                        <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="${pageContext.request.contextPath}/expert/filter">ស្វែងរកបេក្ខភាព</a> 
                                     </div>
                                 </div>                                    
                             </div>

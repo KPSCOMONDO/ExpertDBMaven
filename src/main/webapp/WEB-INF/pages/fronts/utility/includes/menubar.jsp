@@ -12,7 +12,7 @@
                                 </a>
                             </span>
                             <span class="mbr-brand__name">
-                                <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/">Recruitment</a>
+                                <a style=' font-family: "Hanuman";' class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/"> ជ្រើសរើស </a>
                             </span>
                         </span>
                     </span>
@@ -23,7 +23,7 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/home">Home</a>
+                                    <a style=' font-family: "Hanuman"; font-size: 18px;' class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/home">ទំព័រដើម</a>
                                 </li>
                             </ul>
                         </div>

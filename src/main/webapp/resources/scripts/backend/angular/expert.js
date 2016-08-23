@@ -44,64 +44,57 @@ app.controller('expert__controller', function ($scope, $http) {
     /*
      * Language 
      */
-    $scope.getComponent = function () {
-        REQUEST.GET("/component/language/findall", $http, function (response) {
-            $scope.LANGUAGES = (response.data.DATA);
-            if ($scope.LANGUAGES) {
-                $scope.LANGUAGES = $scope.LANGUAGES.reverse();
-            }
-            $.map($scope.LANGUAGES, function (item) {
-                item.CHECKED = false
-            })
-        }, function (error) {
-            DIALOG.error("Error", error.message);
-        })
-        REQUEST.GET("/component/location/findall", $http, function (response)
-        {
-            $scope.LOCATIONS = (response.data.DATA);
-            if ($scope.LOCATIONS) {
-                $scope.LOCATIONS = $scope.LOCATIONS.reverse();
-            }
-        }, function (error) {
-            DIALOG.error("Error", error.message);
-        })
-        /**
-         * Position
-         */
-        REQUEST.GET("/component/position/findall", $http, function (response)
-        {
-            $scope.POSITIONS = (response.data.DATA);
-            if ($scope.POSITIONS) {
-                $scope.POSITIONS = $scope.POSITIONS.reverse();
-            }
-        }, function (error) {
-            DIALOG.error("Error", error.message);
-        })
-        /*
-         * Skill Category
-         */
-        REQUEST.GET("/component/skill/category/findall", $http, function (response)
-        {
-            $scope.SKILLCATEGORIES = (response.data.DATA);
-            if ($scope.SKILLCATEGORIES) {
-                $scope.SKILLCATEGORIES = $scope.SKILLCATEGORIES.reverse();
-            }
-        }, function (error) {
-            DIALOG.error("Error", error.message);
-        })
 
-        REQUEST.GET("/component/level/findall", $http, function (response)
-        {
-            $scope.LEVELS = (response.data.DATA);
-            if ($scope.LEVELS) {
-                //$scope.LEVELS = $scope.LEVELS.reverse();
-            }
-        }, function (error) {
-            DIALOG.error("Error", error.message);
+    REQUEST.GET("/component/language/findall", $http, function (response) {
+        $scope.LANGUAGES = (response.data.DATA);
+        $.map($scope.LANGUAGES, function (item) {
+            item.CHECKED = false
         })
+    }, function (error) {
+        DIALOG.error("Error", error.message);
+    })
+
+    REQUEST.GET("/component/location/findall", $http, function (response)
+    {
+        $scope.LOCATIONS = (response.data.DATA);
+    }, function (error) {
+        DIALOG.error("Error", error.message);
+    })
+
+    REQUEST.GET("/component/position/findall", $http, function (response)
+    {
+        $scope.POSITIONS = (response.data.DATA);
+    }, function (error) {
+        DIALOG.error("Error", error.message);
+    })
+
+    REQUEST.GET("/component/skill/category/findall", $http, function (response)
+    {
+        $scope.SKILLCATEGORIES = (response.data.DATA);
+    }, function (error) {
+        DIALOG.error("Error", error.message);
+    })
+
+    REQUEST.GET("/component/level/findall", $http, function (response)
+    {
+        $scope.LEVELS = (response.data.DATA);
+    }, function (error) {
+        DIALOG.error("Error", error.message);
+    })
+
+    REQUEST.GET("/component/skill/findall", $http, function (response) {
+        $scope.ALLSKILLS = (response.data.DATA);
+    }, function (error) {
+        DIALOG.error("Error", error.message);
+    })
+
+
+    
+    $scope.upLoadProfile=function (){
+        alert("FUCK OU")
     }
 
-    $scope.getComponent()
+
     $scope.onLanguageCheck = function (laguage) {
         if (laguage.CHECKED) {
             $.map($scope.ADD_LANGUAGES, function (item, i) {
@@ -115,6 +108,8 @@ app.controller('expert__controller', function ($scope, $http) {
         }
         laguage.CHECKED = !laguage.CHECKED
     }
+
+    ////
     $scope.onLaguageLevelCheck = function (language, level) {
         var update = false
         $.map($scope.ADD_LANGUAGES, function (item) {
@@ -135,16 +130,13 @@ app.controller('expert__controller', function ($scope, $http) {
             console.log("ADDED:", $scope.ADD_LANGUAGES)
         }
     }
+
     $scope.deleteLanguage = function (index) {
         JYSON.DELETE($scope.ADD_LANGUAGES, index, function (data) {
             $scope.ADD_LANGUAGES = data
         })
     }
-    REQUEST.GET("/component/skill/findall", $http, function (response) {
-        $scope.ALLSKILLS = (response.data.DATA);
-    }, function (error) {
-        DIALOG.error("Error", error.message);
-    })
+
 
     /*
      *  Location
@@ -161,10 +153,8 @@ app.controller('expert__controller', function ($scope, $http) {
             DIALOG.error("Error", error.message);
         })
     }
-
     $scope.onSkillCheck = function (skill, index) {
         if (skill.CHECKED) {
-//$scope.deleteSkill(index)
             console.log("Removed:", $scope.ADD_SKILLS)
         }
         skill.CHECKED = !skill.CHECKED
@@ -197,9 +187,6 @@ app.controller('expert__controller', function ($scope, $http) {
             console.log("ADDED:", $scope.ADD_SKILLS)
         }
     }
-    /*
-     * Level
-     */
 
     /*
      * Watch
@@ -238,7 +225,7 @@ app.controller('expert__controller', function ($scope, $http) {
         }
     });
     $scope.$watch('cboLocation', function (element) {
-        
+
         if (element != undefined) {
             console.log("Element :", element)
             $scope.locationId = element.LOCATIONID;
@@ -260,11 +247,7 @@ app.controller('expert__controller', function ($scope, $http) {
     /*
      * Related Function
      */
-    $scope.setItemStatus = function () {
-        $.map($scope.SKILLS, function (item) {
-            item.STATUS = false;
-        })
-    }
+
 
     $scope.onDocumentTypeClick = function (type) {
         $scope.docuemntType = type.VALUE
@@ -272,10 +255,24 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.addDocument = function () {
+
+        var url = ""
+        REQUEST.UPLOAD($scope.txtFullName, $('#docForm'), function (data) {
+            url = data.PATH
+            console.log("PATH:", data)
+        }, function (data) {
+            console.log("ERRO:", data)
+        })
+
+        
+        
+        
+
+
         $scope.ADD_DOCUMENTS.push({
             "STATE": $scope.docuemntType,
             "STATUS": $scope.txtDocumentTitle,
-            "URL": "Not avaliable",
+            "URL": "ddd",
             "DESCRIPTION": $scope.txtDocumentDescription
         })
         console.log($scope.ADD_DOCUMENTS)
@@ -348,7 +345,6 @@ app.controller('expert__controller', function ($scope, $http) {
             if ($scope.EXPERT) {
                 $scope.txtFullName = $scope.EXPERT.FULLNAME
                 $scope.gender = $scope.EXPERT.GENDER
-                $scope.cboGender = $scope.EXPERT.GENDER
 
                 $scope.txtDateOfBirth = $scope.EXPERT.DATEOFBIRTH
                 $scope.txtCurrentWorkPlace = $scope.EXPERT.CURRENTWORK
@@ -363,13 +359,9 @@ app.controller('expert__controller', function ($scope, $http) {
                 $scope.city = $scope.EXPERT.ADDRESS.CITY
                 $scope.txtCountry = $scope.EXPERT.ADDRESS.COUNTRY
 
-                $.map($scope.LOCATIONS, function (loc) {
-                    console.log(loc)
-                    if ($scope.EXPERT.LOCATION == loc.LOCATIONID) {
-                        $scope.location = loc.item.LOCATIONSTATUS
-                        console.log("JLOC",$scope.location)
-                    }
-                })
+
+                $scope.locationId = $scope.EXPERT.LOCATION.LOCATIONID
+                $scope.location = $scope.EXPERT.LOCATION.LOCATIONSTATUS
 
 
                 $.map($scope.EXPERT.CONTACTS, function (item, index) {
@@ -543,192 +535,12 @@ app.controller('expert__controller', function ($scope, $http) {
         $scope.ADD_DOCUMENTS = []
         $scope.ADD_POSITIONS = []
         $scope.ADD_EDUCATIONS = []
+
+        $.map($scope.LANGUAGES, function (item) {
+            item.CHECKED = false
+        })
+        $.map($scope.SKILLS, function (item) {
+            item.CHECKED = false
+        })
     }
-
-
-
-    /**
-     * 
-     * @returns {undefined}
-     * 
-     * EDIT
-     */
-
-//    $scope.UPDATE_EXPERIENCES = []
-//    $scope.UPDATE_EDUCATIONS = []
-//    $scope.UPDATE_DOCUMENTS = []
-//    $scope.UPDATE_SKILLS = []
-//    $scope.UPDATE_POSITIONS = []
-//    $scope.UPDATE_LANGUAGES = []
-//
-//    $scope.editData = function () {        
-//        var data = {
-//            "ID": $scope.expertId,
-//            "FULL NAME": $scope.EXPERT.FULLNAME,
-//            "GENDER": $scope.EXPERT.GENDER,
-//            "DATE OF BIRTH": $scope.EXPERT.DATEOFBIRTH,
-//            "CURRENT WORK": $scope.EXPERT.CURRENTWORK,
-//            "SALARY": $scope.EXPERT.SALARY,
-//            "INTEREST": $scope.EXPERT.INTEREST,
-//            "YEAR EXPERIENCE": $scope.EXPERT.YEAREXPERIENCE,
-//            "IMAGE URL": "not avaliable",
-//            "LOCATION ID": $scope.locationId, //$scope.locationId,
-//            "ADDRESS": {
-//                "COMMUNE": $scope.EXPERT.ADDRESS.COMMUNE,
-//                "DISTRICT": $scope.EXPERT.ADDRESS.DISTRICT,
-//                "CITY": $scope.EXPERT.ADDRESS.CITY,
-//                "COUNTRY": $scope.EXPERT.ADDRESS.CITY
-//            },
-//            "CONTACTS": $scope.EXPERT.CONTACTS,
-//            "EDUCATIONS": $scope.ADD_EDUCATIONS,
-//            "DOCUMENTS": $scope.ADD_DOCUMENTS,
-//            "EXPERIENCES": $scope.ADD_EXPERIENCES,
-//            "LANGUAGES": $scope.ADD_LANGUAGES,
-//            "SKILLS": $scope.ADD_SKILLS,
-//            "POSITION ID": $scope.ADD_POSITIONS
-//        }
-//        var dd = {
-//            "FULL NAME": "string",
-//            "GENDER": "string",
-//            "DATE OF BIRTH": "2016-08-21T15",
-//            "CURRENT WORK": "string",
-//            "SALARY": 1,
-//            "INTEREST": "string",
-//            "YEAR EXPERIENCE": 1,
-//            "IMAGE URL": "string",
-//            "LOCATION ID": 1,
-//            "ADDRESS": {
-//                "COMMUNE": "string",
-//                "DISTRICT": "string",
-//                "CITY": "string",
-//                "COUNTRY": "string"
-//            },
-//            "CONTACTS": [
-//                {
-//                    "CONTACT ID": 1,
-//                    "EMAIL": "string",
-//                    "PHONE": "string",
-//                    "LIKED IN": "string",
-//                    "WEBSITE": "string"
-//                }
-//            ],
-//            "EDUCATIONS": [
-//                {
-//                    "EDUCATION ID": 1,
-//                    "STATUS": "string",
-//                    "GRADUATED DATE": "2016-08-21",
-//                    "DESCRIPTION": "string"
-//                }
-//            ],
-//            "DOCUMENTS": [
-//                {
-//                    "DOCUMENT ID": 1,
-//                    "STATUS": "string",
-//                    "URL": "string",
-//                    "STATE": "string",
-//                    "DESCRIPTION": "string"
-//                }
-//            ],
-//            "EXPERIENCES": [
-//                {
-//                    "EXPERIENCE ID": 1,
-//                    "STATUS": "string",
-//                    "YEAR": "string",
-//                    "DESCRIPTION": "string"
-//                }
-//            ],
-//            "LANGUAGES": [
-//                {
-//                    "OLD LANGUAGE ID": 1,
-//                    "NEW LANGUAGE ID": 1,
-//                    "LEVEL ID": 1
-//                }
-//            ],
-//            "SKILLS": [
-//                {
-//                    "OLD SKILL ID": 1,
-//                    "NEW SKILL ID": 1,
-//                    "LEVEL ID": 1
-//                }
-//            ],
-//            "POSITION ID": [
-//                {
-//                    "OLD POSITION ID": 1,
-//                    "NEW POSITION ID": 1
-//                }
-//            ]
-//        }
-//        console.log("Edit Data:", data)
-//        return dd
-//    }
-//
-//    $scope.prepareEdit = function () {
-//        $.map($scope.ADD_LANGUAGES, function (item) {
-//            $.map($scope.LEVELS, function (lev) {
-//                if (item.LEVEL === lev.LEVELSTATUS) {
-//                    item.LEVELID = lev.LEVELID
-//                    item.LANGUAGEID = item.ID
-//                }
-//            })
-//        })
-//        $.map($scope.ADD_SKILLS, function (item) {
-//            $.map($scope.LEVELS, function (lev) {
-//                if (item.LEVEL === lev.LEVELSTATUS) {
-//                    item.LEVELID = lev.LEVELID
-//                    item.SKILLID = item.ID
-//                }
-//            })
-//        })
-//
-//        $.map($scope.ADD_EDUCATIONS, function (item) {
-//            var temp = []
-//            temp.push({
-//                "STATUS": item.EDUCATION,
-//                "GRADUATED_DATE": item.EDUCATEDDATE,
-//                "DESCRIPTION": item.DESCRIPTION
-//            })
-//            $scope.ADD_EDUCATIONS = temp
-//        })
-//        $.map($scope.ADD_DOCUMENTS, function (item) {
-//            var temp = []
-//            temp.push({
-//                "STATE": item.DOCUMENTSTATE,
-//                "STATUS": item.DOCUMENTSTATUS,
-//                "URL": item.DOCUMENTURL,
-//                "DESCRIPTION": item.DOCUMENTDESCRIPTION
-//            })
-//            $scope.ADD_DOCUMENTS = temp
-//        })
-//
-//        $.map($scope.ADD_EXPERIENCES, function (item) {
-//            var temp = []
-//            temp.push({
-//                "STATUS": item.EXPERIENCE,
-//                "YEAR": item.YEAR,
-//                "DESCRIPTION": item.DESCRIPTION
-//            })
-//            $scope.ADD_EXPERIENCES = temp
-//        })
-//        console.log("SKILLS,", $scope.ADD_SKILLS)
-//        console.log("Lang,", $scope.ADD_LANGUAGES)
-//    }
-//
-//    $scope.addPosition = function () {
-//        var i = 0;
-//        $.map($scope.EXPERT.POSITIONS, function (item) {
-//            $scope.ADD_POSITIONS[i] = item.ID
-//            i++
-//        })
-//    }
-
-//
-//    $scope.updateExpert = function () {
-//        REQUEST.PUT("/expert/update/" + APP_CACHE.get("EXPERT_ID"), $scope.editData(), $http, function (response) {
-//            REQUEST.SUCCESS(response);
-//            $scope.FindAllExpert()
-//        }, function (error) {
-//            REQUEST.ERROR(error)
-//        })
-//    }
-//    console.log(APP_CACHE.get("EXPERT_ID"), ": EXPER ID")
 });
