@@ -4,24 +4,28 @@
     <div class="col-xs-12">                        
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Data Table With Full Features</h3>
+                <h3 class="box-title">បញ្ចី</h3>
             </div>
+            <form class="form-inline box-header">
+                <div class="form-group">
+                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                </div>
+            </form>
             <div class="box-body">
                 <table class="table table-striped table-responsive">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th ng-click="sort('FULLNAME')">Name
+                            <th ng-click="sort('FULLNAME')">ឈ្មោះ
                                 <span class="fa" ng-show="sortKey == 'FULLNAME'" 
                                       ng-class="{'fa-sort-desc':reverse,'fa-sort-asc':!reverse}">              
                                 </span>
                             </th>        
-                            <th>Gender</th>
-                            <th>Position</th>
-                            <th >Email</th>
-                            <th>Phone</th>                                                        
-                            <th>Active</th>
-                            <th>Action</th>
+                            <th>ភេទ</th>                           
+                            <th>អិុម៉ែល</th>
+                            <th>លេខទូរស័ព្ទ</th>                                                        
+                            <th>សកម្ម</th>
+                            <th>សកម្មភាព</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,7 +33,6 @@
                             <td>{{$index + 1}}</td>
                             <td>{{item.FULLNAME}}</td> 
                             <td>{{item.GENDER}}</td>
-                            <td ng-repeat="p in item.POSITIONS|limitTo:1">{{p.POSITION}}</td>
                             <td ng-repeat="con in item.CONTACTS|limitTo:1">{{con.EMAIL}}</td>
                             <td ng-repeat="con in item.CONTACTS|limitTo:1">{{con.PHONE}}</td>              
                             <td>

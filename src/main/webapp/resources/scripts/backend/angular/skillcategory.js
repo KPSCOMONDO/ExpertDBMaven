@@ -1,7 +1,6 @@
 var app = angular.module('skill-category--app', ['angularUtils.directives.dirPagination']);
 
-app.controller('skill_category__controller', function ($scope, $http) {
-    $scope.loading = true;
+app.controller('skill_category__controller', function ($scope, $http) {   
     $scope.FinallSkillCategory = function () {
         REQUEST.GET("/component/skill/category/findall", $http, function (response) {
             $scope.loading = false;
@@ -9,11 +8,9 @@ app.controller('skill_category__controller', function ($scope, $http) {
             if ($scope.SKILLCATEGORIES) {
                 $scope.SKILLCATEGORIES = $scope.SKILLCATEGORIES.reverse();
             }
-            $scope.setItemStatus();
-            $scope.loading = false
+            $scope.setItemStatus();         
         }, function (error) {
-            DIALOG.error("Error", error.message);
-            $scope.loading = false;
+           REQUEST.ERROR(error)
         })
     }
     $scope.setItemStatus = function () {

@@ -1,19 +1,15 @@
 var app = angular.module('location--app', ['angularUtils.directives.dirPagination']);
 
 app.controller('location__controller', function ($scope, $http) {
-    $scope.loading = true;
     $scope.FinallLocation = function () {
         REQUEST.GET("/component/location/findall", $http, function (response) {
-            $scope.loading = false;
             $scope.LOCATIONS = (response.data.DATA);
             if($scope.LOCATIONS){
                 $scope.LOCATIONS=$scope.LOCATIONS.reverse();
             }
-            $scope.setItemStatus();
-            $scope.loading = false            
+            $scope.setItemStatus();             
         }, function (error) {
-            DIALOG.error("Error", error.message);
-            $scope.loading = false;
+            REQUEST.ERROR(error)
         })
     }
     $scope.sort = function (keyname, name) {

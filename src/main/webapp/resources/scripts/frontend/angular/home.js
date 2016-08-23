@@ -1,6 +1,12 @@
 var app = angular.module("home--app", []);
 app.controller("home__controller", function ($scope, $http) {
     $scope.LOGIN = APP_CACHE.get("LOGIN")
+    $scope.logOut = function () {
+        APP_CACHE.set("LOGIN", false)
+        $scope.LOGIN = false
+        $scope.LOGOUT=true
+    }
+
     //-----------------declarationion----------------- 
     $scope.loading = true;
     $scope.hash = "#";
@@ -18,7 +24,7 @@ app.controller("home__controller", function ($scope, $http) {
 
     $scope.doFilter = function (element) {
         APP_CACHE.set("SKILL_ID", element.ID);
-        console.log("SKill ID",APP_CACHE.get("SKILL_ID"))
+        console.log("SKill ID", APP_CACHE.get("SKILL_ID"))
         $scope.loading = true;
         REQUEST.GET("/filter/expert/by-skill-id/" + APP_CACHE.get("SKILL_ID"), $http, function (response) {
             if ($scope.EXPERTS = response.data.DATA) {
@@ -34,5 +40,4 @@ app.controller("home__controller", function ($scope, $http) {
     $scope.onViewDetailClick = function (element) {
         APP_CACHE.set("EXPERT_ID", element.ID);
     }
-
 });

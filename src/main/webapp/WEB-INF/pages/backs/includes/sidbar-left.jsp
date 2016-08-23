@@ -9,8 +9,7 @@
                 <p>Sok Channy</p>                
             </div>
         </div>           
-        <ul class="sidebar-menu">
-            <li class="header">ស្វែងរកព័ត៌មានលំអិត</li>
+        <ul class="sidebar-menu">            
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin">
                     <i class="fa fa-dashboard"></i>
@@ -19,7 +18,7 @@
             </li>
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/expert/list">
-                    <i class="fa fa-circle-o"></i> ក្រុមអ្នកជំនាញ</a>                                        
+                    <i class="fa fa-circle-o"></i> បញ្ជីអ្នកជំនាញ</a>                                        
                 </a>                
             </li>  
             <li class="treeview">
@@ -38,7 +37,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/position">
                     <i class="fa fa-bars"></i>
-                    <span>មុខតំណែង</span>
+                    <span>តួនាទី</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">34</span>
                     </span>
@@ -47,7 +46,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/province">
                     <i class="fa fa-map-marker"></i>
-                    <span>ខេត្ត</span>
+                    <span>ទីតាំង(ខេត្ត/ក្រុង)</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
@@ -56,7 +55,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/language">
                     <i class="fa fa-language"></i>
-                    <span>ភាសា</span>
+                    <span>ភាសារ</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">14</span>
                     </span>
@@ -65,7 +64,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/level">
                     <i class="fa fa-level-up"></i>
-                    <span>លំដាប់ថ្នាក់</span>
+                    <span>កំរិត</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">144</span>
                     </span>
@@ -74,7 +73,7 @@
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/user">
                     <i class="fa fa-users"></i>
-                    <span>អ្នកប្រើប្រាស់</span>
+                    <span>បញ្ជីអ្នកគ្រប់គ្រង</span>
                     <span class="pull-right-container">
                         <span class="label label-primary pull-right">144</span>
                     </span>

@@ -1,20 +1,15 @@
 var app = angular.module('position--app', ['angularUtils.directives.dirPagination']);
 
 app.controller('position__controller', function ($scope, $http) {
-    $scope.loading = true;
     $scope.FinallPosition = function () {
         REQUEST.GET("/component/position/findall", $http, function (response) {
-            $scope.loading = false;
             $scope.POSITIONS = (response.data.DATA);
             if ($scope.POSITIONS) {
                 $scope.POSITIONS = $scope.POSITIONS.reverse();
             }
             $scope.setItemStatus();
-            $scope.loading = false
-            $scope.setItemStatus();
         }, function (error) {
-            DIALOG.error("Error", error.message);
-            $scope.loading = false;
+            REQUEST.ERROR(error)
         })
     }
 

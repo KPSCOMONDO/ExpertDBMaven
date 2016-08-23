@@ -1,6 +1,11 @@
 var app = angular.module('filter--app', ['angularUtils.directives.dirPagination']);
 
 app.controller('filter__controller', function ($scope, $http) {
+    $scope.LOGIN = APP_CACHE.get("LOGIN")
+    $scope.logOut = function () {
+        APP_CACHE.set("LOGIN", false)
+        $scope.LOGIN = false
+    }
     // DECLARATION 
     $scope.LOGIN = APP_CACHE.get("LOGIN")
     $scope.loading = true;

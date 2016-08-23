@@ -1,22 +1,24 @@
 package org.expert.database.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddExpertAddress {
 	
 	@JsonProperty("COMMUNE")
-	private String commune="PP";
+	private String commune;
 	
 	@JsonProperty("DISTRICT")
-	private String district="PP";
+	private String district;
 	
 	@JsonProperty("CITY")
-	private String city="PP";
+	private String city;
 	
 	@JsonProperty("COUNTRY")
-	private String country="PP";
-
+	private String country;
+	
+	@JsonProperty("STREET NUMBER")
+	private String street;
+	
 	public String getCommune() {
 		return commune;
 	}
@@ -48,4 +50,14 @@ public class AddExpertAddress {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+	
+	
 }

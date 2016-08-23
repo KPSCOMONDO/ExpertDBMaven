@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <div class="box box-info collapsed-box">
     <div class="box-header">
-        <h3 class="box-title">Add new job position
-            <small>Click on + drop down form to add new.</small>
+        <h3 class="box-title">បង្កើត អ្នកជំនាញ
+            <small>ចុចសញ្ញា +</small>
         </h3>
         <div class="pull-right box-tools">            
             <input type="button" class="btn btn-info btn-sm" id="edit" data-widget="collapse" data-toggle="tooltip" title="Collapse" 
@@ -15,75 +15,80 @@
             <form ng-submit="createExpert()">
                 <div class="col-sm-6">
                     <%----------------------------------------- Basic information  ----------------------------------%>
-                    <h3 class="box-title text-red">Basic Information</h3>
+                    <h3 class="box-title text-red">ព័តិតមានផ្ទាល់ខ្លួន</h3>
                     <div class="form-group">
                         <img src="" style="width: 80px;height: 100px;" alt="UNAVALIABEL">
-                        <label for="txtProfile">Upload profile</label>
+                        <label for="txtProfile">បញ្ចូលរូបភាព</label>
                         <input id="txtFullName" type="file" placeholder="Name" ng-click="upLoadProfile()">
                     </div>
                     <div class="form-group">
-                        <label for="txtFullName">First name</label>
-                        <input ng-model="txtFullName" id="txtFullName" type="text" class="form-control" placeholder="Name" required>
+                        <label for="txtFullName">ឈ្មោះ</label>
+                        <input ng-model="txtFullName" id="txtFullName" type="text" class="form-control" placeholder="ឈ្មោះ" required>
                     </div>
                     <div class="form-group">
-                        <label for="cboGender">Gender</label>
+                        <label for="cboGender">ភេទ</label>
                         <select class="form-filter expert--province--select form-control" id="cboGender" 
                                 ng-model="cboGender" ng-options="item.VALUE for item in GENDERS" required>
                             <option value="" selected>-- {{gender}} --</option>
                         </select>            
                     </div>
                     <div class="form-group">
-                        <label for="txtDateOfBirth">Date of birth</label>
-                        <input ng-model="txtDateOfBirth" id="txtDateOfBirth" type="date" class="form-control" placeholder="Date of birth" required>
+                        <label for="txtDateOfBirth">ថ្ងៃខែឆ្នាំកំណើត</label>
+                        <input ng-model="txtDateOfBirth" id="txtDateOfBirth" type="date" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="txtInterest">Date of birth</label>
-                        <input ng-model="txtInterest" id="txtInterest" type="text" class="form-control" placeholder="Date of birth" required>
+                        <label for="txtInterest">ចំណង់ចំណូលចិត្ត</label>
+                        <input ng-model="txtInterest" id="txtInterest" type="text" class="form-control" placeholder="ចំណង់ចំណូលចិត" required>
                     </div>
                 </div>                
                 <div class="col-sm-6">
-                    <%----------------------------------------- Address  ----------------------------------%>
-                    <h3 class="box-title text-red">Address</h3>
+                    <%----------------------------------------- Address  ----------------------------------%>                    
+                    <h3 class="box-title text-red">អាស័យដ្ឋានប្បច្ចុបន្ន</h3>
                     <div class="form-group">
-                        <label for="txtCommune">Commune</label>
+                        <label for="txtStreetNumber">លេខផ្លូវ</label>
+                        <input ng-model="txtStreetNumber" id="txtStreetNumber" type="text" class="form-control" placeholder="េលខផ្លូវ" required>
+                    </div>
+                    <h3 class="box-title text-red">អាស័យដ្ឋានប្បច្ចុបន្ន</h3>
+                    <div class="form-group">
+                        <label for="txtCommune">ភូមិ</label>
                         <input ng-model="txtCommune" id="txtCommune" type="text" class="form-control" placeholder="Commune name" required>
                     </div>
                     <div class="form-group">
-                        <label for="txtDistrict">District</label>
+                        <label for="txtDistrict">ឃុំ / សង្កាត់</label>
                         <input ng-model="txtDistrict" id="txtDistrict" type="text" class="form-control" placeholder="District name" required>
                     </div>
                     <div class="form-group">
-                        <label for="cboCity">Province/City</label>
+                        <label for="cboCity">ខេត្ត / ក្រុង</label>
                         <select class="form-filter expert--province--select form-control" ng-model="cboCity" ng-options="item.LOCATIONSTATUS for item in LOCATIONS" id="cboCity">
                             <option value="">-- {{city}} --</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="txtCountry">Country</label>
+                        <label for="txtCountry">ប្រទេស</label>
                         <input ng-model="txtCountry" id="txtCountry" type="text" class="form-control" placeholder="Country name" required>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <%----------------------------------------- Contact  ----------------------------------%>
-                    <h3 class="box-title text-red">Contact</h3>
+                    <h3 class="box-title text-red">ទំនាក់ទំនង</h3>
                     <div class="col-sm-6 row">
                         <div class="form-group">
-                            <label for="txtPhoneA">Phone 1</label>
-                            <input ng-model="txtPhoneA" id="txtPhoneA" type="text" class="form-control" placeholder="Phone first line" required>
+                            <label for="txtPhoneA">លេខទូរស័ព្ទខ្សែរទី​ ១</label>
+                            <input ng-model="txtPhoneA" id="txtPhoneA" type="text" class="form-control" placeholder="េខទូរស័ព្ទខ្សែរទី​ ១" required>
                         </div>
                         <div class="form-group">
-                            <label for="txtEmailA">Email 1</label>
-                            <input ng-model="txtEmailA" id="txtEmailA" type="email" class="form-control" placeholder="Email first line" required>
+                            <label for="txtEmailA">អុីម៉ែល​ ១</label>
+                            <input ng-model="txtEmailA" id="txtEmailA" type="email" class="form-control" placeholder="អុីម៉ែល​ ១" required>
                         </div>                        
                     </div>
                     <div class="col-sm-6">                        
                         <div class="form-group">
-                            <label for="txtPhoneB">Phone 2</label>
-                            <input ng-model="txtPhoneB" id="txtPhoneB" type="text" class="form-control" placeholder="Phone second line">
+                            <label for="txtPhoneB">េខទូរស័ព្ទខ្សែរទី​ ២</label>
+                            <input ng-model="txtPhoneB" id="txtPhoneB" type="text" class="form-control" placeholder="េខទូរស័ព្ទខ្សែរទី​ ២">
                         </div>
                         <div class="form-group">
-                            <label for="txtEmailB">Email 2</label>
-                            <input ng-model="txtEmailB" id="txtEmailB" type="email" class="form-control" placeholder="Email second line">
+                            <label for="txtEmailB">អុីម៉ែល​ ២</label>
+                            <input ng-model="txtEmailB" id="txtEmailB" type="email" class="form-control" placeholder="អុីម៉ែល​ ២">
                         </div>                        
                     </div>
                     <div class="form-group">
@@ -107,37 +112,37 @@
 
                 <div class="col-sm-6">
                     <%------------------------------------ Work Experience ------------------------%>
-                    <h3 class="box-title text-red">Work information</h3>                                    
+                    <h3 class="box-title text-red">ព័តិមាន​ អំពីការងារ</h3>                                    
                     <div class="form-group">
-                        <label for="txtCurrentWorkPlace">Current workplace</label>
-                        <input ng-model="txtCurrentWorkPlace" id="txtCurrentWorkPlace" type="text" class="form-control" placeholder="Current workplace" required>
+                        <label for="txtCurrentWorkPlace">ការងារ ប្បច្ចុបន្ន</label>
+                        <input ng-model="txtCurrentWorkPlace" id="txtCurrentWorkPlace" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="cboPositionA">In position</label>
+                        <label for="cboPositionA">តួនាទីការងារ</label>
                         <select class="form-filter expert--province--select form-control" ng-model="cboPositionA" 
                                 ng-options="item.POSITION for item in POSITIONS" id="cboPositionA" required>
-                            <option value="">-- Choose position --</option>
+                            <option value="">-- ជ្រើសរើសមួយ --</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="txtYearexperience">Year experience</label>
+                        <label for="txtYearexperience">បទពិសោធន៍ ការងារ</label>
                         <input ng-model="txtYearexperience" id="txtYearexperience" type="number" class="form-control" placeholder="Salary" required>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h3 class="box-title text-red">Interest work information</h3>                                       
+                    <h3 class="box-title text-red">ចំណាប់​ អារម្មរណ៍​ ការងារ</h3>                                       
                     <div class="form-group">
-                        <label for="cboPositionB">Work position</label>
+                        <label for="cboPositionB">តួនាទី​ការងារ</label>
                         <select class="form-filter expert--province--select form-control" ng-model="cboPositionB" ng-options="item.POSITION for item in POSITIONS" id="cboPositionB" required>
-                            <option value="">-- Choose position --</option>
+                            <option value="">-- ជ្រើរើសមួយ --</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="txtSalary">Salary</label>
+                        <label for="txtSalary">ប្រាក់ខែ</label>
                         <input ng-model="txtSalary" id="txtSalary" type="number" class="form-control" placeholder="Salary" required>
                     </div> 
                     <div class="form-group">
-                        <label for="cboLocation">Interest work location</label>
+                        <label for="cboLocation">ទីតាំងការងារ</label>
                         <select class="form-filter expert--province--select form-control" ng-model="cboLocation" ng-options="item.LOCATIONSTATUS for item in LOCATIONS" id="cboLocation" required>
                             <option value="">-- {{location}} --</option>
                         </select>
@@ -147,7 +152,7 @@
                 <div class="col-sm-12">
                     <div class="col-sm-12">
                         <%-- ---------------------------------------  Language  -------------------------------%>
-                        <h3 class="box-title text-red">Language</h3>
+                        <h3 class="box-title text-red">ភាសា</h3>
                         <div class="box-body">                
                             <div class="form-group">
                                 <table style="width: 100%;" class="t able-striped table-condensed">
@@ -167,14 +172,14 @@
                         </div>
                     </div> 
                     <div class="col-sm-12">
-                        <h4 class="box-title text-red">Added language</h4>                        
+                        <h4 class="box-title text-red">ភាសា ដែលបានបញ្ចូលរួច</h4>                        
                         <table class="table-condensed table">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Language</th>
-                                    <th>Level</th>                                
-                                    <th>Action</th>
+                                    <th>ភាសា</th>
+                                    <th>កំរិត</th>                                
+                                    <th>សកម្មភាព</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -197,42 +202,41 @@
             </form>
             <div class="col-sm-12">
                 <div class="col-sm-10">
-                    <h3 class="box-title text-red">Education</h3>                                       
+                    <h3 class="box-title text-red">ការសិក្សា</h3>                                       
                     <form ng-submit="addEducation()">
                         <div class="form-group">
-                            <label for="txtMajor">Major/course</label>
-                            <input ng-model="txtMajor" id="txtMajor" type="text" class="form-control" placeholder="Major/course" required>
+                            <label for="txtMajor">ឈ្មោះ​មុខ ជំនាញ / វគ្គ</label>
+                            <input ng-model="txtMajor" id="txtMajor" type="text" class="form-control" placeholder="ជំនាញ / វគ" required>
+                        </div>
+                        <div class="form-group">                            
+                            <div class="col-sm-2">
+                                <label for="txtGraduateDate">ថ្ងៃបញ្ចប់ការសិក្សា</label>
+                            </div>
+                            <div class="col-sm-5">
+                                <input ng-model="txtGraduateDate" id="txtGraduateDate" type="date" class="form-control" required>
+                            </div>                                                                                                             
                         </div>
                         <div class="form-group">
-                            <label for="txtGraduateDate">Graduated/Finished date</label>
-                            <div>
-                                <div class="col-sm-5">
-                                    <input ng-model="txtGraduateDate" id="txtGraduateDate" type="date" class="form-control" required>
-                                </div>                                
-                            </div>                                                                               
-                        </div>
-                        <div class="form-group">
-                            <label for="txtEducationDescription">Description</label>
+                            <br><br>
+                            <label for="txtEducationDescription">លំអិត</label>
                             <textarea ng-model="txtEducationDescription" id="txtEducationDescription" rows="5" class="form-control" placeholder="Education description" required></textarea>
                         </div>      
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">
-                                <span class='fa fa-plus'>Add</span>
-                            </button>
+                            <button type="submit" class="btn btn-primary"><span class='fa fa-plus'>បញ្ចូល</span></button>
+                            <button type="submit" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
                         </div>
                     </form>
                 </div>
-
                 <div class="col-sm-12">
-                    <h4 class="box-title text-red">Added education</h4>                        
+                    <h4 class="box-title text-red">ការសិក្សា​ បញ្ចូលរួច</h4>                        
                     <table class="table-condensed table">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Course/Major</th>
-                                <th>Year</th>
-                                <th>Description</th>
-                                <th>Action</th>
+                                <th>មុខ ជំនាញ /​ វគ្គ</th>
+                                <th>ឆ្នាំបញ្ចប់</th>
+                                <th>លំអាត</th>
+                                <th>សកម្មភាព</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -255,49 +259,52 @@
                 <%--------------------------------- Work Experience --------------------------------------%>
                 <div class="col-sm-10">
                     <form ng-submit="addExperience()">
-                        <h3 class="box-title text-red">Work experience</h3>                                    
+                        <h3 class="box-title text-red">បទពិសោធន៍ការងារ</h3>                                    
                         <div class="form-group">
-                            <label for="txtPosition">Position</label>
+                            <label for="txtPosition">តួនាទីការងារ</label>
                             <input ng-model="txtPosition" id="txtPosition" type="text" class="form-control" 
-                                   placeholder="Position" required>
+                                   placeholder="តួនាទីការងារ" required>
                         </div>
-                        <div class="form-group">
-                            <label for="txtYearFromB">Year</label>
+                        <div class="form-group">                           
                             <div>
-                                <div class="col-sm-5">
+                                <div class="col-sm-2">
+                                    <label for="txtYearFromB">ឆ្នាំចាប់ផ្តើម</label>
+                                </div>
+                                <div class="col-sm-4">
                                     <input ng-model="txtYearFromB" id="txtYearFromB" type="date" class="form-control" 
                                            placeholder="From" required>
                                 </div>
                                 <div class="col-sm-2">
-                                    <label for="txtYearToB">To</label>
+                                    <label for="txtYearToB">រហូតដល់ ឆ្នាំ</label>
                                 </div>
-                                <div class="col-sm-5">
+                                <div class="col-sm-4">
                                     <input ng-model="txtYearToB" id="txtYearToB" type="date" class="form-control" 
                                            placeholder="To" required>
                                 </div>
                             </div>                                                                       
                         </div>
                         <div class="form-group">
-                            <label for="txtExperienceDescription">Description</label>
+                            <label for="txtExperienceDescription">លំអិត</label>
                             <textarea ng-model="txtExperienceDescription" id="txtExperienceDescription" rows="5" class="form-control" 
-                                      placeholder="New job position" required></textarea>
+                                      placeholder="ព័តិមានលំអិតអំពីការងារ" required></textarea>
                         </div>      
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary"><span class='fa fa-plus'>Add</span></button>
+                            <button type="submit" class="btn btn-primary"><span class='fa fa-plus'>បញ្ចូល</span></button>
+                            <button type="submit" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
                         </div>
                         </h3>
                     </form>
                 </div>
                 <div class="col-sm-12">
-                    <h4 class="box-title text-red">Added experience</h4>                        
+                    <h4 class="box-title text-red">បទពិសោធន៍ដែលបញ្ចូលរួច</h4>                        
                     <table class="table-condensed table">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Position</th>
-                                <th>Year</th>
-                                <th>Description</th>
-                                <th>Action</th>
+                                <th>តួនាទីការងារ</th>
+                                <th>ឆ្នាំ</th>
+                                <th>លំអិត</th>
+                                <th>សកម្មភាព</th>
                             </tr>                        
                         </thead>
                         <tbody>
@@ -320,12 +327,12 @@
             <div class="col-sm-12">
                 <div class="col-sm-12">
                     <%-- --------------------------------------- SKILL =-------------------------------%>
-                    <h3 class="box-title text-red">Skill</h3>
+                    <h3 class="box-title text-red">ជំនាញ</h3>
                     <div class="box-body">
                         <label for="cboCategory"></label>
                         <select class="form-filter form-control" ng-model="cboCategory" 
                                 ng-options="item.CATEGORYSTATUS for item in SKILLCATEGORIES" id="cboCategory">
-                            <option value="">-- Choose main skill --</option>
+                            <option value="">-- ជ្រើសរើសមួយ --</option>
                         </select>                
                         <br>
                         <div class="form-group">
@@ -344,14 +351,14 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <h4 class="box-title text-red">Added skill</h4>
+                        <h4 class="box-title text-red">ជំនាញដែលបានបញ្ចូលរួច</h4>
                         <table class="table table-condensed">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Skill</th>
-                                    <th>Level</th>
-                                    <th>Action</th>
+                                    <th>ជំនាញ</th>
+                                    <th>កំរិត</th>
+                                    <th>សកម្មភាព</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -375,28 +382,28 @@
                 <%-- ---------------------------------------  Document  -------------------------------%>
                 <div class="col-sm-10">
                     <form ng-submit="addDocument()" id="docForm">
-                        <h3 class="box-title text-red">Related document</h3>
+                        <h3 class="box-title text-red">ឯកសារផ្សេងៗ</h3>
                         <div class="box-body">      
                             <div class="form-group">
-                                <label>Type&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+                                <label>ប្រភេទឯកសារ</label><br>
                                 <span ng-repeat="item in DOCUMENTS" style="margin-right: 20px;">
                                     <input type="radio" ng-click="onDocumentTypeClick(item)" 
                                            name="document" required>&nbsp;&nbsp;&nbsp;{{item.VALUE}}                                
                                 </span>              
                             </div>
                             <div class="form-group">
-                                <label for="txtDocumentTitle">Title</label>                                                       
+                                <label for="txtDocumentTitle">ចំណងជើង</label>                                                       
                                 <input ng-model="txtDocumentTitle" id="txtDocumentTitle" type="text" 
                                        class="form-control" placeholder="Title" required>
                             </div>
                             <div class="form-group">
-                                <label for="Upload">Upload file</label>                                                      
+                                <label for="Upload">បន្ថែមឯកាសារ</label>                                                      
                                 <input ng-model="Upload" id="Upload" name="file" type="file" required></textarea>                                                                                                    
                             </div>                           
                             <div class="form-group">
-                                <label for="txtDocumentDescription">Description</label>                                                      
+                                <label for="txtDocumentDescription">លំអិត</label>                                                      
                                 <textarea ng-model="txtDocumentDescription" id="txtDocumentDescription" rows="5" 
-                                          class="form-control" placeholder="Description" required></textarea>                                                                                                    
+                                          class="form-control" placeholder="លំអិត" required></textarea>                                                                                                    
                             </div>
                             <div class="form-group">
                                 <button  type="submit" class="btn btn-primary"><span class='fa fa-plus'>Add</span></button>
@@ -405,15 +412,15 @@
                     </form>
                 </div>
                 <div class="col-sm-12 table-responsive">
-                    <h4 class="box-title text-red">Added document</h4>                        
+                    <h4 class="box-title text-red">ឯកសារដែលបានដាក់បញ្ចូល</h4>                        
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Type</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Action</th>
+                                <th>ប្រភេទឯកសារ</th>
+                                <th>ចំណងជើង</th>
+                                <th>លំអិត</th>
+                                <th>សកម្មភាព</th>
                             </tr>                                
                         </thead>
                         <tbody>
@@ -435,7 +442,7 @@
         </div> 
     </div>
     <div class="box-footer">
-        <label class="btn btn-primary" for="btSubmit">Submit</label>
-        <label type="reset" ng-click="reset()" class="btn btn-danger" for="btReset">Reset</label>
+        <label class="btn btn-primary" for="btSubmit">រក្សារទុក</label>
+        <label type="reset" ng-click="reset()" class="btn btn-danger" for="btReset">សំអាត</label>
     </div>    
 </div>

@@ -1,20 +1,14 @@
 var app = angular.module('language--app', ['angularUtils.directives.dirPagination']);
 app.controller('language__controller', function ($scope, $http) {
-    $scope.loading = true;
-
-    $scope.FinallLanguage = function () {
-        $scope.loading = true;
+    $scope.FinallLanguage = function () {        
         REQUEST.GET("/component/language/findall", $http, function (response) {
-            $scope.loading = false
             $scope.LANGUAGES = (response.data.DATA);
             if ($scope.LANGUAGES) {
                 $scope.LANGUAGES = $scope.LANGUAGES.reverse();
-            }
-            console.log("Language:", $scope.LANGUAGES)
+            }           
             $scope.setItemStatus();
         }, function (error) {
-            
-            $scope.loading = false;
+            REQUEST.ERROR(error)
         })
     }
 

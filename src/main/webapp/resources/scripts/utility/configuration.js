@@ -142,7 +142,7 @@ var DIALOG = {
             title: title,
             text: text,
             confirmButtonColor: '#3085d6',
-            timer: '1000'
+            timer: '2000'
         })
     },
     error: function (title, text) {
@@ -150,7 +150,7 @@ var DIALOG = {
             title: title,
             text: text,
             confirmButtonColor: '#d33',
-            timer: '1000'
+            timer: '5000'
         })
     }
 }

@@ -10,9 +10,8 @@ app.controller('skill__controller', function ($scope, $http) {
         }
         $scope.setItemStatus();
     }, function (error) {
-        DIALOG.error("Error", error.message);
+        REQUEST.ERROR(error)
     })
-
 
     $scope.$watch('skill_category_id', function (element) {
         if (element != undefined) {
@@ -29,7 +28,7 @@ app.controller('skill__controller', function ($scope, $http) {
             }            
             $scope.setItemStatus();
         }, function (error) {
-            DIALOG.error("Error", error.message);
+            REQUEST.ERROR(error)
         })
 
     }
@@ -87,9 +86,5 @@ app.controller('skill__controller', function ($scope, $http) {
             })
         })
     }
-
-    /*
-     * Create new 
-     */
 
 });

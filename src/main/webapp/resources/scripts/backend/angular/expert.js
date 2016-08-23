@@ -38,7 +38,7 @@ app.controller('expert__controller', function ($scope, $http) {
                 $scope.EXPERTS = $scope.EXPERTS.reverse();
             }
         }, function (error) {
-            DIALOG.error("Error", error.message);
+            REQUEST.ERROR(error)
         })
     }
     /*
@@ -58,34 +58,34 @@ app.controller('expert__controller', function ($scope, $http) {
     {
         $scope.LOCATIONS = (response.data.DATA);
     }, function (error) {
-        DIALOG.error("Error", error.message);
+        REQUEST.ERROR(error)
     })
 
     REQUEST.GET("/component/position/findall", $http, function (response)
     {
         $scope.POSITIONS = (response.data.DATA);
     }, function (error) {
-        DIALOG.error("Error", error.message);
+        REQUEST.ERROR(error)
     })
 
     REQUEST.GET("/component/skill/category/findall", $http, function (response)
     {
         $scope.SKILLCATEGORIES = (response.data.DATA);
     }, function (error) {
-        DIALOG.error("Error", error.message);
+        REQUEST.ERROR(error)
     })
 
     REQUEST.GET("/component/level/findall", $http, function (response)
     {
         $scope.LEVELS = (response.data.DATA);
     }, function (error) {
-        DIALOG.error("Error", error.message);
+        REQUEST.ERROR(error)
     })
 
     REQUEST.GET("/component/skill/findall", $http, function (response) {
         $scope.ALLSKILLS = (response.data.DATA);
     }, function (error) {
-        DIALOG.error("Error", error.message);
+        REQUEST.ERROR(error)
     })
 
 
@@ -150,7 +150,7 @@ app.controller('expert__controller', function ($scope, $http) {
             }
             $scope.setItemStatus();
         }, function (error) {
-            DIALOG.error("Error", error.message);
+            REQUEST.ERROR(error)
         })
     }
     $scope.onSkillCheck = function (skill, index) {
@@ -433,7 +433,7 @@ app.controller('expert__controller', function ($scope, $http) {
             }
             console.log($scope.EXPERT, ":  :", APP_CACHE.get("EXPERT_ID"))
         }, function (error) {
-            DIALOG.error("Error", error.message);
+            REQUEST.ERROR(error)
         })
     }
 
@@ -455,7 +455,8 @@ app.controller('expert__controller', function ($scope, $http) {
                 "COMMUNE": $scope.txtCommune,
                 "DISTRICT": $scope.txtDistrict,
                 "CITY": $scope.city,
-                "COUNTRY": $scope.txtCountry
+                "COUNTRY": $scope.txtCountry,
+                "STREET NUMBER": $scope.txtStreetNumber
             },
             "CONTACTS": [
                 {
