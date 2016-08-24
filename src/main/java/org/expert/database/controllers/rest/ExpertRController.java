@@ -83,6 +83,15 @@ public class ExpertRController {
         return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
     }
 
+    @RequestMapping(value = {"/update-state/{key}/{expertId}"}, method = RequestMethod.PUT)
+    public ResponseEntity<Map<String, Object>> UpdateState(@PathVariable("key") boolean key, @PathVariable("expertId") int expertId) {
+        HttpEntity<Object> request = new HttpEntity<Object>(header);
+        header.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+        String URL = WS_URL + "/admin/change-state-expert?state=" + key + "&expertId=" + expertId;
+        ResponseEntity<Map> response = rest.exchange(URL, HttpMethod.PUT, request, Map.class);
+        return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
+    }
+
 //     @RequestMapping(value = {"/update"},method = RequestMethod.PUT)   
 //    public ResponseEntity<Map<String, Object>> UpdateExpert(@RequestBody UpdateE @PathVariable("expertId")) {
 //        HttpEntity<Object> request = new HttpEntity<Object>(header);

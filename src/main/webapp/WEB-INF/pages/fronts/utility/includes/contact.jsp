@@ -42,7 +42,7 @@
                 <div class="thumbnail">                    
                     <div class="caption">
                         <div class="text-left">                                                        
-                            <img class="img-responsive" src="../../../../../resources/static/img/exlogo1.png" alt=""/>
+                            <img class="img-responsive" src="${pageContext.request.contextPath}/resources/static/img/app-logo.png" alt=""/>
                         </div>                        
                     </div>
                 </div>

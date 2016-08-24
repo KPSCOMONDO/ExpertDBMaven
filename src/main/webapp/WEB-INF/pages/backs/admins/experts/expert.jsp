@@ -15,9 +15,6 @@
                 <section class="content" ng-controller="expert__controller">
                     <jsp:include page="includes/new.jsp"/>
                     <jsp:include page="includes/expert-list.jsp"/>
-<!--                </section>
-                <section ng-controller="update__expert__controller">-->
-                    <jsp:include page="includes/update.jsp"/>
                 </section>
             </div>             
             <jsp:include page="../../includes/footer.jsp"/>

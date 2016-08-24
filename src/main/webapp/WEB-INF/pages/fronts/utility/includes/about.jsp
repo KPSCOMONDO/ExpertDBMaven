@@ -8,11 +8,9 @@
                     <div class="caption">
                         <div class="text-left">
                             <h3 class="heading">អំពីយើង</h3>
-                            <p style="color: #000;text-justify: inter-word; text-align: justify;">
-                            
+                            <p style="color: #000;text-justify: inter-word; text-align: justify;">                            
                             	GEEG DIR គឺជាគ្រុមមួយដែលមានទំនួលខុសត្រូវខ្ពស់ចំពោះកាងារ។ ដែលក្រុមនេះត្រូវបានចាប់ផ្តើមឡើងនៅពេលដែលពួកយើងបានចូលមកសិក្សានៅ HRD Center។ ហើយក្រុមពួកយើងបានធ្វើកម្មវិធីមួយដែលគ្រប់គ្រង់ទៅលើ 
-                            	ពត៏មានរបស់អតីត សិស្សដែលបានសិក្សានៅ មជ្ឈមណ្ឌលនេះទាំងអស់។ ពួកយើងទទួលបានជោកជ័យលើកិច្ចការនេះដោយមានសមាជិកចូលរួមប្រតិបត្តិការទាំងអស់គ្នាមានចំនួនប្រាំនាក់ ដោយម្នាក់ៗមានមុខងាផ្សេងគ្នា ប៉ុន្តែយើងមានការសហការគ្នាបានល្អក្នុងកិច្ចការមួយនេះ។
-                            	
+                            	ពត៏មានរបស់អតីត សិស្សដែលបានសិក្សានៅ មជ្ឈមណ្ឌលនេះទាំងអស់។ ពួកយើងទទួលបានជោកជ័យលើកិច្ចការនេះដោយមានសមាជិកចូលរួមប្រតិបត្តិការទាំងអស់គ្នាមានចំនួនប្រាំនាក់ ដោយម្នាក់ៗមានមុខងាផ្សេងគ្នា ប៉ុន្តែយើងមានការសហការគ្នាបានល្អក្នុងកិច្ចការមួយនេះ។                            	
                             	&nbsp;</p>
                         </div>                        
                     </div>
@@ -53,7 +51,7 @@
                 <div class="thumbnail">                    
                     <div class="caption">
                         <div class="text-left">                                                        
-                            <img class="img-responsive" src="../../../../../resources/static/img/exlogo1.png" alt=""/>
+                            <img class="img-responsive" src="${pageContext.request.contextPath}/resources/static/img/app-logo.png" alt=""/>
                         </div>                        
                     </div>
                 </div>

@@ -37,7 +37,7 @@
                             <td ng-repeat="con in item.CONTACTS|limitTo:1">{{con.PHONE}}</td>              
                             <td>
                                 <label class="switch">
-                                    <input ng-checked="item.STATE" type="checkbox">
+                                    <input ng-checked="item.STATE" ng-click="onActiveClick(item)" type="checkbox">
                                     <div class="slider round"></div>
                                 </label>
                             </td>

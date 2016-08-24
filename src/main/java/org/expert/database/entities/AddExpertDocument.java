@@ -16,6 +16,14 @@ public class AddExpertDocument {
 	@JsonProperty("DESCRIPTION")
 	private String description;
 
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
 	public String getStatus() {
 		return status;
 	}

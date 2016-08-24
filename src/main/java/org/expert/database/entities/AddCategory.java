@@ -1,7 +1,5 @@
 package org.expert.database.entities;
 
-import java.util.ArrayList;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddCategory {

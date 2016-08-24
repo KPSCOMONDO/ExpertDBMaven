@@ -20,7 +20,7 @@ public class AddLanguage {
 		@JsonProperty("LANGUAGE ID")
 		private int id;
 		
-		@JsonProperty("LANGUAGE")
+		@JsonProperty("LANGUAGE STATUS")
 		private String status;
 		
 		public int getId() {

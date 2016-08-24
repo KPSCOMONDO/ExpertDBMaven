@@ -7,7 +7,7 @@
         </h3>
         <div class="pull-right box-tools">            
             <input type="button" class="btn btn-info btn-sm" id="edit" data-widget="collapse" data-toggle="tooltip" title="Collapse" 
-                   ng-model="btAdd"/>                                        
+                   ng-click="onAddClick()" value="{{BTADD}}"/>                                        
         </div>
     </div>
     <div class="box-body pad">        
@@ -47,8 +47,7 @@
                     <div class="form-group">
                         <label for="txtStreetNumber">លេខផ្លូវ</label>
                         <input ng-model="txtStreetNumber" id="txtStreetNumber" type="text" class="form-control" placeholder="េលខផ្លូវ" required>
-                    </div>
-                    <h3 class="box-title text-red">អាស័យដ្ឋានប្បច្ចុបន្ន</h3>
+                    </div>                 
                     <div class="form-group">
                         <label for="txtCommune">ភូមិ</label>
                         <input ng-model="txtCommune" id="txtCommune" type="text" class="form-control" placeholder="Commune name" required>
@@ -93,11 +92,11 @@
                     </div>
                     <div class="form-group">
                         <label for="txtWebsiteA">Website/block URL 1</label>
-                        <input ng-model="txtWebsiteA" id="txtWebsiteA" type="text" class="form-control" placeholder="Website/block URL 1" required>
+                        <input ng-model="txtWebsiteA" id="txtWebsiteA" type="text" class="form-control" placeholder="Website/block URL 1">
                     </div>
                     <div class="form-group">
                         <label for="txtWebsiteB">Website/block URL 2</label>
-                        <input ng-model="txtWebsiteB" id="txtWebsiteB" type="text" class="form-control" placeholder="Website/block URL 2" required>
+                        <input ng-model="txtWebsiteB" id="txtWebsiteB" type="text" class="form-control" placeholder="Website/block URL 2">
                     </div>
 
                     <div class="form-group">
@@ -223,7 +222,7 @@
                         </div>      
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary"><span class='fa fa-plus'>បញ្ចូល</span></button>
-                            <button type="submit" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
+                            <button type="reset" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
                         </div>
                     </form>
                 </div>
@@ -290,7 +289,7 @@
                         </div>      
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary"><span class='fa fa-plus'>បញ្ចូល</span></button>
-                            <button type="submit" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
+                            <button type="reset" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
                         </div>
                         </h3>
                     </form>
@@ -406,7 +405,8 @@
                                           class="form-control" placeholder="លំអិត" required></textarea>                                                                                                    
                             </div>
                             <div class="form-group">
-                                <button  type="submit" class="btn btn-primary"><span class='fa fa-plus'>Add</span></button>
+                                <button type="submit" class="btn btn-primary"><span class='fa fa-plus'>បញ្ចូល</span></button>
+                                <button type="reset" class="btn btn-danger"><span class='fa fa-plus'>សំអាត</span></button>
                             </div>
                         </div>
                     </form>

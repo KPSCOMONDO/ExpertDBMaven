@@ -8,11 +8,11 @@
                         <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
                             <span class="mbr-brand__logo">
                                 <a href="${pageContext.request.contextPath}/">
-                                    <img class="mbr-navbar__brand-img mbr-brand__img" src="../../../../resources/static/img/exlogo1.png" alt="Mobirise">
+                                    <img class="mbr-navbar__brand-img mbr-brand__img" src="${pageContext.request.contextPath}/resources/static/img/app-logo.png">
                                 </a>
                             </span>
                             <span class="mbr-brand__name">
-                                <a style=' font-family: "Hanuman";' class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/"> ជ្រើសរើស </a>
+                                <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/"> ជ្រើសរើស </a>
                             </span>
                         </span>
                     </span>
@@ -23,7 +23,7 @@
                         <div class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
                                 <li class="mbr-navbar__item">
-                                    <a style=' font-family: "Hanuman"; font-size: 18px;' class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/home">ទំព័រដើម</a>
+                                    <a class="mbr-buttons__link btn text-white" href="${pageContext.request.contextPath}/home">ទំព័រដើម</a>
                                 </li>
                             </ul>
                         </div>

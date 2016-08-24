@@ -9,7 +9,7 @@ public class AddExpertEducation {
 	@JsonProperty("STATUS")
 	private String status;
 	
-	@JsonProperty("GRADUATED_DATE")
+	@JsonProperty("GRADUATED DATE")
 	private Date graduatedDate;
 	
 	@JsonProperty("DESCRIPTION")

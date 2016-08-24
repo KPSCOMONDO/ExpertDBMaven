@@ -187,6 +187,16 @@ var REQUEST = {
         }, function (data) {
             errorCallback(data)
         })
+    },
+    PUT_NO_DATA: function (REST_URL, $HTTP, successCallback, errorCallback) {
+        $HTTP({
+            method: 'PUT',
+            url: CONFIGURATION.getBase_url() + REST_URL
+        }).then(function (data) {
+            successCallback(data)
+        }, function (data) {
+            errorCallback(data)
+        })
 
     },
     DELETE: function (REST_URL, $HTTP, successCallback, errorCallback) {

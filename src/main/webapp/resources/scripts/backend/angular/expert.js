@@ -29,8 +29,12 @@ app.controller('expert__controller', function ($scope, $http) {
     $scope.ADD_POSITIONS = []
     $scope.ADD_EDUCATIONS = []
 
+    $scope.BTADD = "ដាក់បន្ថែម"
     $scope.btAdd = "Add"
-
+    $scope.onAddClick = function () {
+        $scope.UPDATE = false
+        $scope.BTADD = "ដាក់បន្ថែម"
+    }
     $scope.FindAllExpert = function () {
         REQUEST.GET("/expert/findall", $http, function (response) {
             $scope.EXPERTS = response.data.DATA;
@@ -89,8 +93,8 @@ app.controller('expert__controller', function ($scope, $http) {
     })
 
 
-    
-    $scope.upLoadProfile=function (){
+
+    $scope.upLoadProfile = function () {
         alert("FUCK OU")
     }
 
@@ -264,11 +268,6 @@ app.controller('expert__controller', function ($scope, $http) {
             console.log("ERRO:", data)
         })
 
-        
-        
-        
-
-
         $scope.ADD_DOCUMENTS.push({
             "STATE": $scope.docuemntType,
             "STATUS": $scope.txtDocumentTitle,
@@ -336,8 +335,9 @@ app.controller('expert__controller', function ($scope, $http) {
     $scope.detailClick = function (element) {
         APP_CACHE.set("EXPERT_ID", element.ID)
         $scope.UPDATE = true
-
+        $scope.BTADD = "កែរប្រែ"
         $scope.FindExpertByID()
+
     }
     $scope.FindExpertByID = function () {
         REQUEST.GET("/expert/find-by-id/" + APP_CACHE.get("EXPERT_ID"), $http, function (response) {
@@ -358,7 +358,7 @@ app.controller('expert__controller', function ($scope, $http) {
                 $scope.txtDistrict = $scope.EXPERT.ADDRESS.DISTRICT
                 $scope.city = $scope.EXPERT.ADDRESS.CITY
                 $scope.txtCountry = $scope.EXPERT.ADDRESS.COUNTRY
-
+                $scope.txtStreetNumber = $scope.EXPERT.ADDRESS.STREET
 
                 $scope.locationId = $scope.EXPERT.LOCATION.LOCATIONID
                 $scope.location = $scope.EXPERT.LOCATION.LOCATIONSTATUS
@@ -483,22 +483,22 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.createExpert = function () {
-        if ($scope.UPDATE) {
-            REQUEST.DELETE("/expert/delete/" + APP_CACHE.get("EXPERT_ID"), $http, function (data) {
-                console.log(data)
-                $scope.FindAllExpert()
-            }, function (error) {
-                REQUEST.ERROR(error)
-            })
-        }
         REQUEST.POST("/expert/create", $scope.createData(), $http, function (response) {
             REQUEST.SUCCESS(response);
             $scope.reset()
-            $scope.getComponent()
             $scope.FindAllExpert()
+            if ($scope.UPDATE) {
+                REQUEST.DELETE("/expert/delete/" + APP_CACHE.get("EXPERT_ID"), $http, function (data) {
+                    console.log(data)
+                    $scope.FindAllExpert()
+                }, function (error) {
+                    REQUEST.ERROR(error)
+                })
+            }
         }, function (error) {
             REQUEST.ERROR(error)
         })
+
     }
 
     $scope.deleteExpert = function (element) {
@@ -510,6 +510,14 @@ app.controller('expert__controller', function ($scope, $http) {
             }, function (error) {
                 REQUEST.ERROR(error)
             })
+        })
+    }
+
+    $scope.onActiveClick = function (element) {
+        REQUEST.PUT_NO_DATA("/expert/update-state/" + !element.STATE + "/" + element.ID, $http,function (data){
+            
+        },function (data){
+            REQUEST.ERROR(data)
         })
     }
 

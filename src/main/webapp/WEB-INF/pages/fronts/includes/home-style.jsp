@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
 <link rel="stylesheet" href="../../../../../resources/static/assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/animate.css/animate.min.css">
-<link rel="stylesheet" href="../../../../../resources/static/assets/socicon/css/socicon.min.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise/css/style.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise-slider/style.css">
 <link rel="stylesheet" href="../../../../../resources/static/assets/mobirise-gallery/style.css">

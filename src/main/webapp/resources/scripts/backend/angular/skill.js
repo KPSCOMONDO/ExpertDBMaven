@@ -4,11 +4,11 @@ app.controller('skill__controller', function ($scope, $http) {
     $scope.catId = null;
     
     REQUEST.GET("/component/skill/category/findall", $http, function (response) {
-        $scope.SKILLCATEGORIES = (response.data.DATA);
+        $scope.SKILLCATEGORIES = response.data.DATA
         if ($scope.SKILLCATEGORIES) {
             $scope.SKILLCATEGORIES = $scope.SKILLCATEGORIES.reverse();
-        }
-        $scope.setItemStatus();
+        }        
+        console.log("CT:",$scope.SKILLCATEGORIES)
     }, function (error) {
         REQUEST.ERROR(error)
     })

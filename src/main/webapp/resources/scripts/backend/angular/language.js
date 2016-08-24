@@ -1,11 +1,11 @@
 var app = angular.module('language--app', ['angularUtils.directives.dirPagination']);
 app.controller('language__controller', function ($scope, $http) {
-    $scope.FinallLanguage = function () {        
+    $scope.FinallLanguage = function () {
         REQUEST.GET("/component/language/findall", $http, function (response) {
             $scope.LANGUAGES = (response.data.DATA);
             if ($scope.LANGUAGES) {
                 $scope.LANGUAGES = $scope.LANGUAGES.reverse();
-            }           
+            }
             $scope.setItemStatus();
         }, function (error) {
             REQUEST.ERROR(error)
@@ -43,7 +43,7 @@ app.controller('language__controller', function ($scope, $http) {
         }, $http, function (response) {
             REQUEST.SUCCESS(response);
             $scope.FinallLanguage()
-            $scope.txtLanguage=""
+            $scope.txtLanguage = ""
         }, function (error) {
             REQUEST.ERROR(error)
         })
@@ -53,10 +53,9 @@ app.controller('language__controller', function ($scope, $http) {
      */
     $scope.updateLanguage = function (element) {
         REQUEST.PUT("/component/language/update", {
-            "LANGUAGE ID": parseInt(element.ID),
-            "LANGUAGE": element.LANGUAGE.toString()
+            "LANGUAGE ID": element.ID,
+            "LANGUAGE STATUS": element.LANGUAGE
         }, $http, function (response) {
-            REQUEST.SUCCESS(response);
             REQUEST.SUCCESS(response);
             $scope.FinallLanguage()
         }, function (error) {

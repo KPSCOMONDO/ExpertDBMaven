@@ -6,11 +6,12 @@
             <div class="box-header">
                 <h3 class="box-title">បញ្ជី</h3>
             </div>
-            <div class="col-sm-6 box-body">
-                <select class="form-filter expert--province--select form-control" ng-model="skill_category_id" 
-                        ng-options="item.CATEGORYSTATUS for item in SKILLCATEGORIES">
+
+            <div class="box-body">
+                <select id="cbskillcategory" class="form-filter expert--province--select form-control" ng-model="skill_category_id" 
+                        ng-options="item.CATEGORYSTATUS for item in SKILLCATEGORIES" required>
                     <option value="">-- ជ្រើសរើស --</option>
-                </select> 
+                </select>
             </div>
             <form class="form-inline box-header">
                 <div class="form-group">

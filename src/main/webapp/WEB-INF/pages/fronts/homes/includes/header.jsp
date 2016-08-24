@@ -6,7 +6,7 @@
                 <li data-app-prevent-settings="" data-target="#slider-38" class="active" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#slider-38" data-slide-to="1" class=""></li><li data-app-prevent-settings="" data-target="#slider-38" data-slide-to="2" class=""></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center active mbr-section--60-height" style="background-image: url(../../../../resources/static/assets/images/expert-background.jpg);">                    
+                <div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center active mbr-section--60-height" style="background-image: url(${pageContext.request.contextPath}/resources/static/assets/images/slide-2.jpg);">                    
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-after-navbar">
                         <div class=" container">
                             <div class="row"><div class="col-sm-8 col-sm-offset-2">
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--60-height" style="background-image: url(../../../../resources/static/assets/images/background.jpg);">
+                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--60-height" style="background-image: url(${pageContext.request.contextPath}/resources/static/assets/images/slide-3.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-after-navbar">
                         <div class=" container">
                             <div class="row">
@@ -37,13 +37,13 @@
                             </div>
                         </div>
                     </div>
-                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--60-height" style="background-image: url(../../../../resources/static/assets/images/profile-background.jpg);">
+                </div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center mbr-section--60-height" style="background-image: url(${pageContext.request.contextPath}/resources/static/assets/images/slide-1.jpg);">
                     <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-after-navbar">
                         <div class=" container">
                             <div class="row">
                                 <div class="col-sm-8 col-sm-offset-2">
                                     <div class="mbr-hero">
-                                        <h1 class="mbr-hero__text">ដំណើការមានល្បឿនលឿនក្នុងការស្វែងរកបេក្ខភាព</h1>
+                                        <h1 class="mbr-hero__text">ដំណើការមានល្បឿនលឿនក្នុងការស្វែងរក</h1>
                                         <p class="mbr-hero__subtext">យើងផ្តល់នូវទំនាក់ទំនងលម្អិតរបស់ អ្នកជំនាញពត៏រមានវិទ្យា</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">

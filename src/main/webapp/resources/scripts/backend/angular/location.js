@@ -53,9 +53,9 @@ app.controller('location__controller', function ($scope, $http) {
     $scope.updateLocation = function (element) {
         //console.log('LOCATION:', element)
         REQUEST.PUT("/component/location/update", {
-            "LOCATION ID": element.ID,
+            "LOCATION ID": element.LOCATIONID,
             "LOCATION STATUS": element.LOCATIONSTATUS,
-            "DESCRIPTION": "string"
+            "DESCRIPTION": "Not Avaliable"
         }, $http, function (response) {
             REQUEST.SUCCESS(response)
             $scope.FinallLocation()

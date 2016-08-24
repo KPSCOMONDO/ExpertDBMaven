@@ -46,7 +46,7 @@
                     <div class="content">
                         <div class="image">
                             <img class="undefined" src="{{item.IMAGEURL}}" 
-                                 onerror="this.onerror=null;this.src='../../../../../resources/images/profile/na-profile.jpg';">                           
+                                 onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/resources/images/profile/na-profile.jpg';">                           
                         </div>
                         <div class="caption">
                             <span class="info-name"><strong>{{item.FULLNAME| limitTo:20}}<span ng-if="item.length > 20">....</span></strong></span><br>
