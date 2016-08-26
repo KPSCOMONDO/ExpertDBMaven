@@ -3,7 +3,7 @@
     <section class="sidebar">
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="/resources/static/img/profile/channy.jpg" class="img-circle" alt="User Image">
+                <img src="/resources/images/profile/profile.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>Sok Channy</p>                

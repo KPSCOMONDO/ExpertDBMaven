@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<section class="mbr-section mbr-section--relative" style="background-image: url(/resources/static/assets/images/background.jpg);">
+<section class="mbr-section mbr-section--relative" style="background-image: url(/resources/static/assets/images/slide-3.jpg);">
     <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(255, 355, 255);"></div>
     <div class="mbr-section__container mbr-section__container--isolated container" style="padding-top: 10%;padding-bottom: 2%;">        
         <div class="">
             <div class="mbr-box mbr-box--fixed mbr-box--adapted box--bottom--shardow" style="background-color: white;padding: 20px">                                                
                 <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-2">
                     <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom">
-                        <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/static/img/profile/channy.jpg">
-                    </figure>                        
+                        <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="localhost:8081/{{EXPERTS.IMAGEURL}}">
+                    </figure>                    
                 </div>                                    
                 <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">
                     <div class="col-sm-12" style="padding: 10px;">
@@ -16,7 +16,8 @@
                     <div>
                         <div class="mbr-section__container mbr-section__container--middle">
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">                            
-                                <h2 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}</h2>                                
+                                <h2 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}</h2>
+                                <h4>{{EXPERTS.IMAGEURL}}</h4>
                                 <h4>
                                     <i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;{{EXPERTS.ADDRESS.CITY}}
                                 </h4>
@@ -33,14 +34,14 @@
                                         <span>{{EXPERTS.YEAREXPERIENCE}}&nbsp;ឆ្នាំបទពិសោធន៍ការងារ</span><br>
                                         <span>{{EXPERTS.SALARY|currency:"USD ":0}}</span>
                                     </p> 
-                                </div>                                                           
-                                <br>
-                                <a class="col-sm-5 mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href=""><i class="glyphicon glyphicon-eye-open"></i></a>
-                                <a class="col-sm-5 mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href=""><i class="glyphicon glyphicon-download"></i></a>                                                            
+                                    <br>
+                                    <i class="fa fa-anchor fa-3x" style="padding-left: 40px;"></i>
+                                </div>                                                                                                                                                        
                             </div>
                         </div>                     
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
+    </div>
 </section> 

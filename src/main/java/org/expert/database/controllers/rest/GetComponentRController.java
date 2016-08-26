@@ -111,5 +111,14 @@ public class GetComponentRController {
         ResponseEntity<Map> response = rest.exchange(URL, HttpMethod.GET, request, Map.class);
         return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
     }
+    
+    @RequestMapping(value = {"/count"})
+    public ResponseEntity<Map<String, Object>> FindCount() {
+        HttpEntity<Object> request = new HttpEntity<Object>(header);
+        header.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+        String URL = WS_URL + "/expert/count-all";
+        ResponseEntity<Map> response = rest.exchange(URL, HttpMethod.GET, request, Map.class);
+        return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
+    }
 
 }

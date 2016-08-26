@@ -12,7 +12,7 @@
                                 </a>
                             </span>
                             <span class="mbr-brand__name">
-                                <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/">GEEK DIR</a>
+                                <a class="mbr-brand__name text-white" href="${pageContext.request.contextPath}/">GEEKH</a>
                             </span>
                         </span>
                     </span>

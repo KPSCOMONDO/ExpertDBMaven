@@ -25,7 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr dir-paginate="item in POSITIONS|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                        <tr dir-paginate="item in POSITIONS|orderBy:sortKey:reverse|filter:search|itemsPerPage:10">
                             <td>
                                 {{$index + 1}}
                             </td>

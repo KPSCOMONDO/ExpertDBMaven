@@ -16,11 +16,25 @@
         <div class="col-sm-4 contact--expert"  style="z-index: 9999">                  
             <h2 class="heading text-white">Contact</h2>
             <div class="content">
-                <h4><i class="glyphicon glyphicon-map-marker"></i><span>&nbsp;&nbsp;Phnom Penh, Cambodia</span></h4>
-                <h4><i class="glyphicon glyphicon-envelope"></i><a href="#">&nbsp;&nbsp;sokchanny.sg@gmail.com</a></h4>
-                <h4><i class="glyphicon glyphicon-globe"></i><a href="#">&nbsp;&nbsp;http://www.website.com</a></h4>
-                <h4><i class="glyphicon glyphicon-phone"></i><a href="#">&nbsp;&nbsp;(+855)86-651-443</a></h4>
-                <h4><i class="glyphicon glyphicon-phone-alt"></i><a href="#">&nbsp;&nbsp;(+855)55-222-443-55</a></h4>
+                <h4><i class="glyphicon glyphicon-map-marker"></i>
+                    <span>&nbsp;&nbsp;{{EXPERTS.LOCATION.LOCATIONSTATUS}}</span>
+                </h4>
+                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    <a href="#">&nbsp;&nbsp;{{item.EMAIL}}</a>
+                </h4>
+                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                    <i class="glyphicon glyphicon-globe"></i>
+                    <a href="#">&nbsp;&nbsp;{{item.WEBSITE}}</a>
+                </h4>
+                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                    <i class="glyphicon glyphicon-phone"></i>
+                    <a href="#">&nbsp;&nbsp;{{item.PHONE}}</a>
+                </h4>            
+                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                    <i class="glyphicon glyphicon-list-alt"></i>
+                    <a href="#">&nbsp;&nbsp;{{item.LIKEDIN}}</a>
+                </h4>                               
             </div> 
         </div>
     </div>                                                     

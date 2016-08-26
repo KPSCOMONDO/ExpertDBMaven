@@ -30,7 +30,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr dir-paginate="item in SKILLCATEGORIES|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                        <tr dir-paginate="item in SKILLCATEGORIES|orderBy:sortKey:reverse|filter:search|itemsPerPage:10">
                             <td>{{$index +1}}</td>
                             <td><input type="text" ng-model="item.CATEGORYSTATUS" class="edit--text" ng-class="{'edit--text--enable':item.STATUS}" ng-disabled="!item.STATUS"/></td>
                             <td>{{item.COUNT}}</td>

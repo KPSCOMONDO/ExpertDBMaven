@@ -1,6 +1,40 @@
 var app = angular.module('filter--app', ['angularUtils.directives.dirPagination']);
 
 app.controller('filter__controller', function ($scope, $http) {
+
+    $scope.WHERE_CLAUSE = {}
+
+    $scope.appendWhereClause = function (key, VALUE) {
+        switch (key) {
+            case 'SKILL' :
+                $scope.WHERE_CLAUSE.SKILL = VALUE.SKILL
+                break
+            case 'POSITION':
+                $scope.WHERE_CLAUSE.POSITION = VALUE.POSITION
+                break
+            case 'GENDER':
+                $scope.WHERE_CLAUSE.GENDER = VALUE.VALUE
+                break
+            case 'AGE':
+                $scope.WHERE_CLAUSE.AGE = VALUE
+                break
+            case 'LOCATION':
+                $scope.WHERE_CLAUSE.LOCATION = VALUE
+                break
+            case 'LANGUAGE':
+                $scope.WHERE_CLAUSE.LANGUAGE = VALUE
+                break
+            case 'EXPERIENCE':
+                $scope.WHERE_CLAUSE.EXPERIENCE = VALUE
+                break
+            case 'SALARY':
+                $scope.WHERE_CLAUSE.SALARY = VALUE
+                break
+        }
+        console.log("ZIN :",VALUE)
+        console.log("WHERE CLUASE:",$scope.WHERE_CLAUSE)
+    }
+
     $scope.LOGIN = APP_CACHE.get("LOGIN")
     $scope.logOut = function () {
         APP_CACHE.set("LOGIN", false)

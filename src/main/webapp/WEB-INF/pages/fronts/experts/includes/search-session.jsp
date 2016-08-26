@@ -22,12 +22,12 @@
                     <option value="">-- ជ្រើសរើស --</option>
                 </select>            
                 <div ng-repeat="item in SKILLS| limitTo:5">
-                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="onSkillChange(item)">
+                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="appendWhereClause('SKILL', item)">
                     <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
                 </div>
-                <div class="collapse" id="bl-sub-skill" ng-repeat="item in skills| limitTo:skills.length" ng-if="$index>4">
-                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-init='checkStatus = false' ng-model='checkStatus' 
-                           ng-click="onSkillChange(item)">
+                <div class="collapse" id="bl-sub-skill" ng-repeat="item in skills| limitTo:skills.length" ng-if="$index > 4">
+                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-init='checkStatus = false' ng-model='checkStatus' ng-click="appendWhereClause('SKILL', item)">
+                    <!--ng-click="appendWhereClauseonSkillChange(item)">-->
                     <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
                 </div><br><br>
                 <h3 class="sub-menu" ng-if="skills.length == 0">មិនទំនេរ</h3>
@@ -46,14 +46,14 @@
             </div>
             <div class="collapse panel-body"  id="bl-position">               
                 <div ng-repeat="item in POSITIONS| limitTo:5">                
-                    <input id="{{item.POSITION}}" type="radio" name="rdoPosition" value="{{item.POSITION}}">
+                    <input id="{{item.POSITION}}" type="radio" name="rdoPosition" value="{{item.POSITION}}" ng-click="appendWhereClause('POSITION', item)">
                     <label for="{{item.POSITION}}" class="sub-menu">{{item.POSITION| limitTo:32 }}
                         <span ng-if="item.POSITION.length > 32">...</span>
                     </label><br>
                 </div>
                 <div  class="collapse" id="bl-sub-position">
-                    <div ng-repeat="item in POSITIONS"  ng-if="$index>4">
-                        <input id="{{item.POSITION}}" type="radio" name="rdoPosition" value="{{item.POSITION}}">
+                    <div ng-repeat="item in POSITIONS"  ng-if="$index > 4">
+                        <input id="{{item.POSITION}}" type="radio" name="rdoPosition" value="{{item.POSITION}}" ng-click="appendWhereClause('POSITION', item)">
                         <label for="{{item.POSITION}}" class="sub-menu">{{item.POSITION| limitTo: 32 }}
                             <span ng-if="item.POSITION.length > 32">...</span>
                         </label><br>    
@@ -73,7 +73,7 @@
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-gender">
-                <div ng-repeat="item in GENDERS">
+                <div ng-repeat="item in GENDERS" ng-click="appendWhereClause('GENDER', item)">
                     <input id="{{item.VALUE}}gender" type="radio" name="" class="{{item.VALUE}}gender">
                     <label for="{{item.VALUE}}gender" class="sub-menu">
                         {{item.VALUE}}
@@ -90,7 +90,7 @@
             </div>
             <div class="collapse panel-body" id="bl-age">            
                 <div ng-repeat="item in AGES">                
-                    <input id="{{item.MIN}}" type="radio" ng-click="ongAgeChange(item)" name="age" value="{{item}}">
+                    <input id="{{item.MIN}}" type="radio" name="age" value="{{item}}" ng-click="appendWhereClause('AGE', item)">
                     <label for="{{item.MIN}}" class="sub-menu">
                         {{item.MIN}} ឆ្នាំ 
                         <span ng-if="item.MAX"> រហូតដល់ {{item.MAX}} ឆ្នាំ</span>
@@ -108,8 +108,7 @@
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-province">
-                <select class="form-filter expert--province--select" ng-model="cbo_location" 
-                        ng-options="item.LOCATIONSTATUS for item in LOCATIONS">
+                <select class="form-filter expert--province--select" ng-model="cbo_location" ng-options="item.LOCATIONSTATUS for item in LOCATIONS" ng-click="appendWhereClause('LOCATION', item)">
                     <option value="">-- ខេត្ត/ក្រុង --</option>
                 </select>            
             </div>                        
@@ -123,14 +122,14 @@
             </div>
             <div class="collapse panel-body" id="bl-language">
                 <div  ng-repeat="item in LANGUAGES| limitTo:5">
-                    <input id="{{item.LANGUAGE}}" type="checkbox"/>
+                    <input id="{{item.LANGUAGE}}" type="checkbox" ng-click="appendWhereClause('LANGUAGE', item)"/>
                     <label for="{{item.LANGUAGE}}" class="sub-menu">
                         {{item.LANGUAGE| limitTo:32}}<span ng-if="item.LANGUAGE.length > 32">...</span>
                     </label><br>
                 </div>
                 <div class="collapse" id="bl-sub-language">                    
-                    <div  ng-repeat="item in LANGUAGES" ng-if="$index>4">
-                        <input id="{{item.LANGUAGE}}" type="checkbox"/>
+                    <div  ng-repeat="item in LANGUAGES" ng-if="$index > 4">
+                        <input id="{{item.LANGUAGE}}" type="checkbox" ng-click="appendWhereClause('LANGUAGE', item)"/>
                         <label for="{{item.LANGUAGE}}" class="sub-menu">
                             {{item.LANGUAGE| limitTo:32}}<span ng-if="item.LANGUAGE.length > 32">...</span>
                         </label><br>
@@ -151,7 +150,7 @@
             </div>
             <div class="collapse panel-body" id="bl-experience"> 
                 <div ng-repeat="item in EXPERIENCES">
-                    <input id="{{item.MIN}}age" type="radio" name="rdSalary">
+                    <input id="{{item.MIN}}age" type="radio" name="rdSalary" ng-click="appendWhereClause('EXPERIENCE', item)">
                     <label for="{{item.MIN}}age" class="sub-menu">{{item.MIN}} ឆ្នាំ
                         <span ng-if="item.MAX"> រហូតដល់ {{item.MAX}} ឆ្នាំ</span> 
                         <span ng-if="!item.MAX"> +</span>
@@ -168,7 +167,7 @@
             </div>
             <div class="collapse panel-body" id="bl-salary">
                 <div ng-repeat="item in SALARIES">
-                    <input id="{{item.MIN}}salary" type="radio" name="rdSalary">
+                    <input id="{{item.MIN}}salary" type="radio" name="rdSalary" ng-click="appendWhereClause('SALARY', item)">
                     <label for="{{item.MIN}}salary" class="sub-menu">
                         <span>{{item.MIN| currency:"USD ":0}}</span>
                         <span ng-if="item.MAX"> រហូតដល់ {{item.MAX| currency:"USD ":0}}</span>

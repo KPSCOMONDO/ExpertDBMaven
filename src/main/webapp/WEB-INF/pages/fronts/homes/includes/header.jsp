@@ -11,7 +11,7 @@
                         <div class=" container">
                             <div class="row"><div class="col-sm-8 col-sm-offset-2">
                                     <div class="mbr-hero">
-                                        <h1 class="mbr-hero__text">GEEK DIR</h1>
+                                        <h1 class="mbr-hero__text">GEEKH</h1>
                                         <p class="mbr-hero__subtext">យើបផ្តល់នូវទម្រង់សម្រាប់ស្វែងរកបុគ្គលិក</p>
                                     </div>
                                     <div class="mbr-buttons btn-inverse mbr-buttons--center">

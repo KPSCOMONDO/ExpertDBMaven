@@ -1,12 +1,13 @@
 var app = angular.module('expert--app', ['angularUtils.directives.dirPagination']);
 app.controller('expert__controller', function ($scope, $http) {
+    $scope.formHide = true
     $scope.expertId = null
     $scope.UPDATE = false
 
     $scope.catId = null
     $scope.cityId = null
     $scope.city = null
-    $scope.docuemntType
+    $scope.docuemntType = null
     $scope.locationId = null
     $scope.location = null
     $scope.positionA = null
@@ -28,11 +29,13 @@ app.controller('expert__controller', function ($scope, $http) {
     $scope.ADD_DOCUMENTS = []
     $scope.ADD_POSITIONS = []
     $scope.ADD_EDUCATIONS = []
+    $scope.ADD_CONTACTS = []
 
     $scope.BTADD = "ដាក់បន្ថែម"
     $scope.btAdd = "Add"
     $scope.onAddClick = function () {
-        $scope.UPDATE = false
+        //$scope.UPDATE = false
+        $scope.reset()
         $scope.BTADD = "ដាក់បន្ថែម"
     }
     $scope.FindAllExpert = function () {
@@ -54,48 +57,48 @@ app.controller('expert__controller', function ($scope, $http) {
         $.map($scope.LANGUAGES, function (item) {
             item.CHECKED = false
         })
+        REQUEST.GET("/component/location/findall", $http, function (response)
+        {
+            $scope.LOCATIONS = (response.data.DATA);
+            REQUEST.GET("/component/position/findall", $http, function (response)
+            {
+                $scope.POSITIONS = (response.data.DATA);
+                REQUEST.GET("/component/skill/category/findall", $http, function (response)
+                {
+                    $scope.SKILLCATEGORIES = (response.data.DATA);
+                    REQUEST.GET("/component/level/findall", $http, function (response)
+                    {
+                        $scope.LEVELS = (response.data.DATA);
+
+                        REQUEST.GET("/component/skill/findall", $http, function (response) {
+                            $scope.ALLSKILLS = (response.data.DATA);
+                        }, function (error) {
+                            REQUEST.ERROR(error)
+                        })
+                    }, function (error) {
+                        REQUEST.ERROR(error)
+                    })
+                }, function (error) {
+                    REQUEST.ERROR(error)
+                })
+            }, function (error) {
+                REQUEST.ERROR(error)
+            })
+        }, function (error) {
+            REQUEST.ERROR(error)
+        })
     }, function (error) {
         DIALOG.error("Error", error.message);
     })
 
-    REQUEST.GET("/component/location/findall", $http, function (response)
-    {
-        $scope.LOCATIONS = (response.data.DATA);
-    }, function (error) {
-        REQUEST.ERROR(error)
-    })
-
-    REQUEST.GET("/component/position/findall", $http, function (response)
-    {
-        $scope.POSITIONS = (response.data.DATA);
-    }, function (error) {
-        REQUEST.ERROR(error)
-    })
-
-    REQUEST.GET("/component/skill/category/findall", $http, function (response)
-    {
-        $scope.SKILLCATEGORIES = (response.data.DATA);
-    }, function (error) {
-        REQUEST.ERROR(error)
-    })
-
-    REQUEST.GET("/component/level/findall", $http, function (response)
-    {
-        $scope.LEVELS = (response.data.DATA);
-    }, function (error) {
-        REQUEST.ERROR(error)
-    })
-
-    REQUEST.GET("/component/skill/findall", $http, function (response) {
-        $scope.ALLSKILLS = (response.data.DATA);
-    }, function (error) {
-        REQUEST.ERROR(error)
-    })
-
-
-
-    $scope.upLoadProfile = function () {
-        alert("FUCK OU")
+    $scope.uploadProfile = function () {
+        alert("UPLOADING PROFILE")
+        REQUEST.UPLOAD($scope.txtFullName, $('#profileform'), function (data) {
+            $scope.PROFILE_URL = data.PATH
+            console.log("PATH:", data)
+        }, function (data) {
+            console.log("ERRO:", data)
+        })
     }
 
 
@@ -113,15 +116,15 @@ app.controller('expert__controller', function ($scope, $http) {
         laguage.CHECKED = !laguage.CHECKED
     }
 
-    ////
+
     $scope.onLaguageLevelCheck = function (language, level) {
         var update = false
         $.map($scope.ADD_LANGUAGES, function (item) {
             if (item.LANGUAGEID == language.ID) {
                 item.LEVELID = level.LEVELID
+                item.LEVEL = level.LEVELSTATUS
                 console.log("UPDATED:", $scope.ADD_LANGUAGES)
                 update = true
-                return
             }
         })
         if (!update) {
@@ -152,7 +155,6 @@ app.controller('expert__controller', function ($scope, $http) {
             if ($scope.SKILLS) {
                 $scope.SKILLS = $scope.SKILLS.reverse();
             }
-            $scope.setItemStatus();
         }, function (error) {
             REQUEST.ERROR(error)
         })
@@ -259,10 +261,11 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.addDocument = function () {
-
-        var url = ""
+        var DOC_URL
+        var KEY
         REQUEST.UPLOAD($scope.txtFullName, $('#docForm'), function (data) {
-            url = data.PATH
+            DOC_URL = data.PATH
+            KEY = data.KEY
             console.log("PATH:", data)
         }, function (data) {
             console.log("ERRO:", data)
@@ -271,12 +274,18 @@ app.controller('expert__controller', function ($scope, $http) {
         $scope.ADD_DOCUMENTS.push({
             "STATE": $scope.docuemntType,
             "STATUS": $scope.txtDocumentTitle,
-            "URL": "ddd",
-            "DESCRIPTION": $scope.txtDocumentDescription
+            "URL": DOC_URL,
+            "DESCRIPTION": $scope.txtDocumentDescription,
+            "KEY": KEY
         })
         console.log($scope.ADD_DOCUMENTS)
     }
-    $scope.deleteDocument = function (index) {
+    $scope.deleteDocument = function (element, index) {
+        REQUEST.DELETE_FILE(element.KEY, function (data) {
+            console.log("DELETE FILE OK ", data)
+        }, function (data) {
+            console.log("DELETE FILE ERRO ", data)
+        })
         JYSON.DELETE($scope.ADD_DOCUMENTS, index, function (data) {
             $scope.ADD_DOCUMENTS = data
         })
@@ -289,6 +298,24 @@ app.controller('expert__controller', function ($scope, $http) {
             "DESCRIPTION": $scope.txtEducationDescription
         })
     }
+
+    $scope.addContact = function () {
+        $scope.ADD_CONTACTS.push({
+            "EMAIL": $scope.txtEmailA,
+            "PHONE": $scope.txtPhoneA,
+            "LIKED IN": $scope.txtSocialA,
+            "WEBSITE": $scope.txtWebsiteA
+        })
+        if ($scope.txtPhoneB != "" || $scope.txtEmailB != "" || $scope.txtSocialB != "" || $scope.txtWebsiteB) {
+            $scope.ADD_CONTACTS.push({
+                "EMAIL": $scope.txtEmailB,
+                "PHONE": $scope.txtPhoneB,
+                "LIKED IN": $scope.txtSocialB,
+                "WEBSITE": $scope.txtWebsiteB
+            })
+        }
+    }
+
     $scope.prepareEducation = function () {
         var temp = []
         $.map($scope.ADD_EDUCATIONS, function (item) {
@@ -333,8 +360,13 @@ app.controller('expert__controller', function ($scope, $http) {
         $scope.ADD_LANGUAGES = temp
     }
     $scope.detailClick = function (element) {
+        if ($scope.formHide) {
+            $scope.formHide = false
+        }
+        $scope.reset()
         APP_CACHE.set("EXPERT_ID", element.ID)
         $scope.UPDATE = true
+        console.log($scope.UPDATE)
         $scope.BTADD = "កែរប្រែ"
         $scope.FindExpertByID()
 
@@ -438,9 +470,11 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.createData = function () {
+        $scope.addContact()
         $scope.prepareSkill()
         $scope.prepareEducation()
         $scope.prepareLanguage()
+
         var data = {
             "FULL NAME": $scope.txtFullName,
             "GENDER": $scope.gender,
@@ -449,7 +483,7 @@ app.controller('expert__controller', function ($scope, $http) {
             "SALARY": $scope.txtSalary,
             "INTEREST": $scope.txtInterest,
             "YEAR EXPERIENCE": $scope.txtYearexperience,
-            "IMAGE URL": "not avaliable",
+            "IMAGE URL": $scope.PROFILE_URL,
             "LOCATION ID": $scope.locationId,
             "ADDRESS": {
                 "COMMUNE": $scope.txtCommune,
@@ -458,19 +492,7 @@ app.controller('expert__controller', function ($scope, $http) {
                 "COUNTRY": $scope.txtCountry,
                 "STREET NUMBER": $scope.txtStreetNumber
             },
-            "CONTACTS": [
-                {
-                    "EMAIL": $scope.txtEmailA,
-                    "PHONE": $scope.txtPhoneA,
-                    "LIKED IN": $scope.txtSocialA,
-                    "WEBSITE": $scope.txtWebsiteA
-                },
-                {
-                    "EMAIL": $scope.txtEmailB,
-                    "PHONE": $scope.txtPhoneB,
-                    "LIKED IN": $scope.txtSocialB,
-                    "WEBSITE": $scope.txtWebsiteB
-                }],
+            "CONTACTS": $scope.ADD_CONTACTS,
             "EDUCATIONS": $scope.ADD_EDUCATIONS,
             "DOCUMENTS": $scope.ADD_DOCUMENTS,
             "EXPERIENCES": $scope.ADD_EXPERIENCES,
@@ -483,11 +505,14 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.createExpert = function () {
+        $scope.uploadProfile()
         REQUEST.POST("/expert/create", $scope.createData(), $http, function (response) {
             REQUEST.SUCCESS(response);
             $scope.reset()
             $scope.FindAllExpert()
+            console.log("kkk", $scope.UPDATE)
             if ($scope.UPDATE) {
+                alert("UPDATE")
                 REQUEST.DELETE("/expert/delete/" + APP_CACHE.get("EXPERT_ID"), $http, function (data) {
                     console.log(data)
                     $scope.FindAllExpert()
@@ -514,19 +539,21 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.onActiveClick = function (element) {
-        REQUEST.PUT_NO_DATA("/expert/update-state/" + !element.STATE + "/" + element.ID, $http,function (data){
-            
-        },function (data){
+        REQUEST.PUT_NO_DATA("/expert/update-state/" + !element.STATE + "/" + element.ID, $http, function (data) {
+        }, function (data) {
             REQUEST.ERROR(data)
         })
     }
+
+
+    $scope.FindAllExpert()
+
 
     $scope.sort = function (keyname, name) {
         $scope.sortKey = keyname; //set the sortKey to the param passed
         $scope.sortName = name;
         $scope.reverse = !$scope.reverse; //if true make it false and vice versa
     }
-    $scope.FindAllExpert()
 
     $scope.reset = function () {
         $scope.txtFullName = ""
@@ -544,12 +571,10 @@ app.controller('expert__controller', function ($scope, $http) {
         $scope.ADD_DOCUMENTS = []
         $scope.ADD_POSITIONS = []
         $scope.ADD_EDUCATIONS = []
-
+        $scope.SKILLS = []
         $.map($scope.LANGUAGES, function (item) {
             item.CHECKED = false
         })
-        $.map($scope.SKILLS, function (item) {
-            item.CHECKED = false
-        })
+
     }
 });

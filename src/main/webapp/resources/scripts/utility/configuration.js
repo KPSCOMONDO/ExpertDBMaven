@@ -159,7 +159,11 @@ var REQUEST = {
     GET: function (REST_URL, $HTTP, successCallback, errorCallback) {
         $HTTP({
             method: 'GET',
-            url: CONFIGURATION.getBase_url() + REST_URL
+            url: CONFIGURATION.getBase_url() + REST_URL,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
         }).then(function (response) {
             successCallback(response);
         }, function (response) {
@@ -170,7 +174,11 @@ var REQUEST = {
         $HTTP({
             method: 'POST',
             url: CONFIGURATION.getBase_url() + REST_URL,
-            data: JSON.stringify(DATA)
+            data: JSON.stringify(DATA),
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
         }).then(function (data) {
             successCallback(data)
         }, function (data) {
@@ -181,7 +189,11 @@ var REQUEST = {
         $HTTP({
             method: 'PUT',
             url: CONFIGURATION.getBase_url() + REST_URL,
-            data: JSON.stringify(DATA)
+            data: JSON.stringify(DATA),
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
         }).then(function (data) {
             successCallback(data)
         }, function (data) {
@@ -191,7 +203,11 @@ var REQUEST = {
     PUT_NO_DATA: function (REST_URL, $HTTP, successCallback, errorCallback) {
         $HTTP({
             method: 'PUT',
-            url: CONFIGURATION.getBase_url() + REST_URL
+            url: CONFIGURATION.getBase_url() + REST_URL,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
         }).then(function (data) {
             successCallback(data)
         }, function (data) {
@@ -202,7 +218,11 @@ var REQUEST = {
     DELETE: function (REST_URL, $HTTP, successCallback, errorCallback) {
         $HTTP({
             method: 'DELETE',
-            url: CONFIGURATION.getBase_url() + REST_URL
+            url: CONFIGURATION.getBase_url() + REST_URL,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
         }).then(function (data) {
             successCallback(data);
         }, function (data) {
@@ -213,16 +233,16 @@ var REQUEST = {
         if (data.status == 400) {
             DIALOG.error("បរាជ័យ", "ទំព័រជួបការរំខាន​")
         } else if (data.status == 500) {
-        	DIALOG.error("បរាជ័យ", "ការតភ្ជាប់ទៅកាន់ម៉ាសុីនមេត្រូវបានកាត់ផ្តាច់")
+            DIALOG.error("បរាជ័យ", "ការតភ្ជាប់ទៅកាន់ម៉ាសុីនមេត្រូវបានកាត់ផ្តាច់")
         } else if (data.status == 401) {
-        	DIALOG.error("បរាជ័យ", "ទំព័រមិនទំនេរ")
+            DIALOG.error("បរាជ័យ", "ទំព័រមិនទំនេរ")
         }
     },
     SUCCESS: function (data) {
         if (data.data.STATUS) {
-        	DIALOG.success("ជោកជ័យ", "ប្រតិបត្តការណ៍ជោគជ័យ")
+            DIALOG.success("ជោកជ័យ", "ប្រតិបត្តការណ៍ជោគជ័យ")
         } else {
-        	DIALOG.error("បរាជ័យ", "មានកំហុសឆ្គង ប្រតិបត្តការណ៍មិនអាចធ្វើបាន")
+            DIALOG.error("បរាជ័យ", "មានកំហុសឆ្គង ប្រតិបត្តការណ៍មិនអាចធ្វើបាន")
         }
     },
     SUCCESS_DELETE: function (data) {
@@ -249,7 +269,19 @@ var REQUEST = {
         }, function (data) {
             errorCallBack(data)
         })
+    },
+    DELETE_FILE: function (KEY, successCallback, errorCallback) {
+       $.ajax({
+            method: 'DELETE',
+            url: CONFIGURATION.getBase_url() + "/delete-upload-file/" + KEY
+        }).then(function (data) {
+            successCallback(data);
+        }, function (data) {
+            errorCallback(data)
+        });
     }
+
+
 
 }
 var JYSON = {

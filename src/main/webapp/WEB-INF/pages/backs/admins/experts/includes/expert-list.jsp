@@ -42,9 +42,9 @@
                                 </label>
                             </td>
                             <td>
-                                <label  for="edit" ng-click="detailClick(item)" class="btn btn-primary btn-xs">
+                                <a href="#head" ng-click="detailClick(item)" class="btn btn-primary btn-xs">
                                     <i class="fa fa-info"></i>
-                                </label>
+                                </a>
                                 <a ng-click="deleteExpert(item)" data-skin="skin-blue-light" class="btn btn-danger btn-xs">
                                     <i class="fa fa-remove"></i>
                                 </a>

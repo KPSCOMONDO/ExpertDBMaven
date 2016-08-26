@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>GEEK DIR</title>
+        <title>GEEKH</title>
         <jsp:include page="../../includes/home-style.jsp"/>
     </head>
     <body ng-controller="detail__controller">

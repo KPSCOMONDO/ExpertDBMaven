@@ -1,26 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<div class="box box-info collapsed-box">
+<div class="box-info box" ng-class="{'collapsed-box':formHide}">
     <div class="box-header">
         <h3 class="box-title">បង្កើត អ្នកជំនាញ
             <small>ចុចសញ្ញា +</small>
         </h3>
-        <div class="pull-right box-tools">            
-            <input type="button" class="btn btn-info btn-sm" id="edit" data-widget="collapse" data-toggle="tooltip" title="Collapse" 
+        <div class="pull-right">            
+            <input type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse" 
                    ng-click="onAddClick()" value="{{BTADD}}"/>                                        
         </div>
     </div>
-    <div class="box-body pad">        
+    <div id="head">        
         <div class="box-body">
-            <form ng-submit="createExpert()">
-                <div class="col-sm-6">
-                    <%----------------------------------------- Basic information  ----------------------------------%>
-                    <h3 class="box-title text-red">ព័តិតមានផ្ទាល់ខ្លួន</h3>
+            <div class="col-sm-12">
+                <form id="profileform">                   
                     <div class="form-group">
                         <img src="" style="width: 80px;height: 100px;" alt="UNAVALIABEL">
                         <label for="txtProfile">បញ្ចូលរូបភាព</label>
-                        <input id="txtFullName" type="file" placeholder="Name" ng-click="upLoadProfile()">
+                        <input id="txtProfile" type="file" name="file">                                                   
                     </div>
+                </form>  
+            </div>                  
+            <form ng-submit="createExpert()" novalidate>
+                <div class="col-sm-6">  
+                    <h3 class="box-title text-red">ព័តិតមានផ្ទាល់ខ្លួន</h3>
+
+                    <%----------------------------------------- Basic information  ----------------------------------%>                    
                     <div class="form-group">
                         <label for="txtFullName">ឈ្មោះ</label>
                         <input ng-model="txtFullName" id="txtFullName" type="text" class="form-control" placeholder="ឈ្មោះ" required>
@@ -38,7 +43,8 @@
                     </div>
                     <div class="form-group">
                         <label for="txtInterest">ចំណង់ចំណូលចិត្ត</label>
-                        <input ng-model="txtInterest" id="txtInterest" type="text" class="form-control" placeholder="ចំណង់ចំណូលចិត" required>
+                        <textarea ng-model="txtInterest" id="txtInterest" rows="4" class="form-control" placeholder="ចំណង់ចំណូលចិត">
+                        </textarea>
                     </div>
                 </div>                
                 <div class="col-sm-6">
@@ -149,7 +155,7 @@
                 </div>
 
                 <div class="col-sm-12">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <%-- ---------------------------------------  Language  -------------------------------%>
                         <h3 class="box-title text-red">ភាសា</h3>
                         <div class="box-body">                
@@ -157,7 +163,7 @@
                                 <table style="width: 100%;" class="t able-striped table-condensed">
                                     <tr ng-repeat="item in LANGUAGES"> 
                                         <td style="width: 40%;">
-                                            <input type="checkbox" value="" ng-click="onLanguageCheck(item)" id="{{item.LANGUAGE}}">
+                                            <input type="checkbox" ng-click="onLanguageCheck(item)" id="{{item.LANGUAGE}}">
                                             <label for="{{item.LANGUAGE}}">&nbsp;&nbsp;{{item.LANGUAGE}}</label>
                                         </td>
                                         <td ng-repeat="level in LEVELS">
@@ -170,7 +176,7 @@
                             </div>
                         </div>
                     </div> 
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <h4 class="box-title text-red">ភាសា ដែលបានបញ្ចូលរួច</h4>                        
                         <table class="table-condensed table">
                             <thead>
@@ -324,7 +330,7 @@
             </div>
 
             <div class="col-sm-12">
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     <%-- --------------------------------------- SKILL =-------------------------------%>
                     <h3 class="box-title text-red">ជំនាញ</h3>
                     <div class="box-body">
@@ -349,32 +355,32 @@
                             </table>               
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <h4 class="box-title text-red">ជំនាញដែលបានបញ្ចូលរួច</h4>
-                        <table class="table table-condensed">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>ជំនាញ</th>
-                                    <th>កំរិត</th>
-                                    <th>សកម្មភាព</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="item in ADD_SKILLS">
-                                    <td>{{$index + 1}}</td>
-                                    <td>{{item.SKILL}}</td>
-                                    <td>{{item.LEVEL}}</td>
-                                    <td>
-                                        <label ng-click="deleteSkill($index)" for="{{item.SKILL}}" class="btn btn-danger btn-xs">
-                                            <i class="fa fa-remove"></i>
-                                        </label>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
+                <div class="col-sm-6">
+                    <h4 class="box-title text-red">ជំនាញដែលបានបញ្ចូលរួច</h4>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>ជំនាញ</th>
+                                <th>កំរិត</th>
+                                <th>សកម្មភាព</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in ADD_SKILLS">
+                                <td>{{$index + 1}}</td>
+                                <td>{{item.SKILL}}</td>
+                                <td>{{item.LEVEL}}</td>
+                                <td>
+                                    <label ng-click="deleteSkill($index)" for="{{item.SKILL}}" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-remove"></i>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
             </div>
 
             <div class="col-sm-12">
@@ -394,11 +400,15 @@
                                 <label for="txtDocumentTitle">ចំណងជើង</label>                                                       
                                 <input ng-model="txtDocumentTitle" id="txtDocumentTitle" type="text" 
                                        class="form-control" placeholder="Title" required>
-                            </div>
+                            </div>                            
                             <div class="form-group">
                                 <label for="Upload">បន្ថែមឯកាសារ</label>                                                      
-                                <input ng-model="Upload" id="Upload" name="file" type="file" required></textarea>                                                                                                    
-                            </div>                           
+                                <input ng-model="Upload" id="Upload" name="file" type="file"></textarea>                                                                                                    
+                            </div>
+                            <div class="form-group">
+                                <label for="txtDocURL">URL</label>                                                      
+                                <input ng-model="DOC_URL" id="txtDocURL" class="form-control" type="text"></textarea>                                                                                                    
+                            </div>
                             <div class="form-group">
                                 <label for="txtDocumentDescription">លំអិត</label>                                                      
                                 <textarea ng-model="txtDocumentDescription" id="txtDocumentDescription" rows="5" 
