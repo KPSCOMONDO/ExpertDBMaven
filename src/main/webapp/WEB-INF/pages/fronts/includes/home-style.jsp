@@ -10,3 +10,4 @@
 <link href="../../../../../resources/static/assets/custom.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../resources/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../resources/static/sweetalert2/sweetalert2.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../resources/static/fonts/font.css" rel="stylesheet" type="text/css"/>

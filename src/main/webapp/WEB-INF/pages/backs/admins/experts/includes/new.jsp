@@ -131,7 +131,7 @@
                     </div>
                     <div class="form-group">
                         <label for="txtYearexperience">បទពិសោធន៍ ការងារ</label>
-                        <input ng-model="txtYearexperience" id="txtYearexperience" type="number" class="form-control" placeholder="Salary" required>
+                        <input ng-model="txtYearexperience" id="txtYearexperience" type="number" class="form-control" placeholder="បទពិសោធន៍ ការងារ" required>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -403,7 +403,7 @@
                             </div>                            
                             <div class="form-group">
                                 <label for="Upload">បន្ថែមឯកាសារ</label>                                                      
-                                <input ng-model="Upload" id="Upload" name="file" type="file"></textarea>                                                                                                    
+                                <input ng-model="Upload" id="Upload" name="file1" type="file"></textarea>                                                                                                    
                             </div>
                             <div class="form-group">
                                 <label for="txtDocURL">URL</label>                                                      

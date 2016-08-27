@@ -15,4 +15,16 @@ app.controller('detail__controller', function ($scope, $http) {
         REQUEST.ERROR(error)
         $scope.loading = false;
     })
+
+    $scope.DONLOAD = function (element) {
+        
+        $scope.loading = true;
+        console.log(element)
+        REQUEST.DOWNLOAD(element.DOCUMENTID, function () {
+
+        }, function (error) {
+            REQUEST.ERROR(error)
+            $scope.loading = false;
+        })
+    }
 });

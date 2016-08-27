@@ -1,13 +1,12 @@
 @CHARSET "UTF-8";
 /* khmer */
 @font-face {
-  font-family: 'Hanuman';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Hanuman'), url(https://fonts.gstatic.com/s/hanuman/v9/Mwf4nEdDuEyEx8WKMXx7c1KPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
-
-  //src: local('Hanuman'), url(Freehand.ttf) format('tff');
-  unicode-range: 'U+1780-17FF, U+200B-200C, U+25CC';
+    font-family: 'Hanuman';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Hanuman'), url(https://fonts.gstatic.com/s/hanuman/v9/Mwf4nEdDuEyEx8WKMXx7c1KPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+    //src: local('Hanuman'), url(../fonts/Freehand.ttf) format('tff');
+    unicode-range: 'U+1780-17FF, U+200B-200C, U+25CC';
 }
 
 h2,h1,h3{
@@ -1022,8 +1021,21 @@ mbr-header__text{
 }*/
 
 .content-detail{
-   padding-top: 30px;
-   padding-bottom: 100px;
-   padding-left: 20px;
-   padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.condent-left{
+    padding-left: 20pt;
+}
+
+#share-buttons img {
+    width: 50px;
+    padding: 5px;      
+    display: inline;    
+}
+#share-buttons{
+    text-decoration: none;
 }

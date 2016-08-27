@@ -1,5 +1,6 @@
 package org.expert.database.controllers.rest;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import org.expert.database.utilities.FileMessageResource;
@@ -111,4 +112,16 @@ public class DocumentRController {
 
         return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
     }
+    
+    @RequestMapping(value="/download/{documentId}",method=RequestMethod.POST)
+	public ResponseEntity<byte[]> downloadDocument(@PathVariable("documentId")int documentId) throws IOException{
+		
+		HttpEntity<Object> request = new HttpEntity<Object>(header);
+
+	    ResponseEntity<byte[]> response = rest.exchange(
+	    		WS_URL+"/expert/download-document/"+documentId,
+	            HttpMethod.POST, request, byte[].class);
+	    
+	    return response;
+	}
 }

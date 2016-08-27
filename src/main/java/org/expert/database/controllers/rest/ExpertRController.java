@@ -7,6 +7,7 @@ package org.expert.database.controllers.rest;
 
 import java.util.Map;
 import org.expert.database.entities.AddExpert;
+import org.expert.database.entities.ModelWhere;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -100,4 +101,12 @@ public class ExpertRController {
 //        ResponseEntity<Map> response = rest.exchange(URL, HttpMethod.PUT, request, Map.class);
 //        return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
 //    }
+    @RequestMapping(value = {"/expert/advancefind"},method = RequestMethod.POST)
+    public ResponseEntity<Map<String, Object>> findExpertAdvance(@RequestBody ModelWhere whereClause) {
+        HttpEntity<Object> request = new HttpEntity<Object>(whereClause, header);
+        header.set("Accept", MediaType.APPLICATION_JSON_VALUE);
+        String URL = WS_URL + "/expert/find-by/advance-search";
+        ResponseEntity<Map> response = rest.exchange(URL, HttpMethod.POST, request, Map.class);
+        return new ResponseEntity<Map<String, Object>>(response.getBody(), HttpStatus.OK);
+    }
 }

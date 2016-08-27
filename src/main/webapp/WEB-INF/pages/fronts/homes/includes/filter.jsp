@@ -41,8 +41,8 @@
         </h3>
         <%-- ----- ------- -----Expert list ---------------- ----- --- --%> 
         <div ng-if="experts.length != 0" class="row">
-            <div ng-repeat="item in EXPERTS|limitTo:8">
-                <div>
+            <div ng-repeat="item in EXPERTS|limitTo:10">
+                <div style="height: 300px;">
                     <div class="content">
                         <div class="col-lg-6 col-sm-6 col-xs-6 col-lg-offset-3 col-xs-offset-3 col-sm-offset-3">
                             <img class="img-responsive" src="{{item.IMAGEURL}}" 

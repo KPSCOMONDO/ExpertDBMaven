@@ -11,7 +11,7 @@
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="${pageContext.request.contextPath}/home" class="logo">Front end</a>
+                    <a href="${pageContext.request.contextPath}/home" class="logo">ទៅកាន់ទំព័រមុខ</a>
                 </li>
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

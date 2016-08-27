@@ -252,9 +252,9 @@ var REQUEST = {
             DIALOG.error("បរាជ័យ", "មានកំហុសឆ្គង ប្រតិបត្តការណ៍មិនអាចធ្វើបាន")
         }
     },
-    UPLOAD: function (NAME, formdata, successCallBack, errorCallBack) {
+    UPLOAD: function (NAME, formdata,$element, successCallBack, errorCallBack) {
         var formData = new FormData(formdata)
-        var profilePicture = $('input[name=file]')[0].files[0]
+        var profilePicture = $element
         formData.append('file', profilePicture)
         $.ajax({
             method: 'POST',
@@ -270,19 +270,34 @@ var REQUEST = {
             errorCallBack(data)
         })
     },
+    DOWNLOAD: function (ID, successCallBack, errorCallBack) {
+        $.ajax({
+            method: 'POST',
+            url: CONFIGURATION.getBase_url() + "/document/download/" + ID,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).then(function (data) {
+            successCallBack(data)
+        }, function (data) {
+            errorCallBack(data)
+        })
+    },
     DELETE_FILE: function (KEY, successCallback, errorCallback) {
-       $.ajax({
+        $.ajax({
             method: 'DELETE',
-            url: CONFIGURATION.getBase_url() + "/delete-upload-file/" + KEY
+            url: CONFIGURATION.getBase_url() + "/delete-upload-file/" + KEY,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false
         }).then(function (data) {
             successCallback(data);
         }, function (data) {
             errorCallback(data)
         });
     }
-
-
-
 }
 var JYSON = {
     DELETE: function (jsonArray, index, callBack) {

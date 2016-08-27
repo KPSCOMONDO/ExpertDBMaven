@@ -6,7 +6,7 @@
             <div class="mbr-box mbr-box--fixed mbr-box--adapted box--bottom--shardow" style="background-color: white;padding: 20px">                                                
                 <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-2">
                     <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom">
-                        <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="localhost:8081/{{EXPERTS.IMAGEURL}}">
+                        <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/images/profile/Screen Shot 2016-08-21 at 9.50.39 PM.png">
                     </figure>                    
                 </div>                                    
                 <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">
@@ -16,8 +16,7 @@
                     <div>
                         <div class="mbr-section__container mbr-section__container--middle">
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">                            
-                                <h2 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}</h2>
-                                <h4>{{EXPERTS.IMAGEURL}}</h4>
+                                <h2 class="" style="margin-top: 10%;">{{EXPERTS.FULLNAME}}</h2>                                
                                 <h4>
                                     <i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;{{EXPERTS.ADDRESS.CITY}}
                                 </h4>

@@ -19,19 +19,19 @@
                 <h4><i class="glyphicon glyphicon-map-marker"></i>
                     <span>&nbsp;&nbsp;{{EXPERTS.LOCATION.LOCATIONSTATUS}}</span>
                 </h4>
-                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                <h4 ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.EMAIL">
                     <i class="glyphicon glyphicon-envelope"></i>
                     <a href="#">&nbsp;&nbsp;{{item.EMAIL}}</a>
                 </h4>
-                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                <h4 ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.WEBSITE">
                     <i class="glyphicon glyphicon-globe"></i>
                     <a href="#">&nbsp;&nbsp;{{item.WEBSITE}}</a>
                 </h4>
-                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                <h4 ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.PHONE">
                     <i class="glyphicon glyphicon-phone"></i>
                     <a href="#">&nbsp;&nbsp;{{item.PHONE}}</a>
                 </h4>            
-                <h4 ng-repeat="item in EXPERTS.CONTACTS">
+                <h4 ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.LIKEDIN">
                     <i class="glyphicon glyphicon-list-alt"></i>
                     <a href="#">&nbsp;&nbsp;{{item.LIKEDIN}}</a>
                 </h4>                               

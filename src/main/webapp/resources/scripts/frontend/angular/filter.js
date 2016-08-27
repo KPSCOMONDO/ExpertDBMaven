@@ -1,38 +1,80 @@
 var app = angular.module('filter--app', ['angularUtils.directives.dirPagination']);
-
 app.controller('filter__controller', function ($scope, $http) {
 
-    $scope.WHERE_CLAUSE = {}
+    $scope.ADD_LANGUAGES = []
+    $scope.ADD_SKILLS = []
+
+    $scope.temp = []
+    $scope.WHERE_CLAUSE = {
+        "SKILL_ID": [],
+        "POSITION_ID": [],
+        "GENDERS": [],
+        "AGES": [],
+        "LOCATION_ID": [],
+        "LANGUAGE_ID": [],
+        "EXPERIENCE_ID": [],
+        "SALARIES": []
+    }
 
     $scope.appendWhereClause = function (key, VALUE) {
         switch (key) {
-            case 'SKILL' :
-                $scope.WHERE_CLAUSE.SKILL = VALUE.SKILL
-                break
             case 'POSITION':
-                $scope.WHERE_CLAUSE.POSITION = VALUE.POSITION
+                $scope.temp.POSITION = VALUE.POSITION
                 break
             case 'GENDER':
-                $scope.WHERE_CLAUSE.GENDER = VALUE.VALUE
+                $scope.temp.GENDERS = VALUE.VALUE
                 break
             case 'AGE':
-                $scope.WHERE_CLAUSE.AGE = VALUE
-                break
-            case 'LOCATION':
-                $scope.WHERE_CLAUSE.LOCATION = VALUE
-                break
-            case 'LANGUAGE':
-                $scope.WHERE_CLAUSE.LANGUAGE = VALUE
+                $scope.temp.AGES_MIN = VALUE.MIN
+                $scope.temp.AGES_MAX = VALUE.MAX
                 break
             case 'EXPERIENCE':
-                $scope.WHERE_CLAUSE.EXPERIENCE = VALUE
+                $scope.temp.EXPERIENCE_MIN = VALUE.MIN
+                $scope.temp.EXPERIENCE_MAX = VALUE.MAX
                 break
             case 'SALARY':
-                $scope.WHERE_CLAUSE.SALARY = VALUE
+                $scope.temp.SALARY_MIN = VALUE.MIN
+                $scope.temp.SALARY_MAX = VALUE.MAX
                 break
         }
-        console.log("ZIN :",VALUE)
-        console.log("WHERE CLUASE:",$scope.WHERE_CLAUSE)
+        console.log("ZIN :", VALUE)
+    }
+
+    $scope.onSkillCheck = function (skill) {
+        var n = false
+        $.map($scope.ADD_SKILLS, function (item, i) {
+            if (item.SKILLID == skill.ID) {
+                JYSON.DELETE($scope.ADD_SKILLS, i, function (data) {
+                    $scope.ADD_SKILLS = data
+                })
+                console.log("Deleted:", $scope.ADD_SKILLS)
+                n = true
+            }
+        })
+        if (!n) {
+            $scope.ADD_SKILLS.push({
+                "SKILLID": skill.ID,
+            })
+            console.log("ADDED:", $scope.ADD_SKILLS)
+        }
+    }
+    $scope.onLaguageCheck = function (language) {
+        var n = false
+        $.map($scope.ADD_LANGUAGES, function (item, i) {
+            if (item.LANGUAGEID == language.ID) {
+                JYSON.DELETE($scope.ADD_LANGUAGES, i, function (data) {
+                    $scope.ADD_LANGUAGES = data
+                })
+                console.log("Deleted:", $scope.ADD_LANGUAGES)
+                n = true
+            }
+        })
+        if (!n) {
+            $scope.ADD_LANGUAGES.push({
+                "LANGUAGEID": language.ID,
+            })
+            console.log("ADDED:", $scope.ADD_LANGUAGES)
+        }
     }
 
     $scope.LOGIN = APP_CACHE.get("LOGIN")
@@ -51,7 +93,7 @@ app.controller('filter__controller', function ($scope, $http) {
      * sort epert 
      */
     $scope.sort = function (keyname, name) {
-        $scope.sortKey = keyname;   //set the sortKey to the param passed
+        $scope.sortKey = keyname; //set the sortKey to the param passed
         $scope.sortName = name;
         $scope.reverse = !$scope.reverse; //if true make it false and vice versa
     }
@@ -117,10 +159,68 @@ app.controller('filter__controller', function ($scope, $http) {
             $scope.SKILLS = element.SKILLS;
         }
     });
+    $scope.$watch('cbo_location', function (element) {
+        $scope.temp.LOCATIONS = element.LOCATIONID
+    });
+    $scope.PREPARE_WHERE_CLUASE = function () {
+        $.map($scope.ADD_LANGUAGES, function (item) {
+            $scope.WHERE_CLAUSE.LANGUAGE_ID.push(item.LANGUAGEID)
+        })
+        $scope.ADD_LANGUAGES = []
+        $.map($scope.ADD_SKILLS, function (item) {
+            $scope.WHERE_CLAUSE.SKILL_ID.push(item.SKILLID)
+        })
+        $scope.ADD_SKILLS = []
+        if ($scope.temp.POSITION) {
+            $scope.WHERE_CLAUSE.POSITION_ID = $scope.POSITION
+        }
+        if ($scope.temp.AGES_MIN) {
+            $scope.WHERE_CLAUSE.AGES.push($scope.temp.AGES_MIN)
+            $scope.WHERE_CLAUSE.AGES.push($scope.temp.AGES_MAX)
+        }
+        if ($scope.temp.SALARY_MIN) {
+            $scope.WHERE_CLAUSE.SALARIES.push($scope.temp.SALARY_MIN)
+            $scope.WHERE_CLAUSE.SALARIES.push($scope.temp.SALARY_MAX)
+        }
+
+        if ($scope.temp.EXPERIENCE_MIN) {
+            $scope.WHERE_CLAUSE.EXPERIENCE_ID.push($scope.temp.EXPERIENCE_MIN)
+            $scope.WHERE_CLAUSE.EXPERIENCE_ID.push($scope.temp.EXPERIENCE_MAX)
+        }
+        if ($scope.temp.GENDERS) {
+            $scope.WHERE_CLAUSE.GENDERS.push($scope.temp.GENDERS)
+        }
+        if ($scope.temp.LOCATIONS) {
+            $scope.WHERE_CLAUSE.LOCATION_ID = $scope.temp.LOCATIONS
+        }
+        console.log("WHERE CLUASE:", $scope.WHERE_CLAUSE)
+    }
+
+    $scope.doSearchAdvance = function () {
+        $scope.PREPARE_WHERE_CLUASE()
+        REQUEST.POST("/expert/expert/advancefind",
+                $scope.WHERE_CLAUSE
+                , $http, function (data) {
+                    console.log("Success ", data)
+                    $scope.temp = []
+                    $scope.WHERE_CLAUSE = {
+                        "SKILL_ID": [],
+                        "POSITION_ID": [],
+                        "GENDERS": [],
+                        "AGES": [],
+                        "LOCATION_ID": [],
+                        "LANGUAGE_ID": [],
+                        "EXPERIENCE_ID": [],
+                        "SALARIES": []
+                    }
+                    $scope.EXPERTS = data.data.DATA
+                }, function (data) {
+            console.log("Error ", data)
+            REQUEST.ERROR(data)
+        })
+    }
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>=======================================
 });
-
-
 $(document).ready(function () {
     onChange = function (element) {
         $span1 = $(element).children().first()
@@ -149,5 +249,4 @@ $(document).ready(function () {
                     .addClass("fa-chevron-right")
         }
     }
-
 });

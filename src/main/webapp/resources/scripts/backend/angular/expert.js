@@ -91,9 +91,8 @@ app.controller('expert__controller', function ($scope, $http) {
         DIALOG.error("Error", error.message);
     })
 
-    $scope.uploadProfile = function () {
-        alert("UPLOADING PROFILE")
-        REQUEST.UPLOAD($scope.txtFullName, $('#profileform'), function (data) {
+    $scope.uploadProfile = function () {        
+        REQUEST.UPLOAD($scope.txtFullName, $('#profileform'), $('input[name=file]')[0].files[0], function (data) {
             $scope.PROFILE_URL = data.PATH
             console.log("PATH:", data)
         }, function (data) {
@@ -263,13 +262,15 @@ app.controller('expert__controller', function ($scope, $http) {
     $scope.addDocument = function () {
         var DOC_URL
         var KEY
-        REQUEST.UPLOAD($scope.txtFullName, $('#docForm'), function (data) {
+        REQUEST.UPLOAD($scope.txtFullName, $('#docForm'), $('input[name=file1]')[0].files[0], function (data) {
             DOC_URL = data.PATH
             KEY = data.KEY
             console.log("PATH:", data)
         }, function (data) {
             console.log("ERRO:", data)
+            REQUEST.ERROR(data)
         })
+
 
         $scope.ADD_DOCUMENTS.push({
             "STATE": $scope.docuemntType,
@@ -511,8 +512,7 @@ app.controller('expert__controller', function ($scope, $http) {
             $scope.reset()
             $scope.FindAllExpert()
             console.log("kkk", $scope.UPDATE)
-            if ($scope.UPDATE) {
-                alert("UPDATE")
+            if ($scope.UPDATE) {             
                 REQUEST.DELETE("/expert/delete/" + APP_CACHE.get("EXPERT_ID"), $http, function (data) {
                     console.log(data)
                     $scope.FindAllExpert()
@@ -571,6 +571,7 @@ app.controller('expert__controller', function ($scope, $http) {
         $scope.ADD_DOCUMENTS = []
         $scope.ADD_POSITIONS = []
         $scope.ADD_EDUCATIONS = []
+        $scope.ADD_CONTACTS = []
         $scope.SKILLS = []
         $.map($scope.LANGUAGES, function (item) {
             item.CHECKED = false

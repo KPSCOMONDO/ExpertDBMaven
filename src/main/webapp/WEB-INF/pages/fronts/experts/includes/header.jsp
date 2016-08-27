@@ -7,7 +7,7 @@
                 ng-model="searh_for_skill" placeholder="ស្វែងរកតាមរយះជំនាញ...">
             </div>
             <div class="search--expert col-sm-1">
-                <button class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  expert--search-box">
+                <button ng-click="doSearchAdvance()" class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  expert--search-box">
                     <span class="fa fa-search" style="padding: 10px;"></span>
                 </button>
             </div>

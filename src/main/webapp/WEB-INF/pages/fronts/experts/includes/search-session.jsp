@@ -22,13 +22,16 @@
                     <option value="">-- ជ្រើសរើស --</option>
                 </select>            
                 <div ng-repeat="item in SKILLS| limitTo:5">
-                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="appendWhereClause('SKILL', item)">
-                    <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
+                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-click="onSkillCheck(item)">
+                    <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL| limitTo:32}}
+                        <span ng-if="item.SKILL.length > 32">...</span>
+                        <small>({{item.COUNT}})</small></label>
                 </div>
-                <div class="collapse" id="bl-sub-skill" ng-repeat="item in skills| limitTo:skills.length" ng-if="$index > 4">
-                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-init='checkStatus = false' ng-model='checkStatus' ng-click="appendWhereClause('SKILL', item)">
-                    <!--ng-click="appendWhereClauseonSkillChange(item)">-->
-                    <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL}} <small>({{item.COUNT}})</small></label>
+                <div class="collapse" id="bl-sub-skill" ng-repeat="item in SKILLS| limitTo:SKILLS.length" ng-if="$index > 4">
+                    <input id="{{item.SKILL}}" type="checkbox" value="{{item}}" ng-init='checkStatus = false' ng-model='checkStatus' ng-click="onSkillCheck(item)">                    
+                    <label for="{{item.SKILL}}" class="sub-menu">{{item.SKILL| limitTo:32}}
+                        <span ng-if="item.SKILL.length > 32">...</span>
+                        <small>({{item.COUNT}})</small></label>
                 </div><br><br>
                 <h3 class="sub-menu" ng-if="skills.length == 0">មិនទំនេរ</h3>
                 <a data-toggle="collapse" class="search--more" onclick="onChange(this)" href="#bl-sub-skill">
@@ -74,7 +77,7 @@
             </div>
             <div class="collapse panel-body" id="bl-gender">
                 <div ng-repeat="item in GENDERS" ng-click="appendWhereClause('GENDER', item)">
-                    <input id="{{item.VALUE}}gender" type="radio" name="" class="{{item.VALUE}}gender">
+                    <input id="{{item.VALUE}}gender" type="radio" name="rdoGender" class="{{item.VALUE}}gender">
                     <label for="{{item.VALUE}}gender" class="sub-menu">
                         {{item.VALUE}}
                     </label><br>
@@ -108,7 +111,7 @@
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-province">
-                <select class="form-filter expert--province--select" ng-model="cbo_location" ng-options="item.LOCATIONSTATUS for item in LOCATIONS" ng-click="appendWhereClause('LOCATION', item)">
+                <select class="form-filter expert--province--select" ng-model="cbo_location" ng-options="item.LOCATIONSTATUS for item in LOCATIONS">
                     <option value="">-- ខេត្ត/ក្រុង --</option>
                 </select>            
             </div>                        
@@ -117,19 +120,19 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-language" onclick="onCatClick(this)">
-                    <h3 class="" >ភាសារ<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >ភាសា<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>                           
             </div>
             <div class="collapse panel-body" id="bl-language">
                 <div  ng-repeat="item in LANGUAGES| limitTo:5">
-                    <input id="{{item.LANGUAGE}}" type="checkbox" ng-click="appendWhereClause('LANGUAGE', item)"/>
+                    <input id="{{item.LANGUAGE}}" type="checkbox" ng-click="onLaguageCheck(item)"/>
                     <label for="{{item.LANGUAGE}}" class="sub-menu">
                         {{item.LANGUAGE| limitTo:32}}<span ng-if="item.LANGUAGE.length > 32">...</span>
                     </label><br>
                 </div>
                 <div class="collapse" id="bl-sub-language">                    
                     <div  ng-repeat="item in LANGUAGES" ng-if="$index > 4">
-                        <input id="{{item.LANGUAGE}}" type="checkbox" ng-click="appendWhereClause('LANGUAGE', item)"/>
+                        <input id="{{item.LANGUAGE}}" type="checkbox" ng-click="onLaguageCheck(item)"/>
                         <label for="{{item.LANGUAGE}}" class="sub-menu">
                             {{item.LANGUAGE| limitTo:32}}<span ng-if="item.LANGUAGE.length > 32">...</span>
                         </label><br>
@@ -145,7 +148,7 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-experience" onclick="onCatClick(this)">
-                    <h3 class="" >បទពិសោទការងារ<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >បទពិសោធន៍ការងារ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-experience"> 
@@ -162,7 +165,7 @@
         <div class="panel-default filter--box">
             <div class="panel-heading">
                 <a data-toggle="collapse" href="#bl-salary" onclick="onCatClick(this)">
-                    <h3 class="" >ប្រាក់ខែរ<span class="icon pull-right fa fa-chevron-right"></h3>
+                    <h3 class="" >ប្រាក់ខែ<span class="icon pull-right fa fa-chevron-right"></h3>
                 </a>
             </div>
             <div class="collapse panel-body" id="bl-salary">
