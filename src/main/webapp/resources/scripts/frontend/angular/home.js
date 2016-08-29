@@ -6,7 +6,7 @@ app.controller("home__controller", function ($scope, $http) {
         $scope.LOGIN = false
         $scope.LOGOUT=true
     }
-
+    APP_CACHE.set("SKILL_ID", 0);
     //-----------------declarationion----------------- 
     $scope.loading = true;
     $scope.hash = "#";

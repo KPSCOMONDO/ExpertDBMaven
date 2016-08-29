@@ -33,7 +33,7 @@
         </div>
         <table style="width: 100%;" >    
             <tbody>
-                <tr dir-paginate="item in EXPERTS|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                <tr dir-paginate="item in EXPERTS|orderBy:sortKey:reverse|filter:search|itemsPerPage:15">
                     <td>
                         <div class="col-sm-12 col-lg-12 col-xs-12 box--result">
                             <div class="pull-left image--profile">                                                                                         
@@ -51,6 +51,9 @@
                                 <div class="col-sm-12 col-lg-12 col-xs-12 row">
                                     <div class="col-sm-8 col-xs-8 col-lg-8 pull-left" style="padding-left: 0;margin-left: 0;">
                                         <span ng-repeat="pos in item.POSITIONS| limitTo:1" class="fa fa-briefcase">
+                                            &nbsp;&nbsp;<strong>{{pos.POSITION}}</strong>
+                                        </span><br>
+                                        <span ng-repeat="pos in item.POSITIONS" ng-if="$index>0" class="fa fa-briefcase">
                                             &nbsp;&nbsp;<strong>{{pos.POSITION}}</strong>
                                         </span><br>
                                         <span ng-if="item.GENDER == 'Male'" class="fa fa-male">&nbsp;&nbsp;&nbsp;</span>

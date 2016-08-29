@@ -69,11 +69,6 @@ public class SendMailServiceImpl implements org.expert.database.service.SendMail
 
     }
 }
-////	
-////	
-////	public static void main(String[] args) {
-////		new SendMailServiceImp().sendMaile("polen.hrd@gmail.com", "rest", "test"); //receiver
-////	}
-////
-////    
-//}
+	
+
+

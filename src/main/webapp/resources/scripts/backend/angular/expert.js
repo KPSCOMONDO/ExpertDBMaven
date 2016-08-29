@@ -260,11 +260,11 @@ app.controller('expert__controller', function ($scope, $http) {
     }
 
     $scope.addDocument = function () {
-        var DOC_URL
-        var KEY
+        var url
+        var key
         REQUEST.UPLOAD($scope.txtFullName, $('#docForm'), $('input[name=file1]')[0].files[0], function (data) {
-            DOC_URL = data.PATH
-            KEY = data.KEY
+            url = data.PATH
+            key = data.KEY
             console.log("PATH:", data)
         }, function (data) {
             console.log("ERRO:", data)
@@ -275,9 +275,9 @@ app.controller('expert__controller', function ($scope, $http) {
         $scope.ADD_DOCUMENTS.push({
             "STATE": $scope.docuemntType,
             "STATUS": $scope.txtDocumentTitle,
-            "URL": DOC_URL,
+            "URL": url,
             "DESCRIPTION": $scope.txtDocumentDescription,
-            "KEY": KEY
+            "KEY": key
         })
         console.log($scope.ADD_DOCUMENTS)
     }

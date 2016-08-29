@@ -6,13 +6,12 @@
             <div class="mbr-box mbr-box--fixed mbr-box--adapted box--bottom--shardow" style="background-color: white;padding: 20px">                                                
                 <div class="mbr-box__magnet mbr-box__magnet--top-right mbr-section__left col-sm-2">
                     <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom">
-                        <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/images/profile/Screen Shot 2016-08-21 at 9.50.39 PM.png">
+                        <!--<img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/images/profile/Screen Shot 2016-08-21 at 9.50.39 PM.png">-->
+                        <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" 
+                             src="/Users/sokchanny/Documents/Project/ED_API_V04/Document/NounVeyo.png">
                     </figure>                    
                 </div>                                    
-                <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">
-                    <div class="col-sm-12" style="padding: 10px;">
-                        <a href="#" class="pull-right">សំគាល់ <i class="glyphicon glyphicon-bookmark"></i></a>
-                    </div>
+                <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">                    
                     <div>
                         <div class="mbr-section__container mbr-section__container--middle">
                             <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg col-sm-6">                            

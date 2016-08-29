@@ -1,16 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section class="" style="background-color: #EEEEEE;padding: 112px 0 15px 0;">
     <div class="container">
-        <div class="text-center">
-            <div class="col-sm-11 search--expert">
-                <input type="text" class="form-control expert--search-box animated fadeInUp delay" style="padding: 10px;" 
-                ng-model="searh_for_skill" placeholder="ស្វែងរកតាមរយះជំនាញ...">
-            </div>
-            <div class="search--expert col-sm-1">
-                <button ng-click="doSearchAdvance()" class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-default  expert--search-box">
-                    <span class="fa fa-search" style="padding: 10px;"></span>
-                </button>
-            </div>
+        <div class="text-left">
+            <div class="col-sm-12 search--expert">
+                <!--                <input type="text" class="form-control expert--search-box animated fadeInUp delay" style="padding: 10px;" 
+                                ng-model="searh_for_skill" placeholder="ស្វែងរកតាមរយះជំនាញ...">                                -->
+                <!--<tags-input ng-model="ADD_SEARCHS"></tags-input>-->               
+                <tags-input placeholder="ស្វែងរកជំនាញ" ng-model="ADD_SKILLS" add-on-paste="true" on-tag-removed="tagSkillRemove()" on-tag-added="tagSkillAdd()">
+                    <auto-complete source="loadTags($query)"></auto-complete>                                       
+                </tags-input>
+            </div>            
         </div>
     </div>
 </section>

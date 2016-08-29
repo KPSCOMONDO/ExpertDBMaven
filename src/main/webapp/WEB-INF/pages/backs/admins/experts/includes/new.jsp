@@ -119,7 +119,7 @@
                     <%------------------------------------ Work Experience ------------------------%>
                     <h3 class="box-title text-red">ព័តិមាន​ អំពីការងារ</h3>                                    
                     <div class="form-group">
-                        <label for="txtCurrentWorkPlace">ការងារ ប្បច្ចុបន្ន</label>
+                        <label for="txtCurrentWorkPlace">ទីតាំងការងារ ប្បច្ចុបន្ន</label>
                         <input ng-model="txtCurrentWorkPlace" id="txtCurrentWorkPlace" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
@@ -403,7 +403,7 @@
                             </div>                            
                             <div class="form-group">
                                 <label for="Upload">បន្ថែមឯកាសារ</label>                                                      
-                                <input ng-model="Upload" id="Upload" name="file1" type="file"></textarea>                                                                                                    
+                                <input ng-model="Upload" name="file1" type="file"></textarea>                                                                                                    
                             </div>
                             <div class="form-group">
                                 <label for="txtDocURL">URL</label>                                                      

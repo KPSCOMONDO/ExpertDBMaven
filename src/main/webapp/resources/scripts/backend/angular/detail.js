@@ -1,4 +1,4 @@
-var app = angular.module('detail--app', []);
+var app = angular.module('detail--app', ['angularUtils.directives.dirPagination']);
 app.controller('detail__controller', function ($scope, $http) {
     $scope.expertId = null
 

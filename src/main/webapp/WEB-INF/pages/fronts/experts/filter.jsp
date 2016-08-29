@@ -4,12 +4,14 @@
     <head>        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>GEEK DIR</title>
-        <jsp:include page="../includes/home-style.jsp"/>
+        <jsp:include page="../includes/home-style.jsp"/>    
+        <link href="../../../../resources/static/libs/ng-tags-input.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     </head>
-    <body ng-controller="filter__controller">
+    <body ng-cloak ng-controller="filter__controller">
         <jsp:include page="includes/menubar.jsp"/>
         <jsp:include page="includes/header.jsp"/>
-    <sectio class="text-left content">
+    <section class="text-left content">
         <div class="col-2 container">
             <jsp:include page="includes/search-session.jsp"/>
             <jsp:include page="includes/expert-list.jsp"/>    
@@ -19,11 +21,13 @@
     <jsp:include page="../includes/footer.jsp"/>
     <jsp:include page="../includes/home-script.jsp"/> 
     <script src="../../../../resources/scripts/utility/configuration.js" type="text/javascript"></script>
-    <script src="../../../../resources/static/angular/angular.js" type="text/javascript"></script>
+<!--    <script src="../../../../resources/static/angular/angular.js" type="text/javascript"></script>-->
     <script src="../../../../resources/static/libs/dirPagination.js" type="text/javascript"></script>
+    <script src="../../../../resources/static/libs/ng-tags-input.js" type="text/javascript"></script>
+    <script src="../../../../resources/static/libs/jsel.js" type="text/javascript"></script>
     <script src="../../../../resources/scripts/frontend/angular/filter.js" type="text/javascript"></script>
 
     <%-- Pagination --%>
- 
+
 </body>
 </html>

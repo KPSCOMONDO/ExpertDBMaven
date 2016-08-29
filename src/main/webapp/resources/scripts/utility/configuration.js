@@ -43,7 +43,7 @@ var DECLARATION = {
                 "VALUE": "Female",
             },
             {
-                "VALUE": "Male and female"
+                "VALUE": "Other"
             }
         ];
     },
