@@ -25,7 +25,7 @@
   <div class="form">
     <h2>Login to your account</h2>
     <form id="frmLogin" method="" action="">
-      <input type="email" placeholder="Email" name="email"/>
+      <input type="text" placeholder="Email" name="email"/>
       <input type="password" placeholder="Password" name="password"/>
       <button type="submit">Login</button>
     </form>
