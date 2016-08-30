@@ -22,6 +22,8 @@ public class ViewConfiguration extends WebMvcAutoConfiguration.WebMvcAutoConfigu
                 
         registry.addViewController("/about").setViewName("/fronts/utility/about");
         registry.addViewController("/contact").setViewName("/fronts/utility/contact");
+        
+        registry.addViewController("/access-denied").setViewName("/fronts/authentications/access-denied");
     }
     
     

@@ -4,16 +4,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.expert.database.entities.user.Role;
+import org.expert.database.entities.user.User;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
+import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
+import org.springframework.security.web.savedrequest.RequestCache;
+import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Component;
 
 @Component("ajaxAuthenticationSuccessHandler")
 public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHandler { 
+	
+	
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication auth)
             throws IOException, ServletException {
@@ -23,8 +37,8 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
          map.put("targetUrl", determineTargetUrl(auth));
 			
          String json = new Gson().toJson(map);*/
-
-        response.getWriter().print(determineTargetUrl(auth));
+    	
+    	response.getWriter().print(determineTargetUrl(auth));
         response.getWriter().flush();
 
     }
@@ -37,9 +51,9 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
         List<String> roles = new ArrayList<String>();
         for (GrantedAuthority authority : authorities) {
-            //System.out.println(authority.getAuthority());
+           // System.out.println(authority.getAuthority());
             roles.add(authority.getAuthority());
-            //System.out.println("Extract Role: " + authority.getAuthority());
+           System.out.println("Extract Role: " + authority.getAuthority());
         }
         if (roles.contains("ROLE_USER")) {
             return "/expert/detail";
@@ -59,4 +73,5 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
      APIUser user = (APIUser) authentication.getPrincipal();
      return user;
      }*/
+    
 }

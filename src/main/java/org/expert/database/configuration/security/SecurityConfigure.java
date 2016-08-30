@@ -2,21 +2,23 @@ package org.expert.database.configuration.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.session.SessionRegistry;
+import org.springframework.security.core.session.SessionRegistryImpl;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-
-/**
- *
- * @author sokchanny
- */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfigure extends WebSecurityConfigurerAdapter {
 
+	
     @Autowired
     @Qualifier(value = "ajaxAuthenticationSuccessHandler")
     private AjaxAuthenticationSuccessHandler ajaxAuthenticationSuccessHandler;
@@ -25,20 +27,21 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
     @Qualifier(value = "ajaxAuthenticationFailureHandler")
     private AjaxAuthenticationFailureHandler ajaxAuthenticationFailureHandler;
 
-    //@Autowired
-    //private UserDetailsService userDetailService;
-    //@Value("${spring.profiles.active}")
-//	private String env;
-    @Autowired
-    protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("admin").password("123").roles("ADMIN");
-        auth.inMemoryAuthentication().withUser("user").password("123").roles("USER");
-        
-       // auth.userDetailsService(userDetailService)
-        //       .passwordEncoder(passwordEncoder());
-    }
+	@Autowired
+	private UserDetailsService userDetailsService;
 
-    @Override
+	@Autowired
+	protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		//auth.inMemoryAuthentication().withUser("user@gmail.com").password("123").roles("USER");
+		//System.out.println("configure global");
+		auth.userDetailsService(userDetailsService)
+		.passwordEncoder(passwordEncoder());
+//		 auth.inMemoryAuthentication().withUser("user").password("123").roles("USER");
+	}
+	
+
+	
+	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
@@ -47,23 +50,46 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
                 .antMatchers("/home/**").permitAll()
                 .antMatchers("/expert/filter/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/expert/detail/**").hasAnyRole("ADMIN","USER");                                
-        http
-                .formLogin()
-                .loginPage("/login")
-                .usernameParameter("username")
-                .passwordParameter("password")
-                .permitAll().failureHandler(ajaxAuthenticationFailureHandler)
-                .successHandler(ajaxAuthenticationSuccessHandler);
+                .antMatchers("/expert/detail/**").hasAnyRole("ADMIN","USER");
+        
+		http
+		.formLogin()
+		.loginPage("/login")
+		.usernameParameter("email")
+		.passwordParameter("password")
+		.permitAll().failureHandler(ajaxAuthenticationFailureHandler)
+		.successHandler(ajaxAuthenticationSuccessHandler);
+	/*http
+		.sessionManagement()
+		.sessionAuthenticationErrorUrl("/login")
+		.maximumSessions(1)
+		.maxSessionsPreventsLogin(true)
+		.expiredUrl("/login")
+		.sessionRegistry(sessionRegistryImpl());*/
+	/*http
+		.logout()
+		.logoutUrl("/logout")
+		.logoutSuccessUrl(environment.getProperty("ACCOUNT_LOGOUT_URL"))
+		.invalidateHttpSession(true)
+		.deleteCookies("JESSIONID",environment.getProperty("ACCOUNT_KNONG_DAI_COOKIE_NAME"))
+		.permitAll();*/
+	
+	http.csrf().disable();
+	http.exceptionHandling().accessDeniedPage("/access-denied");
 
-        http.csrf().disable();
-        http.exceptionHandling().accessDeniedPage("/access-denied");
-        //if (!env.equals("dev"))
-        //http.requiresChannel().anyRequest().requiresSecure();
     }
 
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
+
+	@Bean
+	protected SessionRegistry sessionRegistryImpl(){
+		return new SessionRegistryImpl();
+	}
+    
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+     
+     
+ 
 }
