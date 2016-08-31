@@ -1,17 +1,13 @@
 package org.expert.database.controllers.login;
 
-import org.expert.database.entities.user.User;
+import org.expert.database.entities.user.UserInput;
 import org.expert.database.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class LoginController {
@@ -19,7 +15,7 @@ public class LoginController {
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping(value = "/auto-login" , method= RequestMethod.GET)
+/*	@RequestMapping(value = "/auto-login" , method= RequestMethod.GET)
 	public String autoLogin(@RequestParam("email") String email , @RequestParam(name="continue-site", required=false , defaultValue="http://localhost:8082") String continueSite) {
 
 		User user = userService.findUserByEmail(email);
@@ -34,6 +30,15 @@ public class LoginController {
 		SecurityContextHolder.setContext(context);
 
 		return "redirect:"+continueSite;
+
+	}*/
+	
+	@RequestMapping(value = "/user-register" , method= RequestMethod.POST,
+			produces = "application/json")
+	@ResponseBody
+	public boolean autoLogin(@RequestBody UserInput user) {
+		
+		return userService.userRegister(user);	
 
 	}
 	

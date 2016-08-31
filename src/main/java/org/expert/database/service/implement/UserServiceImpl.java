@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.expert.database.entities.user.Role;
 import org.expert.database.entities.user.User;
+import org.expert.database.entities.user.UserInput;
 import org.expert.database.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -32,14 +33,10 @@ public class UserServiceImpl implements UserService{
 	public User findUserByEmail(String email) {
 		
 		HttpEntity<Object> request = new HttpEntity<Object>(header);
-			
-		System.out.println(email);
 		
-		ResponseEntity<Map> response = rest.exchange(WS_URL+"/user/login?email="+email, HttpMethod.POST , request , Map.class) ;
+		ResponseEntity<Map> response = rest.exchange(WS_URL+"/user/user-login?email="+email, HttpMethod.POST , request , Map.class) ;
 		
 		Map<String, Object> map = (HashMap<String, Object>)response.getBody();
-
-		//System.out.println("map="+map);
 		
 		if(map.get("DATA") != null){
 			Map<String , Object> data = (HashMap<String , Object>) map.get("DATA");
@@ -47,10 +44,10 @@ public class UserServiceImpl implements UserService{
 			u.setId((Integer)data.get("USERID"));
 			u.setUsername((String)data.get("USERNAME"));
 			u.setPassword((String)data.get("USERPASSWORD"));
-			//u.setPassword("550c39ae-c7ab-480d-9742-a43c66726e98");
 			u.setGender((String)data.get("USERGENDER"));
 			u.setEmail((String)data.get("USEREMAIL"));
 			u.setImage((String)data.get("USERIMAGE"));
+			u.setActive((boolean)data.get("ISACTIVE"));
 			List<Role> roles = new ArrayList<Role>();
 			roles.add(new Role((String)data.get("USERROLE")));
 			u.setRoles(roles);
@@ -59,6 +56,22 @@ public class UserServiceImpl implements UserService{
 		}
 		
 		return null;
+	}
+
+	@Override
+	public boolean userRegister(UserInput user) {
+		
+		HttpEntity<Object> request = new HttpEntity<Object>(user,header);
+		
+		ResponseEntity<Map> response = rest.exchange(WS_URL+"/user/user-register", HttpMethod.POST , request , Map.class) ;
+		
+		Map<String, Object> map = (HashMap<String, Object>)response.getBody();
+		
+		if(map.get("DATA") != null){
+			Map<String , Object> data = (HashMap<String , Object>) map.get("DATA");
+			return (boolean)map.get("STATUS");
+		}
+		return false;
 	}
 
 }

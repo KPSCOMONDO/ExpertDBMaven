@@ -36,13 +36,13 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
      * This method extracts the roles of currently logged-in user and returns
      * appropriate URL according to his/her role.
      */
-    private String determineTargetUrl(Authentication authentication) {
+   private String determineTargetUrl(Authentication authentication) {
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
         List<String> roles = new ArrayList<String>();
         for (GrantedAuthority authority : authorities) {
            // System.out.println(authority.getAuthority());
             roles.add(authority.getAuthority());
-           System.out.println("Extract Role: " + authority.getAuthority());
+           //System.out.println("Extract Role: " + authority.getAuthority());
         }
         if (roles.contains("ROLE_USER")) {
             return "/expert/detail";

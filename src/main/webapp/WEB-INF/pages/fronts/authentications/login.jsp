@@ -25,19 +25,19 @@
   <div class="form">
     <h2>Login to your account</h2>
     <form id="frmLogin" method="" action="">
-      <input type="text" placeholder="Email" name="email"/>
+      <input type="text" placeholder="Email" name="user"/>
       <input type="password" placeholder="Password" name="password"/>
       <button type="submit">Login</button>
     </form>
   </div>
   <div class="form">
     <h2>Create an account</h2>
-    <form>
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
-      <input type="email" placeholder="Email Address"/>
+    <form id="frmRegister" method="" action="">
+      <input type="text" placeholder="Username" name="NAME" id="name"/>
+      <input type="password" placeholder="Password" name="PASSWORD" id="pwd"/>
+      <input type="email" placeholder="Email Address" name="EMAIL" id="email"/>
       <input type="tel" placeholder="Phone Number"/>
-      <button>Register</button>
+      <button type="submit">Register</button>
     </form>
   </div>
   <div class="cta"><a href="#">Forgot your password?</a></div>
@@ -60,9 +60,9 @@
 	  	            	}else if(data == "Bad credentials"){
 	  	            		alert(data);
 	  	            	}else{
-	  	            		//console.log(data);
+	  	            		console.log(data);
 	  	            		//alert("Logined success.");
-	  	            		location.href =data;
+	  	            		//location.href =data;
 	  	            	}
 					},
 					error:function(err){
@@ -70,6 +70,28 @@
 					}
 				});
 			}); 
+			 $("#frmRegister").submit(function(e){
+				 e.preventDefault();
+				 $.ajax({
+					 url:"${pageContext.request.contextPath}/user-register",
+						type:"POST",
+						 headers: { 
+						        'Accept': 'application/json',
+						        'Content-Type': 'application/json' 
+						  },
+						data:JSON.stringify({
+							  'NAME': $("#name").val(),
+							  'PASSWORD':$("#pwd").val(),
+							  'EMAIL': $("#email").val()
+							}),
+						success:function(data){
+		  	            	alert("Register success.");
+						},
+						error:function(err){
+							console.log(err);
+						}
+				 });
+			 });
 		});
 	</script>
 </body>

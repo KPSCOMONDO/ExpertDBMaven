@@ -19,6 +19,7 @@ public class User implements UserDetails{
 	private String image;
 	private String department;
 	private String university;
+	private boolean active;
 	private List<Role> roles;
 		
 	public int getId() {
@@ -67,6 +68,14 @@ public class User implements UserDetails{
 
 	public void setUniversity(String university) {
 		this.university = university;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public void setPassword(String password) {

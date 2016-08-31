@@ -50,12 +50,11 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
                 .antMatchers("/home/**").permitAll()
                 .antMatchers("/expert/filter/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/expert/detail/**").hasAnyRole("ADMIN","USER");
-        
-		http
+                .antMatchers("/expert/detail/**").hasAnyRole("ADMIN","USER")
+        .and()
 		.formLogin()
 		.loginPage("/login")
-		.usernameParameter("email")
+		.usernameParameter("user")
 		.passwordParameter("password")
 		.permitAll().failureHandler(ajaxAuthenticationFailureHandler)
 		.successHandler(ajaxAuthenticationSuccessHandler);
@@ -78,7 +77,6 @@ public class SecurityConfigure extends WebSecurityConfigurerAdapter {
 	http.exceptionHandling().accessDeniedPage("/access-denied");
 
     }
-
 
 	@Bean
 	protected SessionRegistry sessionRegistryImpl(){
