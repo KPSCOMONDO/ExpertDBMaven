@@ -21,6 +21,9 @@ var CONFIGURATION = {
     getBase_url: function () {
         //return "http://192.168.178.211:9999/rest";
         return "http://localhost:8082/rest";
+    },
+    getDocument_url: function () {              
+        return "http://localhost:8081//resources/Documents/Uploads";
     }
 }
 

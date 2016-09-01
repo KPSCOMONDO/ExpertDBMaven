@@ -4,7 +4,7 @@ app.controller("home__controller", function ($scope, $http) {
     $scope.logOut = function () {
         APP_CACHE.set("LOGIN", false)
         $scope.LOGIN = false
-        $scope.LOGOUT=true
+        $scope.LOGOUT = true
     }
     APP_CACHE.set("SKILL_ID", 0);
     //-----------------declarationion----------------- 
@@ -28,7 +28,11 @@ app.controller("home__controller", function ($scope, $http) {
         $scope.loading = true;
         REQUEST.GET("/filter/expert/by-skill-id/" + APP_CACHE.get("SKILL_ID"), $http, function (response) {
             if ($scope.EXPERTS = response.data.DATA) {
-                $scope.COUNTERS = response.data.DATA.COUNTER;
+                $scope.COUNTERS = response.data.DATA.COUNTER
+                $.map($scope.EXPERTS, function (item) {
+                    item.IMAGEURL = CONFIGURATION.getDocument_url() + item.IMAGEURL
+                })
+                console.log("Test Image URL",$scope.EXPERTS)
             }
             $scope.loading = false;
         }, function (error) {

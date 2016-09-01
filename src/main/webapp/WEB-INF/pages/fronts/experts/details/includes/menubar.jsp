@@ -32,24 +32,24 @@
                                 </li>                                                              
                             </ul>
                         </div>
-                        <div ng-if="(LOGIN != true)" class="mbr-navbar__column">
+<!--                        <div ng-if="(LOGIN != true)" class="mbr-navbar__column">
                             <ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
                                 <li class="mbr-navbar__item">
                                     <a  class="mbr-buttons__link mbr-buttons__btn btn btn-default" href="${pageContext.request.contextPath}/login">ចូលប្រើប្រាស់</a>
                                 </li>                                
                             </ul>
-                        </div>                        
+                        </div>                        -->
                     </nav>
                 </div>
-                <div ng-if="(LOGIN == true)" class="mbr-navbar__column pull-right">
+                <div class="mbr-navbar__column pull-right">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/resources/static/img/profile/channy.jpg" style="width: 40px;height: 40px;border-radius: 50%;padding-top:0;padding-bottom: 0p;margin-top: 10px;margin-bottom: 10px;"  alt="User Image">
+                        <img src="/resources/images/profile/profile.png" style="width: 50px;height: 50px;border-radius: 50%;padding-top:0;padding-bottom: 0p;margin-top: 5px;margin-bottom: 5px;"  alt="User Image">
                     </a>
                     <div class="dropdown-menu panel row" style="width: 250px;padding: 0;background-color: #2196F3">                                        
                         <div class="text-center panel-heading" style="">
-                            <img src="/resources/static/img/profile/channy.jpg" style="width: 60px;height: 60px;border-radius: 50%;" alt="User Image">
+                            <img src="/resources/images/profile/profile.png" style="width: 70px;height: 70px;border-radius: 50%;" alt="User Image">
                             <p>
-                                Sok Channy
+                                Ky Sona
                             </p>
                         </div>
                         <div class="col-2 panel-body">                           

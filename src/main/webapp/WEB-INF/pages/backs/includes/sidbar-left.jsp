@@ -1,12 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <aside class="main-sidebar">
-    <section class="sidebar">
+    <section class="sidebar text-left">
         <div class="user-panel">
             <div class="pull-left image">
                 <img src="/resources/images/profile/profile.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Sok Channy</p>                
+                <p>Ky Sona</p>                
             </div>
         </div>           
         <ul class="sidebar-menu">            
@@ -18,15 +18,19 @@
             </li>
             <li class="treeview">
                 <a href="${pageContext.request.contextPath}/admin/expert/list">
-                    <i class="fa fa-circle-o"></i> បញ្ជីអ្នកជំនាញ</a>                                        
-                </a>                
+                    <i class="fa fa-circle-o"></i>
+                    <span>បញ្ជីអ្នកជំនាញ</span>
+                    <span class="pull-right-container">
+                        <span class="label label-primary pull-right">104</span>
+                    </span>                    
+                </a>                                                                   
             </li>  
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-pie-chart"></i>
                     <span>ជំនាញ</span>
                     <span class="pull-right-container">
-                        <span class="label label-primary pull-right">14</span>
+                        <span class="label label-primary pull-right">78</span>
                     </span>
                     <ul class="treeview-menu">
                         <li><a href="${pageContext.request.contextPath}/admin/skill"><i class="fa fa-circle-o"></i> មុខជំនាញ</a></li>
@@ -48,7 +52,7 @@
                     <i class="fa fa-map-marker"></i>
                     <span>ទីតាំង(ខេត្ត/ក្រុង)</span>
                     <span class="pull-right-container">
-                        <span class="label label-primary pull-right">14</span>
+                        <span class="label label-primary pull-right">25</span>
                     </span>
                 </a>                
             </li>
@@ -57,7 +61,7 @@
                     <i class="fa fa-language"></i>
                     <span>ភាសារ</span>
                     <span class="pull-right-container">
-                        <span class="label label-primary pull-right">14</span>
+                        <span class="label label-primary pull-right">9</span>
                     </span>
                 </a>                
             </li>
@@ -66,7 +70,7 @@
                     <i class="fa fa-level-up"></i>
                     <span>កំរិត</span>
                     <span class="pull-right-container">
-                        <span class="label label-primary pull-right">144</span>
+                        <span class="label label-primary pull-right">3</span>
                     </span>
                 </a>                
             </li>
@@ -75,7 +79,7 @@
                     <i class="fa fa-users"></i>
                     <span>បញ្ជីអ្នកគ្រប់គ្រង</span>
                     <span class="pull-right-container">
-                        <span class="label label-primary pull-right">144</span>
+                        <span class="label label-primary pull-right">12</span>
                     </span>
                 </a>                
             </li>

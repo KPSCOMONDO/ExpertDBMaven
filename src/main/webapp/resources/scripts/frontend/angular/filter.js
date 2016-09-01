@@ -25,6 +25,10 @@ app.controller('filter__controller', function ($scope, $http) {
                     console.log("Success ", data)
                     if (!($scope.EXPERTS = data.data.DATA)) {
                         $scope.EXPERTS = []
+                    } else {
+                        $.map($scope.EXPERTS, function (item) {
+                            item.IMAGEURL = CONFIGURATION.getDocument_url() + item.IMAGEURL
+                        })
                     }
 
                 }, function (data) {
@@ -66,8 +70,14 @@ app.controller('filter__controller', function ($scope, $http) {
 
     REQUEST.GET("/filter/expert/by-skill-id/" + APP_CACHE.get("SKILL_ID"), $http, function (response) {
         $scope.loading = false;
-        $scope.EXPERTS = response.data.DATA;
-        $scope.COUNTERS = response.data.COUNTER;
+        if ($scope.EXPERTS = response.data.DATA) {
+            $.map($scope.EXPERTS, function (item) {
+                item.IMAGEURL = CONFIGURATION.getDocument_url() + item.IMAGEURL
+                $scope.COUNTERS = response.data.COUNTER;
+                console.log($scope.COUNTERS)
+            })
+        }        
+
     }, function (error) {
         REQUEST.ERROR(error)
         $scope.loading = false;

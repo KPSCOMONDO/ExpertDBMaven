@@ -8,7 +8,7 @@
                     <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom">
                         <!--<img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" src="/resources/images/profile/Screen Shot 2016-08-21 at 9.50.39 PM.png">-->
                         <img class="img-responsive img-thumbnail" style="margin: 20px 0px 20px 0px; padding: 10px 10px 10px 10px" 
-                             src="/Users/sokchanny/Documents/Project/ED_API_V04/Document/NounVeyo.png">
+                             src="{{IMAGE_URL}}">
                     </figure>                    
                 </div>                                    
                 <div class="mbr-box__magnet mbr-class-mbr-box__magnet--center-left col-sm-8 mbr-section__right">                    
