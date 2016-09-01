@@ -45,6 +45,10 @@
                                         <span>{{EXPERTS.ADDRESS.COUNTRY}}</span>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td><h4 class="text--title">ចំណូលចិត្ត</h4></td>
+                                    <td><h4>{{EXPERTS.INTEREST}}</h4></td>
+                                </tr>
                             </table>
                         </div>
                     </div>    
@@ -90,34 +94,64 @@
                             </table>
                         </div>
                     </div> 
-                    <div class="content-detail">
+                    <div class="content-detail col-sm-12">
                         <%--      ------------ Skill ----------------------- --%>
-                        <h3>
-                            <i class="fa fa-circle-o-notch fa-2x text-blue"></i>
-                            <strong class="text-blue">ជំនាញ</strong>
-                        </h3>
-                        <div class="condent-left">                                  
-                            <table style="width: 100%;" class="table-striped">                               
-                                <tbody>
-                                    <tr ng-repeat="item in EXPERTS.SKILLS">
-                                        <td>
-                                            <h6><i class="fa fa-circle-o" 
-                                                   ng-class="{'text-blue':($index % 2 === 0),
+                        <div class="col-sm-6">
+                            <h3>
+                                <i class="fa fa-circle-o-notch fa-2x text-blue"></i>
+                                <strong class="text-blue">ជំនាញ</strong>
+                            </h3>
+                            <div class="condent-left">                                  
+                                <table style="width: 100%;" class="table-striped">                               
+                                    <tbody>
+                                        <tr ng-repeat="item in EXPERTS.SKILLS| limitTo:(EXPERTS.SKILLS.length) / 2">
+                                            <td>
+                                                <h6><i class="fa fa-circle-o" 
+                                                       ng-class="{'text-blue':($index % 2 === 0),
                                                                'text-red':($index % 3 === 0),
                                                                'text-green':($idex % 2 !== 0),
                                                                'text-yellow':($index % 3 !== 0)}">
 
-                                                </i>
-                                                {{item.SKILL}}
-                                            </h6>
-                                        </td>
-                                        <td>                                                                                          
-                                            <span class="pull-right">{{item.LEVEL}}</span>                                                                                                                                     
-                                        </td>                                           
-                                    </tr>                                            
-                                </tbody>
-                            </table>
-                        </div> 
+                                                    </i>
+                                                    {{item.SKILL}}
+                                                </h6>
+                                            </td>
+                                            <td>                                                                                          
+                                                <span class="pull-right">{{item.LEVEL}}</span>                                                                                                                                     
+                                            </td>                                           
+                                        </tr>                                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>
+                                <i class="fa fa-circle-o-notch fa-2x text-blue"></i>
+                                <strong class="text-blue">ជំនាញ</strong>
+                            </h3>
+                            <div class="condent-left">                                  
+                                <table style="width: 100%;" class="table-striped">                               
+                                    <tbody>
+                                        <tr ng-repeat="item in EXPERTS.SKILLS" ng-if="$index >= (EXPERTS.SKILLS.length) / 2">
+                                            <td>
+                                                <h6><i class="fa fa-circle-o" 
+                                                       ng-class="{'text-blue':($index % 2 === 0),
+                                                               'text-red':($index % 3 === 0),
+                                                               'text-green':($idex % 2 !== 0),
+                                                               'text-yellow':($index % 3 !== 0)}">
+
+                                                    </i>
+                                                    {{item.SKILL}}
+                                                </h6>
+                                            </td>
+                                            <td>                                                                                          
+                                                <span class="pull-right">{{item.LEVEL}}</span>                                                                                                                                     
+                                            </td>                                           
+                                        </tr>                                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                     <%--      ------------ WORK EXPERIENCE ----------------------- --%>
@@ -153,10 +187,10 @@
                                 <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
                                 <p class="group">
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
+                                        <i class="fa fa-download text-red">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
                                     </a>
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-info" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 == 0)}">&nbsp;ព័តិមានលំអិត</i>                                                
+                                        <i class="fa fa-info text-red">&nbsp;ព័តិមានលំអិត</i>                                                
                                     </a>
                                 </p>
                             </div>
@@ -180,10 +214,10 @@
                                 <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
                                 <p class="group">
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
+                                        <i class="fa fa-download text-red">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
                                     </a>
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-info" ng-class="{'text-green':($index != 2 == 0),'text-red':($index % 2 == 0)}">&nbsp;ព័តិមានលំអិត</i>                                                
+                                        <i class="fa fa-info text-red">&nbsp;ព័តិមានលំអិត</i>                                                
                                     </a>
                                 </p>
                             </div>
@@ -197,10 +231,10 @@
                                 <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
                                 <p class="group">
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
+                                        <i class="fa fa-download text-red">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
                                     </a>
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-info" ng-class="{'text-green':($index != 2 == 0),'text-red':($index % 2 == 0)}">&nbsp;ព័តិមានលំអិត</i>                                                
+                                        <i class="fa fa-info text-red">&nbsp;ព័តិមានលំអិត</i>                                                
                                     </a>
                                 </p>
                             </div>
@@ -214,10 +248,10 @@
                                 <p>{{item.DOCUMENTDESCRIPTION}}</p>                                       
                                 <p class="group">
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-download" ng-class="{'text-green':($index % 2 == 0),'text-red':($index % 2 != 0)}">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
+                                        <i class="fa fa-download text-red">&nbsp;ទាញយក&nbsp;&nbsp;&nbsp;&nbsp;</i>                                                
                                     </a>
                                     <a href="{{item.DOCUMENTURL}}" style="text-decoration: none">
-                                        <i class="fa fa-info" ng-class="{'text-green':($index != 2 == 0),'text-red':($index % 2 == 0)}">&nbsp;ព័តិមានលំអិត</i>                                                
+                                        <i class="fa fa-info text-red">&nbsp;ព័តិមានលំអិត</i>                                                
                                     </a>
                                 </p>
                             </div>
@@ -260,26 +294,26 @@
                 </div>
             </div>
             <div class="content-detail">     
-                <h3>
+                <h6>
                     <i class="fa fa-chain-broken fa-2x text-blue"></i>
                     <strong class="text-blue">ទំនាក់ទំនង</strong>
-                </h3>
-                <h4 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.EMAIL">
+                </h6>
+                <h6 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.EMAIL">
                     <i class="glyphicon glyphicon-envelope"></i>
                     <a href="#">&nbsp;&nbsp;{{item.EMAIL}}</a>
-                </h4>
-                <h4 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.WEBSITE">
+                </h6>
+                <h6 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.WEBSITE">
                     <i class="glyphicon glyphicon-globe"></i>
                     <a href="#">&nbsp;&nbsp;{{item.WEBSITE}}</a>
-                </h4>
-                <h4 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.PHONE">
+                </h6>
+                <h6 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.PHONE">
                     <i class="glyphicon glyphicon-phone"></i>
                     <a href="#">&nbsp;&nbsp;{{item.PHONE}}</a>
-                </h4>            
-                <h4 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.LIKEDIN">
+                </h6>            
+                <h6 class="subject" ng-repeat="item in EXPERTS.CONTACTS" ng-if="item.LIKEDIN">
                     <i class="glyphicon glyphicon-list-alt"></i>
                     <a href="#">&nbsp;&nbsp;{{item.LIKEDIN}}</a>
-                </h4>  
+                </h6>  
             </div>
         </div>
     </div>

@@ -41,12 +41,12 @@
         </h3>
         <%-- ----- ------- -----Expert list ---------------- ----- --- --%> 
         <div ng-if="experts.length != 0" class="row">
-            <div ng-repeat="item in EXPERTS|limitTo:10">
+            <div ng-repeat="item in EXPERTS|limitTo:30">
                 <div style="height: 300px;">
                     <div class="content">
                         <div class="col-lg-6 col-sm-6 col-xs-6 col-lg-offset-3 col-xs-offset-3 col-sm-offset-3">
-                            <img class="img-responsive" src="{{item.IMAGEURL}}" 
-                                 onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/resources/images/profile/na-profile.jpg';">                           
+                            <img class="img-circle img-responsive img-thumbnail" ng-src="{{item.IMAGEURL}}" 
+                                 onerror="this.onerror=null;this.src='/resources/images/profile/na-profile.jpg';">                           
                         </div>
                         <div class="col-lg-12 col-lg-12 col-xs-12 text-center">
                             <br>
@@ -60,32 +60,6 @@
                             <p class="group">
                                 <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">ព័តិមានលំអិត</a><br><br>
                             </p>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a ng-show="experts.length > 8" href="#more--expert" data-toggle="collapse">MORE...</a>
-            <div ng-s class="collapse" id="more--expert">
-                <div ng-if="experts.length > 8" ng-repeat="item in EXPERTS|limitTo:(EXPERTS.length - 8):8">
-                    <div>
-                        <div class="content">
-                            <div class="col-lg-6 col-sm-6 col-xs-4 col-lg-offset-3 col-xs-offset-4 col-sm-offset-3">
-                                <img class="img-responsive" src="{{item.IMAGEURL}}" 
-                                 onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/resources/images/profile/na-profile.jpg';">                           
-                        
-                            </div>
-                            <div class="col-lg-12 col-lg-12 col-xs-12 text-center"><br>
-                                <span class="info-name"><strong>{{item.FULLNAME| limitTo:20}}<span ng-if="item.length > 20">....</span></strong></span><br>
-                                <span ng-repeat="pos in item.POSITIONS| limitTo:1">
-                                    <span class="info-text">&nbsp;{{pos.POSITION}}</span>
-                                    <span class="info-text">,&nbsp;{{item.CURRENTWORK}}</span>
-                                </span>
-                                </tr>
-                                </table>                                              
-                                <p class="group">
-                                    <a ng-click="onViewDetailClick(item)" href="${pageContext.request.contextPath}/expert/detail" class="btn btn-default">ព័តិមានលំអិត</a><br><br>
-                                </p>                        
-                            </div>
                         </div>
                     </div>
                 </div>

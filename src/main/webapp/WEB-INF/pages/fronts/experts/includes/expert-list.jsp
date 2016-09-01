@@ -33,11 +33,11 @@
         </div>
         <table style="width: 100%;" >    
             <tbody>
-                <tr dir-paginate="item in EXPERTS|orderBy:sortKey:reverse|filter:search|itemsPerPage:15">
+                <tr dir-paginate="item in EXPERTS|orderBy:sortKey:reverse|filter:search|itemsPerPage:10">
                     <td>
                         <div class="col-sm-12 col-lg-12 col-xs-12 box--result">
                             <div class="pull-left image--profile">                                                                                         
-                                <img class="img-responsive" src="{{item.IMAGEURL}}" 
+                                <img class="img-responsive" ng-src="{{item.IMAGEURL}}" 
                                      onerror="this.onerror=null;this.src='${pageContext.request.contextPath}/resources/images/profile/na-profile.jpg';">                           
                             </div>
                             <div class="col-sm-10 col-lg-10 col-xs-10 row pull-right">

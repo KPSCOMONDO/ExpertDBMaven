@@ -3,18 +3,22 @@
     <div class="mbr-section__container mbr-section__container--isolated container content-2">  
         <div class="mbr-overlay" style="opacity: 0.3; background-color: black"></div>
         <div class="col-sm-8 section" style="z-index: 9999">
-            <h2 class="heading text-white">Message  <i class="fa fa-envelope-o"></i></h2>
-            <select class="form-control">
-                <option>Expert account</option>
-                <option>Sokchanny.sg@gmail.com</option>                            
-            </select>    
-            <br>
-            <textarea class="form-control" rows="5" placeholder="Write your text hear."></textarea>
-            <br>
-            <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay text-white" href="">SEND</a>
+            <form ng-submit="sendEmail()">
+                <h2 class="heading text-white">សារអេឡិចត្រូនិច<i class="fa fa-envelope-o"></i></h2>
+                <select class="form-control search--expert" style="padding: 5px;font-size: 12pt;" ng-model="cbo_email" ng-options="item.EMAIL for item in EXPERTS.CONTACTS">
+                    <option value="">-- អីុម៉ែល --</option>
+                </select>     
+                <br>
+                <input type="text" placeholder="គោលបំណង" class="form-control" ng-model="txtSubject">
+                <br>
+                <textarea class="form-control" ng-model="txtText" rows="10" placeholder="អត្ថបទ"></textarea>
+                <br>
+                <input type='submit' class="mbr-buttons__btn btn btn-lg btn-primary animated fadeInUp delay text-white" value='ផ្ញើរ  '/>
+                <input type='reset' class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay text-white" value='សំអាត'/>
+            </form>            
         </div>
         <div class="col-sm-4 contact--expert"  style="z-index: 9999">                  
-            <h2 class="heading text-white">Contact</h2>
+            <h2 class="heading text-white">ទំនាក់ទំនង</h2>
             <div class="content">
                 <h4><i class="glyphicon glyphicon-map-marker"></i>
                     <span>&nbsp;&nbsp;{{EXPERTS.LOCATION.LOCATIONSTATUS}}</span>

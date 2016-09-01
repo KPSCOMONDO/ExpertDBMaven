@@ -14,6 +14,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import org.expert.database.service.SendMailService;
 
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,7 @@ import org.springframework.stereotype.Service;
  * @author sokchanny
  */
 @Service
-public class SendMailServiceImpl implements org.expert.database.service.SendMailService {
+public class SendMailServiceImpl implements SendMailService {
 
     @Override
     public void sendMaile(String address, String type, String msg) {
